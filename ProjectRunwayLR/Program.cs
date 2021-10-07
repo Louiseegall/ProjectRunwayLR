@@ -16,7 +16,8 @@ namespace ProjectRunwayLR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmExampleMenu());
+            //Application.Run(new frmExampleMenu());
+            Application.Run(new Form3());
         }
     }
 }
