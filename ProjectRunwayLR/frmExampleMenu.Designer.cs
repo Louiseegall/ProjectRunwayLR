@@ -79,11 +79,11 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.Run_Way_Beauty_Salon;
-            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo.Enabled = false;
-            this.pbLogo.Location = new System.Drawing.Point(50, 200);
+            this.pbLogo.Location = new System.Drawing.Point(28, 200);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(450, 412);
+            this.pbLogo.Size = new System.Drawing.Size(487, 400);
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
             // 
@@ -168,7 +168,7 @@ namespace ProjectRunwayLR
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(539, 200);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(488, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(488, 400);
             this.dataGridView1.TabIndex = 15;
             // 
             // pnlMenu
@@ -207,9 +207,10 @@ namespace ProjectRunwayLR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.White_and_Gold;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1153, 719);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.hair;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1062, 719);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.dataGridView1);

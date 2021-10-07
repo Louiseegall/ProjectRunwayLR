@@ -121,10 +121,13 @@
   <data name="Run_Way_Beauty_Salon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Run_Way_Beauty_Salon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="White_and_Gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\White_and_Gold.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Run_Way_Beauty_Salon_Header" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Run_Way_Beauty_Salon_Header.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="White_and_Gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\White_and_Gold.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hair.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
