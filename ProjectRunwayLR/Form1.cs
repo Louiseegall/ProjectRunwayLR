@@ -21,6 +21,7 @@ namespace ProjectRunwayLR
         private void btnMenu_Click(object sender, EventArgs e)
         {
             tmrMenu.Enabled = true;
+            timer1.Enabled = true;
             vis = !vis;
            
 
@@ -30,7 +31,7 @@ namespace ProjectRunwayLR
         {
             if (vis)
             {
-                if (pnlMenu.Left > -1000)
+                if (pnlMenu.Left > -160)
                 {
                     pnlMenu.Left -= 50;
 
@@ -39,6 +40,8 @@ namespace ProjectRunwayLR
                 {
                     tmrMenu.Enabled = false;
                 }
+   
+              
             }
             else
             {
@@ -50,7 +53,44 @@ namespace ProjectRunwayLR
                 else
                 {
                     tmrMenu.Enabled = false;
-                    
+                }
+                      
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (vis)
+            {
+                if (pictureBox1.Left < 0)
+                {
+                    pictureBox1.Left += 60;
+
+                }
+                else
+                {
+                    timer1.Enabled = false;
+                }
+
+                
+            }
+            else
+            {
+               
+                
+                if (pictureBox1.Left > -360)
+                {
+                    pictureBox1.Left -= 60;
+
+                }
+                else
+                {
+                    timer1.Enabled = false;
                 }
             }
         }

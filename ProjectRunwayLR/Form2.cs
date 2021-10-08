@@ -31,7 +31,8 @@ namespace ProjectRunwayLR
             {
                 if (pnlMenu.Left > -1000)
                 {
-                    pnlMenu.Left -= 50;
+                    pnlMenu.Left -= 80;
+                
 
                 }
                 else
@@ -43,7 +44,7 @@ namespace ProjectRunwayLR
             {
                 if (pnlMenu.Left < 0)
                 {
-                    pnlMenu.Left += 50;
+                    pnlMenu.Left += 80;
 
                 }
                 else
@@ -52,5 +53,11 @@ namespace ProjectRunwayLR
                 }
             }
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+           
+         }
+        
     }
 }

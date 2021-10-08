@@ -74,16 +74,15 @@ namespace ProjectRunwayLR
             // 
             // pbLogo
             // 
-            this.pbLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo.Enabled = false;
             this.pbLogo.Image = global::ProjectRunwayLR.Properties.Resources.Run_Way_Beauty_Salon;
-            this.pbLogo.Location = new System.Drawing.Point(28, 212);
+            this.pbLogo.Location = new System.Drawing.Point(65, 212);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(450, 412);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
             // 
@@ -161,6 +160,7 @@ namespace ProjectRunwayLR
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(539, 212);
             this.dataGridView1.Name = "dataGridView1";
@@ -169,6 +169,7 @@ namespace ProjectRunwayLR
             // 
             // pnlMenu
             // 
+            this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Controls.Add(this.btnLogin);
@@ -213,6 +214,7 @@ namespace ProjectRunwayLR
             this.Controls.Add(this.pbLogo);
             this.Name = "Form2";
             this.Text = "frmExampleMenu";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlMenu.ResumeLayout(false);
