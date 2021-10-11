@@ -43,9 +43,11 @@ namespace ProjectRunwayLR
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.tmrMenu = new System.Windows.Forms.Timer(this.components);
             this.btnMenu = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -62,10 +64,11 @@ namespace ProjectRunwayLR
             // 
             // txtUsername
             // 
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsername.BackColor = System.Drawing.Color.LightGray;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(707, 39);
+            this.txtUsername.Location = new System.Drawing.Point(1362, 39);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(150, 23);
             this.txtUsername.TabIndex = 7;
@@ -74,14 +77,13 @@ namespace ProjectRunwayLR
             // 
             // pbLogo
             // 
-            this.pbLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo.Enabled = false;
-            this.pbLogo.Image = global::ProjectRunwayLR.Properties.Resources.Run_Way_Beauty_Salon;
-            this.pbLogo.Location = new System.Drawing.Point(65, 212);
+            this.pbLogo.Image = global::ProjectRunwayLR.Properties.Resources.run;
+            this.pbLogo.Location = new System.Drawing.Point(28, 213);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(450, 412);
+            this.pbLogo.Size = new System.Drawing.Size(558, 534);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
@@ -148,10 +150,11 @@ namespace ProjectRunwayLR
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.BackColor = System.Drawing.Color.LightGray;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(877, 39);
+            this.textBox1.Location = new System.Drawing.Point(1536, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 23);
             this.textBox1.TabIndex = 14;
@@ -162,9 +165,9 @@ namespace ProjectRunwayLR
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(539, 212);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(488, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(1077, 555);
             this.dataGridView1.TabIndex = 15;
             // 
             // pnlMenu
@@ -177,7 +180,7 @@ namespace ProjectRunwayLR
             this.pnlMenu.Controls.Add(this.button5);
             this.pnlMenu.Controls.Add(this.button3);
             this.pnlMenu.Controls.Add(this.button4);
-            this.pnlMenu.Location = new System.Drawing.Point(28, 121);
+            this.pnlMenu.Location = new System.Drawing.Point(28, 120);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(999, 56);
             this.pnlMenu.TabIndex = 16;
@@ -199,25 +202,36 @@ namespace ProjectRunwayLR
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(603, 213);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1083, 561);
+            this.panel1.TabIndex = 17;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.White_and_Gold;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1153, 719);
+            this.ClientSize = new System.Drawing.Size(1714, 786);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pbLogo);
             this.Name = "Form2";
             this.Text = "frmExampleMenu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +252,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Timer tmrMenu;
         private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Panel panel1;
     }
 }
