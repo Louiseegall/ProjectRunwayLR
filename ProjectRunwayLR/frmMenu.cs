@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjectRunwayLR
 {
-    public partial class Form2 : Form
+    public partial class frmMenu : Form
     {
         Boolean vis;
-        public Form2()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -58,6 +58,42 @@ namespace ProjectRunwayLR
         {
            
          }
-        
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            frmAppointment Check = new frmAppointment();
+            Check.Show();
+
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            frmCustomers Check = new frmCustomers();
+            Check.Show();
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            frmStaff Check = new frmStaff();
+            Check.Show();
+        }
+
+        private void btnTreatment_Click(object sender, EventArgs e)
+        {
+            frmTreatment Check = new frmTreatment();
+            Check.Show();
+        }
+
+        private void btnRoom_Click(object sender, EventArgs e)
+        {
+            frmRoom Check = new frmRoom();
+            Check.Show();
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            frmPayment Check = new frmPayment();
+            Check.Show();
+        }
     }
 }

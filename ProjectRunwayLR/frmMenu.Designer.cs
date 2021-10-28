@@ -1,7 +1,7 @@
 ﻿
 namespace ProjectRunwayLR
 {
-    partial class Form2
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@ namespace ProjectRunwayLR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAppointment = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
+            this.btnTreatment = new System.Windows.Forms.Button();
+            this.btnRoom = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlMenu = new System.Windows.Forms.Panel();
@@ -50,17 +50,18 @@ namespace ProjectRunwayLR
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnLogin
+            // btnCustomer
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Black;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(171, 3);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(150, 50);
-            this.btnLogin.TabIndex = 8;
-            this.btnLogin.Text = "Customer";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnCustomer.BackColor = System.Drawing.Color.Black;
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Location = new System.Drawing.Point(171, 3);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(150, 50);
+            this.btnCustomer.TabIndex = 8;
+            this.btnCustomer.Text = "Customer";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // txtUsername
             // 
@@ -88,65 +89,70 @@ namespace ProjectRunwayLR
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
             // 
-            // button1
+            // btnAppointment
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Appointment";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAppointment.BackColor = System.Drawing.Color.Black;
+            this.btnAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointment.ForeColor = System.Drawing.Color.White;
+            this.btnAppointment.Location = new System.Drawing.Point(3, 3);
+            this.btnAppointment.Name = "btnAppointment";
+            this.btnAppointment.Size = new System.Drawing.Size(150, 50);
+            this.btnAppointment.TabIndex = 9;
+            this.btnAppointment.Text = "Appointment";
+            this.btnAppointment.UseVisualStyleBackColor = false;
+            this.btnAppointment.Click += new System.EventHandler(this.btnAppointment_Click);
             // 
-            // button2
+            // btnStaff
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(337, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 50);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Staff";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnStaff.BackColor = System.Drawing.Color.Black;
+            this.btnStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaff.ForeColor = System.Drawing.Color.White;
+            this.btnStaff.Location = new System.Drawing.Point(337, 3);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(150, 50);
+            this.btnStaff.TabIndex = 10;
+            this.btnStaff.Text = "Staff";
+            this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
-            // button3
+            // btnTreatment
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(511, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 50);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Treatment";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnTreatment.BackColor = System.Drawing.Color.Black;
+            this.btnTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTreatment.ForeColor = System.Drawing.Color.White;
+            this.btnTreatment.Location = new System.Drawing.Point(511, 3);
+            this.btnTreatment.Name = "btnTreatment";
+            this.btnTreatment.Size = new System.Drawing.Size(150, 50);
+            this.btnTreatment.TabIndex = 11;
+            this.btnTreatment.Text = "Treatment";
+            this.btnTreatment.UseVisualStyleBackColor = false;
+            this.btnTreatment.Click += new System.EventHandler(this.btnTreatment_Click);
             // 
-            // button4
+            // btnRoom
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(679, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Room";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRoom.BackColor = System.Drawing.Color.Black;
+            this.btnRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoom.ForeColor = System.Drawing.Color.White;
+            this.btnRoom.Location = new System.Drawing.Point(679, 3);
+            this.btnRoom.Name = "btnRoom";
+            this.btnRoom.Size = new System.Drawing.Size(150, 50);
+            this.btnRoom.TabIndex = 12;
+            this.btnRoom.Text = "Room";
+            this.btnRoom.UseVisualStyleBackColor = false;
+            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
             // 
-            // button5
+            // btnPayment
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(849, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 50);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Payment";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnPayment.BackColor = System.Drawing.Color.Black;
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.Location = new System.Drawing.Point(849, 3);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(150, 50);
+            this.btnPayment.TabIndex = 13;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // textBox1
             // 
@@ -174,12 +180,12 @@ namespace ProjectRunwayLR
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlMenu.Controls.Add(this.button1);
-            this.pnlMenu.Controls.Add(this.btnLogin);
-            this.pnlMenu.Controls.Add(this.button2);
-            this.pnlMenu.Controls.Add(this.button5);
-            this.pnlMenu.Controls.Add(this.button3);
-            this.pnlMenu.Controls.Add(this.button4);
+            this.pnlMenu.Controls.Add(this.btnAppointment);
+            this.pnlMenu.Controls.Add(this.btnCustomer);
+            this.pnlMenu.Controls.Add(this.btnStaff);
+            this.pnlMenu.Controls.Add(this.btnPayment);
+            this.pnlMenu.Controls.Add(this.btnTreatment);
+            this.pnlMenu.Controls.Add(this.btnRoom);
             this.pnlMenu.Location = new System.Drawing.Point(28, 120);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(999, 56);
@@ -211,7 +217,7 @@ namespace ProjectRunwayLR
             this.panel1.Size = new System.Drawing.Size(1083, 561);
             this.panel1.TabIndex = 17;
             // 
-            // Form2
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +230,7 @@ namespace ProjectRunwayLR
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pbLogo);
-            this.Name = "Form2";
+            this.Name = "frmMenu";
             this.Text = "frmExampleMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -239,14 +245,14 @@ namespace ProjectRunwayLR
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAppointment;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnTreatment;
+        private System.Windows.Forms.Button btnRoom;
+        private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel pnlMenu;

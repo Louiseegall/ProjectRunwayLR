@@ -16,11 +16,17 @@ namespace ProjectRunwayLR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-                  //     Application.Run(new frmExampleMenu());
+            //     Application.Run(new frmExampleMenu());
             // Application.Run(new Form3());
 
-       Application.Run(new Form2());
-//Application.Run(new Form1());
+             Application.Run(new frmMenu());
+            //Application.Run(new frmCustomers());
+            // Application.Run(new frmStaff());
+            // Application.Run(new frmTreatment());
+           // Application.Run(new frmAppointment());
+           // Application.Run(new frmPayment());
+            //  Application.Run(new frmRoom());
+            //Application.Run(new Form1());
         }
     }
 }
