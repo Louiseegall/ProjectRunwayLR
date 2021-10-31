@@ -22,13 +22,11 @@ namespace ProjectRunwayLR
             InitializeComponent();
         }
 
-        private void frmMainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
+
             if (!menuChanging)
             {
                 menuChanging = true;
@@ -37,6 +35,7 @@ namespace ProjectRunwayLR
                 menuTimer.Start();
             }
         }
+
 
         private void menuTimer_Tick(object sender, EventArgs e)
         {
@@ -82,7 +81,6 @@ namespace ProjectRunwayLR
                         pnlContent.Top = 120;
                     }
 
-
                 }
                 else
                 {
@@ -101,9 +99,84 @@ namespace ProjectRunwayLR
             }
         }
 
-        private void pnlMenu_Paint(object sender, PaintEventArgs e)
+
+        private void frmMainMenu_SizeChanged(object sender, EventArgs e)
+        {
+            if (menuOpen)
+            {
+                tlpMenu.Left = 10;
+            }
+            else
+            {
+                tlpMenu.Left = -tlpMenu.Width;
+            }
+        }
+
+
+        private void openForm(Form form)
         {
 
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            pnlContent.Controls.Clear();
+            pnlContent.Controls.Add(form);
+            form.ShowInTaskbar = false;
+            form.Show();
+            form.Dock = DockStyle.Fill;
+        }
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmAppointment))
+            {
+                currentForm = new frmAppointment();
+                openForm(currentForm);
+            }
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmCustomers))
+            {
+                currentForm = new frmCustomers();
+                openForm(currentForm);
+            }
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmStaff))
+            {
+                currentForm = new frmStaff();
+                openForm(currentForm);
+            }
+        }
+
+        private void btnTreatment_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmTreatment))
+            {
+                currentForm = new frmTreatment();
+                openForm(currentForm);
+            }
+        }
+
+        private void btnRoom_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmRoom))
+            {
+                currentForm = new frmRoom();
+                openForm(currentForm);
+            }
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmPayment))
+            {
+                currentForm = new frmPayment();
+                openForm(currentForm);
+            }
         }
     }
 }

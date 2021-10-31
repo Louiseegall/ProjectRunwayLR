@@ -97,6 +97,7 @@ namespace ProjectRunwayLR
             this.button4.TabIndex = 12;
             this.button4.Text = "Room";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -116,15 +117,18 @@ namespace ProjectRunwayLR
             this.btnMenu.BackColor = System.Drawing.Color.Black;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Location = new System.Drawing.Point(12, 55);
+            this.btnMenu.Location = new System.Drawing.Point(12, 41);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(150, 50);
             this.btnMenu.TabIndex = 100;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // pnlMenu
             // 
+            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlMenu.Controls.Add(this.button1);
@@ -133,10 +137,11 @@ namespace ProjectRunwayLR
             this.pnlMenu.Controls.Add(this.button5);
             this.pnlMenu.Controls.Add(this.button3);
             this.pnlMenu.Controls.Add(this.button4);
-            this.pnlMenu.Location = new System.Drawing.Point(9, 160);
+            this.pnlMenu.Location = new System.Drawing.Point(9, 146);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(999, 56);
             this.pnlMenu.TabIndex = 99;
+            this.pnlMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenu_Paint);
             // 
             // button1
             // 
@@ -149,6 +154,7 @@ namespace ProjectRunwayLR
             this.button1.TabIndex = 9;
             this.button1.Text = "Appointment";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLogin
             // 
@@ -161,6 +167,7 @@ namespace ProjectRunwayLR
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Customer";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // button2
             // 
@@ -173,6 +180,7 @@ namespace ProjectRunwayLR
             this.button2.TabIndex = 10;
             this.button2.Text = "Staff";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -185,6 +193,7 @@ namespace ProjectRunwayLR
             this.button5.TabIndex = 13;
             this.button5.Text = "Payment";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -197,6 +206,7 @@ namespace ProjectRunwayLR
             this.button3.TabIndex = 11;
             this.button3.Text = "Treatment";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label15
             // 
@@ -217,12 +227,13 @@ namespace ProjectRunwayLR
             this.txtUsername.BackColor = System.Drawing.Color.LightGray;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(858, 55);
+            this.txtUsername.Location = new System.Drawing.Point(858, 41);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(150, 23);
             this.txtUsername.TabIndex = 105;
             this.txtUsername.Text = "User ID";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label14
             // 
@@ -345,6 +356,7 @@ namespace ProjectRunwayLR
             this.Controls.Add(this.button8);
             this.Name = "frmAppointment";
             this.Text = "frmAppointment";
+            this.Load += new System.EventHandler(this.frmAppointment_Load);
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
