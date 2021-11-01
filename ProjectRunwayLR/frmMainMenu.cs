@@ -15,7 +15,7 @@ namespace ProjectRunwayLR
         bool menuOpen = true;
         bool menuChanging = false;
         int menuWidth = 0;
-        int menuSpeed = 10;
+        int menuSpeed = 20;
         Form currentForm = null;
         public frmMainMenu()
         {
@@ -31,7 +31,7 @@ namespace ProjectRunwayLR
             {
                 menuChanging = true;
                 menuWidth = tlpMenu.Width;
-                menuSpeed = 10 + menuWidth / 100;
+                menuSpeed = 20 + menuWidth / 100;
                 menuTimer.Start();
             }
         }
@@ -51,14 +51,14 @@ namespace ProjectRunwayLR
                 }
                 else
                 {
-                    if (pnlContent.Top > 60)
+                    if (splitContent.Top > 120)
                     {
-                        pnlContent.Top -= menuSpeed / 2;
-                        pnlContent.Height += menuSpeed / 2;
-                        if (pnlContent.Top < 60)
+                        splitContent.Top -= menuSpeed / 2;
+                        splitContent.Height += menuSpeed / 2;
+                        if (splitContent.Top < 120)
                         {
-                            pnlContent.Height -= 60 - pnlContent.Top;
-                            pnlContent.Top = 60;
+                            splitContent.Height -= 120 - splitContent.Top;
+                            splitContent.Top = 120;
                         }
                     }
                     else
@@ -71,14 +71,14 @@ namespace ProjectRunwayLR
             }
             else
             {
-                if (pnlContent.Top < 110)
+                if (splitContent.Top < 185)
                 {
-                    pnlContent.Top += menuSpeed / 2;
-                    pnlContent.Height -= menuSpeed / 2;
-                    if (pnlContent.Top > 120)
+                    splitContent.Top += menuSpeed / 2;
+                    splitContent.Height -= menuSpeed / 2;
+                    if (splitContent.Top > 185)
                     {
-                        pnlContent.Height += pnlContent.Top - 120;
-                        pnlContent.Top = 120;
+                        splitContent.Height += splitContent.Top - 185;
+                        splitContent.Top = 185;
                     }
 
                 }
@@ -136,9 +136,9 @@ namespace ProjectRunwayLR
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            if (!(currentForm is frmCustomers))
+            if (!(currentForm is frmCustomer))
             {
-                currentForm = new frmCustomers();
+                currentForm = new frmCustomer();
                 openForm(currentForm);
             }
         }
@@ -177,6 +177,16 @@ namespace ProjectRunwayLR
                 currentForm = new frmPayment();
                 openForm(currentForm);
             }
+        }
+
+        private void frmMainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace ProjectRunwayLR
 {
-    public partial class frmRoom : Form
+    public partial class frmCustomer : Form
     {
-        public frmRoom()
+        public frmCustomer()
         {
             InitializeComponent();
         }
 
-        private void frmRoom_Load(object sender, EventArgs e)
+        private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }
