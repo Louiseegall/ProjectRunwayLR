@@ -31,514 +31,414 @@ namespace ProjectRunwayLR
         {
             this.components = new System.ComponentModel.Container();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tabCustomer = new System.Windows.Forms.TabControl();
-            this.tabDisplay = new System.Windows.Forms.TabPage();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.btnDisplayEdit = new System.Windows.Forms.Button();
-            this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.tabCustomer = new System.Windows.Forms.TabControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
-            this.tabCustomer.SuspendLayout();
-            this.tabDisplay.SuspendLayout();
             this.tabEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tabAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            this.tabCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
             // errP
             // 
             this.errP.ContainerControl = this;
             // 
-            // tabCustomer
-            // 
-            this.tabCustomer.Controls.Add(this.tabDisplay);
-            this.tabCustomer.Controls.Add(this.tabAdd);
-            this.tabCustomer.Controls.Add(this.tabEdit);
-            this.tabCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabCustomer.Location = new System.Drawing.Point(0, 0);
-            this.tabCustomer.Name = "tabCustomer";
-            this.tabCustomer.SelectedIndex = 0;
-            this.tabCustomer.Size = new System.Drawing.Size(634, 521);
-            this.tabCustomer.TabIndex = 3;
-            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
-            // 
-            // tabDisplay
-            // 
-            this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDisplay.Controls.Add(this.dgvCustomers);
-            this.tabDisplay.Controls.Add(this.btnDisplayDelete);
-            this.tabDisplay.Controls.Add(this.btnDisplayEdit);
-            this.tabDisplay.Controls.Add(this.btnDisplayExit);
-            this.tabDisplay.Controls.Add(this.btnDisplayAdd);
-            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDisplay.Location = new System.Drawing.Point(4, 29);
-            this.tabDisplay.Name = "tabDisplay";
-            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(626, 548);
-            this.tabDisplay.TabIndex = 0;
-            this.tabDisplay.Text = "Display";
-            // 
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.Transparent;
-            this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.button1);
-            this.tabEdit.Controls.Add(this.button6);
-            this.tabEdit.Controls.Add(this.textBox10);
-            this.tabEdit.Controls.Add(this.label15);
-            this.tabEdit.Controls.Add(this.dateTimePicker1);
-            this.tabEdit.Controls.Add(this.textBox9);
-            this.tabEdit.Controls.Add(this.textBox8);
-            this.tabEdit.Controls.Add(this.textBox7);
-            this.tabEdit.Controls.Add(this.textBox6);
-            this.tabEdit.Controls.Add(this.textBox5);
-            this.tabEdit.Controls.Add(this.textBox4);
-            this.tabEdit.Controls.Add(this.textBox3);
-            this.tabEdit.Controls.Add(this.textBox2);
-            this.tabEdit.Controls.Add(this.textBox1);
-            this.tabEdit.Controls.Add(this.comboBox1);
-            this.tabEdit.Controls.Add(this.label14);
-            this.tabEdit.Controls.Add(this.label13);
-            this.tabEdit.Controls.Add(this.label12);
-            this.tabEdit.Controls.Add(this.label11);
-            this.tabEdit.Controls.Add(this.label10);
-            this.tabEdit.Controls.Add(this.label9);
-            this.tabEdit.Controls.Add(this.label8);
-            this.tabEdit.Controls.Add(this.label7);
-            this.tabEdit.Controls.Add(this.label6);
-            this.tabEdit.Controls.Add(this.label5);
-            this.tabEdit.Controls.Add(this.label1);
-            this.tabEdit.Controls.Add(this.label16);
-            this.tabEdit.Controls.Add(this.label17);
-            this.tabEdit.Controls.Add(this.label18);
-            this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEdit.Controls.Add(this.numericUpDown2);
+            this.tabEdit.Controls.Add(this.button4);
+            this.tabEdit.Controls.Add(this.button5);
+            this.tabEdit.Controls.Add(this.label30);
+            this.tabEdit.Controls.Add(this.dateTimePicker3);
+            this.tabEdit.Controls.Add(this.textBox11);
+            this.tabEdit.Controls.Add(this.textBox21);
+            this.tabEdit.Controls.Add(this.textBox22);
+            this.tabEdit.Controls.Add(this.textBox23);
+            this.tabEdit.Controls.Add(this.textBox24);
+            this.tabEdit.Controls.Add(this.textBox25);
+            this.tabEdit.Controls.Add(this.textBox26);
+            this.tabEdit.Controls.Add(this.textBox27);
+            this.tabEdit.Controls.Add(this.textBox28);
+            this.tabEdit.Controls.Add(this.comboBox3);
+            this.tabEdit.Controls.Add(this.label31);
+            this.tabEdit.Controls.Add(this.label32);
+            this.tabEdit.Controls.Add(this.label33);
+            this.tabEdit.Controls.Add(this.label34);
+            this.tabEdit.Controls.Add(this.label35);
+            this.tabEdit.Controls.Add(this.label36);
+            this.tabEdit.Controls.Add(this.label37);
+            this.tabEdit.Controls.Add(this.label38);
+            this.tabEdit.Controls.Add(this.label39);
+            this.tabEdit.Controls.Add(this.label40);
+            this.tabEdit.Controls.Add(this.label41);
+            this.tabEdit.Controls.Add(this.label42);
+            this.tabEdit.Controls.Add(this.label43);
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
             this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEdit.Size = new System.Drawing.Size(626, 548);
-            this.tabEdit.TabIndex = 2;
+            this.tabEdit.Size = new System.Drawing.Size(611, 488);
+            this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "Edit";
             // 
-            // textBox10
+            // label43
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Location = new System.Drawing.Point(113, 440);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(417, 24);
-            this.textBox10.TabIndex = 74;
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(20, 19);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(121, 24);
+            this.label43.TabIndex = 105;
+            this.label43.Text = "Customer No";
             // 
-            // label15
+            // label42
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(212, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(16, 24);
-            this.label15.TabIndex = 73;
-            this.label15.Text = "-";
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(20, 56);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(45, 24);
+            this.label42.TabIndex = 106;
+            this.label42.Text = "Title";
             // 
-            // dateTimePicker1
+            // label41
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(20, 93);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(98, 24);
+            this.label41.TabIndex = 107;
+            this.label41.Text = "Forename";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(20, 131);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(87, 24);
+            this.label40.TabIndex = 108;
+            this.label40.Text = "Surname";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(20, 161);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(58, 24);
+            this.label39.TabIndex = 109;
+            this.label39.Text = "Street";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(20, 198);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(58, 24);
+            this.label38.TabIndex = 110;
+            this.label38.Text = "Town";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(20, 237);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(69, 24);
+            this.label37.TabIndex = 111;
+            this.label37.Text = "County";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(323, 237);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(75, 24);
+            this.label36.TabIndex = 112;
+            this.label36.Text = "Country";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(20, 272);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(89, 24);
+            this.label35.TabIndex = 113;
+            this.label35.Text = "Postcode";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(20, 340);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(57, 24);
+            this.label34.TabIndex = 114;
+            this.label34.Text = "Email";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(20, 306);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(67, 24);
+            this.label33.TabIndex = 115;
+            this.label33.Text = "Tel No";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(259, 55);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(50, 24);
+            this.label32.TabIndex = 116;
+            this.label32.Text = "DOB";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(20, 371);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(88, 24);
+            this.label31.TabIndex = 117;
+            this.label31.Text = "Discount ";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(125, 57);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(129, 28);
+            this.comboBox3.TabIndex = 118;
+            // 
+            // textBox28
+            // 
+            this.textBox28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(417, 24);
-            this.dateTimePicker1.TabIndex = 72;
+            this.textBox28.Location = new System.Drawing.Point(125, 93);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(458, 26);
+            this.textBox28.TabIndex = 119;
             // 
-            // textBox9
+            // textBox27
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(113, 403);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(417, 24);
-            this.textBox9.TabIndex = 71;
+            this.textBox27.Location = new System.Drawing.Point(125, 131);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(458, 26);
+            this.textBox27.TabIndex = 120;
             // 
-            // textBox8
+            // textBox26
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(113, 367);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(417, 24);
-            this.textBox8.TabIndex = 70;
+            this.textBox26.Location = new System.Drawing.Point(125, 161);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(458, 26);
+            this.textBox26.TabIndex = 121;
             // 
-            // textBox7
+            // textBox25
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(113, 332);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(417, 24);
-            this.textBox7.TabIndex = 69;
+            this.textBox25.Location = new System.Drawing.Point(125, 198);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(458, 26);
+            this.textBox25.TabIndex = 122;
             // 
-            // textBox6
+            // textBox24
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox24.Location = new System.Drawing.Point(125, 239);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(184, 26);
+            this.textBox24.TabIndex = 123;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(113, 295);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(417, 24);
-            this.textBox6.TabIndex = 68;
+            this.textBox23.Location = new System.Drawing.Point(404, 237);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(179, 26);
+            this.textBox23.TabIndex = 124;
             // 
-            // textBox5
+            // textBox22
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(113, 260);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(417, 24);
-            this.textBox5.TabIndex = 67;
+            this.textBox22.Location = new System.Drawing.Point(125, 273);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(458, 26);
+            this.textBox22.TabIndex = 125;
             // 
-            // textBox4
+            // textBox21
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(113, 225);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(417, 24);
-            this.textBox4.TabIndex = 66;
+            this.textBox21.Location = new System.Drawing.Point(125, 307);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(458, 26);
+            this.textBox21.TabIndex = 126;
             // 
-            // textBox3
+            // textBox11
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(113, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(417, 24);
-            this.textBox3.TabIndex = 65;
+            this.textBox11.Location = new System.Drawing.Point(125, 341);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(458, 26);
+            this.textBox11.TabIndex = 127;
             // 
-            // textBox2
+            // dateTimePicker3
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(113, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(417, 24);
-            this.textBox2.TabIndex = 64;
+            this.dateTimePicker3.Location = new System.Drawing.Point(314, 55);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(268, 26);
+            this.dateTimePicker3.TabIndex = 128;
             // 
-            // textBox1
+            // label30
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(113, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(417, 24);
-            this.textBox1.TabIndex = 63;
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(310, 19);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(16, 24);
+            this.label30.TabIndex = 129;
+            this.label30.Text = "-";
             // 
-            // comboBox1
+            // button5
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(417, 26);
-            this.comboBox1.TabIndex = 62;
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(125, 423);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 50);
+            this.button5.TabIndex = 130;
+            this.button5.Text = "Edit";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // label14
+            // button4
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(57, 136);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 24);
-            this.label14.TabIndex = 61;
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(404, 423);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 50);
+            this.button4.TabIndex = 131;
+            this.button4.Text = "Cancel";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // label13
+            // numericUpDown2
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 440);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 24);
-            this.label13.TabIndex = 60;
-            this.label13.Text = "Discount ";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 150);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 24);
-            this.label12.TabIndex = 59;
-            this.label12.Text = "DOB";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 367);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 24);
-            this.label11.TabIndex = 58;
-            this.label11.Text = "Tel No";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 403);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 24);
-            this.label10.TabIndex = 57;
-            this.label10.Text = "Email";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 332);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 24);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "Postcode";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 295);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 24);
-            this.label8.TabIndex = 55;
-            this.label8.Text = "Country";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 260);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 24);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "County";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 24);
-            this.label6.TabIndex = 53;
-            this.label6.Text = "Town";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 190);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 24);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Street";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Surname";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(12, 77);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 24);
-            this.label16.TabIndex = 50;
-            this.label16.Text = "Forename";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(12, 40);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 24);
-            this.label17.TabIndex = 49;
-            this.label17.Text = "Title";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(8, 3);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(121, 24);
-            this.label18.TabIndex = 48;
-            this.label18.Text = "Customer No";
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(113, 490);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 50);
-            this.button6.TabIndex = 81;
-            this.button6.Text = "Edit";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(370, 490);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.numericUpDown2.Location = new System.Drawing.Point(125, 373);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDown2.TabIndex = 132;
             // 
             // tabAdd
             // 
@@ -576,256 +476,9 @@ namespace ProjectRunwayLR
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdd.Size = new System.Drawing.Size(626, 488);
+            this.tabAdd.Size = new System.Drawing.Size(611, 488);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(368, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 24);
-            this.label2.TabIndex = 99;
-            this.label2.Text = "-";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(422, 38);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(162, 24);
-            this.dateTimePicker2.TabIndex = 98;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(111, 355);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(473, 24);
-            this.textBox12.TabIndex = 97;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Location = new System.Drawing.Point(111, 311);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(473, 24);
-            this.textBox13.TabIndex = 96;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Location = new System.Drawing.Point(111, 269);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(473, 24);
-            this.textBox14.TabIndex = 95;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.Location = new System.Drawing.Point(390, 223);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(194, 24);
-            this.textBox15.TabIndex = 94;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.Location = new System.Drawing.Point(111, 222);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(184, 24);
-            this.textBox16.TabIndex = 93;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.Location = new System.Drawing.Point(111, 183);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(473, 24);
-            this.textBox17.TabIndex = 92;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.Location = new System.Drawing.Point(111, 146);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(473, 24);
-            this.textBox18.TabIndex = 91;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox19.Location = new System.Drawing.Point(111, 116);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(473, 24);
-            this.textBox19.TabIndex = 90;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.Location = new System.Drawing.Point(111, 77);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(473, 24);
-            this.textBox20.TabIndex = 89;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(111, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(82, 26);
-            this.comboBox2.TabIndex = 88;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 395);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "Discount ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(350, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 24);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "DOB";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(13, 310);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(67, 24);
-            this.label19.TabIndex = 85;
-            this.label19.Text = "Tel No";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(13, 354);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(57, 24);
-            this.label20.TabIndex = 84;
-            this.label20.Text = "Email";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(11, 268);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 24);
-            this.label21.TabIndex = 83;
-            this.label21.Text = "Postcode";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(309, 222);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 24);
-            this.label22.TabIndex = 82;
-            this.label22.Text = "Country";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(11, 221);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(69, 24);
-            this.label23.TabIndex = 81;
-            this.label23.Text = "County";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(11, 182);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(58, 24);
-            this.label24.TabIndex = 80;
-            this.label24.Text = "Town";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(11, 145);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 24);
-            this.label25.TabIndex = 79;
-            this.label25.Text = "Street";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(10, 112);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(87, 24);
-            this.label26.TabIndex = 78;
-            this.label26.Text = "Surname";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(10, 77);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(98, 24);
-            this.label27.TabIndex = 77;
-            this.label27.Text = "Forename";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(10, 40);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(45, 24);
-            this.label28.TabIndex = 76;
-            this.label28.Text = "Title";
             // 
             // label29
             // 
@@ -834,11 +487,253 @@ namespace ProjectRunwayLR
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(6, 3);
+            this.label29.Location = new System.Drawing.Point(18, 19);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(121, 24);
             this.label29.TabIndex = 75;
             this.label29.Text = "Customer No";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(18, 56);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(45, 24);
+            this.label28.TabIndex = 76;
+            this.label28.Text = "Title";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(18, 93);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(98, 24);
+            this.label27.TabIndex = 77;
+            this.label27.Text = "Forename";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(18, 131);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 24);
+            this.label26.TabIndex = 78;
+            this.label26.Text = "Surname";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(18, 161);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 24);
+            this.label25.TabIndex = 79;
+            this.label25.Text = "Street";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(18, 198);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 24);
+            this.label24.TabIndex = 80;
+            this.label24.Text = "Town";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(18, 237);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(69, 24);
+            this.label23.TabIndex = 81;
+            this.label23.Text = "County";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(321, 237);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 24);
+            this.label22.TabIndex = 82;
+            this.label22.Text = "Country";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(18, 272);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 24);
+            this.label21.TabIndex = 83;
+            this.label21.Text = "Postcode";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(18, 340);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(57, 24);
+            this.label20.TabIndex = 84;
+            this.label20.Text = "Email";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(18, 306);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(67, 24);
+            this.label19.TabIndex = 85;
+            this.label19.Text = "Tel No";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(258, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 24);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "DOB";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 371);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 24);
+            this.label3.TabIndex = 87;
+            this.label3.Text = "Discount ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(123, 57);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(129, 26);
+            this.comboBox2.TabIndex = 88;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox20.Location = new System.Drawing.Point(123, 93);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(458, 24);
+            this.textBox20.TabIndex = 89;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox19.Location = new System.Drawing.Point(123, 131);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(458, 24);
+            this.textBox19.TabIndex = 90;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox18.Location = new System.Drawing.Point(123, 161);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(458, 24);
+            this.textBox18.TabIndex = 91;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox17.Location = new System.Drawing.Point(123, 198);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(458, 24);
+            this.textBox17.TabIndex = 92;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(123, 239);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(184, 24);
+            this.textBox16.TabIndex = 93;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox15.Location = new System.Drawing.Point(402, 237);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(179, 24);
+            this.textBox15.TabIndex = 94;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox14.Location = new System.Drawing.Point(123, 273);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(458, 24);
+            this.textBox14.TabIndex = 95;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox13.Location = new System.Drawing.Point(123, 307);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(458, 24);
+            this.textBox13.TabIndex = 96;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox12.Location = new System.Drawing.Point(123, 341);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(458, 24);
+            this.textBox12.TabIndex = 97;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(303, 55);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(278, 24);
+            this.dateTimePicker2.TabIndex = 98;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(308, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 24);
+            this.label2.TabIndex = 99;
+            this.label2.Text = "-";
             // 
             // button2
             // 
@@ -846,7 +741,7 @@ namespace ProjectRunwayLR
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(111, 430);
+            this.button2.Location = new System.Drawing.Point(123, 411);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 50);
             this.button2.TabIndex = 102;
@@ -859,12 +754,53 @@ namespace ProjectRunwayLR
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(300, 432);
+            this.button3.Location = new System.Drawing.Point(402, 411);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 50);
             this.button3.TabIndex = 103;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(123, 373);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 24);
+            this.numericUpDown1.TabIndex = 104;
+            // 
+            // tabDisplay
+            // 
+            this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDisplay.Controls.Add(this.button8);
+            this.tabDisplay.Controls.Add(this.button7);
+            this.tabDisplay.Controls.Add(this.button6);
+            this.tabDisplay.Controls.Add(this.button1);
+            this.tabDisplay.Controls.Add(this.dgvCustomers);
+            this.tabDisplay.Controls.Add(this.btnDisplayDelete);
+            this.tabDisplay.Controls.Add(this.btnDisplayEdit);
+            this.tabDisplay.Controls.Add(this.btnDisplayExit);
+            this.tabDisplay.Controls.Add(this.btnDisplayAdd);
+            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDisplay.Location = new System.Drawing.Point(4, 29);
+            this.tabDisplay.Name = "tabDisplay";
+            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDisplay.Size = new System.Drawing.Size(626, 488);
+            this.tabDisplay.TabIndex = 0;
+            this.tabDisplay.Text = "Display";
+            // 
+            // btnDisplayAdd
+            // 
+            this.btnDisplayAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
+            this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
+            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 490);
+            this.btnDisplayAdd.Name = "btnDisplayAdd";
+            this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
+            this.btnDisplayAdd.TabIndex = 86;
+            this.btnDisplayAdd.Text = "Add";
+            this.btnDisplayAdd.UseVisualStyleBackColor = false;
             // 
             // btnDisplayExit
             // 
@@ -892,19 +828,6 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit.Text = "Edit";
             this.btnDisplayEdit.UseVisualStyleBackColor = false;
             // 
-            // btnDisplayAdd
-            // 
-            this.btnDisplayAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
-            this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 490);
-            this.btnDisplayAdd.Name = "btnDisplayAdd";
-            this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
-            this.btnDisplayAdd.TabIndex = 86;
-            this.btnDisplayAdd.Text = "Add";
-            this.btnDisplayAdd.UseVisualStyleBackColor = false;
-            // 
             // btnDisplayDelete
             // 
             this.btnDisplayDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -930,15 +853,74 @@ namespace ProjectRunwayLR
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(615, 469);
+            this.dgvCustomers.Size = new System.Drawing.Size(615, 382);
             this.dgvCustomers.TabIndex = 0;
             // 
-            // numericUpDown1
+            // tabCustomer
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(111, 397);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 24);
-            this.numericUpDown1.TabIndex = 104;
+            this.tabCustomer.Controls.Add(this.tabDisplay);
+            this.tabCustomer.Controls.Add(this.tabAdd);
+            this.tabCustomer.Controls.Add(this.tabEdit);
+            this.tabCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCustomer.Location = new System.Drawing.Point(0, 0);
+            this.tabCustomer.Name = "tabCustomer";
+            this.tabCustomer.SelectedIndex = 0;
+            this.tabCustomer.Size = new System.Drawing.Size(619, 521);
+            this.tabCustomer.TabIndex = 3;
+            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(168, 419);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 50);
+            this.button1.TabIndex = 131;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(3, 419);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(133, 50);
+            this.button6.TabIndex = 132;
+            this.button6.Text = "Add";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button7.BackColor = System.Drawing.Color.Black;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(325, 419);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(136, 50);
+            this.button7.TabIndex = 133;
+            this.button7.Text = "Delete";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.BackColor = System.Drawing.Color.Black;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(490, 419);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(128, 50);
+            this.button8.TabIndex = 134;
+            this.button8.Text = "Exit";
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // frmCustomer
             // 
@@ -946,20 +928,21 @@ namespace ProjectRunwayLR
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(634, 521);
+            this.ClientSize = new System.Drawing.Size(619, 521);
             this.Controls.Add(this.tabCustomer);
             this.Name = "frmCustomer";
             this.Text = "frmCustomer";
             this.TransparencyKey = System.Drawing.Color.Maroon;
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
-            this.tabCustomer.ResumeLayout(false);
-            this.tabDisplay.ResumeLayout(false);
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabDisplay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            this.tabCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -968,35 +951,19 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.TabControl tabCustomer;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.TabPage tabEdit;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.Button btnDisplayDelete;
+        private System.Windows.Forms.Button btnDisplayEdit;
+        private System.Windows.Forms.Button btnDisplayExit;
+        private System.Windows.Forms.Button btnDisplayAdd;
         private System.Windows.Forms.TabPage tabAdd;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox textBox12;
@@ -1022,15 +989,34 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnDisplayExit;
-        private System.Windows.Forms.Button btnDisplayEdit;
-        private System.Windows.Forms.Button btnDisplayAdd;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dgvCustomers;
-        private System.Windows.Forms.Button btnDisplayDelete;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TabPage tabEdit;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
     }
 }
