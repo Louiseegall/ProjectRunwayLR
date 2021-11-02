@@ -152,7 +152,7 @@ namespace ProjectRunwayLR
             }
         }
 
-        private void btnTreatment_Click(object sender, EventArgs e)
+        private void btnBooking_Click(object sender, EventArgs e)
         {
             if (!(currentForm is frmTreatment))
             {
@@ -161,24 +161,16 @@ namespace ProjectRunwayLR
             }
         }
 
-        private void btnRoom_Click(object sender, EventArgs e)
+        private void btnSchedule_Click(object sender, EventArgs e)
         {
-            if (!(currentForm is frmRoom))
+            if (!(currentForm is frmSchedule))
             {
-                currentForm = new frmRoom();
+                currentForm = new frmSchedule();
                 openForm(currentForm);
             }
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            if (!(currentForm is frmPayment))
-            {
-                currentForm = new frmPayment();
-                openForm(currentForm);
-            }
-        }
-
+ 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
 
