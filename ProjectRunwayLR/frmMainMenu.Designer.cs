@@ -85,13 +85,13 @@ namespace ProjectRunwayLR
             // pbLogo
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbLogo.Enabled = false;
             this.pbLogo.Image = global::ProjectRunwayLR.Properties.Resources.run;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(514, 554);
+            this.pbLogo.Size = new System.Drawing.Size(375, 554);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 18;
             this.pbLogo.TabStop = false;
@@ -172,7 +172,7 @@ namespace ProjectRunwayLR
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(606, 554);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 554);
             this.dataGridView1.TabIndex = 15;
             // 
             // menuTimer
@@ -199,7 +199,7 @@ namespace ProjectRunwayLR
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(606, 554);
+            this.pnlContent.Size = new System.Drawing.Size(745, 554);
             this.pnlContent.TabIndex = 24;
             // 
             // tlpMenu
@@ -249,7 +249,7 @@ namespace ProjectRunwayLR
             // 
             this.splitContent.Panel2.Controls.Add(this.pnlContent);
             this.splitContent.Size = new System.Drawing.Size(1124, 554);
-            this.splitContent.SplitterDistance = 514;
+            this.splitContent.SplitterDistance = 375;
             this.splitContent.TabIndex = 19;
             // 
             // frmMainMenu
@@ -264,7 +264,7 @@ namespace ProjectRunwayLR
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnMenu);
             this.DoubleBuffered = true;
-            this.MinimumSize = new System.Drawing.Size(1000, 740);
+            this.MinimumSize = new System.Drawing.Size(1000, 726);
             this.Name = "frmMainMenu";
             this.Text = "frmMainMenu";
             this.Load += new System.EventHandler(this.frmMainMenu_Load);

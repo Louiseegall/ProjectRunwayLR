@@ -127,9 +127,9 @@ namespace ProjectRunwayLR
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            if (!(currentForm is frmAppointment))
+            if (!(currentForm is frmAppointmentBooking))
             {
-                currentForm = new frmAppointment();
+                currentForm = new frmAppointmentBooking();
                 openForm(currentForm);
             }
         }

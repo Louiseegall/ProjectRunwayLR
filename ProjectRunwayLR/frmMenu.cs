@@ -61,7 +61,7 @@ namespace ProjectRunwayLR
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            frmAppointment Check = new frmAppointment();
+            frmAppointmentBooking Check = new frmAppointmentBooking();
             Check.Show();
 
         }
