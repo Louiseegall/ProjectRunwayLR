@@ -38,20 +38,22 @@ namespace ProjectRunwayLR
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnTreatment = new System.Windows.Forms.Button();
             this.btnRoom = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuTimer = new System.Windows.Forms.Timer(this.components);
             this.btnMenu = new System.Windows.Forms.Button();
-            this.pnlContent = new System.Windows.Forms.Panel();
             this.tlpMenu = new System.Windows.Forms.TableLayoutPanel();
             this.splitContent = new System.Windows.Forms.SplitContainer();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pnlContent.SuspendLayout();
             this.tlpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContent)).BeginInit();
             this.splitContent.Panel1.SuspendLayout();
             this.splitContent.Panel2.SuspendLayout();
             this.splitContent.SuspendLayout();
+            this.pnlContent.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCustomer
@@ -91,7 +93,7 @@ namespace ProjectRunwayLR
             this.pbLogo.Image = global::ProjectRunwayLR.Properties.Resources.run;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(375, 554);
+            this.pbLogo.Size = new System.Drawing.Size(404, 554);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 18;
             this.pbLogo.TabStop = false;
@@ -166,15 +168,6 @@ namespace ProjectRunwayLR
             this.btnRoom.UseVisualStyleBackColor = false;
             this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 554);
-            this.dataGridView1.TabIndex = 15;
-            // 
             // menuTimer
             // 
             this.menuTimer.Tick += new System.EventHandler(this.menuTimer_Tick);
@@ -191,16 +184,6 @@ namespace ProjectRunwayLR
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // pnlContent
-            // 
-            this.pnlContent.BackColor = System.Drawing.Color.Transparent;
-            this.pnlContent.Controls.Add(this.dataGridView1);
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 0);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(745, 554);
-            this.pnlContent.TabIndex = 24;
             // 
             // tlpMenu
             // 
@@ -249,8 +232,36 @@ namespace ProjectRunwayLR
             // 
             this.splitContent.Panel2.Controls.Add(this.pnlContent);
             this.splitContent.Size = new System.Drawing.Size(1124, 554);
-            this.splitContent.SplitterDistance = 375;
+            this.splitContent.SplitterDistance = 404;
             this.splitContent.TabIndex = 19;
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.Color.Transparent;
+            this.pnlContent.Controls.Add(this.panel1);
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 0);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(716, 554);
+            this.pnlContent.TabIndex = 24;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(716, 554);
+            this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(716, 554);
+            this.dataGridView1.TabIndex = 0;
             // 
             // frmMainMenu
             // 
@@ -270,13 +281,14 @@ namespace ProjectRunwayLR
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.SizeChanged += new System.EventHandler(this.frmMainMenu_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pnlContent.ResumeLayout(false);
             this.tlpMenu.ResumeLayout(false);
             this.splitContent.Panel1.ResumeLayout(false);
             this.splitContent.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContent)).EndInit();
             this.splitContent.ResumeLayout(false);
+            this.pnlContent.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,11 +304,12 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnTreatment;
         private System.Windows.Forms.Button btnRoom;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Timer menuTimer;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.TableLayoutPanel tlpMenu;
         private System.Windows.Forms.SplitContainer splitContent;
+        private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
