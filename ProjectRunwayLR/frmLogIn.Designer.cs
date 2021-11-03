@@ -90,6 +90,7 @@ namespace ProjectRunwayLR
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // textBox1
             // 
@@ -115,6 +116,7 @@ namespace ProjectRunwayLR
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 13;
             this.pbLogo.TabStop = false;
+            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
             // frmLogIn
             // 

@@ -22,5 +22,15 @@ namespace ProjectRunwayLR
 
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmMainMenu mainMenu = new frmMainMenu();
+            mainMenu.Show();
+        }
+
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
