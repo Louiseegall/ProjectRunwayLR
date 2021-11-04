@@ -70,7 +70,7 @@
     </Compile>
     <Compile Include="frmBooking.Designer.cs">
       <DependentUpon>frmBooking.cs</DependentUpon>
-
+	</Compile>
     <Compile Include="frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,7 +158,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBooking.resx">
       <DependentUpon>frmBooking.cs</DependentUpon>
-
+	</EmbeddedResource>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>

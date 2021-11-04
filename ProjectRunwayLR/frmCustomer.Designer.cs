@@ -476,7 +476,7 @@ namespace ProjectRunwayLR
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdd.Size = new System.Drawing.Size(611, 488);
+            this.tabAdd.Size = new System.Drawing.Size(611, 478);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
@@ -784,7 +784,7 @@ namespace ProjectRunwayLR
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(611, 488);
+            this.tabDisplay.Size = new System.Drawing.Size(611, 478);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
@@ -929,7 +929,6 @@ namespace ProjectRunwayLR
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(619, 511);
             this.Controls.Add(this.tabCustomer);
-            this.MaximumSize = new System.Drawing.Size(950, 550);
             this.Name = "frmCustomer";
             this.Text = "frmCustomer";
             this.TransparencyKey = System.Drawing.Color.Maroon;

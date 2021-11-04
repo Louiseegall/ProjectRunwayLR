@@ -180,5 +180,23 @@ namespace ProjectRunwayLR
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmRoom))
+            {
+                currentForm = new frmRoom();
+                openForm(currentForm);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmPayment))
+            {
+                currentForm = new frmPayment();
+                openForm(currentForm);
+            }
+        }
     }
 }
