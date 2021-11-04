@@ -81,12 +81,14 @@ namespace ProjectRunwayLR
             // 
             // lvwBooking
             // 
+            this.lvwBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwBooking.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colStaffNo,
             this.colStaffName,
             this.colRoomNo,
             this.colTreatmentCode});
-            this.lvwBooking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwBooking.HideSelection = false;
             this.lvwBooking.Location = new System.Drawing.Point(0, 0);
             this.lvwBooking.Name = "lvwBooking";
@@ -121,6 +123,9 @@ namespace ProjectRunwayLR
             // 
             // pnlKennel
             // 
+            this.pnlKennel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlKennel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnlKennel.Controls.Add(this.cmbKennelNo);
             this.pnlKennel.Controls.Add(this.lblKennelNo);
@@ -149,7 +154,9 @@ namespace ProjectRunwayLR
             // 
             // pnlDog
             // 
-            this.pnlDog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDog.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnlDog.Controls.Add(this.label2);
             this.pnlDog.Controls.Add(this.label1);
@@ -201,6 +208,9 @@ namespace ProjectRunwayLR
             // 
             // pnlCustomer
             // 
+            this.pnlCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCustomer.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnlCustomer.Controls.Add(this.label5);
             this.pnlCustomer.Controls.Add(this.label4);
@@ -342,7 +352,7 @@ namespace ProjectRunwayLR
             // 
             // button6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.Color.Black;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
@@ -355,6 +365,7 @@ namespace ProjectRunwayLR
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -367,6 +378,7 @@ namespace ProjectRunwayLR
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -379,7 +391,9 @@ namespace ProjectRunwayLR
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label3);
