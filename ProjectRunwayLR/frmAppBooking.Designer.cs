@@ -170,6 +170,8 @@ namespace ProjectRunwayLR
             this.button10.Text = "Cancel";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button10.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // panel1
             // 
@@ -216,6 +218,8 @@ namespace ProjectRunwayLR
             this.button2.TabIndex = 118;
             this.button2.Text = "Remove Item";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button3
             // 
@@ -229,6 +233,8 @@ namespace ProjectRunwayLR
             this.button3.TabIndex = 117;
             this.button3.Text = "Add Item";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button9
             // 
@@ -242,6 +248,8 @@ namespace ProjectRunwayLR
             this.button9.TabIndex = 116;
             this.button9.Text = "Add";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button9.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // pnlBooking
             // 
@@ -568,6 +576,8 @@ namespace ProjectRunwayLR
             this.button14.TabIndex = 139;
             this.button14.Text = "Cancel";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button14.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button8
             // 
@@ -581,6 +591,8 @@ namespace ProjectRunwayLR
             this.button8.TabIndex = 138;
             this.button8.Text = "Print Bill";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button8.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button7
             // 
@@ -595,6 +607,8 @@ namespace ProjectRunwayLR
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button7.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button1
             // 
@@ -609,6 +623,8 @@ namespace ProjectRunwayLR
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button6
             // 
@@ -623,6 +639,8 @@ namespace ProjectRunwayLR
             this.button6.Text = "Add";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button6.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // dgvCustomers
             // 
@@ -742,6 +760,8 @@ namespace ProjectRunwayLR
             this.button4.TabIndex = 120;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // panel2
             // 
@@ -787,6 +807,8 @@ namespace ProjectRunwayLR
             this.button5.TabIndex = 118;
             this.button5.Text = "Remove Item";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button11
             // 
@@ -800,6 +822,8 @@ namespace ProjectRunwayLR
             this.button11.TabIndex = 117;
             this.button11.Text = "Edit Item";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button11.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // button12
             // 
@@ -813,6 +837,8 @@ namespace ProjectRunwayLR
             this.button12.TabIndex = 116;
             this.button12.Text = "Edit";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button12.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // panel3
             // 

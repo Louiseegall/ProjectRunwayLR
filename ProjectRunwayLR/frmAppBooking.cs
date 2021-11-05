@@ -56,5 +56,23 @@ namespace ProjectRunwayLR
         {
 
         }
+
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.FromArgb(255, 250, 237, 174);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 250, 237, 174);
+
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.White;
+            btn.FlatStyle = FlatStyle.Standard;
+
+        }
     }
 }
+
