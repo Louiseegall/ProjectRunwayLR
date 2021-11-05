@@ -36,5 +36,15 @@ namespace ProjectRunwayLR
         {
 
         }
+
+        private void frmCustomer_SizeChanged(object sender, EventArgs e)
+        {
+            //tabCustomer.ItemSize = new Size((tabCustomer.Width - 45) / 3, tabCustomer.ItemSize.Height);
+        }
+
+        private void frmCustomer_Load(object sender, EventArgs e)
+        {
+           // tabCustomer.ItemSize = new Size((tabCustomer.Width - 45) / 3, tabCustomer.ItemSize.Height);
+        }
     }
 }

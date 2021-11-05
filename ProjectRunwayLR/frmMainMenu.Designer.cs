@@ -31,7 +31,6 @@ namespace ProjectRunwayLR
         {
             this.components = new System.ComponentModel.Container();
             this.btnCustomer = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnAppointment = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@ namespace ProjectRunwayLR
             this.menuTimer = new System.Windows.Forms.Timer(this.components);
             this.btnMenu = new System.Windows.Forms.Button();
             this.tlpMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnBooking = new System.Windows.Forms.Button();
             this.splitContent = new System.Windows.Forms.SplitContainer();
@@ -47,7 +47,8 @@ namespace ProjectRunwayLR
             this.pnlBackground = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tlpMenu.SuspendLayout();
@@ -59,6 +60,7 @@ namespace ProjectRunwayLR
             this.pnlBackground.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCustomer
@@ -74,20 +76,8 @@ namespace ProjectRunwayLR
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = false;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsername.BackColor = System.Drawing.Color.LightGray;
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(989, 12);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(150, 23);
-            this.txtUsername.TabIndex = 19;
-            this.txtUsername.Text = "User ID";
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.btnCustomer.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnCustomer.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // pbLogo
             // 
@@ -116,6 +106,8 @@ namespace ProjectRunwayLR
             this.btnAppointment.Text = "Appointment";
             this.btnAppointment.UseVisualStyleBackColor = false;
             this.btnAppointment.Click += new System.EventHandler(this.btnAppointment_Click);
+            this.btnAppointment.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAppointment.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // btnStaff
             // 
@@ -130,6 +122,8 @@ namespace ProjectRunwayLR
             this.btnStaff.Text = "Staff";
             this.btnStaff.UseVisualStyleBackColor = false;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
+            this.btnStaff.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnStaff.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // btnSchedule
             // 
@@ -144,6 +138,8 @@ namespace ProjectRunwayLR
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
             this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
+            this.btnSchedule.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnSchedule.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // dataGridView1
             // 
@@ -152,7 +148,7 @@ namespace ProjectRunwayLR
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 539);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 532);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuTimer
@@ -166,11 +162,13 @@ namespace ProjectRunwayLR
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Location = new System.Drawing.Point(12, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(150, 55);
+            this.btnMenu.Size = new System.Drawing.Size(136, 55);
             this.btnMenu.TabIndex = 21;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.btnMenu.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnMenu.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // tlpMenu
             // 
@@ -205,6 +203,22 @@ namespace ProjectRunwayLR
             this.tlpMenu.Size = new System.Drawing.Size(1127, 55);
             this.tlpMenu.TabIndex = 25;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(991, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 49);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Payment";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
@@ -218,6 +232,8 @@ namespace ProjectRunwayLR
             this.button1.Text = "Room ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // btnBooking
             // 
@@ -232,6 +248,8 @@ namespace ProjectRunwayLR
             this.btnBooking.Text = "Treatment";
             this.btnBooking.UseVisualStyleBackColor = false;
             this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
+            this.btnBooking.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnBooking.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // splitContent
             // 
@@ -257,7 +275,9 @@ namespace ProjectRunwayLR
             // 
             // pnlBorder
             // 
-            this.pnlBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(221)))), ((int)(((byte)(214)))));
+            this.pnlBorder.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBorder.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.goldd1;
+            this.pnlBorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlBorder.Controls.Add(this.pnlBackground);
             this.pnlBorder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBorder.Location = new System.Drawing.Point(0, 0);
@@ -272,9 +292,9 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBackground.BackColor = System.Drawing.Color.White;
             this.pnlBackground.Controls.Add(this.pnlContent);
-            this.pnlBackground.Location = new System.Drawing.Point(9, 6);
+            this.pnlBackground.Location = new System.Drawing.Point(13, 9);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(592, 539);
+            this.pnlBackground.Size = new System.Drawing.Size(585, 532);
             this.pnlBackground.TabIndex = 0;
             // 
             // pnlContent
@@ -284,7 +304,7 @@ namespace ProjectRunwayLR
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(592, 539);
+            this.pnlContent.Size = new System.Drawing.Size(585, 532);
             this.pnlContent.TabIndex = 24;
             // 
             // panel1
@@ -294,22 +314,32 @@ namespace ProjectRunwayLR
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 539);
+            this.panel1.Size = new System.Drawing.Size(585, 532);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // panel2
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(991, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 49);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Payment";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.goldd1;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(1003, 9);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(133, 35);
+            this.panel2.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(14, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "User ID";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainMenu
             // 
@@ -318,9 +348,9 @@ namespace ProjectRunwayLR
             this.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.White_and_Gold;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 701);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.splitContent);
             this.Controls.Add(this.tlpMenu);
-            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnMenu);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(999, 739);
@@ -339,15 +369,14 @@ namespace ProjectRunwayLR
             this.pnlBackground.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnCustomer;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnAppointment;
         private System.Windows.Forms.Button btnStaff;
@@ -369,6 +398,8 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Panel pnlBackground;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
         //private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

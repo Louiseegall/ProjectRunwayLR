@@ -127,9 +127,9 @@ namespace ProjectRunwayLR
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            if (!(currentForm is frmBooking))
+            if (!(currentForm is frmAppBooking))
             {
-                currentForm = new frmBooking();
+                currentForm = new frmAppBooking();
                 openForm(currentForm);
             }
         }
@@ -197,6 +197,25 @@ namespace ProjectRunwayLR
                 currentForm = new frmPayment();
                 openForm(currentForm);
             }
+        }
+
+
+
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.FromArgb(255, 250, 237, 174);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 250, 237, 174);
+
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.White;
+            btn.FlatStyle = FlatStyle.Standard;
+
         }
     }
 }
