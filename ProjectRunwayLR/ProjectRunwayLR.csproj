@@ -148,6 +148,9 @@
     <Compile Include="frmTreatment.Designer.cs">
       <DependentUpon>frmTreatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyException.cs" />
+    <Compile Include="MyPersons.cs" />
+    <Compile Include="MyValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
