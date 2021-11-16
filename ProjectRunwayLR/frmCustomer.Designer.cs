@@ -33,31 +33,30 @@ namespace ProjectRunwayLR
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabCustomer = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddExit = new System.Windows.Forms.Button();
+            this.btnAddDelete = new System.Windows.Forms.Button();
+            this.btnDisplayAdd = new System.Windows.Forms.Button();
+            this.btnAddEdit = new System.Windows.Forms.Button();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
-            this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.nudDiscount = new System.Windows.Forms.NumericUpDown();
+            this.btnAddCancel = new System.Windows.Forms.Button();
+            this.btnAddAdd = new System.Windows.Forms.Button();
+            this.lblAddCustomerNo = new System.Windows.Forms.Label();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.txtAddEmail = new System.Windows.Forms.TextBox();
+            this.txtAddTelNo = new System.Windows.Forms.TextBox();
+            this.txtAddPostcode = new System.Windows.Forms.TextBox();
+            this.txtAddCountry = new System.Windows.Forms.TextBox();
+            this.txAddCounty = new System.Windows.Forms.TextBox();
+            this.txtAddTown = new System.Windows.Forms.TextBox();
+            this.txtAddStreet = new System.Windows.Forms.TextBox();
+            this.txtAddSurname = new System.Windows.Forms.TextBox();
+            this.txtAddForename = new System.Windows.Forms.TextBox();
+            this.cmbAddTitle = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -72,21 +71,21 @@ namespace ProjectRunwayLR
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.nudEditDiscount = new System.Windows.Forms.NumericUpDown();
+            this.btnEditCancel = new System.Windows.Forms.Button();
+            this.btnEditEdit = new System.Windows.Forms.Button();
+            this.lblEditCustomerNo = new System.Windows.Forms.Label();
+            this.dtpEditDOB = new System.Windows.Forms.DateTimePicker();
+            this.txtEditEmail = new System.Windows.Forms.TextBox();
+            this.txtEditTelNo = new System.Windows.Forms.TextBox();
+            this.txtEditPostcode = new System.Windows.Forms.TextBox();
+            this.txtEditCountry = new System.Windows.Forms.TextBox();
+            this.txtEditCounty = new System.Windows.Forms.TextBox();
+            this.txtEditTown = new System.Windows.Forms.TextBox();
+            this.txtEditStreet = new System.Windows.Forms.TextBox();
+            this.txtEditSurname = new System.Windows.Forms.TextBox();
+            this.txtEditForename = new System.Windows.Forms.TextBox();
+            this.cmbEditTitle = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -105,9 +104,9 @@ namespace ProjectRunwayLR
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tabAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             this.tabEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEditDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // errP
@@ -131,22 +130,20 @@ namespace ProjectRunwayLR
             this.tabCustomer.Size = new System.Drawing.Size(619, 511);
             this.tabCustomer.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabCustomer.TabIndex = 3;
-            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
             // 
             // tabDisplay
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.White;
             this.tabDisplay.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDisplay.Controls.Add(this.button8);
-            this.tabDisplay.Controls.Add(this.button7);
-            this.tabDisplay.Controls.Add(this.button6);
-            this.tabDisplay.Controls.Add(this.button1);
+            this.tabDisplay.Controls.Add(this.btnAddExit);
+            this.tabDisplay.Controls.Add(this.btnAddDelete);
+            this.tabDisplay.Controls.Add(this.btnDisplayAdd);
+            this.tabDisplay.Controls.Add(this.btnAddEdit);
             this.tabDisplay.Controls.Add(this.dgvCustomers);
             this.tabDisplay.Controls.Add(this.btnDisplayDelete);
             this.tabDisplay.Controls.Add(this.btnDisplayEdit);
             this.tabDisplay.Controls.Add(this.btnDisplayExit);
-            this.tabDisplay.Controls.Add(this.btnDisplayAdd);
             this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDisplay.Location = new System.Drawing.Point(4, 32);
             this.tabDisplay.Name = "tabDisplay";
@@ -155,65 +152,67 @@ namespace ProjectRunwayLR
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
-            // button8
+            // btnAddExit
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackColor = System.Drawing.Color.Black;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(463, 416);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(125, 50);
-            this.button8.TabIndex = 134;
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button8.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnAddExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddExit.BackColor = System.Drawing.Color.Black;
+            this.btnAddExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddExit.ForeColor = System.Drawing.Color.White;
+            this.btnAddExit.Location = new System.Drawing.Point(463, 416);
+            this.btnAddExit.Name = "btnAddExit";
+            this.btnAddExit.Size = new System.Drawing.Size(125, 50);
+            this.btnAddExit.TabIndex = 134;
+            this.btnAddExit.Text = "Exit";
+            this.btnAddExit.UseVisualStyleBackColor = false;
+            this.btnAddExit.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAddExit.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // button7
+            // btnAddDelete
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(305, 416);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(125, 50);
-            this.button7.TabIndex = 133;
-            this.button7.Text = "Delete";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button7.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnAddDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddDelete.BackColor = System.Drawing.Color.Black;
+            this.btnAddDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDelete.ForeColor = System.Drawing.Color.White;
+            this.btnAddDelete.Location = new System.Drawing.Point(305, 416);
+            this.btnAddDelete.Name = "btnAddDelete";
+            this.btnAddDelete.Size = new System.Drawing.Size(125, 50);
+            this.btnAddDelete.TabIndex = 133;
+            this.btnAddDelete.Text = "Delete";
+            this.btnAddDelete.UseVisualStyleBackColor = false;
+            this.btnAddDelete.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAddDelete.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // button6
+            // btnDisplayAdd
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(3, 416);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 50);
-            this.button6.TabIndex = 132;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button6.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnDisplayAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
+            this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
+            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 416);
+            this.btnDisplayAdd.Name = "btnDisplayAdd";
+            this.btnDisplayAdd.Size = new System.Drawing.Size(125, 50);
+            this.btnDisplayAdd.TabIndex = 132;
+            this.btnDisplayAdd.Text = "Add";
+            this.btnDisplayAdd.UseVisualStyleBackColor = false;
+            this.btnDisplayAdd.Click += new System.EventHandler(this.btnDisplayAdd_Click);
+            this.btnDisplayAdd.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnDisplayAdd.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // button1
+            // btnAddEdit
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(158, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 50);
-            this.button1.TabIndex = 131;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button1.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnAddEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddEdit.BackColor = System.Drawing.Color.Black;
+            this.btnAddEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEdit.ForeColor = System.Drawing.Color.White;
+            this.btnAddEdit.Location = new System.Drawing.Point(158, 416);
+            this.btnAddEdit.Name = "btnAddEdit";
+            this.btnAddEdit.Size = new System.Drawing.Size(125, 50);
+            this.btnAddEdit.TabIndex = 131;
+            this.btnAddEdit.Text = "Edit";
+            this.btnAddEdit.UseVisualStyleBackColor = false;
+            this.btnAddEdit.Click += new System.EventHandler(this.btnAddEdit_Click);
+            this.btnAddEdit.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAddEdit.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // dgvCustomers
             // 
@@ -269,39 +268,26 @@ namespace ProjectRunwayLR
             this.btnDisplayExit.Text = "Exit";
             this.btnDisplayExit.UseVisualStyleBackColor = false;
             // 
-            // btnDisplayAdd
-            // 
-            this.btnDisplayAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
-            this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 487);
-            this.btnDisplayAdd.Name = "btnDisplayAdd";
-            this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
-            this.btnDisplayAdd.TabIndex = 86;
-            this.btnDisplayAdd.Text = "Add";
-            this.btnDisplayAdd.UseVisualStyleBackColor = false;
-            // 
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.numericUpDown1);
-            this.tabAdd.Controls.Add(this.button3);
-            this.tabAdd.Controls.Add(this.button2);
-            this.tabAdd.Controls.Add(this.label2);
-            this.tabAdd.Controls.Add(this.dateTimePicker2);
-            this.tabAdd.Controls.Add(this.textBox12);
-            this.tabAdd.Controls.Add(this.textBox13);
-            this.tabAdd.Controls.Add(this.textBox14);
-            this.tabAdd.Controls.Add(this.textBox15);
-            this.tabAdd.Controls.Add(this.textBox16);
-            this.tabAdd.Controls.Add(this.textBox17);
-            this.tabAdd.Controls.Add(this.textBox18);
-            this.tabAdd.Controls.Add(this.textBox19);
-            this.tabAdd.Controls.Add(this.textBox20);
-            this.tabAdd.Controls.Add(this.comboBox2);
+            this.tabAdd.Controls.Add(this.nudDiscount);
+            this.tabAdd.Controls.Add(this.btnAddCancel);
+            this.tabAdd.Controls.Add(this.btnAddAdd);
+            this.tabAdd.Controls.Add(this.lblAddCustomerNo);
+            this.tabAdd.Controls.Add(this.dtpDOB);
+            this.tabAdd.Controls.Add(this.txtAddEmail);
+            this.tabAdd.Controls.Add(this.txtAddTelNo);
+            this.tabAdd.Controls.Add(this.txtAddPostcode);
+            this.tabAdd.Controls.Add(this.txtAddCountry);
+            this.tabAdd.Controls.Add(this.txAddCounty);
+            this.tabAdd.Controls.Add(this.txtAddTown);
+            this.tabAdd.Controls.Add(this.txtAddStreet);
+            this.tabAdd.Controls.Add(this.txtAddSurname);
+            this.tabAdd.Controls.Add(this.txtAddForename);
+            this.tabAdd.Controls.Add(this.cmbAddTitle);
             this.tabAdd.Controls.Add(this.label3);
             this.tabAdd.Controls.Add(this.label4);
             this.tabAdd.Controls.Add(this.label19);
@@ -323,150 +309,151 @@ namespace ProjectRunwayLR
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
-            // numericUpDown1
+            // nudDiscount
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(123, 373);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 24);
-            this.numericUpDown1.TabIndex = 104;
+            this.nudDiscount.Location = new System.Drawing.Point(123, 373);
+            this.nudDiscount.Name = "nudDiscount";
+            this.nudDiscount.Size = new System.Drawing.Size(120, 24);
+            this.nudDiscount.TabIndex = 104;
             // 
-            // button3
+            // btnAddCancel
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(402, 411);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 50);
-            this.button3.TabIndex = 103;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button3.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnAddCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddCancel.BackColor = System.Drawing.Color.Black;
+            this.btnAddCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCancel.ForeColor = System.Drawing.Color.White;
+            this.btnAddCancel.Location = new System.Drawing.Point(402, 411);
+            this.btnAddCancel.Name = "btnAddCancel";
+            this.btnAddCancel.Size = new System.Drawing.Size(150, 50);
+            this.btnAddCancel.TabIndex = 103;
+            this.btnAddCancel.Text = "Cancel";
+            this.btnAddCancel.UseVisualStyleBackColor = false;
+            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
+            this.btnAddCancel.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAddCancel.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // button2
+            // btnAddAdd
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(123, 411);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 50);
-            this.button2.TabIndex = 102;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnAddAdd.BackColor = System.Drawing.Color.Black;
+            this.btnAddAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAddAdd.Location = new System.Drawing.Point(123, 411);
+            this.btnAddAdd.Name = "btnAddAdd";
+            this.btnAddAdd.Size = new System.Drawing.Size(150, 50);
+            this.btnAddAdd.TabIndex = 102;
+            this.btnAddAdd.Text = "Add";
+            this.btnAddAdd.UseVisualStyleBackColor = false;
+            this.btnAddAdd.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAddAdd.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // label2
+            // lblAddCustomerNo
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblAddCustomerNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(308, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 24);
-            this.label2.TabIndex = 99;
-            this.label2.Text = "-";
+            this.lblAddCustomerNo.AutoSize = true;
+            this.lblAddCustomerNo.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddCustomerNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddCustomerNo.Location = new System.Drawing.Point(308, 19);
+            this.lblAddCustomerNo.Name = "lblAddCustomerNo";
+            this.lblAddCustomerNo.Size = new System.Drawing.Size(16, 24);
+            this.lblAddCustomerNo.TabIndex = 99;
+            this.lblAddCustomerNo.Text = "-";
             // 
-            // dateTimePicker2
+            // dtpDOB
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpDOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(325, 55);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(256, 24);
-            this.dateTimePicker2.TabIndex = 98;
+            this.dtpDOB.Location = new System.Drawing.Point(325, 55);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(256, 24);
+            this.dtpDOB.TabIndex = 98;
             // 
-            // textBox12
+            // txtAddEmail
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(123, 341);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(458, 24);
-            this.textBox12.TabIndex = 97;
+            this.txtAddEmail.Location = new System.Drawing.Point(123, 341);
+            this.txtAddEmail.Name = "txtAddEmail";
+            this.txtAddEmail.Size = new System.Drawing.Size(458, 24);
+            this.txtAddEmail.TabIndex = 97;
             // 
-            // textBox13
+            // txtAddTelNo
             // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddTelNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Location = new System.Drawing.Point(123, 307);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(458, 24);
-            this.textBox13.TabIndex = 96;
+            this.txtAddTelNo.Location = new System.Drawing.Point(123, 307);
+            this.txtAddTelNo.Name = "txtAddTelNo";
+            this.txtAddTelNo.Size = new System.Drawing.Size(458, 24);
+            this.txtAddTelNo.TabIndex = 96;
             // 
-            // textBox14
+            // txtAddPostcode
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddPostcode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Location = new System.Drawing.Point(123, 273);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(458, 24);
-            this.textBox14.TabIndex = 95;
+            this.txtAddPostcode.Location = new System.Drawing.Point(123, 273);
+            this.txtAddPostcode.Name = "txtAddPostcode";
+            this.txtAddPostcode.Size = new System.Drawing.Size(458, 24);
+            this.txtAddPostcode.TabIndex = 95;
             // 
-            // textBox15
+            // txtAddCountry
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.Location = new System.Drawing.Point(402, 237);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(179, 24);
-            this.textBox15.TabIndex = 94;
+            this.txtAddCountry.Location = new System.Drawing.Point(402, 237);
+            this.txtAddCountry.Name = "txtAddCountry";
+            this.txtAddCountry.Size = new System.Drawing.Size(179, 24);
+            this.txtAddCountry.TabIndex = 94;
             // 
-            // textBox16
+            // txAddCounty
             // 
-            this.textBox16.Location = new System.Drawing.Point(123, 239);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(184, 24);
-            this.textBox16.TabIndex = 93;
+            this.txAddCounty.Location = new System.Drawing.Point(123, 239);
+            this.txAddCounty.Name = "txAddCounty";
+            this.txAddCounty.Size = new System.Drawing.Size(184, 24);
+            this.txAddCounty.TabIndex = 93;
             // 
-            // textBox17
+            // txtAddTown
             // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddTown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.Location = new System.Drawing.Point(123, 198);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(458, 24);
-            this.textBox17.TabIndex = 92;
+            this.txtAddTown.Location = new System.Drawing.Point(123, 198);
+            this.txtAddTown.Name = "txtAddTown";
+            this.txtAddTown.Size = new System.Drawing.Size(458, 24);
+            this.txtAddTown.TabIndex = 92;
             // 
-            // textBox18
+            // txtAddStreet
             // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddStreet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.Location = new System.Drawing.Point(123, 161);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(458, 24);
-            this.textBox18.TabIndex = 91;
+            this.txtAddStreet.Location = new System.Drawing.Point(123, 161);
+            this.txtAddStreet.Name = "txtAddStreet";
+            this.txtAddStreet.Size = new System.Drawing.Size(458, 24);
+            this.txtAddStreet.TabIndex = 91;
             // 
-            // textBox19
+            // txtAddSurname
             // 
-            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddSurname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox19.Location = new System.Drawing.Point(123, 131);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(458, 24);
-            this.textBox19.TabIndex = 90;
+            this.txtAddSurname.Location = new System.Drawing.Point(123, 131);
+            this.txtAddSurname.Name = "txtAddSurname";
+            this.txtAddSurname.Size = new System.Drawing.Size(458, 24);
+            this.txtAddSurname.TabIndex = 90;
             // 
-            // textBox20
+            // txtAddForename
             // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddForename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.Location = new System.Drawing.Point(123, 93);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(458, 24);
-            this.textBox20.TabIndex = 89;
+            this.txtAddForename.Location = new System.Drawing.Point(123, 93);
+            this.txtAddForename.Name = "txtAddForename";
+            this.txtAddForename.Size = new System.Drawing.Size(458, 24);
+            this.txtAddForename.TabIndex = 89;
             // 
-            // comboBox2
+            // cmbAddTitle
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(123, 57);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(129, 26);
-            this.comboBox2.TabIndex = 88;
+            this.cmbAddTitle.FormattingEnabled = true;
+            this.cmbAddTitle.Location = new System.Drawing.Point(123, 57);
+            this.cmbAddTitle.Name = "cmbAddTitle";
+            this.cmbAddTitle.Size = new System.Drawing.Size(129, 26);
+            this.cmbAddTitle.TabIndex = 88;
             // 
             // label3
             // 
@@ -620,21 +607,21 @@ namespace ProjectRunwayLR
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.numericUpDown2);
-            this.tabEdit.Controls.Add(this.button4);
-            this.tabEdit.Controls.Add(this.button5);
-            this.tabEdit.Controls.Add(this.label30);
-            this.tabEdit.Controls.Add(this.dateTimePicker3);
-            this.tabEdit.Controls.Add(this.textBox11);
-            this.tabEdit.Controls.Add(this.textBox21);
-            this.tabEdit.Controls.Add(this.textBox22);
-            this.tabEdit.Controls.Add(this.textBox23);
-            this.tabEdit.Controls.Add(this.textBox24);
-            this.tabEdit.Controls.Add(this.textBox25);
-            this.tabEdit.Controls.Add(this.textBox26);
-            this.tabEdit.Controls.Add(this.textBox27);
-            this.tabEdit.Controls.Add(this.textBox28);
-            this.tabEdit.Controls.Add(this.comboBox3);
+            this.tabEdit.Controls.Add(this.nudEditDiscount);
+            this.tabEdit.Controls.Add(this.btnEditCancel);
+            this.tabEdit.Controls.Add(this.btnEditEdit);
+            this.tabEdit.Controls.Add(this.lblEditCustomerNo);
+            this.tabEdit.Controls.Add(this.dtpEditDOB);
+            this.tabEdit.Controls.Add(this.txtEditEmail);
+            this.tabEdit.Controls.Add(this.txtEditTelNo);
+            this.tabEdit.Controls.Add(this.txtEditPostcode);
+            this.tabEdit.Controls.Add(this.txtEditCountry);
+            this.tabEdit.Controls.Add(this.txtEditCounty);
+            this.tabEdit.Controls.Add(this.txtEditTown);
+            this.tabEdit.Controls.Add(this.txtEditStreet);
+            this.tabEdit.Controls.Add(this.txtEditSurname);
+            this.tabEdit.Controls.Add(this.txtEditForename);
+            this.tabEdit.Controls.Add(this.cmbEditTitle);
             this.tabEdit.Controls.Add(this.label31);
             this.tabEdit.Controls.Add(this.label32);
             this.tabEdit.Controls.Add(this.label33);
@@ -654,151 +641,152 @@ namespace ProjectRunwayLR
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "Edit";
             // 
-            // numericUpDown2
+            // nudEditDiscount
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(125, 373);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown2.TabIndex = 132;
+            this.nudEditDiscount.Location = new System.Drawing.Point(125, 373);
+            this.nudEditDiscount.Name = "nudEditDiscount";
+            this.nudEditDiscount.Size = new System.Drawing.Size(120, 26);
+            this.nudEditDiscount.TabIndex = 132;
             // 
-            // button4
+            // btnEditCancel
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(404, 410);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 131;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button4.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnEditCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditCancel.BackColor = System.Drawing.Color.Black;
+            this.btnEditCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCancel.ForeColor = System.Drawing.Color.White;
+            this.btnEditCancel.Location = new System.Drawing.Point(404, 410);
+            this.btnEditCancel.Name = "btnEditCancel";
+            this.btnEditCancel.Size = new System.Drawing.Size(150, 50);
+            this.btnEditCancel.TabIndex = 131;
+            this.btnEditCancel.Text = "Cancel";
+            this.btnEditCancel.UseVisualStyleBackColor = false;
+            this.btnEditCancel.Click += new System.EventHandler(this.btnEditCancel_Click);
+            this.btnEditCancel.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnEditCancel.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // button5
+            // btnEditEdit
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(125, 410);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 50);
-            this.button5.TabIndex = 130;
-            this.button5.Text = "Edit";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button5.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnEditEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditEdit.BackColor = System.Drawing.Color.Black;
+            this.btnEditEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEditEdit.Location = new System.Drawing.Point(125, 410);
+            this.btnEditEdit.Name = "btnEditEdit";
+            this.btnEditEdit.Size = new System.Drawing.Size(150, 50);
+            this.btnEditEdit.TabIndex = 130;
+            this.btnEditEdit.Text = "Edit";
+            this.btnEditEdit.UseVisualStyleBackColor = false;
+            this.btnEditEdit.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnEditEdit.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // label30
+            // lblEditCustomerNo
             // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblEditCustomerNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(310, 19);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(16, 24);
-            this.label30.TabIndex = 129;
-            this.label30.Text = "-";
+            this.lblEditCustomerNo.AutoSize = true;
+            this.lblEditCustomerNo.BackColor = System.Drawing.Color.Transparent;
+            this.lblEditCustomerNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditCustomerNo.Location = new System.Drawing.Point(310, 19);
+            this.lblEditCustomerNo.Name = "lblEditCustomerNo";
+            this.lblEditCustomerNo.Size = new System.Drawing.Size(16, 24);
+            this.lblEditCustomerNo.TabIndex = 129;
+            this.lblEditCustomerNo.Text = "-";
             // 
-            // dateTimePicker3
+            // dtpEditDOB
             // 
-            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpEditDOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(314, 55);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(268, 26);
-            this.dateTimePicker3.TabIndex = 128;
+            this.dtpEditDOB.Location = new System.Drawing.Point(314, 55);
+            this.dtpEditDOB.Name = "dtpEditDOB";
+            this.dtpEditDOB.Size = new System.Drawing.Size(268, 26);
+            this.dtpEditDOB.TabIndex = 128;
             // 
-            // textBox11
+            // txtEditEmail
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(125, 341);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(458, 26);
-            this.textBox11.TabIndex = 127;
+            this.txtEditEmail.Location = new System.Drawing.Point(125, 341);
+            this.txtEditEmail.Name = "txtEditEmail";
+            this.txtEditEmail.Size = new System.Drawing.Size(458, 26);
+            this.txtEditEmail.TabIndex = 127;
             // 
-            // textBox21
+            // txtEditTelNo
             // 
-            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditTelNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox21.Location = new System.Drawing.Point(125, 307);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(458, 26);
-            this.textBox21.TabIndex = 126;
+            this.txtEditTelNo.Location = new System.Drawing.Point(125, 307);
+            this.txtEditTelNo.Name = "txtEditTelNo";
+            this.txtEditTelNo.Size = new System.Drawing.Size(458, 26);
+            this.txtEditTelNo.TabIndex = 126;
             // 
-            // textBox22
+            // txtEditPostcode
             // 
-            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditPostcode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox22.Location = new System.Drawing.Point(125, 273);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(458, 26);
-            this.textBox22.TabIndex = 125;
+            this.txtEditPostcode.Location = new System.Drawing.Point(125, 273);
+            this.txtEditPostcode.Name = "txtEditPostcode";
+            this.txtEditPostcode.Size = new System.Drawing.Size(458, 26);
+            this.txtEditPostcode.TabIndex = 125;
             // 
-            // textBox23
+            // txtEditCountry
             // 
-            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox23.Location = new System.Drawing.Point(404, 237);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(179, 26);
-            this.textBox23.TabIndex = 124;
+            this.txtEditCountry.Location = new System.Drawing.Point(404, 237);
+            this.txtEditCountry.Name = "txtEditCountry";
+            this.txtEditCountry.Size = new System.Drawing.Size(179, 26);
+            this.txtEditCountry.TabIndex = 124;
             // 
-            // textBox24
+            // txtEditCounty
             // 
-            this.textBox24.Location = new System.Drawing.Point(125, 239);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(184, 26);
-            this.textBox24.TabIndex = 123;
+            this.txtEditCounty.Location = new System.Drawing.Point(125, 239);
+            this.txtEditCounty.Name = "txtEditCounty";
+            this.txtEditCounty.Size = new System.Drawing.Size(184, 26);
+            this.txtEditCounty.TabIndex = 123;
             // 
-            // textBox25
+            // txtEditTown
             // 
-            this.textBox25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditTown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox25.Location = new System.Drawing.Point(125, 198);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(458, 26);
-            this.textBox25.TabIndex = 122;
+            this.txtEditTown.Location = new System.Drawing.Point(125, 198);
+            this.txtEditTown.Name = "txtEditTown";
+            this.txtEditTown.Size = new System.Drawing.Size(458, 26);
+            this.txtEditTown.TabIndex = 122;
             // 
-            // textBox26
+            // txtEditStreet
             // 
-            this.textBox26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditStreet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox26.Location = new System.Drawing.Point(125, 161);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(458, 26);
-            this.textBox26.TabIndex = 121;
+            this.txtEditStreet.Location = new System.Drawing.Point(125, 161);
+            this.txtEditStreet.Name = "txtEditStreet";
+            this.txtEditStreet.Size = new System.Drawing.Size(458, 26);
+            this.txtEditStreet.TabIndex = 121;
             // 
-            // textBox27
+            // txtEditSurname
             // 
-            this.textBox27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditSurname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox27.Location = new System.Drawing.Point(125, 131);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(458, 26);
-            this.textBox27.TabIndex = 120;
+            this.txtEditSurname.Location = new System.Drawing.Point(125, 131);
+            this.txtEditSurname.Name = "txtEditSurname";
+            this.txtEditSurname.Size = new System.Drawing.Size(458, 26);
+            this.txtEditSurname.TabIndex = 120;
             // 
-            // textBox28
+            // txtEditForename
             // 
-            this.textBox28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEditForename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox28.Location = new System.Drawing.Point(125, 93);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(458, 26);
-            this.textBox28.TabIndex = 119;
+            this.txtEditForename.Location = new System.Drawing.Point(125, 93);
+            this.txtEditForename.Name = "txtEditForename";
+            this.txtEditForename.Size = new System.Drawing.Size(458, 26);
+            this.txtEditForename.TabIndex = 119;
             // 
-            // comboBox3
+            // cmbEditTitle
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(125, 57);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(129, 28);
-            this.comboBox3.TabIndex = 118;
+            this.cmbEditTitle.FormattingEnabled = true;
+            this.cmbEditTitle.Location = new System.Drawing.Point(125, 57);
+            this.cmbEditTitle.Name = "cmbEditTitle";
+            this.cmbEditTitle.Size = new System.Drawing.Size(129, 28);
+            this.cmbEditTitle.TabIndex = 118;
             // 
             // label31
             // 
@@ -959,6 +947,7 @@ namespace ProjectRunwayLR
             this.Text = "frmCustomer";
             this.TransparencyKey = System.Drawing.Color.Maroon;
             this.Load += new System.EventHandler(this.frmCustomer_Load);
+            this.Shown += new System.EventHandler(this.frmCustomer_Shown);
             this.SizeChanged += new System.EventHandler(this.frmCustomer_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabCustomer.ResumeLayout(false);
@@ -966,10 +955,10 @@ namespace ProjectRunwayLR
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEditDiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -978,31 +967,30 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.TabControl tabCustomer;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddExit;
+        private System.Windows.Forms.Button btnAddDelete;
+        private System.Windows.Forms.Button btnAddEdit;
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Button btnDisplayDelete;
         private System.Windows.Forms.Button btnDisplayEdit;
         private System.Windows.Forms.Button btnDisplayExit;
         private System.Windows.Forms.Button btnDisplayAdd;
         private System.Windows.Forms.TabPage tabAdd;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.NumericUpDown nudDiscount;
+        private System.Windows.Forms.Button btnAddCancel;
+        private System.Windows.Forms.Button btnAddAdd;
+        private System.Windows.Forms.Label lblAddCustomerNo;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.TextBox txtAddEmail;
+        private System.Windows.Forms.TextBox txtAddTelNo;
+        private System.Windows.Forms.TextBox txtAddPostcode;
+        private System.Windows.Forms.TextBox txtAddCountry;
+        private System.Windows.Forms.TextBox txAddCounty;
+        private System.Windows.Forms.TextBox txtAddTown;
+        private System.Windows.Forms.TextBox txtAddStreet;
+        private System.Windows.Forms.TextBox txtAddSurname;
+        private System.Windows.Forms.TextBox txtAddForename;
+        private System.Windows.Forms.ComboBox cmbAddTitle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label19;
@@ -1017,21 +1005,21 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TabPage tabEdit;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.NumericUpDown nudEditDiscount;
+        private System.Windows.Forms.Button btnEditCancel;
+        private System.Windows.Forms.Button btnEditEdit;
+        private System.Windows.Forms.Label lblEditCustomerNo;
+        private System.Windows.Forms.DateTimePicker dtpEditDOB;
+        private System.Windows.Forms.TextBox txtEditEmail;
+        private System.Windows.Forms.TextBox txtEditTelNo;
+        private System.Windows.Forms.TextBox txtEditPostcode;
+        private System.Windows.Forms.TextBox txtEditCountry;
+        private System.Windows.Forms.TextBox txtEditCounty;
+        private System.Windows.Forms.TextBox txtEditTown;
+        private System.Windows.Forms.TextBox txtEditStreet;
+        private System.Windows.Forms.TextBox txtEditSurname;
+        private System.Windows.Forms.TextBox txtEditForename;
+        private System.Windows.Forms.ComboBox cmbEditTitle;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;

@@ -11,7 +11,7 @@ namespace ProjectRunwayLR
         private string title, surname, forename, street, town, county, country, postcode, email, telNo;
         private DateTime dOB;
       
-        public MyPersons() : base()
+        public MyPersons() 
         {
             this.title = "";
             this.surname = "";
@@ -166,53 +166,53 @@ namespace ProjectRunwayLR
             }
         }
 
-        //public static bool validEmail(string txt)
-        //{
-        //    int at = txt.IndexOf("@");
-        //    int lastDot = txt.LastIndexOf(".");
-        //    if (at < 1) return false;
-        //    if (lastDot < at || txt.Contains("..") || txt.EndsWith(".")) return false;
-        //    string local = txt.Substring(0, at);
-        //    if (local.StartsWith(".") || local.EndsWith(".")) return false;
-        //    if (local.StartsWith(".") || local.EndsWith(".")) return false;
-        //    string domain = txt.Substring(at + 1, lastDot - at - 1);
-        //    if (domain.StartsWith(".") || local.EndsWith(".")) return false;
-        //    if (domain.StartsWith("-") || local.EndsWith("-")) return false;
-        //    string topLevelDomain = txt.Substring(lastDot + 1);
+        public static bool validEmail(string txt)
+        {
+            int at = txt.IndexOf("@");
+            int lastDot = txt.LastIndexOf(".");
+            if (at < 1) return false;
+            if (lastDot < at || txt.Contains("..") || txt.EndsWith(".")) return false;
+            string local = txt.Substring(0, at);
+            if (local.StartsWith(".") || local.EndsWith(".")) return false;
+            if (local.StartsWith(".") || local.EndsWith(".")) return false;
+            string domain = txt.Substring(at + 1, lastDot - at - 1);
+            if (domain.StartsWith(".") || local.EndsWith(".")) return false;
+            if (domain.StartsWith("-") || local.EndsWith("-")) return false;
+            string topLevelDomain = txt.Substring(lastDot + 1);
 
 
 
-        //    foreach (char c in local)
-        //    {
-        //        if (!validLocalChar(c)) return false;
-        //    }
-        //    foreach (char c in domain)
-        //    {
-        //        if (!validDomainChar(c)) return false;
-        //    }
-        //    foreach (char c in topLevelDomain)
-        //    {
-        //        if (!char.IsLetter(c)) return false;
-        //    }
-        //    return true;
+            foreach (char c in local)
+            {
+                if (!validLocalChar(c)) return false;
+            }
+            foreach (char c in domain)
+            {
+                if (!validDomainChar(c)) return false;
+            }
+            foreach (char c in topLevelDomain)
+            {
+                if (!char.IsLetter(c)) return false;
+            }
+            return true;
 
 
 
-        //}
-        //private static bool validLocalChar(char c)
-        //{
-        //    if (char.IsLetter(c)) return true;
-        //    if (char.IsNumber(c)) return true;
-        //    if ("!#$%&'*+-/=?^_`{|}~.".Contains(c.ToString())) return true;
-        //    return false;
-        //}
-        //private static bool validDomainChar(char c)
-        //{
-        //    if (char.IsLetter(c)) return true;
-        //    if (char.IsNumber(c)) return true;
-        //    if (c == '-' || c == '.') return true;
-        //    return false;
-        //}
+        }
+        private static bool validLocalChar(char c)
+        {
+            if (char.IsLetter(c)) return true;
+            if (char.IsNumber(c)) return true;
+            if ("!#$%&'*+-/=?^_`{|}~.".Contains(c.ToString())) return true;
+            return false;
+        }
+        private static bool validDomainChar(char c)
+        {
+            if (char.IsLetter(c)) return true;
+            if (char.IsNumber(c)) return true;
+            if (c == '-' || c == '.') return true;
+            return false;
+        }
 
     }
 }

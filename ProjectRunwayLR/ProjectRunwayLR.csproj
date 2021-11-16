@@ -46,35 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAppBooking.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAppBooking.Designer.cs">
       <DependentUpon>frmAppBooking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAppointment.Designer.cs">
-      <DependentUpon>frmAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAppointmentBooking.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAppointmentBooking.Designer.cs">
-      <DependentUpon>frmAppointmentBooking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBooking.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBooking.Designer.cs">
-      <DependentUpon>frmBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogIn.cs">
       <SubType>Form</SubType>
@@ -100,35 +76,11 @@
     <Compile Include="frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustomers.Designer.cs">
-      <DependentUpon>frmCustomers.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmExampleMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmExampleMenu.Designer.cs">
-      <DependentUpon>frmExampleMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPayment.cs">
       <SubType>Form</SubType>
@@ -148,25 +100,14 @@
     <Compile Include="frmTreatment.Designer.cs">
       <DependentUpon>frmTreatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCustomer.cs" />
     <Compile Include="MyException.cs" />
     <Compile Include="MyPersons.cs" />
     <Compile Include="MyValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAppBooking.resx">
       <DependentUpon>frmAppBooking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAppointment.resx">
-      <DependentUpon>frmAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAppointmentBooking.resx">
-      <DependentUpon>frmAppointmentBooking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBooking.resx">
-      <DependentUpon>frmBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
@@ -180,20 +121,8 @@
     <EmbeddedResource Include="frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomers.resx">
-      <DependentUpon>frmCustomers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmExampleMenu.resx">
-      <DependentUpon>frmExampleMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayment.resx">
       <DependentUpon>frmPayment.cs</DependentUpon>

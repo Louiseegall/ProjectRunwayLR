@@ -20,7 +20,7 @@ namespace ProjectRunwayLR
             //Application.Run(new frmExampleMenu());
             //Application.Run(new Form3());
             //Application.Run(new frmMainMenu());
-            //Application.Run(new frmCustomer());
+          //  Application.Run(new frmCustomer());
             //Application.Run(new frmMenu());
             //Application.Run(new frmCustomers());
             //Application.Run(new frmStaff());
