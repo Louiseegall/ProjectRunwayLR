@@ -201,5 +201,8 @@
   <ItemGroup>
     <None Include="Resources\goldd.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="RunwayDatabase\RunwayDatabase.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
