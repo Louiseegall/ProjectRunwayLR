@@ -42,16 +42,16 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.nudDiscount = new System.Windows.Forms.NumericUpDown();
+            this.nudAddDiscount = new System.Windows.Forms.NumericUpDown();
             this.btnAddCancel = new System.Windows.Forms.Button();
             this.btnAddAdd = new System.Windows.Forms.Button();
             this.lblAddCustomerNo = new System.Windows.Forms.Label();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.dtpAddDOB = new System.Windows.Forms.DateTimePicker();
             this.txtAddEmail = new System.Windows.Forms.TextBox();
             this.txtAddTelNo = new System.Windows.Forms.TextBox();
             this.txtAddPostcode = new System.Windows.Forms.TextBox();
             this.txtAddCountry = new System.Windows.Forms.TextBox();
-            this.txAddCounty = new System.Windows.Forms.TextBox();
+            this.txtAddCounty = new System.Windows.Forms.TextBox();
             this.txtAddTown = new System.Windows.Forms.TextBox();
             this.txtAddStreet = new System.Windows.Forms.TextBox();
             this.txtAddSurname = new System.Windows.Forms.TextBox();
@@ -98,13 +98,13 @@ namespace ProjectRunwayLR
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.lblEditCustomerNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabCustomer.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tabAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAddDiscount)).BeginInit();
             this.tabEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEditDiscount)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +130,7 @@ namespace ProjectRunwayLR
             this.tabCustomer.Size = new System.Drawing.Size(619, 511);
             this.tabCustomer.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabCustomer.TabIndex = 3;
+            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
             // 
             // tabDisplay
             // 
@@ -179,6 +180,7 @@ namespace ProjectRunwayLR
             this.btnAddDelete.TabIndex = 133;
             this.btnAddDelete.Text = "Delete";
             this.btnAddDelete.UseVisualStyleBackColor = false;
+            this.btnAddDelete.Click += new System.EventHandler(this.btnAddDelete_Click);
             this.btnAddDelete.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnAddDelete.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -273,16 +275,16 @@ namespace ProjectRunwayLR
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.nudDiscount);
+            this.tabAdd.Controls.Add(this.nudAddDiscount);
             this.tabAdd.Controls.Add(this.btnAddCancel);
             this.tabAdd.Controls.Add(this.btnAddAdd);
             this.tabAdd.Controls.Add(this.lblAddCustomerNo);
-            this.tabAdd.Controls.Add(this.dtpDOB);
+            this.tabAdd.Controls.Add(this.dtpAddDOB);
             this.tabAdd.Controls.Add(this.txtAddEmail);
             this.tabAdd.Controls.Add(this.txtAddTelNo);
             this.tabAdd.Controls.Add(this.txtAddPostcode);
             this.tabAdd.Controls.Add(this.txtAddCountry);
-            this.tabAdd.Controls.Add(this.txAddCounty);
+            this.tabAdd.Controls.Add(this.txtAddCounty);
             this.tabAdd.Controls.Add(this.txtAddTown);
             this.tabAdd.Controls.Add(this.txtAddStreet);
             this.tabAdd.Controls.Add(this.txtAddSurname);
@@ -309,12 +311,12 @@ namespace ProjectRunwayLR
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
-            // nudDiscount
+            // nudAddDiscount
             // 
-            this.nudDiscount.Location = new System.Drawing.Point(123, 373);
-            this.nudDiscount.Name = "nudDiscount";
-            this.nudDiscount.Size = new System.Drawing.Size(120, 24);
-            this.nudDiscount.TabIndex = 104;
+            this.nudAddDiscount.Location = new System.Drawing.Point(123, 373);
+            this.nudAddDiscount.Name = "nudAddDiscount";
+            this.nudAddDiscount.Size = new System.Drawing.Size(120, 24);
+            this.nudAddDiscount.TabIndex = 104;
             // 
             // btnAddCancel
             // 
@@ -343,6 +345,7 @@ namespace ProjectRunwayLR
             this.btnAddAdd.TabIndex = 102;
             this.btnAddAdd.Text = "Add";
             this.btnAddAdd.UseVisualStyleBackColor = false;
+            this.btnAddAdd.Click += new System.EventHandler(this.btnAddAdd_Click);
             this.btnAddAdd.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnAddAdd.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -359,14 +362,14 @@ namespace ProjectRunwayLR
             this.lblAddCustomerNo.TabIndex = 99;
             this.lblAddCustomerNo.Text = "-";
             // 
-            // dtpDOB
+            // dtpAddDOB
             // 
-            this.dtpDOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpAddDOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDOB.Location = new System.Drawing.Point(325, 55);
-            this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(256, 24);
-            this.dtpDOB.TabIndex = 98;
+            this.dtpAddDOB.Location = new System.Drawing.Point(325, 55);
+            this.dtpAddDOB.Name = "dtpAddDOB";
+            this.dtpAddDOB.Size = new System.Drawing.Size(256, 24);
+            this.dtpAddDOB.TabIndex = 98;
             // 
             // txtAddEmail
             // 
@@ -404,12 +407,12 @@ namespace ProjectRunwayLR
             this.txtAddCountry.Size = new System.Drawing.Size(179, 24);
             this.txtAddCountry.TabIndex = 94;
             // 
-            // txAddCounty
+            // txtAddCounty
             // 
-            this.txAddCounty.Location = new System.Drawing.Point(123, 239);
-            this.txAddCounty.Name = "txAddCounty";
-            this.txAddCounty.Size = new System.Drawing.Size(184, 24);
-            this.txAddCounty.TabIndex = 93;
+            this.txtAddCounty.Location = new System.Drawing.Point(123, 239);
+            this.txtAddCounty.Name = "txtAddCounty";
+            this.txtAddCounty.Size = new System.Drawing.Size(184, 24);
+            this.txtAddCounty.TabIndex = 93;
             // 
             // txtAddTown
             // 
@@ -450,6 +453,11 @@ namespace ProjectRunwayLR
             // cmbAddTitle
             // 
             this.cmbAddTitle.FormattingEnabled = true;
+            this.cmbAddTitle.Items.AddRange(new object[] {
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
             this.cmbAddTitle.Location = new System.Drawing.Point(123, 57);
             this.cmbAddTitle.Name = "cmbAddTitle";
             this.cmbAddTitle.Size = new System.Drawing.Size(129, 26);
@@ -634,7 +642,7 @@ namespace ProjectRunwayLR
             this.tabEdit.Controls.Add(this.label40);
             this.tabEdit.Controls.Add(this.label41);
             this.tabEdit.Controls.Add(this.label42);
-            this.tabEdit.Controls.Add(this.label43);
+            this.tabEdit.Controls.Add(this.lblEditCustomerNum);
             this.tabEdit.Location = new System.Drawing.Point(4, 32);
             this.tabEdit.Name = "tabEdit";
             this.tabEdit.Size = new System.Drawing.Size(611, 475);
@@ -676,6 +684,7 @@ namespace ProjectRunwayLR
             this.btnEditEdit.TabIndex = 130;
             this.btnEditEdit.Text = "Edit";
             this.btnEditEdit.UseVisualStyleBackColor = false;
+            this.btnEditEdit.Click += new System.EventHandler(this.btnEditEdit_Click);
             this.btnEditEdit.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnEditEdit.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -922,18 +931,18 @@ namespace ProjectRunwayLR
             this.label42.TabIndex = 106;
             this.label42.Text = "Title";
             // 
-            // label43
+            // lblEditCustomerNum
             // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblEditCustomerNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(20, 19);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(121, 24);
-            this.label43.TabIndex = 105;
-            this.label43.Text = "Customer No";
+            this.lblEditCustomerNum.AutoSize = true;
+            this.lblEditCustomerNum.BackColor = System.Drawing.Color.Transparent;
+            this.lblEditCustomerNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditCustomerNum.Location = new System.Drawing.Point(20, 19);
+            this.lblEditCustomerNum.Name = "lblEditCustomerNum";
+            this.lblEditCustomerNum.Size = new System.Drawing.Size(121, 24);
+            this.lblEditCustomerNum.TabIndex = 105;
+            this.lblEditCustomerNum.Text = "Customer No";
             // 
             // frmCustomer
             // 
@@ -955,7 +964,7 @@ namespace ProjectRunwayLR
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAddDiscount)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEditDiscount)).EndInit();
@@ -976,16 +985,16 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Button btnDisplayExit;
         private System.Windows.Forms.Button btnDisplayAdd;
         private System.Windows.Forms.TabPage tabAdd;
-        private System.Windows.Forms.NumericUpDown nudDiscount;
+        private System.Windows.Forms.NumericUpDown nudAddDiscount;
         private System.Windows.Forms.Button btnAddCancel;
         private System.Windows.Forms.Button btnAddAdd;
         private System.Windows.Forms.Label lblAddCustomerNo;
-        private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.DateTimePicker dtpAddDOB;
         private System.Windows.Forms.TextBox txtAddEmail;
         private System.Windows.Forms.TextBox txtAddTelNo;
         private System.Windows.Forms.TextBox txtAddPostcode;
         private System.Windows.Forms.TextBox txtAddCountry;
-        private System.Windows.Forms.TextBox txAddCounty;
+        private System.Windows.Forms.TextBox txtAddCounty;
         private System.Windows.Forms.TextBox txtAddTown;
         private System.Windows.Forms.TextBox txtAddStreet;
         private System.Windows.Forms.TextBox txtAddSurname;
@@ -1032,6 +1041,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lblEditCustomerNum;
     }
 }

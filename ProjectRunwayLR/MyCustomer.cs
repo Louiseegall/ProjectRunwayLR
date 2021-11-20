@@ -31,5 +31,7 @@ namespace ProjectRunwayLR
 
         public DateTime DatePaid { get => datePaid; set => datePaid = value; }
         public double Discount { get => discount; set => discount = value; }
+        public int IDNo { get; internal set; }
+        public object Email { get; internal set; }
     }
 }
