@@ -39,29 +39,8 @@ Values(5000,'Ms','Louise','Gallagher','1996/11/12','Hill View','Letterkenny','Do
 (5007,'Mr','Rob','Cannon','1989/08/24','Roads Square','Manor','Donegal','Ireland','F92 TE36',
 '0891628736','rob@gmail.com',0 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+DROP table Staff
+GO
 CREATE TABLE [dbo].[Staff]
 (
 	StaffNo			 INT				NOT NULL PRIMARY KEY,
@@ -79,21 +58,49 @@ CREATE TABLE [dbo].[Staff]
 	EmergencyContact VARCHAR(11)		NOT NULL,		
 	Speciality		 VARCHAR(20)		NOT NULL
 
-
 )
+insert into Staff(StaffNo,StaffTitle,StaffForename,StaffSurname,StaffDOB,StaffStreet,
+StaffTown,County,Country,PostCode,TelNo,Email,EmergencyContact,Speciality)
+Values(1001, 'Mr', 'Ryan', 'Campbell', 02/01/2000, 'Marlborough Road', 'Derry', 'Derry', 'Ireland', 'BT489BH', '02896496431',
+'ryan-123@hotmail.co.uk', '07546033351', 'Hairdresser'),
+(1002, 'Ms', 'Shannon', 'McAnaney', 03/08/1998, 'Elaghmoore', 'Derry', 'Derry', 'Ireland', 'BT488DE', '02896496431',
+'shannonmcananey@yahoo.co.uk', '07764728612', 'Makeup Artist'),
+(1003, 'Ms', 'Karla', 'Kelsy', 02/01/2000, 'Marlborough Road', 'Strabane', 'Derry', 'Ireland', 'BT465FH', '02896496431',
+'karlak223@hotmail.co.uk', '02896496784', 'Hairdresser'),
+(1004, 'Ms', 'Angela', 'Doherty', 02/01/2000, 'Marlborough Road', 'Derry', 'Derry', 'Ireland', 'BT489BH', '02896496431',
+'angedoherty3@gmail.com', '02896496181', 'Hairdresser'),
+(1005, 'Ms', 'Anne', 'Tifft', 02/01/2000, 'Marlborough Road', 'Belfast', 'Antrim', 'Ireland', 'BT49BH', '02896496431',
+'annetifft02@hotmail.com', '02896496308', 'Hairdresser'),
+(1006, 'Miss', 'Moyra', 'Sheenan', 02/01/2000, 'Marlborough Road', 'Omagh', 'Tyrone', 'Ireland', 'BT529BH', '02896496431',
+'moyra-36@hotmail.co.uk', '02896496236', 'Hairdresser'),
+(1007, 'Ms', 'Zoie', 'Donahey', 02/01/2000, 'Marlborough Road', 'Letterkenny', 'Donegal', 'Ireland', 'ROI', '02896496431',
+'zdonahey002@hotmail.co.uk', '02896496155', 'Makeup Artist'),
+(1008, 'Mrs', 'Addison', 'Pratt', 02/01/2000, 'Shantallow', 'Derry', 'Derry', 'Ireland', 'BT489KJ', '02896496431', 
+'addipratt3@hotmail.co.uk', '02896496431', 'Nail Tech')
 
 
+
+
+
+
+
+DROP table Room
+GO
 CREATE TABLE [dbo].[Room]
 (
 	RoomNo		INT	NOT NULL	PRIMARY KEY,
 	RoomDesc	INT	NOT NULL
 )
-
+DROP table TreatmentType
+GO
 CREATE TABLE [dbo].[TreatmentType]
 (
 	TreatmentType	INT		NOT NULL Primary Key,
 	TreatmentDesc	VARCHAR	NOT NULL,
 )
+
+DROP table Treatment
+GO
 CREATE TABLE [dbo].[Treatment]
 (
 	TreatmentNo			INT	NOT NULL primary key,
@@ -104,7 +111,8 @@ CREATE TABLE [dbo].[Treatment]
 
 )
 
-
+DROP table Appointment
+GO
 CREATE TABLE [dbo].[Appointment]
 (
 	AppointmentNo			INT			NOT NULL	PRIMARY KEY,
@@ -123,6 +131,9 @@ CREATE TABLE [dbo].[Appointment]
 
 
 )
+
+DROP table AppointmentTreatment
+GO
 create table AppointmentTreatment(
 AppointmentNo INT NOT NULL,
 TreatmentNo INT NOT NULL,
@@ -134,6 +145,8 @@ CONSTRAINT FKTreatmentNum FOREIGN KEY (TreatmentNo) REFERENCES Treatment(Treatme
 
 )
 
+DROP table StaffAppointment
+GO
 CREATE TABLE [dbo].[StaffAppointment]
 (
 	StaffNo			INT		NOT NULL,

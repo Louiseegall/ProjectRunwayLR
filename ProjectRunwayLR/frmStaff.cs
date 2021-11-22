@@ -7,15 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectRunwayLR
 {
     public partial class frmStaff : Form
     {
+        SqlDataAdapter daStaff;
+        DataSet dsRunway = new DataSet();
+        SqlCommandBuilder cmdBStaff;
+        DataRow drStaff;
+        String connStr, SqlStaff;
+        int selectedTab = 0;
+        bool staffSelected = false;
+        int staffNoSelected = 0;
+
         public frmStaff()
         {
             InitializeComponent();
         }
+
+        private void frmStaff_Load(object sender, EventArgs e)
+        {
+            connStr = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Runway; Integrated Security = true";
+
+            SqlStaff = @"select * from Staff";
+            daStaff = new SqlDataAdapter(SqlStaff, connStr);
+            cmdBStaff = new SqlCommandBuilder(daStaff);
+            daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
+            daStaff.Fill(dsRunway, "Staff");
+
+            dgvStaff.DataSource = dsRunway.Tables["Staff"];
+
+            dgvStaff.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            tabStaff.SelectedIndex = 1;
+            tabStaff.SelectedIndex = 0;
+
+        }
+
 
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -163,6 +193,11 @@ namespace ProjectRunwayLR
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabAdd_Click(object sender, EventArgs e)
         {
 
         }
