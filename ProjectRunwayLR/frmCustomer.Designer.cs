@@ -370,6 +370,7 @@ namespace ProjectRunwayLR
             this.dtpAddDOB.Name = "dtpAddDOB";
             this.dtpAddDOB.Size = new System.Drawing.Size(256, 24);
             this.dtpAddDOB.TabIndex = 98;
+            this.dtpAddDOB.ValueChanged += new System.EventHandler(this.dtpAddDOB_ValueChanged);
             // 
             // txtAddEmail
             // 
@@ -792,6 +793,11 @@ namespace ProjectRunwayLR
             // cmbEditTitle
             // 
             this.cmbEditTitle.FormattingEnabled = true;
+            this.cmbEditTitle.Items.AddRange(new object[] {
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
             this.cmbEditTitle.Location = new System.Drawing.Point(125, 57);
             this.cmbEditTitle.Name = "cmbEditTitle";
             this.cmbEditTitle.Size = new System.Drawing.Size(129, 28);

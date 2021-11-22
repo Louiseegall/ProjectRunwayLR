@@ -59,6 +59,8 @@ namespace ProjectRunwayLR
             //flips to generte specific piece of code
             tabCustomer.SelectedIndex = 1;
             tabCustomer.SelectedIndex = 0;
+            dtpAddDOB.MaxDate = DateTime.Now.Date.AddYears(-18);
+            dtpEditDOB.MaxDate = DateTime.Now.Date.AddYears(-18);
         }
 
 
@@ -167,6 +169,7 @@ namespace ProjectRunwayLR
                 errP.SetError(cmbAddTitle, MyException.toString());
             }
 
+
             try
             {
                 myCustomer.Surname = txtAddSurname.Text.Trim();
@@ -186,7 +189,15 @@ namespace ProjectRunwayLR
                 ok = false;
                 errP.SetError(txtAddForename, MyException.toString());
             }
-
+            try
+            {
+                myCustomer.DOB= dtpAddDOB.Value;
+            }
+            catch (MyException MyException)
+            {
+                ok = false;
+                errP.SetError(cmbAddTitle, MyException.toString());
+            }
             try
             {
                 myCustomer.Street = txtAddStreet.Text.Trim();
@@ -261,6 +272,7 @@ namespace ProjectRunwayLR
                     drCustomer["CustomerNo"] = myCustomer.IDNo;
                     drCustomer["CustomerTitle"] = myCustomer.Title;
                     drCustomer["CustomerForename"] = myCustomer.Forename;
+                    drCustomer["CustomerDOB"] = myCustomer.DOB;
                     drCustomer["CustomerSurname"] = myCustomer.Surname;
                     drCustomer["CustomerStreet"] = myCustomer.Street;
                     drCustomer["CustomerTown"] = myCustomer.Town;
@@ -269,6 +281,7 @@ namespace ProjectRunwayLR
                     drCustomer["CustomerPostcode"] = myCustomer.Postcode;
                     drCustomer["CustomerTelNo"] = myCustomer.TelNo;
                     drCustomer["CustomerEmail"] = myCustomer.Email;
+                    drCustomer["Discount"] = myCustomer.Discount;
 
                     dsRunway.Tables["Customer"].Rows.Add(drCustomer);
                     daCustomer.Update(dsRunway, "Customer");
@@ -293,7 +306,7 @@ namespace ProjectRunwayLR
             cmbAddTitle.SelectedIndex = -1;
             txtAddForename.Clear();
             txtAddSurname.Clear();
-            dtpAddDOB.Value = DateTime.Now;
+          //  dtpAddDOB.Value = DateTime.Now;
             txtAddStreet.Clear();
             txtAddTown.Clear();
             txtAddCounty.Clear();
@@ -301,8 +314,7 @@ namespace ProjectRunwayLR
             txtEditPostcode.Clear();
             txtAddTelNo.Clear();
             txtAddEmail.Clear();
-            //nudAddDiscount.Clear();
-        }
+            nudAddDiscount.Value = 0;        }
 
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -356,14 +368,17 @@ namespace ProjectRunwayLR
                                 cmbEditTitle.SelectedIndex = 3;
                             txtEditForename.Text = drCustomer["CustomerForename"].ToString();
                             txtEditSurname.Text = drCustomer["CustomerSurname"].ToString();
+                            dtpEditDOB.Value = DateTime.Parse( drCustomer["CustomerDOB"].ToString());
                             txtEditStreet.Text = drCustomer["CustomerStreet"].ToString();
                             txtEditTown.Text = drCustomer["CustomerTown"].ToString();
                             txtEditCounty.Text = drCustomer["CustomerCounty"].ToString();
-                            txtEditCounty.Text = drCustomer["CustomerCountry"].ToString();
+                            txtEditCountry.Text = drCustomer["CustomerCountry"].ToString();
                             txtEditPostcode.Text = drCustomer["CustomerPostcode"].ToString();
                             txtEditTelNo.Text = drCustomer["CustomerTelNo"].ToString();
                             txtEditEmail.Text = drCustomer["CustomerEmail"].ToString();
-                            nudEditDiscount.Text = drCustomer["Discount"].ToString();
+                            nudEditDiscount.Value = Decimal.Parse(drCustomer["Discount"].ToString());
+
+                            ChangeFormEnabled(false);
                             break;
                         }
                     }
@@ -396,23 +411,35 @@ namespace ProjectRunwayLR
             }
         }
 
+        private void dtpAddDOB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void ChangeFormEnabled(bool enabled)
+        {
+
+            cmbEditTitle.Enabled = enabled;
+            txtEditForename.Enabled = enabled;
+            txtEditSurname.Enabled = enabled;
+            dtpEditDOB.Enabled = enabled;
+            txtEditStreet.Enabled = enabled;
+            txtEditTown.Enabled = enabled;
+            txtEditCounty.Enabled = enabled;
+            txtEditCountry.Enabled = enabled;
+            txtEditPostcode.Enabled = enabled;
+            txtEditTelNo.Enabled = enabled;
+            txtEditEmail.Enabled = enabled;
+            nudEditDiscount.Enabled = enabled;
+            if (enabled) btnEditEdit.Text = "Save";
+            else btnEditEdit.Text = "Edit";
+        }
         private void btnEditEdit_Click(object sender, EventArgs e)
         {
             if (btnEditEdit.Text == "Edit")
             {
-                cmbEditTitle.Enabled = true;
-                txtEditForename.Enabled = true;
-                txtEditSurname.Enabled = true;
-                dtpEditDOB.Enabled = true;
-                txtEditStreet.Enabled = true;
-                txtEditTown.Enabled = true;
-                txtEditCounty.Enabled = true;
-                txtEditCountry.Enabled = true;
-                txtEditPostcode.Enabled = true;
-                txtEditTelNo.Enabled = true;
-                txtEditEmail.Enabled = true;
-                nudEditDiscount.Enabled = true;
-                btnEditEdit.Text = "Save";
+                ChangeFormEnabled(true);
             }
             else
             {
@@ -529,15 +556,15 @@ namespace ProjectRunwayLR
                     ok = false;
                     errP.SetError(txtEditEmail, MyException.toString());
                 }
-                //try
-                //{
-                //    myCustomer.Discount = nudEditDiscount.Text.Trim();
-                //}
-                //catch (MyException MyException)
-                //{
-                //    ok = false;
-                //    errP.SetError(txtEditTelNo, MyException.toString());
-                //}
+                try
+                {
+                    myCustomer.Discount =(Double)nudEditDiscount.Value;
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditTelNo, MyException.toString());
+                }
                 try
                 {
                     if (ok)
@@ -560,19 +587,7 @@ namespace ProjectRunwayLR
                         daCustomer.Update(dsRunway, "Customer");
                         MessageBox.Show("Customer Details Updated", "Customer");
 
-                        cmbEditTitle.Enabled = false;
-                        txtEditForename.Enabled = false;
-                        txtEditSurname.Enabled = false;
-                        txtEditStreet.Enabled = false;
-                        txtEditTown.Enabled = false;
-                        txtEditCounty.Enabled = false;
-                        txtEditCountry.Enabled = false;
-                        txtEditPostcode.Enabled = false;
-                        txtEditTelNo.Enabled = false;
-                        txtEditEmail.Enabled = false;
-                        nudEditDiscount.Enabled = false;
-
-                        btnEditEdit.Text = "Edit";
+                        ChangeFormEnabled(false);
                         tabCustomer.SelectedIndex = 0;
                     }
                 }
