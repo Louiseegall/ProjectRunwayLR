@@ -1,20 +1,49 @@
 ﻿--Create Database Runway;
 use Runway;
+IF OBJECT_ID ('Appointment') IS NOT NULL
+DROP table Appointment
+GO
+IF OBJECT_ID ('AppointmentTreatment') IS NOT NULL
+DROP table AppointmentTreatment
+GO
+IF OBJECT_ID ('StaffAppointment') IS NOT NULL
+DROP table StaffAppointment
+GO
+IF OBJECT_ID ('Treatment') IS NOT NULL
+DROP table Treatment
+GO
+IF OBJECT_ID ('TreatmentType') IS NOT NULL
+DROP table TreatmentType
+GO
+IF OBJECT_ID ('Room') IS NOT NULL
+DROP table Room
+GO
+IF OBJECT_ID ('Staff') IS NOT NULL
+DROP table Staff
+GO
 IF OBJECT_ID ('Customer') IS NOT NULL
 DROP table Customer
 GO
+
+
+
+
+
+
+
+
 CREATE TABLE [dbo].[Customer]
 (
 	CustomerNo			INT				NOT NULL  PRIMARY KEY,
-	CustomerTitle		VarChar(20)		NOT Null,
+	CustomerTitle		VarChar(4)		NOT Null,
 	CustomerForename	VARCHAR(30)		NOT NULL,
 	CustomerSurname		VARCHAR(30)		NOT NULL,
 	CustomerDOB			DATE			NOT NULL,
-	CustomerStreet		VARCHAR	(30)	NOT NULL,
+	CustomerStreet		VARCHAR(30) 	NOT NULL,
 	CustomerTown		VARCHAR(30)		NOT NULL,
-	CustomerCounty		VARCHAR(30)	NOT NULL,
-	CustomerCountry		VARCHAR(30)	NOT NULL,
-	CustomerPostcode	VARCHAR(30)	NOT NULL,
+	CustomerCounty		VARCHAR(30)		NOT NULL,
+	CustomerCountry		VARCHAR(30)		NOT NULL,
+	CustomerPostcode	VARCHAR(30)		NOT NULL,
 	CustomerTelNo		VARCHAR(15)		NOT NULL,
 	CustomerEmail		VARCHAR(50)		NOT NULL,
 	Discount			DECIMAL			NOT NULL,
@@ -44,18 +73,18 @@ GO
 CREATE TABLE [dbo].[Staff]
 (
 	StaffNo			 INT				NOT NULL PRIMARY KEY,
-	StaffTitle		 INT				NOT NULL,
-	StaffForename	 INT				NOT NULL,
-	StaffSurname	 INT				NOT NULL,
+	StaffTitle		 VARCHAR(4)			NOT NULL,
+	StaffForename	 VARCHAR(20)		NOT NULL,
+	StaffSurname	 VARCHAR(20)		NOT NULL,
 	StaffDOB		 DATETIME			NOT NULL,
-	StaffStreet		 VARCHAR(20)		NOT NULL,
+	StaffStreet		 VARCHAR(40)		NOT NULL,
 	StaffTown		 VARCHAR(20)		NOT NULL,
 	County			 VARCHAR(20)		NOT NULL,
 	Country			 VARCHAR(20)		NOT NULL,
 	PostCode		 VARCHAR(20)		NOT NULL,
-	TelNo			 VARCHAR(11)		NOT NULL,
-	Email			 VARCHAR(20)		NOT NULL,
-	EmergencyContact VARCHAR(11)		NOT NULL,		
+	TelNo			 VARCHAR(20)		NOT NULL,
+	Email			 VARCHAR(40)		NOT NULL,
+	EmergencyContact VARCHAR(20)		NOT NULL,		
 	Speciality		 VARCHAR(20)		NOT NULL
 
 )
@@ -78,12 +107,6 @@ Values(1001, 'Mr', 'Ryan', 'Campbell', 02/01/2000, 'Marlborough Road', 'Derry', 
 (1008, 'Mrs', 'Addison', 'Pratt', 02/01/2000, 'Shantallow', 'Derry', 'Derry', 'Ireland', 'BT489KJ', '02896496431', 
 'addipratt3@hotmail.co.uk', '02896496431', 'Nail Tech')
 
-
-
-
-
-
-
 DROP table Room
 GO
 CREATE TABLE [dbo].[Room]
@@ -91,6 +114,7 @@ CREATE TABLE [dbo].[Room]
 	RoomNo		INT	NOT NULL	PRIMARY KEY,
 	RoomDesc	INT	NOT NULL
 )
+
 DROP table TreatmentType
 GO
 CREATE TABLE [dbo].[TreatmentType]
@@ -119,7 +143,7 @@ CREATE TABLE [dbo].[Appointment]
 	AppointmentTime			DATETIME	NOT NULL,
 	AppointmentDate			DATETIME	NOT NULL,
 	CustomerNo				INT			NOT NULL,
-	TreatmentNo		INT			NOT NULL,
+	TreatmentNo				INT			NOT NULL,
 	TreatmentDesc			VARCHAR(20)	NOT NULL,
 	TreatmentCost			INT			NOT NULL,
 	QuantityOfTreatment		INT			NOT NULL,
@@ -129,17 +153,16 @@ CREATE TABLE [dbo].[Appointment]
     CONSTRAINT FKRoomNo FOREIGN KEY (RoomNo) REFERENCES Room(RoomNo),
 	CONSTRAINT FKTreatmentNo FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
 
-
 )
 
 DROP table AppointmentTreatment
 GO
 create table AppointmentTreatment(
-AppointmentNo INT NOT NULL,
-TreatmentNo INT NOT NULL,
-Qty	int not null,
+	AppointmentNo INT NOT NULL,
+	TreatmentNo INT NOT NULL,
+	Qty	int not null,
 
-CONSTRAINT FKTreatmentNum FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
+	CONSTRAINT FKTreatmentNum FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
 	CONSTRAINT FKAppointmentNo FOREIGN KEY (AppointmentNo) REFERENCES Appointment(AppointmentNo),
 	primary key clustered(TreatmentNo, AppointmentNo)
 
@@ -155,4 +178,3 @@ CREATE TABLE [dbo].[StaffAppointment]
 	CONSTRAINT FKAppointmentNum FOREIGN KEY (AppointmentNo) REFERENCES Appointment(AppointmentNo),
 	primary key clustered(staffNo, AppointmentNo)
 )
-

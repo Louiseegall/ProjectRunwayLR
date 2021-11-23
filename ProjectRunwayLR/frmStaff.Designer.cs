@@ -58,7 +58,6 @@ namespace ProjectRunwayLR
             this.label29 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -98,6 +97,8 @@ namespace ProjectRunwayLR
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.tabStaff = new System.Windows.Forms.TabControl();
+            this.lblEditStaffNo = new System.Windows.Forms.Label();
+            this.lblAddStaffNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
@@ -114,6 +115,7 @@ namespace ProjectRunwayLR
             // 
             this.tabEdit.BackColor = System.Drawing.Color.Transparent;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.lblEditStaffNo);
             this.tabEdit.Controls.Add(this.button4);
             this.tabEdit.Controls.Add(this.label1);
             this.tabEdit.Controls.Add(this.button5);
@@ -140,7 +142,6 @@ namespace ProjectRunwayLR
             this.tabEdit.Controls.Add(this.label29);
             this.tabEdit.Controls.Add(this.textBox18);
             this.tabEdit.Controls.Add(this.label30);
-            this.tabEdit.Controls.Add(this.comboBox3);
             this.tabEdit.Controls.Add(this.comboBox1);
             this.tabEdit.Controls.Add(this.button1);
             this.tabEdit.Controls.Add(this.button6);
@@ -165,7 +166,7 @@ namespace ProjectRunwayLR
             this.button4.TabIndex = 113;
             this.button4.Text = "Add";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            //this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -177,10 +178,10 @@ namespace ProjectRunwayLR
             this.label1.Location = new System.Drawing.Point(9, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 33);
+            this.label1.Size = new System.Drawing.Size(449, 33);
             this.label1.TabIndex = 85;
-            this.label1.Text = "Staff No";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Staff No                                       - ";
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
@@ -195,7 +196,7 @@ namespace ProjectRunwayLR
             this.button5.TabIndex = 112;
             this.button5.Text = "Cancel";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            //this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label4
             // 
@@ -476,18 +477,6 @@ namespace ProjectRunwayLR
             this.label30.TabIndex = 98;
             this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(159, 6);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(486, 37);
-            this.comboBox3.TabIndex = 99;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -532,6 +521,7 @@ namespace ProjectRunwayLR
             // 
             this.tabAdd.BackColor = System.Drawing.Color.Transparent;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.lblAddStaffNo);
             this.tabAdd.Controls.Add(this.button7);
             this.tabAdd.Controls.Add(this.label2);
             this.tabAdd.Controls.Add(this.button3);
@@ -996,7 +986,23 @@ namespace ProjectRunwayLR
             this.tabStaff.SelectedIndex = 0;
             this.tabStaff.Size = new System.Drawing.Size(951, 801);
             this.tabStaff.TabIndex = 3;
-            this.tabStaff.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
+            //this.tabStaff.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
+            // 
+            // lblEditStaffNo
+            // 
+            this.lblEditStaffNo.AutoSize = true;
+            this.lblEditStaffNo.Location = new System.Drawing.Point(465, 9);
+            this.lblEditStaffNo.Name = "lblEditStaffNo";
+            this.lblEditStaffNo.Size = new System.Drawing.Size(0, 29);
+            this.lblEditStaffNo.TabIndex = 114;
+            // 
+            // lblAddStaffNo
+            // 
+            this.lblAddStaffNo.AutoSize = true;
+            this.lblAddStaffNo.Location = new System.Drawing.Point(454, 9);
+            this.lblAddStaffNo.Name = "lblAddStaffNo";
+            this.lblAddStaffNo.Size = new System.Drawing.Size(0, 29);
+            this.lblAddStaffNo.TabIndex = 85;
             // 
             // frmStaff
             // 
@@ -1091,6 +1097,7 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label lblEditStaffNo;
+        private System.Windows.Forms.Label lblAddStaffNo;
     }
 }

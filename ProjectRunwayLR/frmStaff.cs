@@ -17,7 +17,7 @@ namespace ProjectRunwayLR
         DataSet dsRunway = new DataSet();
         SqlCommandBuilder cmdBStaff;
         DataRow drStaff;
-        String connStr, SqlStaff;
+        String connStr, sqlStaff;
         int selectedTab = 0;
         bool staffSelected = false;
         int staffNoSelected = 0;
@@ -31,8 +31,8 @@ namespace ProjectRunwayLR
         {
             connStr = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Runway; Integrated Security = true";
 
-            SqlStaff = @"select * from Staff";
-            daStaff = new SqlDataAdapter(SqlStaff, connStr);
+            sqlStaff = @"select * from Staff";
+            daStaff = new SqlDataAdapter(sqlStaff, connStr);
             cmdBStaff = new SqlCommandBuilder(daStaff);
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
             daStaff.Fill(dsRunway, "Staff");
@@ -46,43 +46,63 @@ namespace ProjectRunwayLR
 
         }
 
+        private void btnDisplayAdd_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 1;
+        }
 
-        private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEditCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cancel The Edit Of The Staff No: " + lblEditStaffNo.Text + 
+                "?", "Edit Staff", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                tabStaff.SelectedIndex = 0;
+        }
+
+        private void btnAddCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cancel The Addition Of The Customer No: " + lblAddStaffNo.Text + 
+                "?", "Add Customer", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                tabStaff.SelectedIndex = 0;
+        }
+
+        private void btnAddEdit_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 2;
+        }
+
+        void AddTabValidate(object sender, CancelEventArgs e)
+        {
+            if (dgvStaff.SelectedRows.Count == 0)
+            {//reset
+                staffSelected = false;
+                staffNoSelected = 0;
+            }
+            else if (dgvStaff.SelectedRows.Count == 1)
+            {
+                staffSelected = true;
+                staffNoSelected = Convert.ToInt32(dgvStaff.SelectedRows[0].Cells[0].Value);
+            }
+        } 
+
+        private void btnadd_add(object sender,EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
         {
 
         }
