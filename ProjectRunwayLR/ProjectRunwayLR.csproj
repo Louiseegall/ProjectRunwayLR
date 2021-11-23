@@ -103,6 +103,7 @@
     <Compile Include="MyCustomer.cs" />
     <Compile Include="MyException.cs" />
     <Compile Include="MyPersons.cs" />
+    <Compile Include="MyStaff.cs" />
     <Compile Include="MyValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
