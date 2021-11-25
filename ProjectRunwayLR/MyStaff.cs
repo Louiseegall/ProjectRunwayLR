@@ -31,6 +31,8 @@ namespace ProjectRunwayLR
 
         public int EmergencyContact { get => emergencyContact; set => emergencyContact = value; }
         public int StaffNumber { get => staffNumber; set => staffNumber = value; }
+        public object email { get; internal set; }
         public string Speciality { get => speciality; set => speciality = value; }
     }
+    
 }

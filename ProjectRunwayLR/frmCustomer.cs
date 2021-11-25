@@ -313,7 +313,8 @@ namespace ProjectRunwayLR
             txtEditPostcode.Clear();
             txtAddTelNo.Clear();
             txtAddEmail.Clear();
-            nudAddDiscount.Value = 0;        }
+            nudAddDiscount.Value = 0;
+        }
 
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
