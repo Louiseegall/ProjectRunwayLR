@@ -169,7 +169,6 @@ namespace ProjectRunwayLR
                 errP.SetError(cmbAddTitle, MyException.toString());
             }
 
-
             try
             {
                 myCustomer.Surname = txtAddSurname.Text.Trim();
@@ -196,7 +195,7 @@ namespace ProjectRunwayLR
             catch (MyException MyException)
             {
                 ok = false;
-                errP.SetError(cmbAddTitle, MyException.toString());
+                errP.SetError(dtpAddDOB, MyException.toString());
             }
             try
             {

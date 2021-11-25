@@ -99,7 +99,7 @@ Values(1001, 'Mr', 'Ryan', 'Campbell', 02/01/2000, 'Marlborough Road', 'Derry', 
 (1004, 'Ms', 'Angela', 'Doherty', 02/01/2000, 'Marlborough Road', 'Derry', 'Derry', 'Ireland', 'BT489BH', '02896496431',
 'angedoherty3@gmail.com', '02896496181', 'Hairdresser'),
 (1005, 'Ms', 'Anne', 'Tifft', 02/01/2000, 'Marlborough Road', 'Belfast', 'Antrim', 'Ireland', 'BT49BH', '02896496431',
-'annetifft02@hotmail.com', '02896496308', 'Hairdresser'),
+'annetifft02@hotmail.com', '02896496308', 'Masseuse'),
 (1006, 'Miss', 'Moyra', 'Sheenan', 02/01/2000, 'Marlborough Road', 'Omagh', 'Tyrone', 'Ireland', 'BT529BH', '02896496431',
 'moyra-36@hotmail.co.uk', '02896496236', 'Hairdresser'),
 (1007, 'Ms', 'Zoie', 'Donahey', 02/01/2000, 'Marlborough Road', 'Letterkenny', 'Donegal', 'Ireland', 'ROI', '02896496431',
@@ -112,8 +112,12 @@ GO
 CREATE TABLE [dbo].[Room]
 (
 	RoomNo		INT	NOT NULL	PRIMARY KEY,
-	RoomDesc	INT	NOT NULL
+	RoomDesc	VARCHAR(15)	NOT NULL
 )
+insert into Room(RoomNo, RoomDesc)
+Values(001, 'Hair'),
+(002, 'Makeup/Nails'),
+(003, 'Massage')
 
 DROP table TreatmentType
 GO

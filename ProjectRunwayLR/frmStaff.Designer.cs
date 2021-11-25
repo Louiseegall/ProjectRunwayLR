@@ -32,7 +32,8 @@ namespace ProjectRunwayLR
             this.components = new System.ComponentModel.Container();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.lblEditStaffNo = new System.Windows.Forms.Label();
+            this.btnEditEdit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,14 +63,15 @@ namespace ProjectRunwayLR
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.button7 = new System.Windows.Forms.Button();
+            this.lblAddStaffNo = new System.Windows.Forms.Label();
+            this.btnAddAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpAdd = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -85,11 +87,11 @@ namespace ProjectRunwayLR
             this.label15 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddSurename = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAddForename = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbAddTitle = new System.Windows.Forms.ComboBox();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
@@ -97,8 +99,6 @@ namespace ProjectRunwayLR
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.tabStaff = new System.Windows.Forms.TabControl();
-            this.lblEditStaffNo = new System.Windows.Forms.Label();
-            this.lblAddStaffNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
@@ -116,7 +116,7 @@ namespace ProjectRunwayLR
             this.tabEdit.BackColor = System.Drawing.Color.Transparent;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabEdit.Controls.Add(this.lblEditStaffNo);
-            this.tabEdit.Controls.Add(this.button4);
+            this.tabEdit.Controls.Add(this.btnEditEdit);
             this.tabEdit.Controls.Add(this.label1);
             this.tabEdit.Controls.Add(this.button5);
             this.tabEdit.Controls.Add(this.label4);
@@ -154,19 +154,26 @@ namespace ProjectRunwayLR
             this.tabEdit.TabIndex = 2;
             this.tabEdit.Text = "Edit";
             // 
-            // button4
+            // lblEditStaffNo
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(14, 665);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(222, 78);
-            this.button4.TabIndex = 113;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
-            //this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.lblEditStaffNo.AutoSize = true;
+            this.lblEditStaffNo.Location = new System.Drawing.Point(465, 9);
+            this.lblEditStaffNo.Name = "lblEditStaffNo";
+            this.lblEditStaffNo.Size = new System.Drawing.Size(0, 29);
+            this.lblEditStaffNo.TabIndex = 114;
+            // 
+            // btnEditEdit
+            // 
+            this.btnEditEdit.BackColor = System.Drawing.Color.Black;
+            this.btnEditEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEditEdit.Location = new System.Drawing.Point(14, 665);
+            this.btnEditEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditEdit.Name = "btnEditEdit";
+            this.btnEditEdit.Size = new System.Drawing.Size(222, 78);
+            this.btnEditEdit.TabIndex = 113;
+            this.btnEditEdit.Text = "Edit";
+            this.btnEditEdit.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -181,7 +188,6 @@ namespace ProjectRunwayLR
             this.label1.Size = new System.Drawing.Size(449, 33);
             this.label1.TabIndex = 85;
             this.label1.Text = "Staff No                                       - ";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
@@ -196,7 +202,6 @@ namespace ProjectRunwayLR
             this.button5.TabIndex = 112;
             this.button5.Text = "Cancel";
             this.button5.UseVisualStyleBackColor = false;
-            //this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label4
             // 
@@ -522,14 +527,14 @@ namespace ProjectRunwayLR
             this.tabAdd.BackColor = System.Drawing.Color.Transparent;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabAdd.Controls.Add(this.lblAddStaffNo);
-            this.tabAdd.Controls.Add(this.button7);
+            this.tabAdd.Controls.Add(this.btnAddAdd);
             this.tabAdd.Controls.Add(this.label2);
             this.tabAdd.Controls.Add(this.button3);
             this.tabAdd.Controls.Add(this.label3);
             this.tabAdd.Controls.Add(this.label7);
             this.tabAdd.Controls.Add(this.label19);
             this.tabAdd.Controls.Add(this.label8);
-            this.tabAdd.Controls.Add(this.dateTimePicker1);
+            this.tabAdd.Controls.Add(this.dtpAdd);
             this.tabAdd.Controls.Add(this.label9);
             this.tabAdd.Controls.Add(this.textBox9);
             this.tabAdd.Controls.Add(this.label10);
@@ -545,11 +550,11 @@ namespace ProjectRunwayLR
             this.tabAdd.Controls.Add(this.label15);
             this.tabAdd.Controls.Add(this.textBox3);
             this.tabAdd.Controls.Add(this.label16);
-            this.tabAdd.Controls.Add(this.textBox2);
+            this.tabAdd.Controls.Add(this.txtAddSurename);
             this.tabAdd.Controls.Add(this.label17);
-            this.tabAdd.Controls.Add(this.textBox1);
+            this.tabAdd.Controls.Add(this.txtAddForename);
             this.tabAdd.Controls.Add(this.label18);
-            this.tabAdd.Controls.Add(this.comboBox2);
+            this.tabAdd.Controls.Add(this.cmbAddTitle);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAdd.Location = new System.Drawing.Point(4, 38);
             this.tabAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -560,18 +565,27 @@ namespace ProjectRunwayLR
             this.tabAdd.Text = "Add";
             this.tabAdd.Click += new System.EventHandler(this.tabAdd_Click);
             // 
-            // button7
+            // lblAddStaffNo
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(14, 665);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(222, 78);
-            this.button7.TabIndex = 84;
-            this.button7.Text = "Edit";
-            this.button7.UseVisualStyleBackColor = false;
+            this.lblAddStaffNo.AutoSize = true;
+            this.lblAddStaffNo.Location = new System.Drawing.Point(454, 9);
+            this.lblAddStaffNo.Name = "lblAddStaffNo";
+            this.lblAddStaffNo.Size = new System.Drawing.Size(0, 29);
+            this.lblAddStaffNo.TabIndex = 85;
+            // 
+            // btnAddAdd
+            // 
+            this.btnAddAdd.BackColor = System.Drawing.Color.Black;
+            this.btnAddAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAddAdd.Location = new System.Drawing.Point(14, 665);
+            this.btnAddAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddAdd.Name = "btnAddAdd";
+            this.btnAddAdd.Size = new System.Drawing.Size(222, 78);
+            this.btnAddAdd.TabIndex = 84;
+            this.btnAddAdd.Text = "Add";
+            this.btnAddAdd.UseVisualStyleBackColor = false;
+            this.btnAddAdd.Click += new System.EventHandler(this.btnAddAdd_Click_1);
             // 
             // label2
             // 
@@ -653,15 +667,15 @@ namespace ProjectRunwayLR
             this.label8.TabIndex = 54;
             this.label8.Text = "Surname";
             // 
-            // dateTimePicker1
+            // dtpAdd
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(159, 231);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(486, 33);
-            this.dateTimePicker1.TabIndex = 76;
+            this.dtpAdd.Location = new System.Drawing.Point(159, 231);
+            this.dtpAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpAdd.Name = "dtpAdd";
+            this.dtpAdd.Size = new System.Drawing.Size(486, 33);
+            this.dtpAdd.TabIndex = 76;
             // 
             // label9
             // 
@@ -829,15 +843,15 @@ namespace ProjectRunwayLR
             this.label16.TabIndex = 62;
             this.label16.Text = "DOB";
             // 
-            // textBox2
+            // txtAddSurename
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddSurename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(159, 179);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(486, 33);
-            this.textBox2.TabIndex = 68;
+            this.txtAddSurename.Location = new System.Drawing.Point(159, 179);
+            this.txtAddSurename.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddSurename.Name = "txtAddSurename";
+            this.txtAddSurename.Size = new System.Drawing.Size(486, 33);
+            this.txtAddSurename.TabIndex = 68;
             // 
             // label17
             // 
@@ -850,15 +864,15 @@ namespace ProjectRunwayLR
             this.label17.Size = new System.Drawing.Size(0, 33);
             this.label17.TabIndex = 63;
             // 
-            // textBox1
+            // txtAddForename
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAddForename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(159, 119);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(486, 33);
-            this.textBox1.TabIndex = 67;
+            this.txtAddForename.Location = new System.Drawing.Point(159, 119);
+            this.txtAddForename.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddForename.Name = "txtAddForename";
+            this.txtAddForename.Size = new System.Drawing.Size(486, 33);
+            this.txtAddForename.TabIndex = 67;
             // 
             // label18
             // 
@@ -871,16 +885,16 @@ namespace ProjectRunwayLR
             this.label18.Size = new System.Drawing.Size(0, 33);
             this.label18.TabIndex = 64;
             // 
-            // comboBox2
+            // cmbAddTitle
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbAddTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(159, 61);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(486, 37);
-            this.comboBox2.TabIndex = 66;
+            this.cmbAddTitle.FormattingEnabled = true;
+            this.cmbAddTitle.Location = new System.Drawing.Point(159, 61);
+            this.cmbAddTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbAddTitle.Name = "cmbAddTitle";
+            this.cmbAddTitle.Size = new System.Drawing.Size(486, 37);
+            this.cmbAddTitle.TabIndex = 66;
             // 
             // tabDisplay
             // 
@@ -986,23 +1000,6 @@ namespace ProjectRunwayLR
             this.tabStaff.SelectedIndex = 0;
             this.tabStaff.Size = new System.Drawing.Size(951, 801);
             this.tabStaff.TabIndex = 3;
-            //this.tabStaff.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
-            // 
-            // lblEditStaffNo
-            // 
-            this.lblEditStaffNo.AutoSize = true;
-            this.lblEditStaffNo.Location = new System.Drawing.Point(465, 9);
-            this.lblEditStaffNo.Name = "lblEditStaffNo";
-            this.lblEditStaffNo.Size = new System.Drawing.Size(0, 29);
-            this.lblEditStaffNo.TabIndex = 114;
-            // 
-            // lblAddStaffNo
-            // 
-            this.lblAddStaffNo.AutoSize = true;
-            this.lblAddStaffNo.Location = new System.Drawing.Point(454, 9);
-            this.lblAddStaffNo.Name = "lblAddStaffNo";
-            this.lblAddStaffNo.Size = new System.Drawing.Size(0, 29);
-            this.lblAddStaffNo.TabIndex = 85;
             // 
             // frmStaff
             // 
@@ -1047,7 +1044,7 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpAdd;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
@@ -1063,14 +1060,14 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddSurename;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAddForename;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ComboBox cmbAddTitle;
+        private System.Windows.Forms.Button btnAddAdd;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnEditEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label4;

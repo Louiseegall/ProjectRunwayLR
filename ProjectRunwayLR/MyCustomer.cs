@@ -13,10 +13,10 @@ namespace ProjectRunwayLR
         
         public MyCustomer():base()
         {
-         
             this.DatePaid = new DateTime();
             this.discount = 0.0;
         }
+
         public MyCustomer(DateTime datePaid, double discount, string title, string forename, string surname, string street, string town, string county, string country, string postcode, string email, string telNo, DateTime dOB)
          : base( title,  forename,  surname,  street,  town,  county,  country,  postcode,  email,  telNo,  dOB )
         {
@@ -24,8 +24,7 @@ namespace ProjectRunwayLR
             this.datePaid = datePaid;
             this.discount = discount;
         }
-
-       
+           
 
      
 

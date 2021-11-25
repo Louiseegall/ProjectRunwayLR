@@ -84,9 +84,61 @@ namespace ProjectRunwayLR
             }
         } 
 
-        private void btnadd_add(object sender,EventArgs e)
+        private void btnAddAdd_Click(object sender,EventArgs e)
         {
+            MyStaff myStaff = new MyStaff();
+            bool ok = Capture;
+            errP.Clear();
 
+            try
+            {
+                myStaff.StaffNumber = Convert.ToInt32(lblAddStaffNo.Text.Trim());
+            }
+            catch(MyException MyException)
+            {
+                ok = false;
+                errP.SetError(lblAddStaffNo, MyException.toString());
+            }
+
+            try
+            {
+                myStaff.Title = cmbAddTitle.Text.Trim();
+            }
+            catch(MyException MyException)
+            {
+                ok = false;
+                errP.SetError(cmbAddTitle, MyException.toString());
+            }
+
+            try
+            {
+                myStaff.Surname = txtAddSurename.Text.Trim();
+            }
+            catch(MyException MyException)
+            {
+                ok = false;
+                errP.SetError(txtAddForename, MyException.toString());
+            }
+
+            try
+            {
+                myStaff.Forename = txtAddForename.Text.Trim();
+            }
+            catch (MyException MyException)
+            {
+                ok = false;
+                errP.SetError(txtAddForename, MyException.toString());
+            }
+
+            try
+            {
+                myStaff.DOB = dtpAdd.Value;
+            }
+            catch(MyException MyException)
+            {
+                ok = false;
+                errP.SetError(dtpAdd, MyException.toString());
+            }
         }
 
 
@@ -213,6 +265,11 @@ namespace ProjectRunwayLR
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddAdd_Click_1(object sender, EventArgs e)
         {
 
         }
