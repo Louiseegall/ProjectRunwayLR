@@ -70,9 +70,7 @@ namespace ProjectRunwayLR
 
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Cancel The Addition Of The Customer No: " + lblAddStaffNo.Text + 
-                "?", "Add Customer", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                tabStaff.SelectedIndex = 0;
+
         }
 
         private void btnAddEdit_Click(object sender, EventArgs e)
@@ -353,11 +351,13 @@ namespace ProjectRunwayLR
                             dtpEditDOB.Value = DateTime.Parse(drStaff["StaffDOB"].ToString());
                             txtEditStreet.Text = drStaff["StaffStreet"].ToString();
                             txtEditTown.Text = drStaff["StaffTown"].ToString();
-                            txtEditCounty.Text = drStaff["StaffCounty"].ToString();
-                            txtEditCountry.Text = drStaff["StaffCountry"].ToString();
-                            txtEditPostcode.Text = drStaff["StaffPostcode"].ToString();
-                            txtEditTelNo.Text = drStaff["StaffTelNo"].ToString();
-                            txtEditEmail.Text = drStaff["StaffEmail"].ToString();
+                            txtEditCounty.Text = drStaff["County"].ToString();
+                            txtEditCountry.Text = drStaff["Country"].ToString();
+                            txtEditPostcode.Text = drStaff["Postcode"].ToString();
+                            txtEditSpeciality.Text = drStaff["Speciality"].ToString();
+                            txtEditEmergencyContact.Text = drStaff["EmergencyContact"].ToString();
+                            txtEditTelNo.Text = drStaff["TelNo"].ToString();
+                            txtEditEmail.Text = drStaff["Email"].ToString();
 
 
                             ChangeFormEnabled(false);
@@ -379,6 +379,8 @@ namespace ProjectRunwayLR
             txtEditCounty.Enabled = enabled;
             txtEditCountry.Enabled = enabled;
             txtEditPostcode.Enabled = enabled;
+            txtEditSpeciality.Enabled = enabled;
+            txtEditEmergencyContact.Enabled = enabled;
             txtEditTelNo.Enabled = enabled;
             txtEditEmail.Enabled = enabled;
             if (enabled) btnEditEdit.Text = "Save";
@@ -391,147 +393,196 @@ namespace ProjectRunwayLR
             lblAddStaffNo.Text = (int.Parse(drStaff["StaffNo"].ToString()) + 1).ToString();
         }
 
-
-
-
-
-
-
-
-
-        private void label4_Click(object sender, EventArgs e)
+        private void btnEditEdit_Click(object sender, EventArgs e)
         {
+            if (btnEditEdit.Text == "Edit")
+            {
+                ChangeFormEnabled(true);
+            }
+            else
+            {
+                MyStaff myStaff = new MyStaff();
+                bool ok = true;
+                errP.Clear();
 
-        }
+                try
+                {
+                    myStaff.StaffNumber = Convert.ToInt32(lblEditStaffNo.Text.Trim());
+                }
+                catch(MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(lblEditStaffNo, MyException.toString());
+                }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+                try
+                {
+                    myStaff.Title = cmbEditTitle.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(cmbEditTitle, MyException.toString());
+                }
 
-        }
+                try
+                {
+                    myStaff.Surname = txtEditSurname.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditSurname, MyException.toString());
+                }
 
-        private void label20_Click(object sender, EventArgs e)
-        {
+                try
+                {
+                    myStaff.Forename = txtEditForename.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditForename, MyException.toString());
+                }
 
-        }
+                try
+                {
+                    myStaff.DOB = dtpEditDOB.Value;
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(dtpEditDOB, MyException.toString());
+                }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
+                try
+                {
+                    myStaff.Street = txtEditStreet.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditStreet, MyException.toString());
+                }
 
-        }
+                try
+                {
+                    myStaff.Town = txtEditTown.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditTown, MyException.toString());
+                }
 
-        private void label21_Click(object sender, EventArgs e)
-        {
+                try
+                {
+                    myStaff.County = txtEditCounty.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditCounty, MyException.toString());
+                }
 
-        }
+                try
+                {
+                    myStaff.Country = txtEditCountry.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditCountry, MyException.toString());
+                }
 
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
+                try
+                {
+                    myStaff.Postcode = txtEditPostcode.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditPostcode, MyException.toString());
+                }
+                try
+                {
+                    myStaff.TelNo = txtEditTelNo.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditTelNo, MyException.toString());
+                }
+                try
+                {
+                    myStaff.email = txtEditEmail.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditEmail, MyException.toString());
+                }
+                try
+                {
+                    myStaff.email = txtEditEmail.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditEmail, MyException.toString());
+                }
+                try
+                {
+                    myStaff.EmergencyContact = txtEditEmergencyContact.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditEmail, MyException.toString());
+                }
+                try
+                {
+                    myStaff.Speciality = txtEditSpeciality.Text.Trim();
+                }
+                catch (MyException MyException)
+                {
+                    ok = false;
+                    errP.SetError(txtEditSpeciality, MyException.toString());
+                }
+                try
+                {
+                    if (ok)
+                    {
+                        drStaff.BeginEdit();
+                        drStaff["StaffNo"] = myStaff.StaffNumber;
+                        drStaff["StaffTitle"] = myStaff.Title;
+                        drStaff["StaffForename"] = myStaff.Forename;
+                        drStaff["StaffSurname"] = myStaff.Surname;
+                        drStaff["StaffDOB"] = myStaff.DOB;
+                        drStaff["StaffStreet"] = myStaff.Street;
+                        drStaff["StaffTown"] = myStaff.Town;
+                        drStaff["County"] = myStaff.County;
+                        drStaff["Country"] = myStaff.Country;
+                        drStaff["PostCode"] = myStaff.Postcode;
+                        drStaff["TelNo"] = myStaff.TelNo;
+                        drStaff["Email"] = myStaff.email;
+                        drStaff["EmergencyContact"] = myStaff.EmergencyContact;
+                        drStaff["Speciality"] = myStaff.Speciality;
 
-        }
+                        drStaff.EndEdit();
+                        daStaff.Update(dsRunway, "Staff");
+                        MessageBox.Show("Staff Details Updated", "Staff");
 
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox14_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox15_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox16_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox17_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox18_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddAdd_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabAdd_Click(object sender, EventArgs e)
-        {
-
-        }
+                        ChangeFormEnabled(false);
+                        tabStaff.SelectedIndex = 0;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error!",
+                        MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                }
+            }
+        }     
     }
 }
