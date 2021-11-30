@@ -25,13 +25,6 @@ IF OBJECT_ID ('Customer') IS NOT NULL
 DROP table Customer
 GO
 
-
-
-
-
-
-
-
 CREATE TABLE [dbo].[Customer]
 (
 	CustomerNo			INT				NOT NULL  PRIMARY KEY,

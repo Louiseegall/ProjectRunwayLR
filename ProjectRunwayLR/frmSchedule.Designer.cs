@@ -62,7 +62,8 @@ namespace ProjectRunwayLR
             this.label2 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
@@ -72,7 +73,7 @@ namespace ProjectRunwayLR
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
             this.tabDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.tabCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -464,7 +465,8 @@ namespace ProjectRunwayLR
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDisplay.Controls.Add(this.dgvCustomers);
+            this.tabDisplay.Controls.Add(this.dtpBookingsStartDate);
+            this.tabDisplay.Controls.Add(this.dgvAppointments);
             this.tabDisplay.Controls.Add(this.btnDisplayDelete);
             this.tabDisplay.Controls.Add(this.btnDisplayEdit);
             this.tabDisplay.Controls.Add(this.btnDisplayExit);
@@ -478,22 +480,29 @@ namespace ProjectRunwayLR
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
-            // dgvCustomers
+            // dtpBookingsStartDate
             // 
-            this.dgvCustomers.AllowUserToAddRows = false;
-            this.dgvCustomers.AllowUserToDeleteRows = false;
-            this.dgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtpBookingsStartDate.Location = new System.Drawing.Point(7, 7);
+            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
+            this.dtpBookingsStartDate.Size = new System.Drawing.Size(296, 34);
+            this.dtpBookingsStartDate.TabIndex = 87;
+            // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(4, 4);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.RowHeadersWidth = 51;
-            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(829, 591);
-            this.dgvCustomers.TabIndex = 0;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Location = new System.Drawing.Point(4, 50);
+            this.dgvAppointments.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowHeadersWidth = 51;
+            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAppointments.Size = new System.Drawing.Size(829, 545);
+            this.dgvAppointments.TabIndex = 0;
             // 
             // btnDisplayDelete
             // 
@@ -564,7 +573,6 @@ namespace ProjectRunwayLR
             this.tabCustomer.SelectedIndex = 0;
             this.tabCustomer.Size = new System.Drawing.Size(845, 641);
             this.tabCustomer.TabIndex = 3;
-            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
             // 
             // frmSchedule
             // 
@@ -578,13 +586,14 @@ namespace ProjectRunwayLR
             this.Name = "frmSchedule";
             this.Text = "frmSchedule";
             this.TransparencyKey = System.Drawing.Color.Maroon;
+            this.Load += new System.EventHandler(this.frmSchedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabDisplay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.tabCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -594,7 +603,7 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.TabControl tabCustomer;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.DataGridView dgvAppointments;
         private System.Windows.Forms.Button btnDisplayDelete;
         private System.Windows.Forms.Button btnDisplayEdit;
         private System.Windows.Forms.Button btnDisplayExit;
@@ -629,5 +638,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DateTimePicker dtpBookingsStartDate;
     }
 }
