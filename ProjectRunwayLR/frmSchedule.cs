@@ -47,7 +47,7 @@ namespace ProjectRunwayLR
         private void frmSchedule_Load(object sender, EventArgs e)
         {
             dtpBookingsStartDate.MinDate = DateTime.Now;
-            connStr = @"Data Source = .; Initia Catalog = Runway; Integrated Security = true";
+            connStr = @"Data Source = .; Initial Catalog = Runway; Integrated Security = true";
             conn = new SqlConnection(connStr);
 
             for (int r = 0; r <= 16; r++)
@@ -63,12 +63,122 @@ namespace ProjectRunwayLR
                     dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".30";
                 }
             }
-            sqlAppointments = @"select * from Appointment a where (a.appontmentdate between @StartDate and @EndDate)";
+            sqlAppointments = @"select * from Appointment a where (a.AppontmentDate between @StartDate and @EndDate)";
             cmdAppointment = new SqlCommand(sqlAppointments, conn);
             cmdAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
             cmdAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
             daAppointment = new SqlDataAdapter(cmdAppointment);
             daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");
+        }
+
+        private void dtpBookingsStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime startDate = new DateTime();
+            DateTime d = dtpBookingsStartDate.Value;
+
+            if(dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Monday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(0));
+            }
+            else if(dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Tuesday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(-1));
+            }
+            else if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Wednesday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(-2));
+            }
+            else if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Thursday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(-3));
+            }
+            else if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Friday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(-4));
+            }
+            else if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Saturday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(-5));
+            }
+            else if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Sunday"))
+            {
+                startDate = d.Add(TimeSpan.FromDays(-6));
+            }
+            monStartDate = startDate;
+
+            dgvAppointments.Columns["colMon"].HeaderText = "Monday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["colTue"].HeaderText = "Tuesday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["colWed"].HeaderText = "Wednesday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["colThur"].HeaderText = "Thursday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["colFri"].HeaderText = "Friday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["colSat"].HeaderText = "Saturday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["colSun"].HeaderText = "Sunday" + startDate.ToShortDateString();
+
+            if (!formLoad)
+                populateGrid2(currentWeek, monStartDate);
+            else
+                formLoad = false;
+        }
+
+        private void populateGrid2(DateTime[] currentWeek, DateTime monStartDate)
+        {
+            bool ok = true;
+            try
+            {
+                if(ok)
+                {
+                    dsRunway.Tables["Appointments"].Clear();
+
+                    for (int i = 0; i <7; i++)
+                    {
+                        for(int j = 0; j <16; j++)
+                        {
+                            dgvAppointments.Rows[j].Cells[i].Value = DBNull.Value;
+                            dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.White;
+                        }
+                    }
+                    cmdAppointment.Parameters["@StartDate"].Value = monStartDate.Date;
+                    cmdAppointment.Parameters["@EndDate"].Value = monStartDate.AddDays(7).Date;
+
+                    currentWeek[0] = monStartDate.Date;
+                    currentWeek[1] = monStartDate.AddDays(1).Date;
+                    currentWeek[2] = monStartDate.AddDays(2).Date;
+                    currentWeek[3] = monStartDate.AddDays(3).Date;
+                    currentWeek[4] = monStartDate.AddDays(4).Date;
+                    currentWeek[5] = monStartDate.AddDays(5).Date;
+                    currentWeek[6] = monStartDate.AddDays(6).Date;
+
+                    daAppointment.Fill(dsRunway, "Appointments");
+                }
+                foreach(DataRow dr in dsRunway.Tables["Appointments"].Rows)
+                {
+                    string starttime = (dr["TimeStart"].ToString());
+
+                    for(int i = 0; i < 7; i++)
+                    {
+                        if(Convert.ToDateTime(dr["DateStart"]).ToShortDateString().Equals(currentWeek[i].ToShortDateString()))
+                        {
+                            for(int j = 0; j < 16; j++)
+                            {
+                                if(times[j].Equals(starttime))
+                                {
+                                    dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Green;
+                                    dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
+
+                                    for(int k = 1; k < Convert.ToInt32(dr["NoSlots"]); k++)
+                                    {
+                                        dgvAppointments.Rows[j + k].Cells[i].Style.BackColor = Color.LightGreen;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch(System.Data.SqlTypes.SqlTypeException)
+            {
+                ok = false;
+            }
         }
 
     }
