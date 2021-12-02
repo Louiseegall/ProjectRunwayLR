@@ -1,5 +1,8 @@
 ﻿--Create Database Runway;
 use Runway;
+select * from customer
+
+
 IF OBJECT_ID ('Appointment') IS NOT NULL
 DROP table Appointment
 GO
