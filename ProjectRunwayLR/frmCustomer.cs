@@ -577,7 +577,7 @@ namespace ProjectRunwayLR
                         drCustomer["CustomerStreet"] = myCustomer.Street;
                         drCustomer["CustomerTown"] = myCustomer.Town;
                         drCustomer["CustomerCounty"] = myCustomer.County;
-                        drCustomer["CustomerCounty"] = myCustomer.Country;
+                        drCustomer["CustomerCountry"] = myCustomer.Country;
                         drCustomer["CustomerPostcode"] = myCustomer.Postcode;
                         drCustomer["CustomerTelNo"] = myCustomer.TelNo;
                         drCustomer["CustomerEmail"] = myCustomer.Email;
