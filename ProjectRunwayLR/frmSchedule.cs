@@ -15,12 +15,12 @@ namespace ProjectRunwayLR
     {
         DateTime monStartDate = new DateTime();
         DataSet dsRunway = new DataSet();
-        SqlDataAdapter daAppointment;
+        SqlDataAdapter daAppointment, daStaffAppointment, daStaff;
         SqlConnection conn;
-        SqlCommand cmdAppointment;
-        SqlCommandBuilder cmdBAppointment;
-        DataRow drAppointment;
-        String sqlAppointments, connStr;
+        SqlCommand cmdAppointment, cmdStaffAppointment, cmdStaff;
+        SqlCommandBuilder cmdBAppointment, cmdBStaffAppointment, cmdBStaff;
+        DataRow drAppointment, drStaffAppointment, drStaff;
+        String sqlAppointments, sqlStaffAppointment, sqlStaff, connStr;
         Boolean formLoad = true;
 
         DateTime[] currentWeek = new DateTime[]
@@ -47,7 +47,7 @@ namespace ProjectRunwayLR
         private void frmSchedule_Load(object sender, EventArgs e)
         {
             dtpBookingsStartDate.MinDate = DateTime.Now;
-            connStr = @"Data Source = .; Initial Catalog = Runway; Integrated Security = true";
+            connStr = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Runway; Integrated Security = true";
             conn = new SqlConnection(connStr);
 
             for (int r = 0; r <= 16; r++)
@@ -63,12 +63,14 @@ namespace ProjectRunwayLR
                     dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".30";
                 }
             }
-            sqlAppointments = @"select * from Appointment a where (a.AppontmentDate between @StartDate and @EndDate)";
+            sqlAppointments = @"select * from Appointment a where (a.AppointmentDate between @StartDate and @EndDate)";
+            sqlStaff = @"select * from Staff";
+            sqlStaffAppointment = @"select * from StaffAppointment";
             cmdAppointment = new SqlCommand(sqlAppointments, conn);
             cmdAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
             cmdAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
             daAppointment = new SqlDataAdapter(cmdAppointment);
-            daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");
+            daAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
         }
 
         private void dtpBookingsStartDate_ValueChanged(object sender, EventArgs e)
@@ -149,6 +151,7 @@ namespace ProjectRunwayLR
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
                     daAppointment.Fill(dsRunway, "Appointments");
+
                 }
                 foreach(DataRow dr in dsRunway.Tables["Appointments"].Rows)
                 {
