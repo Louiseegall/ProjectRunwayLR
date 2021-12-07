@@ -1,16 +1,18 @@
 ﻿--Create Database Runway;
 use Runway;
-select * from customer
 
 
-IF OBJECT_ID ('Appointment') IS NOT NULL
-DROP table Appointment
+IF OBJECT_ID ('StaffAppointment') IS NOT NULL
+DROP table StaffAppointment
 GO
 IF OBJECT_ID ('AppointmentTreatment') IS NOT NULL
 DROP table AppointmentTreatment
 GO
-IF OBJECT_ID ('StaffAppointment') IS NOT NULL
-DROP table StaffAppointment
+IF OBJECT_ID ('Appointment') IS NOT NULL
+DROP table Appointment
+GO
+IF OBJECT_ID ('Staff') IS NOT NULL
+DROP table Staff
 GO
 IF OBJECT_ID ('Treatment') IS NOT NULL
 DROP table Treatment
@@ -20,9 +22,6 @@ DROP table TreatmentType
 GO
 IF OBJECT_ID ('Room') IS NOT NULL
 DROP table Room
-GO
-IF OBJECT_ID ('Staff') IS NOT NULL
-DROP table Staff
 GO
 IF OBJECT_ID ('Customer') IS NOT NULL
 DROP table Customer
@@ -42,30 +41,29 @@ CREATE TABLE [dbo].[Customer]
 	CustomerPostcode	VARCHAR(30)		NOT NULL,
 	CustomerTelNo		VARCHAR(15)		NOT NULL,
 	CustomerEmail		VARCHAR(50)		NOT NULL,
-	Discount			DECIMAL			NOT NULL,
+	
 )
 insert into Customer(customerNo,CustomerTitle,CustomerForename, CustomerSurname,CustomerDOB, 
 CustomerStreet,CustomerTown,CustomerCounty,CustomerCountry,CustomerPostcode
-, CustomerTelNo, CustomerEmail, Discount)
+, CustomerTelNo, CustomerEmail)
 Values(5000,'Ms','Louise','Gallagher','1996/11/12','Hill View','Letterkenny','Donegal','Ireland','F92 A7D6',
-'0861225405','Louise@gmail.com',0 ),
+'0861225405','Louise@gmail.com' ),
 (5001,'Miss','Laura','Smith','1990/02/01','Moutain Top','Buncranna','Donegal','Ireland','F93 A7H4',
-'0863482736','Laura@gmail.com',0 ),
+'0863482736','Laura@gmail.com'),
 (5002,'Mrs','Sheila','Craig','1978/07/21',' Pine Lake','Ballyshannon','Donegal','Ireland','F98 TTD3',
-'0877711533','Sheila@gmail.com' ,0),
+'0877711533','Sheila@gmail.com' ),
 (5003,'Mrs','Georgie','Doherty','1980/05/29','Beach Road','Letterkenny','Donegal','Ireland','F92 KK46',
-'0832134876','Georgie@gmail.com',0 ),
+'0832134876','Georgie@gmail.com' ),
 (5004,'Miss','Tina','Ferry','1992/11/05','Castle Park','Buncranna','Donegal','Ireland','F93 YY86',
-'0890056783','Tina@gmail.com' ,0),
+'0890056783','Tina@gmail.com' ),
 (5005,'Mrs','Sarah','Mooney','1991/01/18','Manor Hill','Drumkeen','Donegal','Ireland','F92 TY65',
-'089125575','Sarah@gmail.com' ,0),
+'089125575','Sarah@gmail.com' ),
 (5006,'Mr','Mark','Daniels','1995/01/21','Ard Mor','Newtown','Donegal','Ireland','F92 FC43',
-'089918702','Mark@gmail.com',0 ),
+'089918702','Mark@gmail.com'),
 (5007,'Mr','Rob','Cannon','1989/08/24','Roads Square','Manor','Donegal','Ireland','F92 TE36',
-'0891628736','rob@gmail.com',0 )
+'0891628736','rob@gmail.com' )
 
-DROP table Staff
-GO
+
 CREATE TABLE [dbo].[Staff]
 (
 	StaffNo			 INT				NOT NULL PRIMARY KEY,
@@ -103,8 +101,7 @@ Values(1001, 'Mr', 'Ryan', 'Campbell', 02/01/2000, 'Marlborough Road', 'Derry', 
 (1008, 'Mrs', 'Addison', 'Pratt', 02/01/2000, 'Shantallow', 'Derry', 'Derry', 'Ireland', 'BT489KJ', '02896496431', 
 'addipratt3@hotmail.co.uk', '02896496431', 'Nail Tech')
 
-DROP table Room
-GO
+
 CREATE TABLE [dbo].[Room]
 (
 	RoomNo		INT	NOT NULL	PRIMARY KEY,
@@ -115,16 +112,14 @@ Values(001, 'Hair'),
 (002, 'Makeup/Nails'),
 (003, 'Massage')
 
-DROP table TreatmentType
-GO
+
 CREATE TABLE [dbo].[TreatmentType]
 (
 	TreatmentType	INT		NOT NULL Primary Key,
 	TreatmentDesc	VARCHAR	NOT NULL,
 )
 
-DROP table Treatment
-GO
+
 CREATE TABLE [dbo].[Treatment]
 (
 	TreatmentNo			INT	NOT NULL primary key,
@@ -135,8 +130,6 @@ CREATE TABLE [dbo].[Treatment]
 
 )
 
-DROP table Appointment
-GO
 CREATE TABLE [dbo].[Appointment]
 (
 	AppointmentNo			INT			NOT NULL	PRIMARY KEY,
@@ -155,8 +148,6 @@ CREATE TABLE [dbo].[Appointment]
 
 )
 
-DROP table AppointmentTreatment
-GO
 create table AppointmentTreatment(
 	AppointmentNo INT NOT NULL,
 	TreatmentNo INT NOT NULL,
@@ -168,8 +159,7 @@ create table AppointmentTreatment(
 
 )
 
-DROP table StaffAppointment
-GO
+
 CREATE TABLE [dbo].[StaffAppointment]
 (
 	StaffNo			INT		NOT NULL,

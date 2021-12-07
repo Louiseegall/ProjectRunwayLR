@@ -203,6 +203,8 @@
     <None Include="Resources\goldd.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\img1.jpg" />
+    <None Include="Resources\music.wav" />
     <Content Include="RunwayDatabase\RunwayDatabase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

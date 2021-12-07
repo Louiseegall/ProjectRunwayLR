@@ -768,6 +768,7 @@ namespace ProjectRunwayLR
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(314, 131);
@@ -782,7 +783,7 @@ namespace ProjectRunwayLR
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(104, 13);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(187, 26);
+            this.comboBox2.Size = new System.Drawing.Size(183, 26);
             this.comboBox2.TabIndex = 9;
             // 
             // label6
@@ -895,6 +896,7 @@ namespace ProjectRunwayLR
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.comboBox3);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(6, 318);
@@ -909,7 +911,7 @@ namespace ProjectRunwayLR
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(137, 9);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(163, 26);
+            this.comboBox3.Size = new System.Drawing.Size(159, 26);
             this.comboBox3.TabIndex = 9;
             // 
             // label7
@@ -927,6 +929,7 @@ namespace ProjectRunwayLR
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.comboBox4);
@@ -963,7 +966,7 @@ namespace ProjectRunwayLR
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(104, 13);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(190, 26);
+            this.comboBox4.Size = new System.Drawing.Size(186, 26);
             this.comboBox4.TabIndex = 9;
             // 
             // label10
@@ -981,6 +984,7 @@ namespace ProjectRunwayLR
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label12);
@@ -1034,7 +1038,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Location = new System.Drawing.Point(138, 135);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(163, 24);
+            this.dateTimePicker2.Size = new System.Drawing.Size(159, 24);
             this.dateTimePicker2.TabIndex = 12;
             // 
             // dateTimePicker3
@@ -1043,7 +1047,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker3.Location = new System.Drawing.Point(138, 173);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(163, 24);
+            this.dateTimePicker3.Size = new System.Drawing.Size(159, 24);
             this.dateTimePicker3.TabIndex = 11;
             // 
             // comboBox5
@@ -1064,7 +1068,7 @@ namespace ProjectRunwayLR
             "10"});
             this.comboBox5.Location = new System.Drawing.Point(138, 208);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(163, 26);
+            this.comboBox5.Size = new System.Drawing.Size(159, 26);
             this.comboBox5.TabIndex = 9;
             // 
             // label13

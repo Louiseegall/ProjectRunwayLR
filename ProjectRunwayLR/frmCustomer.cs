@@ -280,7 +280,7 @@ namespace ProjectRunwayLR
                     drCustomer["CustomerPostcode"] = myCustomer.Postcode;
                     drCustomer["CustomerTelNo"] = myCustomer.TelNo;
                     drCustomer["CustomerEmail"] = myCustomer.Email;
-                    drCustomer["Discount"] = myCustomer.Discount;
+                
 
                     dsRunway.Tables["Customer"].Rows.Add(drCustomer);
                     daCustomer.Update(dsRunway, "Customer");
@@ -313,7 +313,7 @@ namespace ProjectRunwayLR
             txtEditPostcode.Clear();
             txtAddTelNo.Clear();
             txtAddEmail.Clear();
-            nudAddDiscount.Value = 0;
+         
         }
 
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
@@ -376,7 +376,7 @@ namespace ProjectRunwayLR
                             txtEditPostcode.Text = drCustomer["CustomerPostcode"].ToString();
                             txtEditTelNo.Text = drCustomer["CustomerTelNo"].ToString();
                             txtEditEmail.Text = drCustomer["CustomerEmail"].ToString();
-                            nudEditDiscount.Value = Decimal.Parse(drCustomer["Discount"].ToString());
+                        
 
                             ChangeFormEnabled(false);
                             break;
@@ -556,15 +556,7 @@ namespace ProjectRunwayLR
                     ok = false;
                     errP.SetError(txtEditEmail, MyException.toString());
                 }
-                try
-                {
-                    myCustomer.Discount =(Double)nudEditDiscount.Value;
-                }
-                catch (MyException MyException)
-                {
-                    ok = false;
-                    errP.SetError(txtEditTelNo, MyException.toString());
-                }
+            
                 try
                 {
                     if (ok)
@@ -581,8 +573,7 @@ namespace ProjectRunwayLR
                         drCustomer["CustomerPostcode"] = myCustomer.Postcode;
                         drCustomer["CustomerTelNo"] = myCustomer.TelNo;
                         drCustomer["CustomerEmail"] = myCustomer.Email;
-                        drCustomer["Discount"] = myCustomer.Discount;
-
+                     
                         drCustomer.EndEdit();
                         daCustomer.Update(dsRunway, "Customer");
                         MessageBox.Show("Customer Details Updated", "Customer");

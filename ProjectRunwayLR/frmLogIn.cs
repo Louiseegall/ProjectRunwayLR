@@ -12,6 +12,7 @@ namespace ProjectRunwayLR
 {
     public partial class frmLogIn : Form
     {
+       public static String username;
         public frmLogIn()
         {
             InitializeComponent();
@@ -24,8 +25,11 @@ namespace ProjectRunwayLR
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmMainMenu mainMenu = new frmMainMenu();
-            mainMenu.Show();
+            //frmMainMenu mainMenu = new frmMainMenu();
+            username = txtUsername.Text;
+            Close();
+            //mainMenu.Show();
+
         }
 
         private void pbLogo_Click(object sender, EventArgs e)
