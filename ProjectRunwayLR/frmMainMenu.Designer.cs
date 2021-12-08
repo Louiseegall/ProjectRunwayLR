@@ -285,7 +285,7 @@ namespace ProjectRunwayLR
             // pnlContent
             // 
             this.pnlContent.BackColor = System.Drawing.Color.Transparent;
-            this.pnlContent.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.img1;
+            this.pnlContent.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.hair2;
             this.pnlContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 0);
@@ -329,7 +329,7 @@ namespace ProjectRunwayLR
             this.Controls.Add(this.tlpMenu);
             this.Controls.Add(this.btnMenu);
             this.DoubleBuffered = true;
-            this.MinimumSize = new System.Drawing.Size(999, 739);
+            this.MinimumSize = new System.Drawing.Size(999, 726);
             this.Name = "frmMainMenu";
             this.Text = "frmMainMenu";
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
