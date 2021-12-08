@@ -42,7 +42,6 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.nudAddDiscount = new System.Windows.Forms.NumericUpDown();
             this.btnAddCancel = new System.Windows.Forms.Button();
             this.btnAddAdd = new System.Windows.Forms.Button();
             this.lblAddCustomerNo = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@ namespace ProjectRunwayLR
             this.txtAddSurname = new System.Windows.Forms.TextBox();
             this.txtAddForename = new System.Windows.Forms.TextBox();
             this.cmbAddTitle = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -71,7 +69,6 @@ namespace ProjectRunwayLR
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.nudEditDiscount = new System.Windows.Forms.NumericUpDown();
             this.btnEditCancel = new System.Windows.Forms.Button();
             this.btnEditEdit = new System.Windows.Forms.Button();
             this.lblEditCustomerNo = new System.Windows.Forms.Label();
@@ -86,7 +83,6 @@ namespace ProjectRunwayLR
             this.txtEditSurname = new System.Windows.Forms.TextBox();
             this.txtEditForename = new System.Windows.Forms.TextBox();
             this.cmbEditTitle = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -104,9 +100,7 @@ namespace ProjectRunwayLR
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tabAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAddDiscount)).BeginInit();
             this.tabEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEditDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // errP
@@ -275,7 +269,6 @@ namespace ProjectRunwayLR
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.nudAddDiscount);
             this.tabAdd.Controls.Add(this.btnAddCancel);
             this.tabAdd.Controls.Add(this.btnAddAdd);
             this.tabAdd.Controls.Add(this.lblAddCustomerNo);
@@ -290,7 +283,6 @@ namespace ProjectRunwayLR
             this.tabAdd.Controls.Add(this.txtAddSurname);
             this.tabAdd.Controls.Add(this.txtAddForename);
             this.tabAdd.Controls.Add(this.cmbAddTitle);
-            this.tabAdd.Controls.Add(this.label3);
             this.tabAdd.Controls.Add(this.label4);
             this.tabAdd.Controls.Add(this.label19);
             this.tabAdd.Controls.Add(this.label20);
@@ -310,13 +302,6 @@ namespace ProjectRunwayLR
             this.tabAdd.Size = new System.Drawing.Size(611, 475);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
-            // 
-            // nudAddDiscount
-            // 
-            this.nudAddDiscount.Location = new System.Drawing.Point(123, 373);
-            this.nudAddDiscount.Name = "nudAddDiscount";
-            this.nudAddDiscount.Size = new System.Drawing.Size(120, 24);
-            this.nudAddDiscount.TabIndex = 104;
             // 
             // btnAddCancel
             // 
@@ -464,17 +449,6 @@ namespace ProjectRunwayLR
             this.cmbAddTitle.Size = new System.Drawing.Size(129, 26);
             this.cmbAddTitle.TabIndex = 88;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 371);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "Discount ";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -616,7 +590,6 @@ namespace ProjectRunwayLR
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.nudEditDiscount);
             this.tabEdit.Controls.Add(this.btnEditCancel);
             this.tabEdit.Controls.Add(this.btnEditEdit);
             this.tabEdit.Controls.Add(this.lblEditCustomerNo);
@@ -631,7 +604,6 @@ namespace ProjectRunwayLR
             this.tabEdit.Controls.Add(this.txtEditSurname);
             this.tabEdit.Controls.Add(this.txtEditForename);
             this.tabEdit.Controls.Add(this.cmbEditTitle);
-            this.tabEdit.Controls.Add(this.label31);
             this.tabEdit.Controls.Add(this.label32);
             this.tabEdit.Controls.Add(this.label33);
             this.tabEdit.Controls.Add(this.label34);
@@ -649,13 +621,6 @@ namespace ProjectRunwayLR
             this.tabEdit.Size = new System.Drawing.Size(611, 475);
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "Edit";
-            // 
-            // nudEditDiscount
-            // 
-            this.nudEditDiscount.Location = new System.Drawing.Point(125, 373);
-            this.nudEditDiscount.Name = "nudEditDiscount";
-            this.nudEditDiscount.Size = new System.Drawing.Size(120, 26);
-            this.nudEditDiscount.TabIndex = 132;
             // 
             // btnEditCancel
             // 
@@ -802,17 +767,6 @@ namespace ProjectRunwayLR
             this.cmbEditTitle.Name = "cmbEditTitle";
             this.cmbEditTitle.Size = new System.Drawing.Size(129, 28);
             this.cmbEditTitle.TabIndex = 118;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(20, 371);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(88, 24);
-            this.label31.TabIndex = 117;
-            this.label31.Text = "Discount ";
             // 
             // label32
             // 
@@ -970,10 +924,8 @@ namespace ProjectRunwayLR
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAddDiscount)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEditDiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -991,7 +943,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Button btnDisplayExit;
         private System.Windows.Forms.Button btnDisplayAdd;
         private System.Windows.Forms.TabPage tabAdd;
-        private System.Windows.Forms.NumericUpDown nudAddDiscount;
         private System.Windows.Forms.Button btnAddCancel;
         private System.Windows.Forms.Button btnAddAdd;
         private System.Windows.Forms.Label lblAddCustomerNo;
@@ -1006,7 +957,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.TextBox txtAddSurname;
         private System.Windows.Forms.TextBox txtAddForename;
         private System.Windows.Forms.ComboBox cmbAddTitle;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
@@ -1020,7 +970,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TabPage tabEdit;
-        private System.Windows.Forms.NumericUpDown nudEditDiscount;
         private System.Windows.Forms.Button btnEditCancel;
         private System.Windows.Forms.Button btnEditEdit;
         private System.Windows.Forms.Label lblEditCustomerNo;
@@ -1035,7 +984,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.TextBox txtEditSurname;
         private System.Windows.Forms.TextBox txtEditForename;
         private System.Windows.Forms.ComboBox cmbEditTitle;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
