@@ -77,8 +77,9 @@ namespace ProjectRunwayLR
         {
             DateTime startDate = new DateTime();
             DateTime d = dtpBookingsStartDate.Value;
+            dgvAppointments.AllowUserToAddRows = false;
 
-            if(dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Monday"))
+            if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Monday"))
             {
                 startDate = d.Add(TimeSpan.FromDays(0));
             }
@@ -108,13 +109,13 @@ namespace ProjectRunwayLR
             }
             monStartDate = startDate;
 
-            dgvAppointments.Columns["colMon"].HeaderText = "Monday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["colTue"].HeaderText = "Tuesday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["colWed"].HeaderText = "Wednesday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["colThur"].HeaderText = "Thursday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["colFri"].HeaderText = "Friday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["colSat"].HeaderText = "Saturday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["colSun"].HeaderText = "Sunday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Monday"].HeaderText = "Monday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Tuesday"].HeaderText = "Tuesday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Wednesday"].HeaderText = "Wednesday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Thursday"].HeaderText = "Thursday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Friday"].HeaderText = "Friday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Saturday"].HeaderText = "Saturday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Sunday"].HeaderText = "Sunday" + startDate.ToShortDateString();
 
             if (!formLoad)
                 populateGrid2(currentWeek, monStartDate);
@@ -129,7 +130,7 @@ namespace ProjectRunwayLR
             {
                 if(ok)
                 {
-                    dsRunway.Tables["Appointments"].Clear();
+                    dsRunway.Tables["Appointment"].Clear();
 
                     for (int i = 0; i <7; i++)
                     {
@@ -150,10 +151,10 @@ namespace ProjectRunwayLR
                     currentWeek[5] = monStartDate.AddDays(5).Date;
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
-                    daAppointment.Fill(dsRunway, "Appointments");
+                    daAppointment.Fill(dsRunway, "Appointment");
 
                 }
-                foreach(DataRow dr in dsRunway.Tables["Appointments"].Rows)
+                foreach(DataRow dr in dsRunway.Tables["Appointment"].Rows)
                 {
                     string starttime = (dr["TimeStart"].ToString());
 
