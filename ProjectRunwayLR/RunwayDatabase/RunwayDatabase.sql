@@ -190,7 +190,6 @@ CREATE TABLE [dbo].[StaffAppointment]
 		CONSTRAINT FKTreatmentNo FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
 	primary key clustered(staffNo, AppointmentNo, TreatmentNo)
 )
-
 insert into StaffAppointment(StaffNo ,AppointmentNo,TreatmentNo)
 Values
 (1001,5000,500),(1002,5000,501),--two staff doing same appointment 
