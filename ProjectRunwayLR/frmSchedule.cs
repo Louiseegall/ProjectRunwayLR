@@ -20,6 +20,9 @@ namespace ProjectRunwayLR
         SqlCommand cmdAppointment, cmdStaffAppointment, cmdStaff;
         SqlCommandBuilder cmdBAppointment, cmdBStaffAppointment, cmdBStaff;
         DataRow drAppointment, drStaffAppointment, drStaff;
+
+     
+
         String sqlAppointments, sqlStaffAppointment, sqlStaff, connStr;
         Boolean formLoad = true;
 

@@ -35,9 +35,9 @@ namespace ProjectRunwayLR
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckbShow_Hide = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ckbShow_Hide = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@ namespace ProjectRunwayLR
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(167, 45);
+            this.label3.Location = new System.Drawing.Point(180, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 25);
             this.label3.TabIndex = 18;
@@ -63,7 +63,7 @@ namespace ProjectRunwayLR
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(171, 124);
+            this.label2.Location = new System.Drawing.Point(180, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 17;
@@ -73,7 +73,7 @@ namespace ProjectRunwayLR
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(40, 154);
+            this.txtPassword.Location = new System.Drawing.Point(62, 152);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(365, 26);
@@ -84,7 +84,7 @@ namespace ProjectRunwayLR
             this.btnLogin.BackColor = System.Drawing.Color.Black;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(133, 248);
+            this.btnLogin.Location = new System.Drawing.Point(155, 248);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(166, 59);
             this.btnLogin.TabIndex = 15;
@@ -97,7 +97,7 @@ namespace ProjectRunwayLR
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(40, 81);
+            this.txtUsername.Location = new System.Drawing.Point(62, 85);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(365, 26);
             this.txtUsername.TabIndex = 14;
@@ -117,6 +117,18 @@ namespace ProjectRunwayLR
             this.panel1.Size = new System.Drawing.Size(488, 314);
             this.panel1.TabIndex = 19;
             // 
+            // ckbShow_Hide
+            // 
+            this.ckbShow_Hide.AutoSize = true;
+            this.ckbShow_Hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ckbShow_Hide.Location = new System.Drawing.Point(185, 205);
+            this.ckbShow_Hide.Name = "ckbShow_Hide";
+            this.ckbShow_Hide.Size = new System.Drawing.Size(102, 17);
+            this.ckbShow_Hide.TabIndex = 19;
+            this.ckbShow_Hide.Text = "Show Password";
+            this.ckbShow_Hide.UseVisualStyleBackColor = true;
+            this.ckbShow_Hide.CheckedChanged += new System.EventHandler(this.ckbShow_Hide_CheckedChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -135,18 +147,6 @@ namespace ProjectRunwayLR
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(523, 351);
             this.panel2.TabIndex = 19;
-            // 
-            // ckbShow_Hide
-            // 
-            this.ckbShow_Hide.AutoSize = true;
-            this.ckbShow_Hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ckbShow_Hide.Location = new System.Drawing.Point(176, 205);
-            this.ckbShow_Hide.Name = "ckbShow_Hide";
-            this.ckbShow_Hide.Size = new System.Drawing.Size(102, 17);
-            this.ckbShow_Hide.TabIndex = 19;
-            this.ckbShow_Hide.Text = "Show Password";
-            this.ckbShow_Hide.UseVisualStyleBackColor = true;
-            this.ckbShow_Hide.CheckedChanged += new System.EventHandler(this.ckbShow_Hide_CheckedChanged);
             // 
             // frmLogIn
             // 

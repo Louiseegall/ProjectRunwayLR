@@ -68,11 +68,9 @@ namespace ProjectRunwayLR
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.button14 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
@@ -113,6 +111,15 @@ namespace ProjectRunwayLR
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -121,7 +128,6 @@ namespace ProjectRunwayLR
             this.pnlStaff.SuspendLayout();
             this.pnlPayment.SuspendLayout();
             this.tabDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tabApp.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,6 +135,7 @@ namespace ProjectRunwayLR
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // errP
@@ -546,12 +553,12 @@ namespace ProjectRunwayLR
             this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
             this.tabDisplay.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDisplay.Controls.Add(this.dtpBookingsStartDate);
+            this.tabDisplay.Controls.Add(this.dgvAppointments);
             this.tabDisplay.Controls.Add(this.button14);
-            this.tabDisplay.Controls.Add(this.button8);
             this.tabDisplay.Controls.Add(this.button7);
             this.tabDisplay.Controls.Add(this.button1);
             this.tabDisplay.Controls.Add(this.button6);
-            this.tabDisplay.Controls.Add(this.dgvCustomers);
             this.tabDisplay.Controls.Add(this.btnDisplayDelete);
             this.tabDisplay.Controls.Add(this.btnDisplayEdit);
             this.tabDisplay.Controls.Add(this.btnDisplayExit);
@@ -560,7 +567,7 @@ namespace ProjectRunwayLR
             this.tabDisplay.Location = new System.Drawing.Point(4, 32);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(612, 442);
+            this.tabDisplay.Size = new System.Drawing.Size(664, 489);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
@@ -570,7 +577,7 @@ namespace ProjectRunwayLR
             this.button14.BackColor = System.Drawing.Color.Black;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(494, 383);
+            this.button14.Location = new System.Drawing.Point(546, 430);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(104, 50);
             this.button14.TabIndex = 139;
@@ -579,28 +586,13 @@ namespace ProjectRunwayLR
             this.button14.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.button14.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // button8
-            // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button8.BackColor = System.Drawing.Color.Black;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(372, 383);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 50);
-            this.button8.TabIndex = 138;
-            this.button8.Text = "Print Bill";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.button8.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button7.BackColor = System.Drawing.Color.Black;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(250, 383);
+            this.button7.Location = new System.Drawing.Point(352, 430);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(104, 50);
             this.button7.TabIndex = 137;
@@ -616,7 +608,7 @@ namespace ProjectRunwayLR
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(128, 383);
+            this.button1.Location = new System.Drawing.Point(174, 430);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 50);
             this.button1.TabIndex = 136;
@@ -632,7 +624,7 @@ namespace ProjectRunwayLR
             this.button6.BackColor = System.Drawing.Color.Black;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(6, 383);
+            this.button6.Location = new System.Drawing.Point(6, 430);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(104, 50);
             this.button6.TabIndex = 132;
@@ -642,28 +634,13 @@ namespace ProjectRunwayLR
             this.button6.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.button6.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // dgvCustomers
-            // 
-            this.dgvCustomers.AllowUserToAddRows = false;
-            this.dgvCustomers.AllowUserToDeleteRows = false;
-            this.dgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(3, 3);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(606, 346);
-            this.dgvCustomers.TabIndex = 0;
-            // 
             // btnDisplayDelete
             // 
             this.btnDisplayDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDisplayDelete.BackColor = System.Drawing.Color.Black;
             this.btnDisplayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayDelete.Location = new System.Drawing.Point(326, 454);
+            this.btnDisplayDelete.Location = new System.Drawing.Point(352, 501);
             this.btnDisplayDelete.Name = "btnDisplayDelete";
             this.btnDisplayDelete.Size = new System.Drawing.Size(136, 50);
             this.btnDisplayDelete.TabIndex = 84;
@@ -676,7 +653,7 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayEdit.Location = new System.Drawing.Point(169, 454);
+            this.btnDisplayEdit.Location = new System.Drawing.Point(195, 501);
             this.btnDisplayEdit.Name = "btnDisplayEdit";
             this.btnDisplayEdit.Size = new System.Drawing.Size(133, 50);
             this.btnDisplayEdit.TabIndex = 85;
@@ -689,7 +666,7 @@ namespace ProjectRunwayLR
             this.btnDisplayExit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayExit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayExit.Location = new System.Drawing.Point(480, 454);
+            this.btnDisplayExit.Location = new System.Drawing.Point(532, 501);
             this.btnDisplayExit.Name = "btnDisplayExit";
             this.btnDisplayExit.Size = new System.Drawing.Size(139, 50);
             this.btnDisplayExit.TabIndex = 83;
@@ -702,7 +679,7 @@ namespace ProjectRunwayLR
             this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
             this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 454);
+            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 501);
             this.btnDisplayAdd.Name = "btnDisplayAdd";
             this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
             this.btnDisplayAdd.TabIndex = 86;
@@ -721,7 +698,7 @@ namespace ProjectRunwayLR
             this.tabApp.Location = new System.Drawing.Point(0, 0);
             this.tabApp.Name = "tabApp";
             this.tabApp.SelectedIndex = 0;
-            this.tabApp.Size = new System.Drawing.Size(620, 478);
+            this.tabApp.Size = new System.Drawing.Size(672, 525);
             this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabApp.TabIndex = 4;
             this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
@@ -1131,11 +1108,101 @@ namespace ProjectRunwayLR
             this.label19.TabIndex = 0;
             this.label19.Text = "Customer Name";
             // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAppointments.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Monday,
+            this.Tuesday,
+            this.Wednesday,
+            this.Thursday,
+            this.Friday,
+            this.Saturday,
+            this.Sunday});
+            this.dgvAppointments.Location = new System.Drawing.Point(6, 41);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAppointments.Size = new System.Drawing.Size(658, 358);
+            this.dgvAppointments.TabIndex = 140;
+            // 
+            // Monday
+            // 
+            this.Monday.HeaderText = "Monday";
+            this.Monday.MinimumWidth = 6;
+            this.Monday.Name = "Monday";
+            this.Monday.ReadOnly = true;
+            this.Monday.Width = 103;
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.HeaderText = "Tuesday";
+            this.Tuesday.MinimumWidth = 6;
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.ReadOnly = true;
+            this.Tuesday.Width = 108;
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.HeaderText = "Wednesday";
+            this.Wednesday.MinimumWidth = 6;
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.ReadOnly = true;
+            this.Wednesday.Width = 136;
+            // 
+            // Thursday
+            // 
+            this.Thursday.HeaderText = "Thursday";
+            this.Thursday.MinimumWidth = 6;
+            this.Thursday.Name = "Thursday";
+            this.Thursday.ReadOnly = true;
+            this.Thursday.Width = 114;
+            // 
+            // Friday
+            // 
+            this.Friday.HeaderText = "Friday";
+            this.Friday.MinimumWidth = 6;
+            this.Friday.Name = "Friday";
+            this.Friday.ReadOnly = true;
+            this.Friday.Width = 87;
+            // 
+            // Saturday
+            // 
+            this.Saturday.HeaderText = "Saturday";
+            this.Saturday.MinimumWidth = 6;
+            this.Saturday.Name = "Saturday";
+            this.Saturday.ReadOnly = true;
+            this.Saturday.Width = 108;
+            // 
+            // Sunday
+            // 
+            this.Sunday.HeaderText = "Sunday";
+            this.Sunday.MinimumWidth = 6;
+            this.Sunday.Name = "Sunday";
+            this.Sunday.ReadOnly = true;
+            this.Sunday.Width = 99;
+            // 
+            // dtpBookingsStartDate
+            // 
+            this.dtpBookingsStartDate.Location = new System.Drawing.Point(6, 6);
+            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
+            this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
+            this.dtpBookingsStartDate.TabIndex = 141;
+            // 
             // frmAppBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 478);
+            this.ClientSize = new System.Drawing.Size(672, 525);
             this.Controls.Add(this.tabApp);
             this.Name = "frmAppBooking";
             this.Text = "frmAppBooking";
@@ -1153,7 +1220,6 @@ namespace ProjectRunwayLR
             this.pnlPayment.ResumeLayout(false);
             this.pnlPayment.PerformLayout();
             this.tabDisplay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabApp.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1165,6 +1231,7 @@ namespace ProjectRunwayLR
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1174,7 +1241,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.TabControl tabApp;
         private System.Windows.Forms.TabPage tabDisplay;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Button btnDisplayDelete;
         private System.Windows.Forms.Button btnDisplayEdit;
         private System.Windows.Forms.Button btnDisplayExit;
@@ -1215,7 +1281,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ComboBox cmbCustomer;
         private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1253,5 +1318,14 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridView dgvAppointments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tuesday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Wednesday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thursday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Friday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Saturday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sunday;
+        private System.Windows.Forms.DateTimePicker dtpBookingsStartDate;
     }
 }
