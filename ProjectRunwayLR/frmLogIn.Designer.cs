@@ -133,10 +133,10 @@ namespace ProjectRunwayLR
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Birch Std", 110.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 32);
+            this.label1.Font = new System.Drawing.Font("Birch Std", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(76, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(564, 173);
+            this.label1.Size = new System.Drawing.Size(459, 141);
             this.label1.TabIndex = 20;
             this.label1.Text = "Please Sign In";
             // 

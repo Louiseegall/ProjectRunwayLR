@@ -217,6 +217,7 @@
     <None Include="Resources\img1.jpg" />
     <None Include="Resources\music.wav" />
     <None Include="Resources\hair1.jpg" />
+    <Content Include="RunwayDatabase\BookingScheduleView.sql" />
     <Content Include="RunwayDatabase\BookingAppointmentView.sql" />
     <Content Include="RunwayDatabase\RunwayDatabase.sql" />
   </ItemGroup>

@@ -122,7 +122,8 @@ CREATE TABLE [dbo].[TreatmentType]
 insert into TreatmentType(TreatmentType,TreatmentTypeDesc)
 Values(1,'Hair'),
 (2,'Nails'),
-(3,'Spa')
+(3,'Spa'),
+(4,'Waxing')
 
 
 
@@ -193,4 +194,4 @@ CREATE TABLE [dbo].[StaffAppointment]
 insert into StaffAppointment(StaffNo ,AppointmentNo,TreatmentNo)
 Values
 (1001,5000,500),(1002,5000,501),--two staff doing same appointment 
-(1003,5001,502)
+(1003,5001,500)

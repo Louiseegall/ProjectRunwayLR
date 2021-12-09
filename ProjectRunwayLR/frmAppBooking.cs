@@ -12,6 +12,12 @@ namespace ProjectRunwayLR
 {
     public partial class frmAppBooking : Form
     {
+
+
+        /* put under dataadapter and ds set up
+          string[] times = { "09:00:00", "09:30:00", "10:00:00", "10:30:00", "11:00:00", "11:30:00",
+         "12:00:00", "12:30:00", "13:00:00", "13:30:00", "14:00:00", "14:30:00", "15:00:00", "15:30:00",
+         "16:00:00", "16:30:00", "17:00:00", "17:30:00" };*/
         public frmAppBooking()
         {
             InitializeComponent();
@@ -39,7 +45,24 @@ namespace ProjectRunwayLR
 
         private void frmAppBooking_Load(object sender, EventArgs e)
         {
-         //   tabApp.ItemSize = new Size((tabApp.Width - 5) / 3, tabApp.ItemSize.Height);
+
+
+
+            /* add in tooo for times
+             * for (int r = 0; r <= 16; r++)
+            {
+                dgvAppointments.Rows.Add(new object[] { "", "" });
+                if (r % 2 == 0)
+                {
+
+                    dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".00";
+                }
+                else
+                {
+                    dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".30";
+                }
+            } */
+            //   tabApp.ItemSize = new Size((tabApp.Width - 5) / 3, tabApp.ItemSize.Height);
         }
 
         private void button10_Click(object sender, EventArgs e)

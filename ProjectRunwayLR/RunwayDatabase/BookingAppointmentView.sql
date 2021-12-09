@@ -1,4 +1,5 @@
-﻿Create View bookingAppointment
+﻿
+Create View bookingAppointment
 as 
 
 select distinct Appointment.AppointmentNo, AppointmentTime,AppointmentDate,
@@ -9,8 +10,14 @@ treatmentPrice*AppointmentTreatment.qty as totalAppointmentCost
 
 From Appointment
 
- join Customer on Appointment.CustomerNo=Customer.customerNo
- join StaffAppointment on Appointment.AppointmentNo=StaffAppointment.AppointmentNo 
-inner join Staff on StaffAppointment.StaffNo=Staff.staffNo
-inner JOIN AppointmentTreatment on Appointment.appointmentNo = AppointmentTreatment.appointmentNo
-inner JOIN Treatment on AppointmentTreatment.TreatmentNo = Treatment.TreatmentNo
+join Customer on Appointment.CustomerNo=Customer.customerNo
+JOIN AppointmentTreatment on Appointment.AppointmentNo = AppointmentTreatment.AppointmentNo
+JOIN Treatment on AppointmentTreatment.TreatmentNo = Treatment.TreatmentNo
+--Join StaffAppointment on TreatmentAppointment.TreatmentNo = StaffAppointment.TreatmentNo
+--Join StaffAppointment on AppointmentTreatment.appointmentNo = StaffAppointment.appointmentNo and TreatmentAppointment.TreatmentNo = StaffAppointment.TreatmentNo
+--join Staff on Staff.StaffNo = StaffAppointment.StaffNo
+
+
+left Join StaffAppointment on AppointmentTreatment.AppointmentNo = StaffAppointment.AppointmentNo and AppointmentTreatment.TreatmentNo = StaffAppointment.TreatmentNo
+left join Staff on Staff.StaffNo = StaffAppointment.StaffNo
+

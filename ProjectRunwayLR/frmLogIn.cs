@@ -56,7 +56,7 @@ namespace ProjectRunwayLR
 
         private void ckbShow_Hide_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckbShow_Hide.Checked)
+            if (ckbShow_Hide.Checked == true)
             {
                 txtPassword.UseSystemPasswordChar = true;
             }
@@ -65,5 +65,6 @@ namespace ProjectRunwayLR
                 txtPassword.UseSystemPasswordChar =false;
             }
         }
+
     }
 }
