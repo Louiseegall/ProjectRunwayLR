@@ -53,5 +53,17 @@ namespace ProjectRunwayLR
             btn.FlatStyle = FlatStyle.Standard;
 
         }
+
+        private void ckbShow_Hide_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbShow_Hide.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar =false;
+            }
+        }
     }
 }
