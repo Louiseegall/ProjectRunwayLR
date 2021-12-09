@@ -431,7 +431,7 @@ namespace ProjectRunwayLR
             txtEditPostcode.Enabled = enabled;
             txtEditTelNo.Enabled = enabled;
             txtEditEmail.Enabled = enabled;
-            nudEditDiscount.Enabled = enabled;
+            //nudEditDiscount.Enabled = enabled;
             if (enabled) btnEditEdit.Text = "Save";
             else btnEditEdit.Text = "Edit";
         }

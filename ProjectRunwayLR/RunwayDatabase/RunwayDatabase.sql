@@ -108,27 +108,39 @@ CREATE TABLE [dbo].[Room]
 	RoomDesc	VARCHAR(15)	NOT NULL
 )
 insert into Room(RoomNo, RoomDesc)
-Values(001, 'Hair'),
-(002, 'Makeup/Nails'),
-(003, 'Massage')
+Values(1, 'Hair'),
+(2, 'Makeup/Nails'),
+(3, 'Massage')
 
 
 CREATE TABLE [dbo].[TreatmentType]
 (
 	TreatmentType	INT		NOT NULL Primary Key,
-	TreatmentDesc	VARCHAR	NOT NULL,
+	TreatmentTypeDesc	VARCHAR(30)	NOT NULL,
 )
+--1-3 deparments ie nails, spa ,hair
+insert into TreatmentType(TreatmentType,TreatmentTypeDesc)
+Values(1,'Hair'),
+(2,'Nails'),
+(3,'Spa')
+
+
 
 
 CREATE TABLE [dbo].[Treatment]
 (
 	TreatmentNo			INT	NOT NULL primary key,
+	TreatmentDesc		varChar(50) not null,
 	TreatmentPrice		INT	NOT NULL,
 	TreatmentDuration	INT	NOT NULL,
 	TreatmentType		INT NOT NULL, 
     CONSTRAINT [FKTreatmentType] FOREIGN KEY (TreatmentType) REFERENCES TreatmentType(TreatmentType),
 
 )
+insert into Treatment( TreatmentNo,TreatmentDesc, TreatmentPrice, TreatmentDuration, treatmentType )
+Values(500,'wash cut blow dry',35, 1,1), --duration 1 slot =30 mins
+(501,'Colour',75, 2,1),
+(502,'highlights',35, 1,1)
 
 CREATE TABLE [dbo].[Appointment]
 (
@@ -136,19 +148,21 @@ CREATE TABLE [dbo].[Appointment]
 	AppointmentTime			DATETIME	NOT NULL,
 	AppointmentDate			DATETIME	NOT NULL,
 	CustomerNo				INT			NOT NULL,
-	TreatmentNo				INT			NOT NULL,
-	TreatmentDesc			VARCHAR(20)	NOT NULL,
-	TreatmentCost			INT			NOT NULL,
-	QuantityOfTreatment		INT			NOT NULL,
-	TreatmentDuration		INT			NOT NULL,
 	RoomNo					INT			NOT NULL, 
     CONSTRAINT FKCustomerNo FOREIGN KEY (CustomerNo) REFERENCES Customer(CustomerNo), 
-    CONSTRAINT FKRoomNo FOREIGN KEY (RoomNo) REFERENCES Room(RoomNo),
-	CONSTRAINT FKTreatmentNo FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
+    CONSTRAINT FKRoomNo FOREIGN KEY (RoomNo) REFERENCES Room(RoomNo)
 
 )
+insert into Appointment(AppointmentNo,AppointmentTime,AppointmentDate, CustomerNo,RoomNo )
+Values(5000, '16:00' ,'2021-12-10',5000,1),
+(5001, '17:00' ,'2021-12-10',5001,1)
+
+
+
 
 create table AppointmentTreatment(
+
+
 	AppointmentNo INT NOT NULL,
 	TreatmentNo INT NOT NULL,
 	Qty	int not null,
@@ -158,13 +172,25 @@ create table AppointmentTreatment(
 	primary key clustered(TreatmentNo, AppointmentNo)
 
 )
+insert into AppointmentTreatment(AppointmentNo, TreatmentNo, Qty)
+Values
+(5000,500,1),(5000,501,2),--two treatments that will happen in that one appointment 
+(5001,500,1)-- one treatment for one appointment 
+
 
 
 CREATE TABLE [dbo].[StaffAppointment]
 (
 	StaffNo			INT		NOT NULL,
 	AppointmentNo	INT		NOT NULL, 
+	TreatmentNo		int		NOT null 
     CONSTRAINT FKStaffNo FOREIGN KEY (StaffNo) REFERENCES Staff(StaffNo),
 	CONSTRAINT FKAppointmentNum FOREIGN KEY (AppointmentNo) REFERENCES Appointment(AppointmentNo),
-	primary key clustered(staffNo, AppointmentNo)
+		CONSTRAINT FKTreatmentNo FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
+	primary key clustered(staffNo, AppointmentNo, TreatmentNo)
 )
+
+insert into StaffAppointment(StaffNo ,AppointmentNo,TreatmentNo)
+Values
+(1001,5000,500),(1002,5000,501),--two staff doing same appointment 
+(1003,5001,502)
