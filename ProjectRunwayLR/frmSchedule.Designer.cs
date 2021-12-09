@@ -108,35 +108,36 @@ namespace ProjectRunwayLR
             this.tabEdit.Controls.Add(this.button1);
             this.tabEdit.Controls.Add(this.button6);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEdit.Location = new System.Drawing.Point(4, 29);
+            this.tabEdit.Location = new System.Drawing.Point(4, 34);
+            this.tabEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEdit.Size = new System.Drawing.Size(626, 454);
+            this.tabEdit.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEdit.Size = new System.Drawing.Size(837, 561);
             this.tabEdit.TabIndex = 2;
             this.tabEdit.Text = "Edit";
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(155, 285);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel4.Location = new System.Drawing.Point(207, 351);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(317, 72);
+            this.panel4.Size = new System.Drawing.Size(423, 89);
             this.panel4.TabIndex = 115;
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(155, 157);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel5.Location = new System.Drawing.Point(207, 193);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(317, 90);
+            this.panel5.Size = new System.Drawing.Size(423, 111);
             this.panel5.TabIndex = 116;
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(155, 38);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel6.Location = new System.Drawing.Point(207, 47);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(317, 83);
+            this.panel6.Size = new System.Drawing.Size(423, 102);
             this.panel6.TabIndex = 117;
             // 
             // button4
@@ -145,9 +146,10 @@ namespace ProjectRunwayLR
             this.button4.BackColor = System.Drawing.Color.Black;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(300, 432);
+            this.button4.Location = new System.Drawing.Point(400, 532);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 51);
+            this.button4.Size = new System.Drawing.Size(200, 63);
             this.button4.TabIndex = 114;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = false;
@@ -158,9 +160,10 @@ namespace ProjectRunwayLR
             this.button5.BackColor = System.Drawing.Color.Black;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(111, 430);
+            this.button5.Location = new System.Drawing.Point(148, 529);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 51);
+            this.button5.Size = new System.Drawing.Size(200, 63);
             this.button5.TabIndex = 113;
             this.button5.Text = "Edit";
             this.button5.UseVisualStyleBackColor = false;
@@ -170,9 +173,10 @@ namespace ProjectRunwayLR
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 363);
+            this.comboBox1.Location = new System.Drawing.Point(207, 447);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 26);
+            this.comboBox1.Size = new System.Drawing.Size(205, 32);
             this.comboBox1.TabIndex = 109;
             // 
             // comboBox6
@@ -180,9 +184,10 @@ namespace ProjectRunwayLR
             this.comboBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(155, 253);
+            this.comboBox6.Location = new System.Drawing.Point(207, 311);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(155, 26);
+            this.comboBox6.Size = new System.Drawing.Size(205, 32);
             this.comboBox6.TabIndex = 110;
             // 
             // comboBox7
@@ -190,9 +195,10 @@ namespace ProjectRunwayLR
             this.comboBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(155, 126);
+            this.comboBox7.Location = new System.Drawing.Point(207, 155);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(155, 26);
+            this.comboBox7.Size = new System.Drawing.Size(205, 32);
             this.comboBox7.TabIndex = 111;
             // 
             // comboBox8
@@ -200,9 +206,10 @@ namespace ProjectRunwayLR
             this.comboBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(155, 6);
+            this.comboBox8.Location = new System.Drawing.Point(207, 7);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(155, 26);
+            this.comboBox8.Size = new System.Drawing.Size(205, 32);
             this.comboBox8.TabIndex = 112;
             // 
             // label1
@@ -212,9 +219,10 @@ namespace ProjectRunwayLR
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 363);
+            this.label1.Location = new System.Drawing.Point(13, 447);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.Size = new System.Drawing.Size(116, 29);
             this.label1.TabIndex = 105;
             this.label1.Text = "Room No";
             // 
@@ -225,9 +233,10 @@ namespace ProjectRunwayLR
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 253);
+            this.label4.Location = new System.Drawing.Point(13, 311);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 24);
+            this.label4.Size = new System.Drawing.Size(98, 29);
             this.label4.TabIndex = 106;
             this.label4.Text = "Staff No";
             // 
@@ -238,9 +247,10 @@ namespace ProjectRunwayLR
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 126);
+            this.label5.Location = new System.Drawing.Point(13, 155);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 24);
+            this.label5.Size = new System.Drawing.Size(186, 29);
             this.label5.TabIndex = 107;
             this.label5.Text = "Appointment No";
             // 
@@ -251,9 +261,10 @@ namespace ProjectRunwayLR
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 6);
+            this.label6.Location = new System.Drawing.Point(13, 7);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 24);
+            this.label6.Size = new System.Drawing.Size(155, 29);
             this.label6.TabIndex = 108;
             this.label6.Text = "Customer No";
             // 
@@ -263,9 +274,10 @@ namespace ProjectRunwayLR
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(370, 490);
+            this.button1.Location = new System.Drawing.Point(493, 603);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 51);
+            this.button1.Size = new System.Drawing.Size(200, 63);
             this.button1.TabIndex = 82;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
@@ -276,9 +288,10 @@ namespace ProjectRunwayLR
             this.button6.BackColor = System.Drawing.Color.Black;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(113, 490);
+            this.button6.Location = new System.Drawing.Point(151, 603);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 51);
+            this.button6.Size = new System.Drawing.Size(200, 63);
             this.button6.TabIndex = 81;
             this.button6.Text = "Edit";
             this.button6.UseVisualStyleBackColor = false;
@@ -301,35 +314,36 @@ namespace ProjectRunwayLR
             this.tabAdd.Controls.Add(this.label2);
             this.tabAdd.Controls.Add(this.label29);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAdd.Location = new System.Drawing.Point(4, 29);
+            this.tabAdd.Location = new System.Drawing.Point(4, 34);
+            this.tabAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabAdd.Name = "tabAdd";
-            this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdd.Size = new System.Drawing.Size(626, 454);
+            this.tabAdd.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabAdd.Size = new System.Drawing.Size(837, 561);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(155, 285);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel3.Location = new System.Drawing.Point(207, 351);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(317, 72);
+            this.panel3.Size = new System.Drawing.Size(423, 89);
             this.panel3.TabIndex = 104;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(155, 157);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel2.Location = new System.Drawing.Point(207, 193);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 90);
+            this.panel2.Size = new System.Drawing.Size(423, 111);
             this.panel2.TabIndex = 104;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(155, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Location = new System.Drawing.Point(207, 47);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 83);
+            this.panel1.Size = new System.Drawing.Size(423, 102);
             this.panel1.TabIndex = 104;
             // 
             // button3
@@ -338,9 +352,10 @@ namespace ProjectRunwayLR
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(300, 432);
+            this.button3.Location = new System.Drawing.Point(400, 532);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 51);
+            this.button3.Size = new System.Drawing.Size(200, 63);
             this.button3.TabIndex = 103;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
@@ -351,9 +366,10 @@ namespace ProjectRunwayLR
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(111, 430);
+            this.button2.Location = new System.Drawing.Point(148, 529);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 51);
+            this.button2.Size = new System.Drawing.Size(200, 63);
             this.button2.TabIndex = 102;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
@@ -363,9 +379,10 @@ namespace ProjectRunwayLR
             this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(155, 363);
+            this.comboBox5.Location = new System.Drawing.Point(207, 447);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(155, 26);
+            this.comboBox5.Size = new System.Drawing.Size(205, 32);
             this.comboBox5.TabIndex = 88;
             // 
             // comboBox4
@@ -373,9 +390,10 @@ namespace ProjectRunwayLR
             this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(155, 253);
+            this.comboBox4.Location = new System.Drawing.Point(207, 311);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(155, 26);
+            this.comboBox4.Size = new System.Drawing.Size(205, 32);
             this.comboBox4.TabIndex = 88;
             // 
             // comboBox2
@@ -383,9 +401,10 @@ namespace ProjectRunwayLR
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(155, 126);
+            this.comboBox2.Location = new System.Drawing.Point(207, 155);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(155, 26);
+            this.comboBox2.Size = new System.Drawing.Size(205, 32);
             this.comboBox2.TabIndex = 88;
             // 
             // comboBox3
@@ -393,9 +412,10 @@ namespace ProjectRunwayLR
             this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(155, 6);
+            this.comboBox3.Location = new System.Drawing.Point(207, 7);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(155, 26);
+            this.comboBox3.Size = new System.Drawing.Size(205, 32);
             this.comboBox3.TabIndex = 88;
             // 
             // label19
@@ -405,9 +425,10 @@ namespace ProjectRunwayLR
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(10, 363);
+            this.label19.Location = new System.Drawing.Point(13, 447);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 24);
+            this.label19.Size = new System.Drawing.Size(116, 29);
             this.label19.TabIndex = 75;
             this.label19.Text = "Room No";
             // 
@@ -418,9 +439,10 @@ namespace ProjectRunwayLR
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 253);
+            this.label3.Location = new System.Drawing.Point(13, 311);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 24);
+            this.label3.Size = new System.Drawing.Size(98, 29);
             this.label3.TabIndex = 75;
             this.label3.Text = "Staff No";
             // 
@@ -431,9 +453,10 @@ namespace ProjectRunwayLR
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 126);
+            this.label2.Location = new System.Drawing.Point(13, 155);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 24);
+            this.label2.Size = new System.Drawing.Size(186, 29);
             this.label2.TabIndex = 75;
             this.label2.Text = "Appointment No";
             // 
@@ -444,9 +467,10 @@ namespace ProjectRunwayLR
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(10, 6);
+            this.label29.Location = new System.Drawing.Point(13, 7);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(121, 24);
+            this.label29.Size = new System.Drawing.Size(155, 29);
             this.label29.TabIndex = 75;
             this.label29.Text = "Customer No";
             // 
@@ -461,19 +485,20 @@ namespace ProjectRunwayLR
             this.tabDisplay.Controls.Add(this.btnDisplayExit);
             this.tabDisplay.Controls.Add(this.btnDisplayAdd);
             this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDisplay.Location = new System.Drawing.Point(4, 29);
+            this.tabDisplay.Location = new System.Drawing.Point(4, 34);
+            this.tabDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabDisplay.Name = "tabDisplay";
-            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(626, 454);
+            this.tabDisplay.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabDisplay.Size = new System.Drawing.Size(837, 561);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
             // dtpBookingsStartDate
             // 
-            this.dtpBookingsStartDate.Location = new System.Drawing.Point(5, 6);
-            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtpBookingsStartDate.Location = new System.Drawing.Point(7, 7);
+            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
-            this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
+            this.dtpBookingsStartDate.Size = new System.Drawing.Size(296, 34);
             this.dtpBookingsStartDate.TabIndex = 87;
             this.dtpBookingsStartDate.ValueChanged += new System.EventHandler(this.dtpBookingsStartDate_ValueChanged);
             // 
@@ -495,13 +520,15 @@ namespace ProjectRunwayLR
             this.Friday,
             this.Saturday,
             this.Sunday});
-            this.dgvAppointments.Location = new System.Drawing.Point(3, 40);
+            this.dgvAppointments.Location = new System.Drawing.Point(4, 49);
+            this.dgvAppointments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointments.Size = new System.Drawing.Size(622, 409);
+            this.dgvAppointments.Size = new System.Drawing.Size(829, 503);
             this.dgvAppointments.TabIndex = 0;
+            //this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
             // 
             // Monday
             // 
@@ -509,7 +536,7 @@ namespace ProjectRunwayLR
             this.Monday.MinimumWidth = 6;
             this.Monday.Name = "Monday";
             this.Monday.ReadOnly = true;
-            this.Monday.Width = 103;
+            this.Monday.Width = 127;
             // 
             // Tuesday
             // 
@@ -517,7 +544,7 @@ namespace ProjectRunwayLR
             this.Tuesday.MinimumWidth = 6;
             this.Tuesday.Name = "Tuesday";
             this.Tuesday.ReadOnly = true;
-            this.Tuesday.Width = 108;
+            this.Tuesday.Width = 135;
             // 
             // Wednesday
             // 
@@ -525,7 +552,7 @@ namespace ProjectRunwayLR
             this.Wednesday.MinimumWidth = 6;
             this.Wednesday.Name = "Wednesday";
             this.Wednesday.ReadOnly = true;
-            this.Wednesday.Width = 136;
+            this.Wednesday.Width = 169;
             // 
             // Thursday
             // 
@@ -533,7 +560,7 @@ namespace ProjectRunwayLR
             this.Thursday.MinimumWidth = 6;
             this.Thursday.Name = "Thursday";
             this.Thursday.ReadOnly = true;
-            this.Thursday.Width = 114;
+            this.Thursday.Width = 142;
             // 
             // Friday
             // 
@@ -541,7 +568,7 @@ namespace ProjectRunwayLR
             this.Friday.MinimumWidth = 6;
             this.Friday.Name = "Friday";
             this.Friday.ReadOnly = true;
-            this.Friday.Width = 87;
+            this.Friday.Width = 109;
             // 
             // Saturday
             // 
@@ -549,7 +576,7 @@ namespace ProjectRunwayLR
             this.Saturday.MinimumWidth = 6;
             this.Saturday.Name = "Saturday";
             this.Saturday.ReadOnly = true;
-            this.Saturday.Width = 108;
+            this.Saturday.Width = 136;
             // 
             // Sunday
             // 
@@ -557,7 +584,7 @@ namespace ProjectRunwayLR
             this.Sunday.MinimumWidth = 6;
             this.Sunday.Name = "Sunday";
             this.Sunday.ReadOnly = true;
-            this.Sunday.Width = 99;
+            this.Sunday.Width = 122;
             // 
             // btnDisplayDelete
             // 
@@ -565,9 +592,10 @@ namespace ProjectRunwayLR
             this.btnDisplayDelete.BackColor = System.Drawing.Color.Black;
             this.btnDisplayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayDelete.Location = new System.Drawing.Point(325, 456);
+            this.btnDisplayDelete.Location = new System.Drawing.Point(433, 561);
+            this.btnDisplayDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayDelete.Name = "btnDisplayDelete";
-            this.btnDisplayDelete.Size = new System.Drawing.Size(136, 51);
+            this.btnDisplayDelete.Size = new System.Drawing.Size(181, 63);
             this.btnDisplayDelete.TabIndex = 84;
             this.btnDisplayDelete.Text = "Delete";
             this.btnDisplayDelete.UseVisualStyleBackColor = false;
@@ -578,9 +606,10 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayEdit.Location = new System.Drawing.Point(168, 456);
+            this.btnDisplayEdit.Location = new System.Drawing.Point(224, 561);
+            this.btnDisplayEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayEdit.Name = "btnDisplayEdit";
-            this.btnDisplayEdit.Size = new System.Drawing.Size(133, 51);
+            this.btnDisplayEdit.Size = new System.Drawing.Size(177, 63);
             this.btnDisplayEdit.TabIndex = 85;
             this.btnDisplayEdit.Text = "Edit";
             this.btnDisplayEdit.UseVisualStyleBackColor = false;
@@ -591,9 +620,10 @@ namespace ProjectRunwayLR
             this.btnDisplayExit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayExit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayExit.Location = new System.Drawing.Point(479, 456);
+            this.btnDisplayExit.Location = new System.Drawing.Point(639, 561);
+            this.btnDisplayExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayExit.Name = "btnDisplayExit";
-            this.btnDisplayExit.Size = new System.Drawing.Size(139, 51);
+            this.btnDisplayExit.Size = new System.Drawing.Size(185, 63);
             this.btnDisplayExit.TabIndex = 83;
             this.btnDisplayExit.Text = "Exit";
             this.btnDisplayExit.UseVisualStyleBackColor = false;
@@ -604,9 +634,10 @@ namespace ProjectRunwayLR
             this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
             this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 456);
+            this.btnDisplayAdd.Location = new System.Drawing.Point(4, 561);
+            this.btnDisplayAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayAdd.Name = "btnDisplayAdd";
-            this.btnDisplayAdd.Size = new System.Drawing.Size(143, 51);
+            this.btnDisplayAdd.Size = new System.Drawing.Size(191, 63);
             this.btnDisplayAdd.TabIndex = 86;
             this.btnDisplayAdd.Text = "Add";
             this.btnDisplayAdd.UseVisualStyleBackColor = false;
@@ -619,19 +650,21 @@ namespace ProjectRunwayLR
             this.tabCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCustomer.Location = new System.Drawing.Point(0, 0);
+            this.tabCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabCustomer.Name = "tabCustomer";
             this.tabCustomer.SelectedIndex = 0;
-            this.tabCustomer.Size = new System.Drawing.Size(634, 487);
+            this.tabCustomer.Size = new System.Drawing.Size(845, 599);
             this.tabCustomer.TabIndex = 3;
             // 
             // frmSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(634, 487);
+            this.ClientSize = new System.Drawing.Size(845, 599);
             this.Controls.Add(this.tabCustomer);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSchedule";
             this.Text = "frmSchedule";
             this.TransparencyKey = System.Drawing.Color.Maroon;

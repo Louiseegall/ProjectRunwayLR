@@ -21,8 +21,6 @@ namespace ProjectRunwayLR
         SqlCommandBuilder cmdBAppointment, cmdBStaffAppointment, cmdBStaff;
         DataRow drAppointment, drStaffAppointment, drStaff;
 
-     
-
         String sqlAppointments, sqlStaffAppointment, sqlStaff, connStr;
         Boolean formLoad = true;
 
@@ -37,9 +35,9 @@ namespace ProjectRunwayLR
             new DateTime(2021,11,30)
         };
 
-        string[] times = { "09:00:00", "09:30:00", "10:00:00", "10:30:00", "11:00:00", "11:30:00",
+        string[] times = {"09:00:00", "09:30:00", "10:00:00", "10:30:00", "11:00:00", "11:30:00",
          "12:00:00", "12:30:00", "13:00:00", "13:30:00", "14:00:00", "14:30:00", "15:00:00", "15:30:00",
-         "16:00:00", "16:30:00", "17:00:00", "17:30:00" };
+         "16:00:00", "16:30:00", "17:00:00", "17:30:00"};
 
         public frmSchedule()
         {
@@ -70,17 +68,22 @@ namespace ProjectRunwayLR
             sqlStaff = @"select * from Staff";
             sqlStaffAppointment = @"select * from StaffAppointment";
             cmdAppointment = new SqlCommand(sqlAppointments, conn);
+            cmdStaff = new SqlCommand(sqlStaff, conn);
+            cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
             cmdAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
             cmdAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
             daAppointment = new SqlDataAdapter(cmdAppointment);
-            daAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
+            daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");
+            daStaff = new SqlDataAdapter(cmdStaff);
+            daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
+            daStaffAppointment = new SqlDataAdapter(cmdStaffAppointment);
+            daStaffAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
         }
 
         private void dtpBookingsStartDate_ValueChanged(object sender, EventArgs e)
         {
             DateTime startDate = new DateTime();
             DateTime d = dtpBookingsStartDate.Value;
-            dgvAppointments.AllowUserToAddRows = false;
 
             if (dtpBookingsStartDate.Value.DayOfWeek.ToString().Equals("Monday"))
             {
@@ -112,13 +115,13 @@ namespace ProjectRunwayLR
             }
             monStartDate = startDate;
 
-            dgvAppointments.Columns["Monday"].HeaderText = "Monday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["Tuesday"].HeaderText = "Tuesday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["Wednesday"].HeaderText = "Wednesday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["Thursday"].HeaderText = "Thursday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["Friday"].HeaderText = "Friday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["Saturday"].HeaderText = "Saturday" + startDate.ToShortDateString();
-            dgvAppointments.Columns["Sunday"].HeaderText = "Sunday" + startDate.ToShortDateString();
+            dgvAppointments.Columns["Monday"].HeaderText = "Monday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Tuesday"].HeaderText = "Tuesday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Wednesday"].HeaderText = "Wednesday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Thursday"].HeaderText = "Thursday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Friday"].HeaderText = "Friday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Saturday"].HeaderText = "Saturday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Sunday"].HeaderText = "Sunday " + startDate.ToShortDateString();
 
             if (!formLoad)
                 populateGrid2(currentWeek, monStartDate);
@@ -133,7 +136,7 @@ namespace ProjectRunwayLR
             {
                 if(ok)
                 {
-                    dsRunway.Tables["Appointment"].Clear();
+                    dsRunway.Tables["StaffAppointment"].Clear();
 
                     for (int i = 0; i <7; i++)
                     {
@@ -154,10 +157,10 @@ namespace ProjectRunwayLR
                     currentWeek[5] = monStartDate.AddDays(5).Date;
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
-                    daAppointment.Fill(dsRunway, "Appointment");
+                    daAppointment.Fill(dsRunway, "StaffAppointment");
 
                 }
-                foreach(DataRow dr in dsRunway.Tables["Appointment"].Rows)
+                foreach(DataRow dr in dsRunway.Tables["StaffAppointment"].Rows)
                 {
                     string starttime = (dr["TimeStart"].ToString());
 
