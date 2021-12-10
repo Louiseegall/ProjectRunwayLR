@@ -139,7 +139,7 @@ namespace ProjectRunwayLR
                 cmbCustomer.Items.Add(dr["CustomerSurname"].ToString() + ", " + dr["CustomerForename"].ToString() + " (" + dr["CustomerNo"].ToString() + " )");
             }
         }
-
+          
         private void populateTreatments()
         {
             int noRows = dsRunway.Tables["Treatment"].Rows.Count;
