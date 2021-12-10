@@ -47,6 +47,7 @@ namespace ProjectRunwayLR
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlUserID = new System.Windows.Forms.Panel();
             this.lblUserID = new System.Windows.Forms.Label();
+            this.btnPause = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.tlpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContent)).BeginInit();
@@ -317,6 +318,20 @@ namespace ProjectRunwayLR
             this.lblUserID.Text = "User ID";
             this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnPause
+            // 
+            this.btnPause.BackColor = System.Drawing.Color.Black;
+            this.btnPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPause.ForeColor = System.Drawing.Color.White;
+            this.btnPause.Location = new System.Drawing.Point(176, 2);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(136, 55);
+            this.btnPause.TabIndex = 27;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Visible = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +339,7 @@ namespace ProjectRunwayLR
             this.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.White_and_Gold;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 701);
+            this.Controls.Add(this.btnPause);
             this.Controls.Add(this.pnlUserID);
             this.Controls.Add(this.splitContent);
             this.Controls.Add(this.tlpMenu);
@@ -371,6 +387,7 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnlUserID;
         private System.Windows.Forms.Label lblUserID;
+        private System.Windows.Forms.Button btnPause;
         //private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
