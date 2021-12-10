@@ -15,13 +15,13 @@ namespace ProjectRunwayLR
     {
         DateTime monStartDate = new DateTime();
         DataSet dsRunway = new DataSet();
-        SqlDataAdapter daAppointment, daStaffAppointment, daStaff;
+        SqlDataAdapter daAppointment, daStaffAppointment, daStaff, daTreatment;
         SqlConnection conn;
-        SqlCommand cmdAppointment, cmdStaffAppointment, cmdStaff;
-        SqlCommandBuilder cmdBAppointment, cmdBStaffAppointment, cmdBStaff;
-        DataRow drAppointment, drStaffAppointment, drStaff;
+        SqlCommand cmdAppointment, cmdStaffAppointment, cmdStaff, cmdTreatment;
+        SqlCommandBuilder cmdBAppointment, cmdBStaffAppointment, cmdBStaff, cmdBTreatment;
+        DataRow drAppointment, drStaffAppointment, drStaff, drTreatment;
 
-        String sqlAppointments, sqlStaffAppointment, sqlStaff, connStr;
+        String sqlAppointments, sqlStaffAppointment, sqlStaff, sqlTreatment, connStr;
         Boolean formLoad = true;
 
         DateTime[] currentWeek = new DateTime[]
@@ -47,7 +47,7 @@ namespace ProjectRunwayLR
 
         private void frmSchedule_Load(object sender, EventArgs e)
         {
-            dtpBookingsStartDate.MinDate = DateTime.Now;
+             dtpBookingsStartDate.MinDate = DateTime.Now;
             connStr = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Runway; Integrated Security = true";
             conn = new SqlConnection(connStr);
 
@@ -67,17 +67,26 @@ namespace ProjectRunwayLR
             sqlAppointments = @"select * from Appointment a where (a.AppointmentDate between @StartDate and @EndDate)";
             sqlStaff = @"select * from Staff";
             sqlStaffAppointment = @"select * from StaffAppointment";
+            sqlTreatment = @"select * from Treatment";
+
             cmdAppointment = new SqlCommand(sqlAppointments, conn);
             cmdStaff = new SqlCommand(sqlStaff, conn);
+            cmdTreatment = new SqlCommand(sqlTreatment, conn);
             cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
             cmdAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
             cmdAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
+
             daAppointment = new SqlDataAdapter(cmdAppointment);
             daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");
+
             daStaff = new SqlDataAdapter(cmdStaff);
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
+
             daStaffAppointment = new SqlDataAdapter(cmdStaffAppointment);
             daStaffAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
+
+            daTreatment = new SqlDataAdapter(cmdTreatment);
+            daTreatment.FillSchema(dsRunway, SchemaType.Source, "Treatment");
         }
 
         private void dtpBookingsStartDate_ValueChanged(object sender, EventArgs e)
@@ -116,11 +125,17 @@ namespace ProjectRunwayLR
             monStartDate = startDate;
 
             dgvAppointments.Columns["Monday"].HeaderText = "Monday " + startDate.ToShortDateString();
+            startDate = startDate.Add(TimeSpan.FromDays(1));
             dgvAppointments.Columns["Tuesday"].HeaderText = "Tuesday " + startDate.ToShortDateString();
+            startDate = startDate.Add(TimeSpan.FromDays(1));
             dgvAppointments.Columns["Wednesday"].HeaderText = "Wednesday " + startDate.ToShortDateString();
+            startDate = startDate.Add(TimeSpan.FromDays(1));
             dgvAppointments.Columns["Thursday"].HeaderText = "Thursday " + startDate.ToShortDateString();
+            startDate = startDate.Add(TimeSpan.FromDays(1));
             dgvAppointments.Columns["Friday"].HeaderText = "Friday " + startDate.ToShortDateString();
+            startDate = startDate.Add(TimeSpan.FromDays(1));
             dgvAppointments.Columns["Saturday"].HeaderText = "Saturday " + startDate.ToShortDateString();
+            startDate = startDate.Add(TimeSpan.FromDays(1)); 
             dgvAppointments.Columns["Sunday"].HeaderText = "Sunday " + startDate.ToShortDateString();
 
             if (!formLoad)
@@ -175,7 +190,7 @@ namespace ProjectRunwayLR
                                     dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Green;
                                     dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
 
-                                    for(int k = 1; k < Convert.ToInt32(dr["NoSlots"]); k++)
+                                    for(int k = 1; k < Convert.ToInt32(dr["TreatmentDuration"]); k++)
                                     {
                                         dgvAppointments.Rows[j + k].Cells[i].Style.BackColor = Color.LightGreen;
                                     }

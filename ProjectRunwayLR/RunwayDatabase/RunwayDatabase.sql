@@ -156,7 +156,9 @@ CREATE TABLE [dbo].[Appointment]
 )
 insert into Appointment(AppointmentNo,AppointmentTime,AppointmentDate, CustomerNo,RoomNo )
 Values(5000, '16:00' ,'2021-12-10',5000,1),
-(5001, '17:00' ,'2021-12-10',5001,1)
+(5001, '17:00' ,'2021-12-10',5001,1),
+(5002, '17:00' ,'2022-1-11',5002,2),
+(5003, '17:00' ,'2021-1-12',5003,1)
 
 
 
