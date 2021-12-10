@@ -146,7 +146,7 @@ namespace ProjectRunwayLR
             cmbTreatment.Items.Clear();
             foreach (DataRow dr in dsRunway.Tables["Treatment"].Rows)
             {
-                cmbCustomer.Items.Add(dr["TreatmentDesc"].ToString() + ", "+ " (" + dr["TreatmentNo"].ToString() + " )");
+                cmbTreatment.Items.Add(dr["TreatmentDesc"].ToString() + ", "+ " (" + dr["TreatmentNo"].ToString() + " )");
             }
         }
     }

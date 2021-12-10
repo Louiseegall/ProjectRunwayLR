@@ -22,6 +22,7 @@ namespace ProjectRunwayLR
         int menuWidth = 0;
         int menuSpeed = 20;
         Form currentForm = null;
+        bool playing = true;
 
         public frmMainMenu()
         {
@@ -182,7 +183,8 @@ namespace ProjectRunwayLR
         {
             player.Stream = Properties.Resources.music;
             //  player.Stream = Properties.Resources._12percent;
-            player.Play();
+          //  player.Play();
+            player.PlayLooping();
 
 
             //  tarStop.Enabled = true;
@@ -212,6 +214,7 @@ namespace ProjectRunwayLR
             splitContent.Top = 135;
             splitContent.Height -= 125;
             lblUserID.Text = frmLogIn.username;
+            btnPause.Visible = true;
             //pnlContent.BackgroundImage = Properties.Resources.img1;
             //throw new NotImplementedException();
 
@@ -257,6 +260,23 @@ namespace ProjectRunwayLR
             btn.ForeColor = Color.White;
             btn.FlatStyle = FlatStyle.Standard;
 
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            if (playing)
+            {
+                player.Stop();
+                btnPause.Text = "Play";
+                playing = false;
+
+            }
+            else
+            {
+                player.PlayLooping();
+                btnPause.Text = "Pause";
+                playing = true;
+            }
         }
     }
 }

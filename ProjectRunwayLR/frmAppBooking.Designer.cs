@@ -273,7 +273,8 @@ namespace ProjectRunwayLR
             // 
             // pnlRoom
             // 
-            this.pnlRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlRoom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlRoom.BackColor = System.Drawing.Color.Transparent;
             this.pnlRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlRoom.Controls.Add(this.cmbKennelNo);
@@ -288,9 +289,9 @@ namespace ProjectRunwayLR
             this.cmbKennelNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbKennelNo.FormattingEnabled = true;
-            this.cmbKennelNo.Location = new System.Drawing.Point(137, 9);
+            this.cmbKennelNo.Location = new System.Drawing.Point(104, 9);
             this.cmbKennelNo.Name = "cmbKennelNo";
-            this.cmbKennelNo.Size = new System.Drawing.Size(135, 26);
+            this.cmbKennelNo.Size = new System.Drawing.Size(168, 26);
             this.cmbKennelNo.TabIndex = 9;
             // 
             // lblKennelNo
@@ -396,11 +397,11 @@ namespace ProjectRunwayLR
             // 
             this.dtpTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpTime.Location = new System.Drawing.Point(154, 172);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(179, 24);
             this.dtpTime.TabIndex = 17;
-           // this.dtpTime.SizeChanged += new System.EventHandler(this.dtpTime_SizeChanged);
             // 
             // label3
             // 
