@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,23 +11,24 @@ using System.Windows.Forms;
 
 namespace ProjectRunwayLR
 {
- 
+
     public partial class frmMainMenu : Form
-    {   
+    {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-    String currDir = Environment.CurrentDirectory;
+        String currDir = Environment.CurrentDirectory;
 
         bool menuOpen = true;
         bool menuChanging = false;
         int menuWidth = 0;
         int menuSpeed = 20;
         Form currentForm = null;
+
         public frmMainMenu()
         {
             InitializeComponent();
         }
 
-      
+
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -127,7 +129,7 @@ namespace ProjectRunwayLR
             form.ShowInTaskbar = false;
             form.Show();
             form.Dock = DockStyle.Fill;
-          
+
         }
 
         private void btnAppointment_Click(object sender, EventArgs e)
@@ -175,7 +177,7 @@ namespace ProjectRunwayLR
             }
         }
 
- 
+
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
             player.Stream = Properties.Resources.music;
@@ -187,20 +189,20 @@ namespace ProjectRunwayLR
             //if (form is frmLogIn)
             //{
             tlpMenu.Visible = false;
-                pnlUserID.Visible = false;
-                btnMenu.Visible = false;
+            pnlUserID.Visible = false;
+            btnMenu.Visible = false;
             //}
             //else
             //{
-              
+
             //}
             frmLogIn login = new frmLogIn();
             login.FormClosed += Login_FormClosed;
             splitContent.Top = 10;
             splitContent.Height += 125;
-            openForm( login);
-     
-       }
+            openForm(login);
+
+        }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -208,7 +210,7 @@ namespace ProjectRunwayLR
             pnlUserID.Visible = true;
             btnMenu.Visible = true;
             splitContent.Top = 135;
-            splitContent.Height -=125;
+            splitContent.Height -= 125;
             lblUserID.Text = frmLogIn.username;
             //pnlContent.BackgroundImage = Properties.Resources.img1;
             //throw new NotImplementedException();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,27 @@ namespace ProjectRunwayLR
     public partial class frmAppBooking : Form
     {
 
+        SqlDataAdapter daCustomers, daTreatments, daRooms, daBooking, daBokingDet, daBookedAppointments;
+        DataSet dsRunway = new DataSet();
+        SqlConnection conn;
+        SqlCommand cmdCustomerDetails, cmdTreatmentDetails, cmdRoomDetails;
+
+
+        SqlCommandBuilder cmdBCustomer, cmdBBooking, cmdBBookingDet, cmdBBookedAppointments, cmdBTreatments;
+
+  
+
+        DataRow drCustomer;
+
+       
+
+        String sqlCustomerDetails, sqlTreatmentDetails, sqlRoomDetails, sqlBooking, sqlBookingDet, sqlBookedAppointments;
+
+   
+
+        String connStr;
+
+
 
         /* put under dataadapter and ds set up
           string[] times = { "09:00:00", "09:30:00", "10:00:00", "10:30:00", "11:00:00", "11:30:00",
@@ -23,20 +45,6 @@ namespace ProjectRunwayLR
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmAppBooking_SizeChanged(object sender, EventArgs e)
         {
@@ -46,6 +54,25 @@ namespace ProjectRunwayLR
         private void frmAppBooking_Load(object sender, EventArgs e)
         {
 
+            lblBookingDatee.Text = DateTime.Now.ToShortDateString();
+            dtpStartDate.MinDate = DateTime.Now;
+            connStr = "Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog = Runway; Integrated Security = true";
+
+            conn = new SqlConnection(connStr);
+
+            sqlCustomerDetails = @"Select * from Customer order by CustomerSurname";
+            daCustomers = new SqlDataAdapter(sqlCustomerDetails, connStr);
+            cmdBCustomer = new SqlCommandBuilder(daCustomers);
+            daCustomers.FillSchema(dsRunway   , SchemaType.Source, "Customer");
+            daCustomers.Fill(dsRunway, "Customer");
+            populateCustomers();
+
+            sqlTreatmentDetails = @"Select * from Treatment order by TreatmentDesc";
+            daTreatments = new SqlDataAdapter(sqlTreatmentDetails, connStr);
+            cmdBTreatments = new SqlCommandBuilder(daTreatments);
+            daTreatments.FillSchema(dsRunway, SchemaType.Source, "Treatment");
+            daTreatments.Fill(dsRunway, "Treatment");
+            populateTreatments();
 
 
             /* add in tooo for times
@@ -65,21 +92,26 @@ namespace ProjectRunwayLR
             //   tabApp.ItemSize = new Size((tabApp.Width - 5) / 3, tabApp.ItemSize.Height);
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void cmbCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int CustNo = int.Parse(cmbCustomer.Text.Substring(cmbCustomer.Text.Length - 7, 5));
+            drCustomer = dsRunway.Tables["Customer"].Rows.Find(CustNo);
+            lblCust1.Text = drCustomer["TelNo"].ToString();
+            lblCust2.Text = drCustomer["Email"].ToString();
+            lblCust3.Text = drCustomer["Postcode"].ToString();
 
+            dtpStartDate.Enabled = true;
         }
 
-        private void tabApp_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpTime.Enabled = true;
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
+      
         private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -95,6 +127,27 @@ namespace ProjectRunwayLR
             btn.ForeColor = Color.White;
             btn.FlatStyle = FlatStyle.Standard;
 
+        }
+
+
+        private void populateCustomers()
+        {
+            int noRows = dsRunway.Tables["Customer"].Rows.Count;
+            cmbCustomer.Items.Clear();
+            foreach (DataRow dr in dsRunway.Tables["customer"].Rows)
+            {
+                cmbCustomer.Items.Add(dr["CustomerSurname"].ToString() + ", " + dr["CustomerForename"].ToString() + " (" + dr["CustomerNo"].ToString() + " )");
+            }
+        }
+
+        private void populateTreatments()
+        {
+            int noRows = dsRunway.Tables["Treatment"].Rows.Count;
+            cmbTreatment.Items.Clear();
+            foreach (DataRow dr in dsRunway.Tables["Treatment"].Rows)
+            {
+                cmbCustomer.Items.Add(dr["TreatmentDesc"].ToString() + ", "+ " (" + dr["TreatmentNo"].ToString() + " )");
+            }
         }
     }
 }

@@ -33,9 +33,6 @@ namespace ProjectRunwayLR
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.button10 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -54,11 +51,12 @@ namespace ProjectRunwayLR
             this.cmbDog = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlPayment = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblCust1 = new System.Windows.Forms.Label();
+            this.dtpTime = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblBookingDate = new System.Windows.Forms.Label();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbNoDays = new System.Windows.Forms.ComboBox();
+            this.cmbTreatment = new System.Windows.Forms.ComboBox();
             this.lblNoDays = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblBookingDatee = new System.Windows.Forms.Label();
@@ -67,6 +65,15 @@ namespace ProjectRunwayLR
             this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button14 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -111,23 +118,14 @@ namespace ProjectRunwayLR
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dgvAppointments = new System.Windows.Forms.DataGridView();
-            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabAdd.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnlBooking.SuspendLayout();
             this.pnlRoom.SuspendLayout();
             this.pnlStaff.SuspendLayout();
             this.pnlPayment.SuspendLayout();
             this.tabDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.tabApp.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -135,7 +133,6 @@ namespace ProjectRunwayLR
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // errP
@@ -148,7 +145,6 @@ namespace ProjectRunwayLR
             this.tabAdd.BackgroundImage = global::ProjectRunwayLR.Properties.Resources.g;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabAdd.Controls.Add(this.button10);
-            this.tabAdd.Controls.Add(this.panel1);
             this.tabAdd.Controls.Add(this.button2);
             this.tabAdd.Controls.Add(this.button3);
             this.tabAdd.Controls.Add(this.button9);
@@ -160,7 +156,7 @@ namespace ProjectRunwayLR
             this.tabAdd.Location = new System.Drawing.Point(4, 32);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdd.Size = new System.Drawing.Size(612, 442);
+            this.tabAdd.Size = new System.Drawing.Size(664, 489);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
@@ -176,42 +172,8 @@ namespace ProjectRunwayLR
             this.button10.TabIndex = 120;
             this.button10.Text = "Cancel";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             this.button10.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.button10.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(329, 131);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 47);
-            this.panel1.TabIndex = 119;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(104, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 26);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Payment No";
             // 
             // button2
             // 
@@ -265,7 +227,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBooking.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnlBooking.Controls.Add(this.lvwBooking);
-            this.pnlBooking.Location = new System.Drawing.Point(329, 186);
+            this.pnlBooking.Location = new System.Drawing.Point(360, 185);
             this.pnlBooking.Name = "pnlBooking";
             this.pnlBooking.Size = new System.Drawing.Size(279, 182);
             this.pnlBooking.TabIndex = 115;
@@ -316,9 +278,9 @@ namespace ProjectRunwayLR
             this.pnlRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlRoom.Controls.Add(this.cmbKennelNo);
             this.pnlRoom.Controls.Add(this.lblKennelNo);
-            this.pnlRoom.Location = new System.Drawing.Point(6, 318);
+            this.pnlRoom.Location = new System.Drawing.Point(360, 131);
             this.pnlRoom.Name = "pnlRoom";
-            this.pnlRoom.Size = new System.Drawing.Size(313, 48);
+            this.pnlRoom.Size = new System.Drawing.Size(279, 48);
             this.pnlRoom.TabIndex = 114;
             // 
             // cmbKennelNo
@@ -328,7 +290,7 @@ namespace ProjectRunwayLR
             this.cmbKennelNo.FormattingEnabled = true;
             this.cmbKennelNo.Location = new System.Drawing.Point(137, 9);
             this.cmbKennelNo.Name = "cmbKennelNo";
-            this.cmbKennelNo.Size = new System.Drawing.Size(169, 26);
+            this.cmbKennelNo.Size = new System.Drawing.Size(135, 26);
             this.cmbKennelNo.TabIndex = 9;
             // 
             // lblKennelNo
@@ -351,7 +313,7 @@ namespace ProjectRunwayLR
             this.pnlStaff.Controls.Add(this.label1);
             this.pnlStaff.Controls.Add(this.cmbDog);
             this.pnlStaff.Controls.Add(this.label15);
-            this.pnlStaff.Location = new System.Drawing.Point(329, 11);
+            this.pnlStaff.Location = new System.Drawing.Point(360, 11);
             this.pnlStaff.Name = "pnlStaff";
             this.pnlStaff.Size = new System.Drawing.Size(279, 114);
             this.pnlStaff.TabIndex = 113;
@@ -402,11 +364,12 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlPayment.BackColor = System.Drawing.Color.Transparent;
             this.pnlPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlPayment.Controls.Add(this.label5);
-            this.pnlPayment.Controls.Add(this.label4);
-            this.pnlPayment.Controls.Add(this.dateTimePicker1);
+            this.pnlPayment.Controls.Add(this.lblCust1);
+            this.pnlPayment.Controls.Add(this.dtpTime);
+            this.pnlPayment.Controls.Add(this.label3);
+            this.pnlPayment.Controls.Add(this.lblBookingDate);
             this.pnlPayment.Controls.Add(this.dtpStartDate);
-            this.pnlPayment.Controls.Add(this.cmbNoDays);
+            this.pnlPayment.Controls.Add(this.cmbTreatment);
             this.pnlPayment.Controls.Add(this.lblNoDays);
             this.pnlPayment.Controls.Add(this.lblStartDate);
             this.pnlPayment.Controls.Add(this.lblBookingDatee);
@@ -416,53 +379,64 @@ namespace ProjectRunwayLR
             this.pnlPayment.Controls.Add(this.lblCustomerName);
             this.pnlPayment.Location = new System.Drawing.Point(5, 11);
             this.pnlPayment.Name = "pnlPayment";
-            this.pnlPayment.Size = new System.Drawing.Size(314, 301);
+            this.pnlPayment.Size = new System.Drawing.Size(340, 357);
             this.pnlPayment.TabIndex = 112;
             // 
-            // label5
+            // lblCust1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 239);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "-";
+            this.lblCust1.AutoSize = true;
+            this.lblCust1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCust1.Location = new System.Drawing.Point(25, 118);
+            this.lblCust1.Name = "lblCust1";
+            this.lblCust1.Size = new System.Drawing.Size(14, 20);
+            this.lblCust1.TabIndex = 18;
+            this.lblCust1.Text = "-";
             // 
-            // label4
+            // dtpTime
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 280);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "-";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(138, 135);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(169, 24);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dtpTime.Location = new System.Drawing.Point(154, 172);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.Size = new System.Drawing.Size(179, 24);
+            this.dtpTime.TabIndex = 17;
+           // this.dtpTime.SizeChanged += new System.EventHandler(this.dtpTime_SizeChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 20);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Appointment Time";
+            // 
+            // lblBookingDate
+            // 
+            this.lblBookingDate.AutoSize = true;
+            this.lblBookingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookingDate.Location = new System.Drawing.Point(3, 209);
+            this.lblBookingDate.Name = "lblBookingDate";
+            this.lblBookingDate.Size = new System.Drawing.Size(106, 20);
+            this.lblBookingDate.TabIndex = 15;
+            this.lblBookingDate.Text = "Booking Date";
             // 
             // dtpStartDate
             // 
             this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpStartDate.Location = new System.Drawing.Point(138, 173);
+            this.dtpStartDate.Location = new System.Drawing.Point(154, 132);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(169, 24);
+            this.dtpStartDate.Size = new System.Drawing.Size(179, 24);
             this.dtpStartDate.TabIndex = 11;
             // 
-            // cmbNoDays
+            // cmbTreatment
             // 
-            this.cmbNoDays.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbTreatment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbNoDays.FormattingEnabled = true;
-            this.cmbNoDays.Items.AddRange(new object[] {
+            this.cmbTreatment.FormattingEnabled = true;
+            this.cmbTreatment.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -473,16 +447,16 @@ namespace ProjectRunwayLR
             "8",
             "9",
             "10"});
-            this.cmbNoDays.Location = new System.Drawing.Point(138, 208);
-            this.cmbNoDays.Name = "cmbNoDays";
-            this.cmbNoDays.Size = new System.Drawing.Size(169, 26);
-            this.cmbNoDays.TabIndex = 9;
+            this.cmbTreatment.Location = new System.Drawing.Point(145, 254);
+            this.cmbTreatment.Name = "cmbTreatment";
+            this.cmbTreatment.Size = new System.Drawing.Size(181, 26);
+            this.cmbTreatment.TabIndex = 9;
             // 
             // lblNoDays
             // 
             this.lblNoDays.AutoSize = true;
             this.lblNoDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoDays.Location = new System.Drawing.Point(15, 210);
+            this.lblNoDays.Location = new System.Drawing.Point(3, 260);
             this.lblNoDays.Name = "lblNoDays";
             this.lblNoDays.Size = new System.Drawing.Size(124, 20);
             this.lblNoDays.TabIndex = 8;
@@ -492,27 +466,27 @@ namespace ProjectRunwayLR
             // 
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDate.Location = new System.Drawing.Point(15, 173);
+            this.lblStartDate.Location = new System.Drawing.Point(3, 136);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(105, 20);
+            this.lblStartDate.Size = new System.Drawing.Size(139, 20);
             this.lblStartDate.TabIndex = 7;
-            this.lblStartDate.Text = "Booking Time";
+            this.lblStartDate.Text = "Appointment Date";
             // 
             // lblBookingDatee
             // 
             this.lblBookingDatee.AutoSize = true;
             this.lblBookingDatee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingDatee.Location = new System.Drawing.Point(15, 135);
+            this.lblBookingDatee.Location = new System.Drawing.Point(216, 209);
             this.lblBookingDatee.Name = "lblBookingDatee";
-            this.lblBookingDatee.Size = new System.Drawing.Size(114, 20);
+            this.lblBookingDatee.Size = new System.Drawing.Size(18, 20);
             this.lblBookingDatee.TabIndex = 6;
-            this.lblBookingDatee.Text = "Booking Date: ";
+            this.lblBookingDatee.Text = "- ";
             // 
             // lblCust3
             // 
             this.lblCust3.AutoSize = true;
             this.lblCust3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCust3.Location = new System.Drawing.Point(25, 78);
+            this.lblCust3.Location = new System.Drawing.Point(25, 40);
             this.lblCust3.Name = "lblCust3";
             this.lblCust3.Size = new System.Drawing.Size(14, 20);
             this.lblCust3.TabIndex = 4;
@@ -522,7 +496,7 @@ namespace ProjectRunwayLR
             // 
             this.lblCust2.AutoSize = true;
             this.lblCust2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCust2.Location = new System.Drawing.Point(25, 40);
+            this.lblCust2.Location = new System.Drawing.Point(25, 78);
             this.lblCust2.Name = "lblCust2";
             this.lblCust2.Size = new System.Drawing.Size(14, 20);
             this.lblCust2.TabIndex = 2;
@@ -535,8 +509,9 @@ namespace ProjectRunwayLR
             this.cmbCustomer.FormattingEnabled = true;
             this.cmbCustomer.Location = new System.Drawing.Point(145, 11);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(162, 26);
+            this.cmbCustomer.Size = new System.Drawing.Size(188, 26);
             this.cmbCustomer.TabIndex = 1;
+            this.cmbCustomer.SelectedIndexChanged += new System.EventHandler(this.cmbCustomer_SelectedIndexChanged);
             // 
             // lblCustomerName
             // 
@@ -571,6 +546,96 @@ namespace ProjectRunwayLR
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
+            // dtpBookingsStartDate
+            // 
+            this.dtpBookingsStartDate.Location = new System.Drawing.Point(6, 6);
+            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
+            this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
+            this.dtpBookingsStartDate.TabIndex = 141;
+            // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAppointments.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Monday,
+            this.Tuesday,
+            this.Wednesday,
+            this.Thursday,
+            this.Friday,
+            this.Saturday,
+            this.Sunday});
+            this.dgvAppointments.Location = new System.Drawing.Point(6, 41);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAppointments.Size = new System.Drawing.Size(658, 358);
+            this.dgvAppointments.TabIndex = 140;
+            // 
+            // Monday
+            // 
+            this.Monday.HeaderText = "Monday";
+            this.Monday.MinimumWidth = 6;
+            this.Monday.Name = "Monday";
+            this.Monday.ReadOnly = true;
+            this.Monday.Width = 103;
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.HeaderText = "Tuesday";
+            this.Tuesday.MinimumWidth = 6;
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.ReadOnly = true;
+            this.Tuesday.Width = 108;
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.HeaderText = "Wednesday";
+            this.Wednesday.MinimumWidth = 6;
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.ReadOnly = true;
+            this.Wednesday.Width = 136;
+            // 
+            // Thursday
+            // 
+            this.Thursday.HeaderText = "Thursday";
+            this.Thursday.MinimumWidth = 6;
+            this.Thursday.Name = "Thursday";
+            this.Thursday.ReadOnly = true;
+            this.Thursday.Width = 114;
+            // 
+            // Friday
+            // 
+            this.Friday.HeaderText = "Friday";
+            this.Friday.MinimumWidth = 6;
+            this.Friday.Name = "Friday";
+            this.Friday.ReadOnly = true;
+            this.Friday.Width = 87;
+            // 
+            // Saturday
+            // 
+            this.Saturday.HeaderText = "Saturday";
+            this.Saturday.MinimumWidth = 6;
+            this.Saturday.Name = "Saturday";
+            this.Saturday.ReadOnly = true;
+            this.Saturday.Width = 108;
+            // 
+            // Sunday
+            // 
+            this.Sunday.HeaderText = "Sunday";
+            this.Sunday.MinimumWidth = 6;
+            this.Sunday.Name = "Sunday";
+            this.Sunday.ReadOnly = true;
+            this.Sunday.Width = 99;
+            // 
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -598,7 +663,6 @@ namespace ProjectRunwayLR
             this.button7.TabIndex = 137;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             this.button7.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.button7.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -614,7 +678,6 @@ namespace ProjectRunwayLR
             this.button1.TabIndex = 136;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             this.button1.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -630,7 +693,6 @@ namespace ProjectRunwayLR
             this.button6.TabIndex = 132;
             this.button6.Text = "Add";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.button6.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -701,7 +763,6 @@ namespace ProjectRunwayLR
             this.tabApp.Size = new System.Drawing.Size(672, 525);
             this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabApp.TabIndex = 4;
-            this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -721,7 +782,7 @@ namespace ProjectRunwayLR
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(612, 442);
+            this.tabPage1.Size = new System.Drawing.Size(664, 489);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Edit";
             // 
@@ -1108,96 +1169,6 @@ namespace ProjectRunwayLR
             this.label19.TabIndex = 0;
             this.label19.Text = "Customer Name";
             // 
-            // dgvAppointments
-            // 
-            this.dgvAppointments.AllowUserToAddRows = false;
-            this.dgvAppointments.AllowUserToDeleteRows = false;
-            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAppointments.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Monday,
-            this.Tuesday,
-            this.Wednesday,
-            this.Thursday,
-            this.Friday,
-            this.Saturday,
-            this.Sunday});
-            this.dgvAppointments.Location = new System.Drawing.Point(6, 41);
-            this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.ReadOnly = true;
-            this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointments.Size = new System.Drawing.Size(658, 358);
-            this.dgvAppointments.TabIndex = 140;
-            // 
-            // Monday
-            // 
-            this.Monday.HeaderText = "Monday";
-            this.Monday.MinimumWidth = 6;
-            this.Monday.Name = "Monday";
-            this.Monday.ReadOnly = true;
-            this.Monday.Width = 103;
-            // 
-            // Tuesday
-            // 
-            this.Tuesday.HeaderText = "Tuesday";
-            this.Tuesday.MinimumWidth = 6;
-            this.Tuesday.Name = "Tuesday";
-            this.Tuesday.ReadOnly = true;
-            this.Tuesday.Width = 108;
-            // 
-            // Wednesday
-            // 
-            this.Wednesday.HeaderText = "Wednesday";
-            this.Wednesday.MinimumWidth = 6;
-            this.Wednesday.Name = "Wednesday";
-            this.Wednesday.ReadOnly = true;
-            this.Wednesday.Width = 136;
-            // 
-            // Thursday
-            // 
-            this.Thursday.HeaderText = "Thursday";
-            this.Thursday.MinimumWidth = 6;
-            this.Thursday.Name = "Thursday";
-            this.Thursday.ReadOnly = true;
-            this.Thursday.Width = 114;
-            // 
-            // Friday
-            // 
-            this.Friday.HeaderText = "Friday";
-            this.Friday.MinimumWidth = 6;
-            this.Friday.Name = "Friday";
-            this.Friday.ReadOnly = true;
-            this.Friday.Width = 87;
-            // 
-            // Saturday
-            // 
-            this.Saturday.HeaderText = "Saturday";
-            this.Saturday.MinimumWidth = 6;
-            this.Saturday.Name = "Saturday";
-            this.Saturday.ReadOnly = true;
-            this.Saturday.Width = 108;
-            // 
-            // Sunday
-            // 
-            this.Sunday.HeaderText = "Sunday";
-            this.Sunday.MinimumWidth = 6;
-            this.Sunday.Name = "Sunday";
-            this.Sunday.ReadOnly = true;
-            this.Sunday.Width = 99;
-            // 
-            // dtpBookingsStartDate
-            // 
-            this.dtpBookingsStartDate.Location = new System.Drawing.Point(6, 6);
-            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
-            this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
-            this.dtpBookingsStartDate.TabIndex = 141;
-            // 
             // frmAppBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1210,8 +1181,6 @@ namespace ProjectRunwayLR
             this.SizeChanged += new System.EventHandler(this.frmAppBooking_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabAdd.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.pnlBooking.ResumeLayout(false);
             this.pnlRoom.ResumeLayout(false);
             this.pnlRoom.PerformLayout();
@@ -1220,6 +1189,7 @@ namespace ProjectRunwayLR
             this.pnlPayment.ResumeLayout(false);
             this.pnlPayment.PerformLayout();
             this.tabDisplay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.tabApp.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1231,7 +1201,6 @@ namespace ProjectRunwayLR
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1247,9 +1216,6 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Button btnDisplayAdd;
         private System.Windows.Forms.TabPage tabAdd;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button9;
@@ -1268,11 +1234,8 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ComboBox cmbDog;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel pnlPayment;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
-        private System.Windows.Forms.ComboBox cmbNoDays;
+        private System.Windows.Forms.ComboBox cmbTreatment;
         private System.Windows.Forms.Label lblNoDays;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblBookingDatee;
@@ -1327,5 +1290,9 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.DataGridViewTextBoxColumn Saturday;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sunday;
         private System.Windows.Forms.DateTimePicker dtpBookingsStartDate;
+        private System.Windows.Forms.Label lblBookingDate;
+        private System.Windows.Forms.DateTimePicker dtpTime;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCust1;
     }
 }
