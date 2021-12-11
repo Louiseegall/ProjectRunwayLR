@@ -20,13 +20,13 @@ namespace ProjectRunwayLR
         SqlCommand cmdCustomerDetails, cmdTreatmentDetails, cmdRoomDetails,cmdRoomAppointmentDetails;
 
 
-        SqlCommandBuilder cmdBCustomer,cmdBStaff, cmdBBookedRooms, cmdBBookingDet, cmdBTreatments;
+        SqlCommandBuilder cmdBCustomer,cmdBStaff, cmdBBookedRooms, cmdBBookingDet, cmdBTreatments, cmdBBooking;
 
 
         DataRow drCustomer, drTreatment;
 
 
-        String sqlCustomerDetails, sqlTreatmentDetails, sqlStaffDetails ,sqlRoomDetails, sqlRooms, sqlBookedRooms, sqlBookingDet, sqlBookedAppointments;
+        String sqlCustomerDetails, sqlTreatmentDetails, sqlStaffDetails ,sqlRoomDetails, sqlRooms, sqlBooking;
 
       
 
@@ -105,7 +105,11 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
             daRoomsAppointments.FillSchema(dsRunway, SchemaType.Source, "RoomAppointment");
 
 
-
+            sqlBooking = @"SELECT * from Appointment";
+            daBooking = new SqlDataAdapter(sqlBooking, conn);
+            cmdBBooking = new SqlCommandBuilder(daBooking);
+            daBooking.FillSchema(dsRunway, SchemaType.Source, "Appointment");
+            daBooking.Fill(dsRunway, "Appointment");
 
             //set up data adapter for room lready booked details for validation
             //sqlBookedRooms = @"Select booking.bookingNo , dateStart, noDays, dogNo, kennelNo from booking Join bookingDetail On booking.bookingNo = bookingDetail.bookingNo order by bookingNo";
@@ -259,67 +263,73 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
         {
 
             bool ok = true;
-            bool exits = false;
+            //bool exits = false;
             if (cmbCustomer.Text == "")
                 MessageBox.Show("please select a customer", "Customer");
-            else if (cmbTreatment.Text == "")
-                MessageBox.Show("please select a Treatment", "Treatment");
-            else if (cmbRoomNo.Text == "")
-                MessageBox.Show("please select a Room", "Room");
-            else if (cmbStaff.Text == "")
 
-                MessageBox.Show("please select a Staff", "Staff");
-            else if (cmbAppointmentTime.Text == "")
+            else if (dtpStartDate.Value<DateTime.Now.Date)
+                MessageBox.Show("please select a Appointment Date", "AppointmentDate");
+else if (cmbAppointmentTime.Text == "")
             {
                 MessageBox.Show("please select a Appointment Time", "AppointmentTime");
 
                 cmbAppointmentTime.Focus();
             }
+            else if (cmbTreatment.Text == "")
+                MessageBox.Show("please select a Treatment", "Treatment");
+        else if (cmbStaff.Text == "")
+                MessageBox.Show("please select a Staff", "Staff");
+            
+
+            else if (cmbRoomNo.Text == "")
+                MessageBox.Show("please select a Room", "Room");
+    
             else
             {
-                foreach (ListViewItem item in lvwBooking.Items)
+                //foreach (ListViewItem item in lvwBooking.Items)
+                //{
+                //    if (item.SubItems[1].Text == cmbRoomNo.Text)
+                //    {
+                //        MessageBox.Show("Room already selected for this booking", "Booking");
+                //        exits = true;
+                //        break;
+                //    }
+                //}
+                //if (!exits)
+                ////{
+                //    DateTime start = DateTime.Parse(cmbAppointmentTime.Text.Trim());
+                //    foreach (DataRow dr in dsRunway.Tables["Appointment"].Rows)
+                //    {
+                //        DateTime bookedDate = DateTime.Parse(dr["dateStart"].ToString());
+                //        if (start >= bookedDate && start <= bookedDate.AddDays(int.Parse(cmbAppointmentTime.Text)))
+                //        {
+
+                //            if ((dr["BookedRooms"] == cmbRoomNo.SelectedValue))
+                //            {
+                //                MessageBox.Show("the selected Room is already included in a booking for this dayte range. pleasereselect", "Booking");
+                //                ok = false;
+                //            }
+                //            if (!ok)
+                //                break;
+                //        }
+                //    }
+                if (ok)
                 {
-                    if (item.SubItems[1].Text == cmbRoomNo.Text)
-                    {
-                        MessageBox.Show("Room already selected for this booking", "Booking");
-                        exits = true;
-                        break;
-                    }
-                }
-                if (!exits)
-                {
-                    DateTime start = DateTime.Parse(dtpStartDate.Text.Trim());
-                    foreach (DataRow dr in dsRunway.Tables["BookedRooms"].Rows)
-                    {
-                        DateTime bookedDate = DateTime.Parse(dr["dateStart"].ToString());
-                        if (start >= bookedDate && start <= bookedDate.AddDays(int.Parse(cmbAppointmentTime.Text)))
-                        {
-
-                            if ((dr["RoomNo"] == cmbRoomNo.SelectedValue) )
-                            {
-                                MessageBox.Show("the selected Room is already included in a booking for this dayte range. pleasereselect", "Booking");
-                                ok = false;
-                            }
-                            if (!ok)
-                                break;
-                        }
-                    }
-                    if (ok)
-                    {
-                        pnlCustomer.Enabled = false;
-                        DataRow room = dsRunway.Tables["Room"].Rows.Find(int.Parse(cmbRoomNo.Text.Substring(cmbRoomNo.Text.Length - 6, 4))); 
+                    pnlCustomer.Enabled = false;
+                    DataRow room = dsRunway.Tables["Room"].Rows.Find(int.Parse(cmbRoomNo.Text));
 
 
 
-                        ListViewItem item = new ListViewItem(room["RoomNo"].ToString());
-                        item.SubItems.Add(room["RoomDesc"].ToString());
-                        item.SubItems.Add(cmbRoomNo.Text);
-                        lvwBooking.Items.Add(item);
+                    ListViewItem item = new ListViewItem(room["RoomNo"].ToString());
+                    item.SubItems.Add(room["RoomDesc"].ToString());
+                    item.SubItems.Add(cmbRoomNo.Text);
+                    lvwBooking.Items.Add(item);
 
 
-                    }
+
 
                 }
+
             }
         }
         private void btnRemoveItem_Click(object sender, EventArgs e)
