@@ -17,11 +17,12 @@ GO
 IF OBJECT_ID ('Treatment') IS NOT NULL
 DROP table Treatment
 GO
-IF OBJECT_ID ('TreatmentType') IS NOT NULL
-DROP table TreatmentType
-GO
+
 IF OBJECT_ID ('Room') IS NOT NULL
 DROP table Room
+GO
+IF OBJECT_ID ('TreatmentType') IS NOT NULL
+DROP table TreatmentType
 GO
 IF OBJECT_ID ('Customer') IS NOT NULL
 DROP table Customer
@@ -102,15 +103,6 @@ Values(1001, 'Mr', 'Ryan', 'Campbell', 02/01/2000, 'Marlborough Road', 'Derry', 
 'addipratt3@hotmail.co.uk', '02896496431', 'Nail Tech')
 
 
-CREATE TABLE [dbo].[Room]
-(
-	RoomNo		INT	NOT NULL	PRIMARY KEY,
-	RoomDesc	VARCHAR(15)	NOT NULL
-)
-insert into Room(RoomNo, RoomDesc)
-Values(1, 'Hair'),
-(2, 'Makeup/Nails'),
-(3, 'Massage')
 
 
 CREATE TABLE [dbo].[TreatmentType]
@@ -125,6 +117,17 @@ Values(1,'Hair'),
 (3,'Spa'),
 (4,'Waxing')
 
+CREATE TABLE [dbo].[Room]
+(
+	RoomNo		INT	NOT NULL	PRIMARY KEY,
+	RoomDesc	VARCHAR(15)	NOT NULL,
+	TreatmentType int NOT NULL,
+    CONSTRAINT [FKTreatmentTypeID] FOREIGN KEY (TreatmentType) REFERENCES TreatmentType(TreatmentType),
+)
+insert into Room(RoomNo, RoomDesc,TreatmentType)
+Values(1, 'Room',1),
+(2, 'Room 1',2),
+(3, 'Room ',3)
 
 
 
@@ -149,16 +152,17 @@ CREATE TABLE [dbo].[Appointment]
 	AppointmentTime			DATETIME	NOT NULL,
 	AppointmentDate			DATETIME	NOT NULL,
 	CustomerNo				INT			NOT NULL,
-	RoomNo					INT			NOT NULL, 
+
     CONSTRAINT FKCustomerNo FOREIGN KEY (CustomerNo) REFERENCES Customer(CustomerNo), 
-    CONSTRAINT FKRoomNo FOREIGN KEY (RoomNo) REFERENCES Room(RoomNo)
+
+
 
 )
-insert into Appointment(AppointmentNo,AppointmentTime,AppointmentDate, CustomerNo,RoomNo )
-Values(5000, '16:00' ,'2021-12-10',5000,1),
-(5001, '17:00' ,'2021-12-10',5001,1),
-(5002, '17:00' ,'2022-1-11',5002,2),
-(5003, '17:00' ,'2021-1-12',5003,1)
+insert into Appointment(AppointmentNo,AppointmentTime,AppointmentDate, CustomerNo )
+Values(5000, '11:00' ,'2021-12-12',5000),
+(5001, '9:30' ,'2021-12-15',5001),
+(5002, '10:00' ,'2022-12-13',5002),
+(5003, '10:30' ,'2021-12-14',5003)
 
 
 
@@ -166,20 +170,23 @@ Values(5000, '16:00' ,'2021-12-10',5000,1),
 create table AppointmentTreatment(
 
 
-	AppointmentNo INT NOT NULL,
-	TreatmentNo INT NOT NULL,
-	Qty	int not null,
-
+	AppointmentNo	INT			NOT NULL,
+	TreatmentNo		INT			NOT NULL,
+	Qty				int			not null,
+	RoomNo			INT			NOT NULL, 
+	TreatmentTime	time		NOT NULL,
+	CONSTRAINT FKRoomNo FOREIGN KEY (RoomNo) REFERENCES Room(RoomNo),
 	CONSTRAINT FKTreatmentNum FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
 	CONSTRAINT FKAppointmentNo FOREIGN KEY (AppointmentNo) REFERENCES Appointment(AppointmentNo),
 	primary key clustered(TreatmentNo, AppointmentNo)
 
 )
-insert into AppointmentTreatment(AppointmentNo, TreatmentNo, Qty)
+insert into AppointmentTreatment(AppointmentNo, TreatmentNo, Qty ,RoomNo,TreatmentTime)
 Values
-(5000,500,1),(5000,501,2),--two treatments that will happen in that one appointment 
-(5001,500,1)-- one treatment for one appointment 
-
+(5000,500,1,1,'11:00'),(5000,501,2,2,'11:30'),--two treatments that will happen in that one appointment 
+(5001,500,1,1,'09:30'),-- one treatment for one appointment 
+(5002,500,1,1,'10:00'),
+(5003,500,1,1,'10:30')
 
 
 CREATE TABLE [dbo].[StaffAppointment]

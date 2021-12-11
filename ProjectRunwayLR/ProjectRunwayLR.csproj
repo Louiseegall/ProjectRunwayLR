@@ -219,6 +219,7 @@
     <None Include="Resources\hair1.jpg" />
     <Content Include="RunwayDatabase\BookingScheduleView.sql" />
     <Content Include="RunwayDatabase\BookingAppointmentView.sql" />
+    <Content Include="RunwayDatabase\RunwayDatabase - Copy.sql" />
     <Content Include="RunwayDatabase\RunwayDatabase.sql" />
   </ItemGroup>
   <ItemGroup>
