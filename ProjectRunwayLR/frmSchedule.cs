@@ -69,7 +69,7 @@ namespace ProjectRunwayLR
             sqlStaffAppointment = @"select * from StaffAppointment";
             sqlTreatment = @"select * from Treatment";
 
-            cmdAppointment = new SqlCommand(sqlAppointments, conn);
+            cmdAppointment = new SqlCommand(sqlAppointments, conn);       
             cmdStaff = new SqlCommand(sqlStaff, conn);
             cmdTreatment = new SqlCommand(sqlTreatment, conn);
             cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
@@ -79,12 +79,39 @@ namespace ProjectRunwayLR
             daAppointment = new SqlDataAdapter(cmdAppointment);
             daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");
 
+
+            sqlStaff = @"select * from Staff";
+            cmdStaff = new SqlCommand(sqlStaff, conn);
             daStaff = new SqlDataAdapter(cmdStaff);
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
 
+
+            sqlStaffAppointment = @"select distinct Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate
+
+From Appointment
+
+JOIN StaffAppointment on StaffAppointment.AppointmentNo=Appointment.AppointmentNo
+
+
+select distinct
+Staff.StaffNo
+
+FROM Staff
+
+JOIN StaffAppointment on StaffAppointment.StaffNo = Staff.StaffNo
+
+select distinct
+Treatment.TreatmentNo
+
+FROM Treatment
+JOIN StaffAppointment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo";
+            cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
             daStaffAppointment = new SqlDataAdapter(cmdStaffAppointment);
             daStaffAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
 
+
+            sqlTreatment = @"select * from Treatment";
+            cmdTreatment = new SqlCommand(sqlTreatment, conn);
             daTreatment = new SqlDataAdapter(cmdTreatment);
             daTreatment.FillSchema(dsRunway, SchemaType.Source, "Treatment");
         }
@@ -151,7 +178,7 @@ namespace ProjectRunwayLR
             {
                 if(ok)
                 {
-                    dsRunway.Tables["StaffAppointment"].Clear();
+                    dsRunway.Tables["Appointment"].Clear();
 
                     for (int i = 0; i <7; i++)
                     {
@@ -172,12 +199,13 @@ namespace ProjectRunwayLR
                     currentWeek[5] = monStartDate.AddDays(5).Date;
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
-                    daAppointment.Fill(dsRunway, "StaffAppointment");
+                    //daStaffAppointment.Fill(dsRunway, "StaffAppointment");
+                    daAppointment.Fill(dsRunway, "Appointment");
 
                 }
-                foreach(DataRow dr in dsRunway.Tables["StaffAppointment"].Rows)
+                foreach(DataRow dr in dsRunway.Tables["Appointment"].Rows)
                 {
-                    string starttime = (dr["TimeStart"].ToString());
+                    string starttime = (dr["AppointmentTime"].ToString());
 
                     for(int i = 0; i < 7; i++)
                     {
