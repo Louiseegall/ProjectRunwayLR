@@ -78,8 +78,10 @@ namespace ProjectRunwayLR
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
 
 
-            sqlStaffAppointment = @"select * from StaffAppointment";
+            sqlStaffAppointment = @"select * from StaffAppointment where (AppointmentDate between @StartDate and @EndDate)";
             cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
+            cmdStaffAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
+            cmdStaffAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
             daStaffAppointment = new SqlDataAdapter(cmdStaffAppointment);
             daStaffAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
 
@@ -152,7 +154,7 @@ namespace ProjectRunwayLR
             {
                 if(ok)
                 {
-                    dsRunway.Tables["Appointment"].Clear();
+                    dsRunway.Tables["StaffAppointment"].Clear();
 
                     for (int i = 0; i <7; i++)
                     {
@@ -162,8 +164,8 @@ namespace ProjectRunwayLR
                             dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.White;
                         }
                     }
-                    cmdAppointment.Parameters["@StartDate"].Value = monStartDate.Date;
-                    cmdAppointment.Parameters["@EndDate"].Value = monStartDate.AddDays(7).Date;
+                    cmdStaffAppointment.Parameters["@StartDate"].Value = monStartDate.Date;
+                    cmdStaffAppointment.Parameters["@EndDate"].Value = monStartDate.AddDays(7).Date;
 
                     currentWeek[0] = monStartDate.Date;
                     currentWeek[1] = monStartDate.AddDays(1).Date;
@@ -174,7 +176,7 @@ namespace ProjectRunwayLR
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
                     //daStaffAppointment.Fill(dsRunway, "StaffAppointment");
-                    daAppointment.Fill(dsRunway, "Appointment");
+                    daStaffAppointment.Fill(dsRunway, "Appointment");
 
                 }
                 foreach(DataRow dr in dsRunway.Tables["Appointment"].Rows)
