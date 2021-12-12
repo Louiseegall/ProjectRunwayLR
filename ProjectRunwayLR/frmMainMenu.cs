@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,25 @@ using System.Windows.Forms;
 
 namespace ProjectRunwayLR
 {
+
     public partial class frmMainMenu : Form
     {
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        String currDir = Environment.CurrentDirectory;
+
         bool menuOpen = true;
         bool menuChanging = false;
         int menuWidth = 0;
         int menuSpeed = 20;
         Form currentForm = null;
+        bool playing = true;
+
         public frmMainMenu()
         {
             InitializeComponent();
         }
 
-      
+
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -123,13 +130,14 @@ namespace ProjectRunwayLR
             form.ShowInTaskbar = false;
             form.Show();
             form.Dock = DockStyle.Fill;
+
         }
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            if (!(currentForm is frmAppointment))
+            if (!(currentForm is frmAppBooking))
             {
-                currentForm = new frmAppointment();
+                currentForm = new frmAppBooking();
                 openForm(currentForm);
             }
         }
@@ -170,15 +178,105 @@ namespace ProjectRunwayLR
             }
         }
 
- 
+
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
+            player.Stream = Properties.Resources.music;
+            //  player.Stream = Properties.Resources._12percent;
+          //  player.Play();
+            player.PlayLooping();
+
+
+            //  tarStop.Enabled = true;
+            //if (form is frmLogIn)
+            //{
+            tlpMenu.Visible = false;
+            pnlUserID.Visible = false;
+            btnMenu.Visible = false;
+            //}
+            //else
+            //{
+
+            //}
+            frmLogIn login = new frmLogIn();
+            login.FormClosed += Login_FormClosed;
+            splitContent.Top = 10;
+            splitContent.Height += 125;
+            openForm(login);
+
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tlpMenu.Visible = true;
+            pnlUserID.Visible = true;
+            btnMenu.Visible = true;
+            splitContent.Top = 135;
+            splitContent.Height -= 125;
+            lblUserID.Text = frmLogIn.username;
+            btnPause.Visible = true;
+            //pnlContent.BackgroundImage = Properties.Resources.img1;
+            //throw new NotImplementedException();
 
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmRoom))
+            {
+                currentForm = new frmRoom();
+                openForm(currentForm);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!(currentForm is frmPayment))
+            {
+                currentForm = new frmPayment();
+                openForm(currentForm);
+            }
+        }
+
+
+
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.FromArgb(255, 250, 237, 174);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 250, 237, 174);
+
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.White;
+            btn.FlatStyle = FlatStyle.Standard;
+
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            if (playing)
+            {
+                player.Stop();
+                btnPause.Text = "Play";
+                playing = false;
+
+            }
+            else
+            {
+                player.PlayLooping();
+                btnPause.Text = "Pause";
+                playing = true;
+            }
         }
     }
 }

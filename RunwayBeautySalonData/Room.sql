@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Room]
+(
+	RoomNo		INT	NOT NULL	PRIMARY KEY,
+	RoomDesc	INT	NOT NULL
+)

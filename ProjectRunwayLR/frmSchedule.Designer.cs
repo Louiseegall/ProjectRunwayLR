@@ -62,7 +62,15 @@ namespace ProjectRunwayLR
             this.label2 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
@@ -72,7 +80,7 @@ namespace ProjectRunwayLR
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
             this.tabDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.tabCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,30 +109,33 @@ namespace ProjectRunwayLR
             this.tabEdit.Controls.Add(this.button6);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEdit.Location = new System.Drawing.Point(4, 34);
-            this.tabEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.tabEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Padding = new System.Windows.Forms.Padding(4);
-            this.tabEdit.Size = new System.Drawing.Size(837, 603);
+            this.tabEdit.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEdit.Size = new System.Drawing.Size(837, 561);
             this.tabEdit.TabIndex = 2;
             this.tabEdit.Text = "Edit";
             // 
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(207, 351);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(423, 89);
             this.panel4.TabIndex = 115;
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(207, 194);
+            this.panel5.Location = new System.Drawing.Point(207, 193);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(423, 111);
             this.panel5.TabIndex = 116;
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(207, 46);
+            this.panel6.Location = new System.Drawing.Point(207, 47);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(423, 102);
             this.panel6.TabIndex = 117;
@@ -136,9 +147,9 @@ namespace ProjectRunwayLR
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(400, 532);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 62);
+            this.button4.Size = new System.Drawing.Size(200, 63);
             this.button4.TabIndex = 114;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = false;
@@ -150,9 +161,9 @@ namespace ProjectRunwayLR
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(148, 529);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 62);
+            this.button5.Size = new System.Drawing.Size(200, 63);
             this.button5.TabIndex = 113;
             this.button5.Text = "Edit";
             this.button5.UseVisualStyleBackColor = false;
@@ -163,7 +174,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(207, 447);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(205, 32);
             this.comboBox1.TabIndex = 109;
@@ -173,8 +184,8 @@ namespace ProjectRunwayLR
             this.comboBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(207, 312);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox6.Location = new System.Drawing.Point(207, 311);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(205, 32);
             this.comboBox6.TabIndex = 110;
@@ -185,7 +196,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(207, 155);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(205, 32);
             this.comboBox7.TabIndex = 111;
@@ -196,7 +207,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(207, 7);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(205, 32);
             this.comboBox8.TabIndex = 112;
@@ -264,9 +275,9 @@ namespace ProjectRunwayLR
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(493, 603);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 62);
+            this.button1.Size = new System.Drawing.Size(200, 63);
             this.button1.TabIndex = 82;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
@@ -278,9 +289,9 @@ namespace ProjectRunwayLR
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(151, 603);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 62);
+            this.button6.Size = new System.Drawing.Size(200, 63);
             this.button6.TabIndex = 81;
             this.button6.Text = "Edit";
             this.button6.UseVisualStyleBackColor = false;
@@ -304,30 +315,33 @@ namespace ProjectRunwayLR
             this.tabAdd.Controls.Add(this.label29);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAdd.Location = new System.Drawing.Point(4, 34);
-            this.tabAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.tabAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabAdd.Name = "tabAdd";
-            this.tabAdd.Padding = new System.Windows.Forms.Padding(4);
-            this.tabAdd.Size = new System.Drawing.Size(837, 603);
+            this.tabAdd.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabAdd.Size = new System.Drawing.Size(837, 561);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(207, 351);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(423, 89);
             this.panel3.TabIndex = 104;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(207, 194);
+            this.panel2.Location = new System.Drawing.Point(207, 193);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 111);
             this.panel2.TabIndex = 104;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(207, 46);
+            this.panel1.Location = new System.Drawing.Point(207, 47);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 102);
             this.panel1.TabIndex = 104;
@@ -339,9 +353,9 @@ namespace ProjectRunwayLR
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(400, 532);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 62);
+            this.button3.Size = new System.Drawing.Size(200, 63);
             this.button3.TabIndex = 103;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
@@ -353,9 +367,9 @@ namespace ProjectRunwayLR
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(148, 529);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 62);
+            this.button2.Size = new System.Drawing.Size(200, 63);
             this.button2.TabIndex = 102;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
@@ -366,7 +380,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(207, 447);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(205, 32);
             this.comboBox5.TabIndex = 88;
@@ -376,8 +390,8 @@ namespace ProjectRunwayLR
             this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(207, 312);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox4.Location = new System.Drawing.Point(207, 311);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(205, 32);
             this.comboBox4.TabIndex = 88;
@@ -388,7 +402,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(207, 155);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(205, 32);
             this.comboBox2.TabIndex = 88;
@@ -399,7 +413,7 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(207, 7);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(205, 32);
             this.comboBox3.TabIndex = 88;
@@ -464,36 +478,113 @@ namespace ProjectRunwayLR
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDisplay.Controls.Add(this.dgvCustomers);
+            this.tabDisplay.Controls.Add(this.dtpBookingsStartDate);
+            this.tabDisplay.Controls.Add(this.dgvAppointments);
             this.tabDisplay.Controls.Add(this.btnDisplayDelete);
             this.tabDisplay.Controls.Add(this.btnDisplayEdit);
             this.tabDisplay.Controls.Add(this.btnDisplayExit);
             this.tabDisplay.Controls.Add(this.btnDisplayAdd);
             this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDisplay.Location = new System.Drawing.Point(4, 34);
-            this.tabDisplay.Margin = new System.Windows.Forms.Padding(4);
+            this.tabDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabDisplay.Name = "tabDisplay";
-            this.tabDisplay.Padding = new System.Windows.Forms.Padding(4);
-            this.tabDisplay.Size = new System.Drawing.Size(837, 603);
+            this.tabDisplay.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabDisplay.Size = new System.Drawing.Size(837, 561);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
-            // dgvCustomers
+            // dtpBookingsStartDate
             // 
-            this.dgvCustomers.AllowUserToAddRows = false;
-            this.dgvCustomers.AllowUserToDeleteRows = false;
-            this.dgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtpBookingsStartDate.Location = new System.Drawing.Point(7, 7);
+            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
+            this.dtpBookingsStartDate.Size = new System.Drawing.Size(296, 34);
+            this.dtpBookingsStartDate.TabIndex = 87;
+            this.dtpBookingsStartDate.ValueChanged += new System.EventHandler(this.dtpBookingsStartDate_ValueChanged);
+            // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(4, 4);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.RowHeadersWidth = 51;
-            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(829, 591);
-            this.dgvCustomers.TabIndex = 0;
+            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAppointments.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Monday,
+            this.Tuesday,
+            this.Wednesday,
+            this.Thursday,
+            this.Friday,
+            this.Saturday,
+            this.Sunday});
+            this.dgvAppointments.Location = new System.Drawing.Point(4, 49);
+            this.dgvAppointments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAppointments.Size = new System.Drawing.Size(829, 503);
+            this.dgvAppointments.TabIndex = 0;
+            //this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
+            // 
+            // Monday
+            // 
+            this.Monday.HeaderText = "Monday";
+            this.Monday.MinimumWidth = 6;
+            this.Monday.Name = "Monday";
+            this.Monday.ReadOnly = true;
+            this.Monday.Width = 127;
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.HeaderText = "Tuesday";
+            this.Tuesday.MinimumWidth = 6;
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.ReadOnly = true;
+            this.Tuesday.Width = 135;
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.HeaderText = "Wednesday";
+            this.Wednesday.MinimumWidth = 6;
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.ReadOnly = true;
+            this.Wednesday.Width = 169;
+            // 
+            // Thursday
+            // 
+            this.Thursday.HeaderText = "Thursday";
+            this.Thursday.MinimumWidth = 6;
+            this.Thursday.Name = "Thursday";
+            this.Thursday.ReadOnly = true;
+            this.Thursday.Width = 142;
+            // 
+            // Friday
+            // 
+            this.Friday.HeaderText = "Friday";
+            this.Friday.MinimumWidth = 6;
+            this.Friday.Name = "Friday";
+            this.Friday.ReadOnly = true;
+            this.Friday.Width = 109;
+            // 
+            // Saturday
+            // 
+            this.Saturday.HeaderText = "Saturday";
+            this.Saturday.MinimumWidth = 6;
+            this.Saturday.Name = "Saturday";
+            this.Saturday.ReadOnly = true;
+            this.Saturday.Width = 136;
+            // 
+            // Sunday
+            // 
+            this.Sunday.HeaderText = "Sunday";
+            this.Sunday.MinimumWidth = 6;
+            this.Sunday.Name = "Sunday";
+            this.Sunday.ReadOnly = true;
+            this.Sunday.Width = 122;
             // 
             // btnDisplayDelete
             // 
@@ -501,10 +592,10 @@ namespace ProjectRunwayLR
             this.btnDisplayDelete.BackColor = System.Drawing.Color.Black;
             this.btnDisplayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayDelete.Location = new System.Drawing.Point(433, 603);
-            this.btnDisplayDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayDelete.Location = new System.Drawing.Point(433, 561);
+            this.btnDisplayDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayDelete.Name = "btnDisplayDelete";
-            this.btnDisplayDelete.Size = new System.Drawing.Size(181, 62);
+            this.btnDisplayDelete.Size = new System.Drawing.Size(181, 63);
             this.btnDisplayDelete.TabIndex = 84;
             this.btnDisplayDelete.Text = "Delete";
             this.btnDisplayDelete.UseVisualStyleBackColor = false;
@@ -515,10 +606,10 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayEdit.Location = new System.Drawing.Point(224, 603);
-            this.btnDisplayEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayEdit.Location = new System.Drawing.Point(224, 561);
+            this.btnDisplayEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayEdit.Name = "btnDisplayEdit";
-            this.btnDisplayEdit.Size = new System.Drawing.Size(177, 62);
+            this.btnDisplayEdit.Size = new System.Drawing.Size(177, 63);
             this.btnDisplayEdit.TabIndex = 85;
             this.btnDisplayEdit.Text = "Edit";
             this.btnDisplayEdit.UseVisualStyleBackColor = false;
@@ -529,10 +620,10 @@ namespace ProjectRunwayLR
             this.btnDisplayExit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayExit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayExit.Location = new System.Drawing.Point(639, 603);
-            this.btnDisplayExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayExit.Location = new System.Drawing.Point(639, 561);
+            this.btnDisplayExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayExit.Name = "btnDisplayExit";
-            this.btnDisplayExit.Size = new System.Drawing.Size(185, 62);
+            this.btnDisplayExit.Size = new System.Drawing.Size(185, 63);
             this.btnDisplayExit.TabIndex = 83;
             this.btnDisplayExit.Text = "Exit";
             this.btnDisplayExit.UseVisualStyleBackColor = false;
@@ -543,10 +634,10 @@ namespace ProjectRunwayLR
             this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
             this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(4, 603);
-            this.btnDisplayAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayAdd.Location = new System.Drawing.Point(4, 561);
+            this.btnDisplayAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplayAdd.Name = "btnDisplayAdd";
-            this.btnDisplayAdd.Size = new System.Drawing.Size(191, 62);
+            this.btnDisplayAdd.Size = new System.Drawing.Size(191, 63);
             this.btnDisplayAdd.TabIndex = 86;
             this.btnDisplayAdd.Text = "Add";
             this.btnDisplayAdd.UseVisualStyleBackColor = false;
@@ -559,12 +650,11 @@ namespace ProjectRunwayLR
             this.tabCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCustomer.Location = new System.Drawing.Point(0, 0);
-            this.tabCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.tabCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabCustomer.Name = "tabCustomer";
             this.tabCustomer.SelectedIndex = 0;
-            this.tabCustomer.Size = new System.Drawing.Size(845, 641);
+            this.tabCustomer.Size = new System.Drawing.Size(845, 599);
             this.tabCustomer.TabIndex = 3;
-            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
             // 
             // frmSchedule
             // 
@@ -572,19 +662,20 @@ namespace ProjectRunwayLR
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(845, 641);
+            this.ClientSize = new System.Drawing.Size(845, 599);
             this.Controls.Add(this.tabCustomer);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSchedule";
             this.Text = "frmSchedule";
             this.TransparencyKey = System.Drawing.Color.Maroon;
+            this.Load += new System.EventHandler(this.frmSchedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabDisplay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.tabCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -594,7 +685,7 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.TabControl tabCustomer;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.DataGridView dgvAppointments;
         private System.Windows.Forms.Button btnDisplayDelete;
         private System.Windows.Forms.Button btnDisplayEdit;
         private System.Windows.Forms.Button btnDisplayExit;
@@ -629,5 +720,13 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DateTimePicker dtpBookingsStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tuesday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Wednesday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thursday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Friday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Saturday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sunday;
     }
 }
