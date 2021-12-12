@@ -78,25 +78,7 @@ namespace ProjectRunwayLR
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
 
 
-            sqlStaffAppointment = @"select distinct Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate
-
-From Appointment
-
-JOIN StaffAppointment on StaffAppointment.AppointmentNo=Appointment.AppointmentNo
-
-
-select distinct
-Staff.StaffNo
-
-FROM Staff
-
-JOIN StaffAppointment on StaffAppointment.StaffNo = Staff.StaffNo
-
-select distinct
-Treatment.TreatmentNo
-
-FROM Treatment
-JOIN StaffAppointment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo";
+            sqlStaffAppointment = @"select * from StaffAppointment";
             cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
             daStaffAppointment = new SqlDataAdapter(cmdStaffAppointment);
             daStaffAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
