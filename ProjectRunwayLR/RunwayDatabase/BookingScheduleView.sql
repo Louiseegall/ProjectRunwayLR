@@ -1,14 +1,18 @@
-﻿create view Schedule
+﻿IF OBJECT_ID ('Schedule') IS NOT NULL
+DROP view Schedule
+GO
+
+create view Schedule
 
 as
 
-select Appointment.AppointmentNo, AppointmentTime, AppointmentDate,
+select Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate,
 Staff.StaffNo,
 Treatment.TreatmentNo
 
-From Appointment
+From StaffAppointment
 
-JOIN Appointment on StaffAppointment.AppointmentNo = Appointment.AppointmentNo
-JOIN StaffAppointment on Staff.StaffNo = StaffAppointment.StaffNo
-JOIN Treatment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo
+join Appointment on StaffAppointment.AppointmentNo = Appointment.AppointmentNo
+join Staff on StaffAppointment.StaffNo = Staff.StaffNo
+join Treatment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo
 

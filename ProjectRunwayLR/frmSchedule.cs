@@ -78,7 +78,16 @@ namespace ProjectRunwayLR
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
 
 
-            sqlStaffAppointment = @"select * from StaffAppointment where (AppointmentDate between @StartDate and @EndDate)";
+            sqlStaffAppointment = @"select Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate,
+Staff.StaffNo,
+Treatment.TreatmentNo
+
+From StaffAppointment
+
+join Appointment on StaffAppointment.AppointmentNo = Appointment.AppointmentNo
+join Staff on StaffAppointment.StaffNo = Staff.StaffNo
+join Treatment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo
+select * from StaffAppointment where (AppointmentDate between @StartDate and @EndDate)";
             cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
             cmdStaffAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
             cmdStaffAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
@@ -176,16 +185,16 @@ namespace ProjectRunwayLR
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
                     //daStaffAppointment.Fill(dsRunway, "StaffAppointment");
-                    daStaffAppointment.Fill(dsRunway, "Appointment");
+                    daStaffAppointment.Fill(dsRunway, "StaffAppointment");
 
                 }
-                foreach(DataRow dr in dsRunway.Tables["Appointment"].Rows)
+                foreach(DataRow dr in dsRunway.Tables["StaffAppointment"].Rows)
                 {
                     string starttime = (dr["AppointmentTime"].ToString());
 
                     for(int i = 0; i < 7; i++)
                     {
-                        if(Convert.ToDateTime(dr["DateStart"]).ToShortDateString().Equals(currentWeek[i].ToShortDateString()))
+                        if(Convert.ToDateTime(dr["AppointmentDate"]).ToShortDateString().Equals(currentWeek[i].ToShortDateString()))
                         {
                             for(int j = 0; j < 16; j++)
                             {

@@ -120,7 +120,7 @@ namespace ProjectRunwayLR
         private void btnAddAdd_Click(object sender,EventArgs e)
         {
             MyStaff myStaff = new MyStaff();
-            bool ok = Capture;
+            bool ok = true;
             errP.Clear();
 
             try
@@ -250,7 +250,7 @@ namespace ProjectRunwayLR
                     drStaff = dsRunway.Tables["Staff"].NewRow();
                     drStaff["StaffNo"] = myStaff.StaffNumber;
                     drStaff["StaffTitle"] = myStaff.Title;
-                    drStaff["StaffForename	"] = myStaff.Forename;
+                    drStaff["StaffForename"] = myStaff.Forename;
                     drStaff["StaffSurname"] = myStaff.Surname;
                     drStaff["StaffDOB"] = myStaff.DOB;
                     drStaff["StaffStreet"] = myStaff.Street;
@@ -263,7 +263,7 @@ namespace ProjectRunwayLR
                     drStaff["EmergencyContact"] = myStaff.EmergencyContact;
                     drStaff["Speciality"] = myStaff.Speciality;
 
-                    dsRunway.Tables["Customer"].Rows.Add(drStaff);
+                    dsRunway.Tables["Staff"].Rows.Add(drStaff);
                     daStaff.Update(dsRunway, "Staff");
                     MessageBox.Show("Staff Added");
 
