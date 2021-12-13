@@ -14,30 +14,23 @@ namespace ProjectRunwayLR
     public partial class frmAppBooking : Form
     {
 
-        SqlDataAdapter daCustomers, daTreatments, daStaff, daRoomsAppointments, daRooms, daBooking, daBokingDet, daBookedAppointments;
+        SqlDataAdapter daCustomers, daTreatments, daStaff, daRoomsAppointments, daRooms, daBooking, daBookingDetails, daBookedAppointments;
         DataSet dsRunway = new DataSet();
         SqlConnection conn;
         SqlCommand cmdCustomerDetails, cmdTreatmentDetails, cmdRoomDetails,cmdRoomAppointmentDetails;
+        SqlCommandBuilder cmdBCustomer,cmdBStaff, cmdBBookedRooms, cmdBBookingDetails, cmdBTreatments, cmdBBooking;
+        DataRow drCustomer, drTreatment ;
+        String sqlCustomerDetails, sqlTreatmentDetails, sqlStaffDetails ,sqlRoomDetails, sqlRooms, sqlBooking , sqlBookingDetails;
 
-
-        SqlCommandBuilder cmdBCustomer,cmdBStaff, cmdBBookedRooms, cmdBBookingDet, cmdBTreatments, cmdBBooking;
-
-
-        DataRow drCustomer, drTreatment;
-
-
-        String sqlCustomerDetails, sqlTreatmentDetails, sqlStaffDetails ,sqlRoomDetails, sqlRooms, sqlBooking;
-
-      
-
+        
         String connStr;
 
 
 
-        /* put under dataadapter and ds set up
-          string[] times = { "09:00:00", "09:30:00", "10:00:00", "10:30:00", "11:00:00", "11:30:00",
+        //put under dataadapter and ds set up
+        string[] times = { "09:00:00", "09:30:00", "10:00:00", "10:30:00", "11:00:00", "11:30:00",
          "12:00:00", "12:30:00", "13:00:00", "13:30:00", "14:00:00", "14:30:00", "15:00:00", "15:30:00",
-         "16:00:00", "16:30:00", "17:00:00", "17:30:00" };*/
+         "16:00:00", "16:30:00", "17:00:00", "17:30:00" };
         public frmAppBooking()
         {
             InitializeComponent();
@@ -90,7 +83,7 @@ namespace ProjectRunwayLR
 
 
 
-            sqlRoomDetails = @"Select distinct Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime, sum( Treatment.TreatmentDuration*AppointmentTreatment.Qty)  as Duration
+            sqlRoomDetails = @"Select distinct Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime, sum( Treatment.TreatmentDuration)  as Duration
  from Room 
 
 left join AppointmentTreatment on Room.RoomNo= AppointmentTreatment.RoomNo
@@ -111,15 +104,18 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
             daBooking.FillSchema(dsRunway, SchemaType.Source, "Appointment");
             daBooking.Fill(dsRunway, "Appointment");
 
-            //set up data adapter for room lready booked details for validation
-            //sqlBookedRooms = @"Select booking.bookingNo , dateStart, noDays, dogNo, kennelNo from booking Join bookingDetail On booking.bookingNo = bookingDetail.bookingNo order by bookingNo";
-            //daBookedRooms = new SqlDataAdapter(sqlBookedRooms, conn);
-            //cmdBBookedRooms = new SqlCommandBuilder(daBookedRooms);
-            //daBookedRooms.FillSchema(dsRunway, SchemaType.Source, "BookedRooms");
-            //daBookedRooms.Fill(dsRunway, "BookedRooms");
 
-            /* add in tooo for times
-             * for (int r = 0; r <= 16; r++)
+            sqlBookingDetails = @"SELECT * from AppointmentTreatment";
+            daBookingDetails = new SqlDataAdapter(sqlBookingDetails, conn);
+            cmdBBookingDetails = new SqlCommandBuilder(daBookingDetails);
+            daBookingDetails.FillSchema(dsRunway, SchemaType.Source, "AppointmentTreatment");
+            daBookingDetails.Fill(dsRunway, "AppointmentTreatment");
+
+
+        
+
+            // add in tooo for times
+              for (int r = 0; r <= 16; r++)
             {
                 dgvAppointments.Rows.Add(new object[] { "", "" });
                 if (r % 2 == 0)
@@ -131,12 +127,21 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
                 {
                     dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".30";
                 }
-            } */
+            } 
             //   tabApp.ItemSize = new Size((tabApp.Width - 5) / 3, tabApp.ItemSize.Height);
         }
 
         private void cmbCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbCustomer.SelectedIndex == -1) {
+                lblCust1.Text = "-";
+                lblCust2.Text = "-";
+                lblCust3.Text = "-";
+                dtpStartDate.Enabled = false;
+
+            }
+            else
+            {
             int CustNo = int.Parse(cmbCustomer.Text.Substring(cmbCustomer.Text.Length - 5, 4));
             drCustomer = dsRunway.Tables["Customer"].Rows.Find(CustNo);
             lblCust1.Text = drCustomer["CustomerTelNo"].ToString();
@@ -144,6 +149,8 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
             lblCust3.Text = drCustomer["CustomerPostcode"].ToString();
 
             dtpStartDate.Enabled = true;
+            }
+           
         }
         private void cmbAppointmentTime_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -313,11 +320,22 @@ else if (cmbAppointmentTime.Text == "")
                 //                break;
                 //        }
                 //    }
+                int TreatmentNo = int.Parse(cmbTreatment.Text.Substring(cmbTreatment.Text.Length - 4, 3));
+                foreach (ListViewItem items in lvwBooking.Items)
+                {
+                    if (items.SubItems[0].Text==TreatmentNo.ToString())
+                    {
+                        ok = false;
+                        MessageBox.Show("Treatment " +TreatmentNo+"  Already added, please select another", "Treatment already Added ");
+
+                    }
+
+                }
                 if (ok)
                 {
                     pnlCustomer.Enabled = false;
 
-                    int TreatmentNo = int.Parse(cmbTreatment.Text.Substring(cmbTreatment.Text.Length - 4, 3));
+                
                     drTreatment = dsRunway.Tables["Treatment"].Rows.Find(TreatmentNo);
                     //DataRow room = dsRunway.Tables["Room"].Rows.Find(int.Parse(cmbRoomNo.Text));
 
@@ -353,6 +371,105 @@ else if (cmbAppointmentTime.Text == "")
             }
 
 
+        }
+
+        private void btnAddAdd_Click(object sender, EventArgs e)
+        {
+            DataRow drBooking;
+            int bookingNo;
+            int noRows = dsRunway.Tables["Appointment"].Rows.Count;
+            drBooking = dsRunway.Tables["Appointment"].Rows[noRows - 1];
+            bookingNo = (int.Parse(drBooking["AppointmentNo"].ToString()) + 1);
+
+            if (cmbCustomer.SelectedIndex == -1)
+                MessageBox.Show("Please select a customer", "Customer");
+
+
+            
+            else if (cmbAppointmentTime.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please input appointment time", "AppointmentTime");
+                cmbAppointmentTime.Focus();
+            }
+            else if (lvwBooking.Items.Count == 0)
+            {
+                MessageBox.Show("please add  to the booking", "BookingDetails");
+            }
+            else
+            {
+                drBooking = dsRunway.Tables["Appointment"].NewRow();
+
+                drBooking["AppointmentNo"] = bookingNo;
+                int CustNo = int.Parse(cmbCustomer.Text.Substring(cmbCustomer.Text.Length - 5, 4));
+                drBooking["CustomerNo"] = CustNo;
+                
+                //drBooking["AppointmentDate"] = DateTime.Parse(lblBookingDatee.Text.Trim());
+                drBooking["AppointmentDate"] = DateTime.Parse(dtpStartDate.Text.Trim());
+                drBooking["AppointmentTime"] =TimeSpan.Parse(cmbAppointmentTime.Text);
+
+                dsRunway.Tables["Appointment"].Rows.Add(drBooking);
+                daBooking.Update(dsRunway, "Appointment");
+
+
+                foreach (ListViewItem item in lvwBooking.Items)
+                {
+                    DataRow drBookingDets = dsRunway.Tables["AppointmentTreatment"].NewRow();
+                    drBookingDets["AppointmentNo"] = drBooking["AppointmentNo"];
+                    drBookingDets["TreatmentTime"] = TimeSpan.Parse(item.SubItems[2].Text);
+                    drBookingDets["RoomNo"] = int.Parse(item.SubItems[3].Text);
+                    drBookingDets["TreatmentNo"] = int.Parse(item.SubItems[0].Text);
+                    dsRunway.Tables["AppointmentTreatment"].Rows.Add(drBookingDets);
+                    // daBookingDet.Update(dsInTheDogHouse, "BookingDetail");
+                }
+
+                if (MessageBox.Show("Booking no: " + drBooking["AppointmentNo"].ToString()
+                    + "added to system. Do you want to Add aother? " ,"Booking Added ",
+                    MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                  
+                    clearFrm();
+                }
+                else
+                {
+                    tabApp.SelectedIndex = 0;
+                    clearFrm();
+                    
+                }
+            }
+        }
+        private void clearFrm()
+        {
+            cmbCustomer.SelectedIndex = -1;
+            dtpStartDate.Value = DateTime.Now;
+            cmbAppointmentTime.SelectedIndex = -1;
+            cmbTreatment.SelectedIndex = -1;
+            cmbRoomNo.SelectedIndex = -1;
+            lvwBooking.Items.Clear();
+            pnlBooking.Enabled = true;
+            cmbCustomer.Enabled = true;
+            pnlCustomer.Enabled = true;
+        }
+
+       
+        private void btnAddCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cancel The Addition Of Appointment No: " + lblTreatmentTime.Text + "?", "Add Appointment",
+                MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                tabApp.SelectedIndex = 0;
+        }
+
+        private void btnAddDisplay_Click(object sender, EventArgs e)
+        {
+            tabApp.SelectedIndex = 1;
+        }
+        private void btnEditDisplay_Click(object sender, EventArgs e)
+        {
+            tabApp.SelectedIndex = 2;
+        }
+        private void btnDeleteDisplay_Click(object sender, EventArgs e)
+        {
+
+           
         }
 
     }

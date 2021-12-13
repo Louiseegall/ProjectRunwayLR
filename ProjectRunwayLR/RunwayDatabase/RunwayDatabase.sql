@@ -149,8 +149,8 @@ Values(500,'wash cut blow dry',35, 1,1), --duration 1 slot =30 mins
 CREATE TABLE [dbo].[Appointment]
 (
 	AppointmentNo			INT			NOT NULL	PRIMARY KEY,
-	AppointmentTime			DATETIME	NOT NULL,
-	AppointmentDate			DATETIME	NOT NULL,
+	AppointmentTime			TIME	NOT NULL,
+	AppointmentDate			DATE	NOT NULL,
 	CustomerNo				INT			NOT NULL,
 
     CONSTRAINT FKCustomerNo FOREIGN KEY (CustomerNo) REFERENCES Customer(CustomerNo), 
@@ -173,7 +173,7 @@ create table AppointmentTreatment(
 
 	AppointmentNo	INT			NOT NULL,
 	TreatmentNo		INT			NOT NULL,
-	Qty				int			not null,
+	
 	RoomNo			INT			NOT NULL, 
 	TreatmentTime	time		NOT NULL,
 	CONSTRAINT FKRoomNo FOREIGN KEY (RoomNo) REFERENCES Room(RoomNo),
@@ -182,12 +182,12 @@ create table AppointmentTreatment(
 	primary key clustered(TreatmentNo, AppointmentNo)
 
 )
-insert into AppointmentTreatment(AppointmentNo, TreatmentNo, Qty ,RoomNo,TreatmentTime)
+insert into AppointmentTreatment(AppointmentNo, TreatmentNo,RoomNo,TreatmentTime)
 Values
-(5000,500,1,1,'11:00'),(5000,501,2,2,'11:30'),--two treatments that will happen in that one appointment 
-(5001,500,1,1,'09:30'),-- one treatment for one appointment 
-(5002,500,1,1,'10:00'),
-(5003,500,1,1,'10:30')
+(5000,500,1,'11:00'),(5000,501,2,'11:30'),--two treatments that will happen in that one appointment 
+(5001,500,1,'09:30'),-- one treatment for one appointment 
+(5002,500,1,'10:00'),
+(5003,500,1,'10:30')
 
 
 CREATE TABLE [dbo].[StaffAppointment]
