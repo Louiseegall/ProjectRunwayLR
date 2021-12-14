@@ -25,3 +25,19 @@ from AppointmentTreatment
 join Treatment on AppointmentTreatment.TreatmentNo= Treatment.TreatmentNo
 where AppointmentNo=5001
 
+
+
+Select distinct Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime, sum( Treatment.TreatmentDuration)  as Duration
+ from Room 
+
+left join AppointmentTreatment on Room.RoomNo= AppointmentTreatment.RoomNo
+left join Appointment on AppointmentTreatment.AppointmentNo=Appointment.AppointmentNo
+left join Treatment on AppointmentTreatment.TreatmentNo=Treatment.TreatmentNo
+
+Where Room.RoomNo=1
+Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime
+
+Select AppointmentNo, Treatment.TreatmentNo,TreatmentTime, TreatmentDuration
+from AppointmentTreatment 
+join Treatment on AppointmentTreatment.TreatmentNo= Treatment.TreatmentNo
+where RoomNo = 1

@@ -44,9 +44,9 @@ namespace ProjectRunwayLR
 
         #region Appointment Schedule
 
-        SqlCommand cmdAppointment,cmdAppTreat;
-        string sqlScheduleAppointment ,sqlScheduleAppTreat;
-        SqlDataAdapter daScheduleAppointment , daScheduleAppTreat;
+        SqlCommand cmdAppointment, cmdAppTreat;
+        string sqlScheduleAppointment, sqlScheduleAppTreat;
+        SqlDataAdapter daScheduleAppointment, daScheduleAppTreat;
 
         DateTime monStartDate = new DateTime();
 
@@ -76,16 +76,18 @@ namespace ProjectRunwayLR
             sqlScheduleAppointment = @"Select * from Appointment where (AppointmentDate between @startDate and @endDate)";
             cmdAppointment = new SqlCommand(sqlScheduleAppointment, conn);
             cmdAppointment.Parameters.Add("@startDate", SqlDbType.Date);
-            cmdAppointment.Parameters.Add("@endDate", SqlDbType.Date);
+            cmdAppointment.Parameters.Add("@endDate", SqlDbType.Date);//add
             daScheduleAppointment = new SqlDataAdapter(cmdAppointment);
             daScheduleAppointment.FillSchema(dsRunway, SchemaType.Source, "ScheduleAppointments");
 
             sqlScheduleAppTreat = @"Select AppointmentNo, Treatment.TreatmentNo,TreatmentTime, TreatmentDuration
 from AppointmentTreatment 
 join Treatment on AppointmentTreatment.TreatmentNo= Treatment.TreatmentNo
-where (AppointmentNo =@AppointmentNo)";
+where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
             cmdAppTreat = new SqlCommand(sqlScheduleAppTreat, conn);
             cmdAppTreat.Parameters.Add("@AppointmentNo", SqlDbType.Int);
+            cmdAppTreat.Parameters.Add("@RoomNo", SqlDbType.Int);
+
             daScheduleAppTreat = new SqlDataAdapter(cmdAppTreat);
             daScheduleAppTreat.FillSchema(dsRunway, SchemaType.Source, "ScheduleAppTreat");
 
@@ -103,6 +105,7 @@ where (AppointmentNo =@AppointmentNo)";
                     dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".30";
                 }
             }
+            dtpBookingsStartDate.Value = DateTime.Now;
         }
         private void populateGrid2(DateTime[] currentWeek, DateTime monStartDate)
         {
@@ -111,7 +114,7 @@ where (AppointmentNo =@AppointmentNo)";
             {
                 if (ok)
                 {
-                    dsRunway.Tables["Appointment"].Clear();
+                    dsRunway.Tables["ScheduleAppointments"].Clear();
 
                     for (int i = 0; i < 7; i++)
                     {
@@ -133,44 +136,55 @@ where (AppointmentNo =@AppointmentNo)";
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
                     //daStaffAppointment.Fill(dsRunway, "StaffAppointment");
-                    daScheduleAppointment.Fill(dsRunway, "ScheduleAppointment");
+                    daScheduleAppointment.Fill(dsRunway, "ScheduleAppointments");
 
                 }
-                foreach (DataRow dr in dsRunway.Tables["ScheduleAppointment"].Rows)
+                foreach (DataRow dr in dsRunway.Tables["ScheduleAppointments"].Rows)
                 {
-                    string starttime = (dr["AppointmentTime"].ToString());
+
 
                     for (int i = 0; i < 7; i++)
                     {
                         if (Convert.ToDateTime(dr["AppointmentDate"]).ToShortDateString().Equals(currentWeek[i].ToShortDateString()))
                         {
                             cmdAppTreat.Parameters["@AppointmentNo"].Value = dr["AppointmentNo"];
+                            cmdAppTreat.Parameters["@RoomNo"].Value = 1;//replace with value from comboBox
                             dsRunway.Tables["ScheduleAppTreat"].Rows.Clear();
                             daScheduleAppTreat.Fill(dsRunway, "ScheduleAppTreat");
-
+                            
                             for (int j = 0; j < 16; j++)
                             {
-                                if (times[j].Equals(starttime))
+                                foreach (DataRow tRow in dsRunway.Tables["ScheduleAppTreat"].Rows)
                                 {
-                                    dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Goldenrod;
-                                    dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
-                                    int start = j;
-                                    foreach(DataRow tRow  in dsRunway.Tables["ScheduleAppTreat"].Rows)
+                                    string starttime = (tRow["TreatmentTime"].ToString());
+                                    if (times[j].Equals(starttime))
                                     {
+                                        if (starttime == dr["AppointmentTime"].ToString())
+                                        {
+                                            dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Goldenrod;
+                                            dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
+                                        }
+                                        else
+                                        {
+                                            dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Gold;
+                                        }
+                                        int start = j;
+
                                         int Duration = int.Parse(tRow["TreatmentDuration"].ToString());
                                         int end = start + Duration;
-                                        if (start==j)
+                                        if (start == j)
                                         {
 
                                             start++;
 
                                         }
-                                        for(int k= start;k<end; k++)
+                                        for (int k = start; k < end; k++)
                                         {
                                             dgvAppointments.Rows[k].Cells[i].Style.BackColor = Color.Gold;
                                         }
+                                        //start = end;
                                     }
-                                       
+
 
                                     //for (int k = 1; k < Convert.ToInt32(dr["TreatmentDuration"]); k++)
                                     //{
@@ -236,10 +250,20 @@ where (AppointmentNo =@AppointmentNo)";
             startDate = startDate.Add(TimeSpan.FromDays(1));
             dgvAppointments.Columns["Sunday"].HeaderText = "Sunday " + startDate.ToShortDateString();
 
-           // if (!formLoad)
-                populateGrid2(currentWeek, monStartDate);
+            // if (!formLoad)
+            populateGrid2(currentWeek, monStartDate);
             //else
             //    formLoad = false;
+        }
+        int bookingClicked = -1;
+        private void dgvAppointments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {        
+            if (dgvAppointments.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                bookingClicked = int.Parse(dgvAppointments.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                
+            }
+            else bookingClicked = -1;
         }
         #endregion
 
@@ -252,6 +276,9 @@ where (AppointmentNo =@AppointmentNo)";
         SqlCommand cmdCustomerDetails, cmdTreatmentDetails, cmdRoomDetails, cmdRoomAppointmentDetails;
         SqlCommandBuilder cmdBCustomer, cmdBStaff, cmdBBookedRooms, cmdBBookingDetails, cmdBTreatments, cmdBBooking;
         DataRow drCustomer, drTreatment;
+
+        
+
         String sqlCustomerDetails, sqlTreatmentDetails, sqlStaffDetails, sqlRoomDetails, sqlRooms, sqlBooking, sqlBookingDetails, sqlBookings;
 
 
@@ -289,15 +316,25 @@ where (AppointmentNo =@AppointmentNo)";
 
 
 
-            sqlRoomDetails = @"Select distinct Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime, sum( Treatment.TreatmentDuration)  as Duration
+            //            sqlRoomDetails = @"Select distinct Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime, sum( Treatment.TreatmentDuration)  as Duration
+            // from Room 
+
+            //left join AppointmentTreatment on Room.RoomNo= AppointmentTreatment.RoomNo
+            //left join Appointment on AppointmentTreatment.AppointmentNo=Appointment.AppointmentNo
+            //left join Treatment on AppointmentTreatment.TreatmentNo=Treatment.TreatmentNo
+
+            //Where Room.RoomNo=@RoomNo
+            //Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
+
+            sqlRoomDetails = @"Select distinct Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime, sum( Treatment.TreatmentDuration)  as Duration
  from Room 
 
 left join AppointmentTreatment on Room.RoomNo= AppointmentTreatment.RoomNo
 left join Appointment on AppointmentTreatment.AppointmentNo=Appointment.AppointmentNo
 left join Treatment on AppointmentTreatment.TreatmentNo=Treatment.TreatmentNo
 
-Where Room.RoomNo=@RoomNo
-Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
+Where Room.RoomNo=1
+Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
             cmdRoomAppointmentDetails = new SqlCommand(sqlRoomDetails, conn);
             cmdRoomAppointmentDetails.Parameters.Add("@RoomNo", SqlDbType.Int);
             daRoomsAppointments = new SqlDataAdapter(cmdRoomAppointmentDetails);
@@ -318,7 +355,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
             daBookingDetails.Fill(dsRunway, "AppointmentTreatment");
         }
 
- 
+
 
 
 
@@ -370,6 +407,8 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
                 cmdRoomAppointmentDetails.Parameters["@RoomNo"].Value = room["RoomNo"];
                 dsRunway.Tables["RoomAppointment"].Rows.Clear();
                 daRoomsAppointments.Fill(dsRunway, "RoomAppointment");
+
+
                 foreach (DataRow ra in dsRunway.Tables["RoomAppointment"].Rows)
                 {
                     DateTime date = DateTime.Parse(ra["AppointmentDate"].ToString());
@@ -377,7 +416,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
                     {
                         continue;
                     }
-                    TimeSpan bookingStart = TimeSpan.Parse(ra["TreatmentTime"].ToString());
+                    TimeSpan bookingStart = TimeSpan.Parse(ra["AppointmentTime"].ToString());
                     int minutes = int.Parse(ra["Duration"].ToString()) * 30;
                     TimeSpan bookingEnd = bookingStart.Add(new TimeSpan(minutes / 60, minutes % 60, 0));
                     //new treatment time through these three lines of code, start is new treamtn tim, set label treaemtn end to string 
@@ -415,9 +454,9 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;";
 
 
 
-    
 
-private void btnLogin_MouseEnter(object sender, EventArgs e)
+
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             btn.ForeColor = Color.FromArgb(255, 250, 237, 174);
@@ -616,9 +655,9 @@ private void btnLogin_MouseEnter(object sender, EventArgs e)
                     drBookingDets["RoomNo"] = int.Parse(item.SubItems[3].Text);
                     drBookingDets["TreatmentNo"] = int.Parse(item.SubItems[0].Text);
                     dsRunway.Tables["AppointmentTreatment"].Rows.Add(drBookingDets);
-                    // daBookingDet.Update(dsInTheDogHouse, "BookingDetail");
+                    daBookingDetails.Update(dsRunway, "AppointmentTreatment");
                 }
-
+                dtpBookingsStartDate.Value = dtpStartDate.Value;
                 if (MessageBox.Show("Booking no: " + drBooking["AppointmentNo"].ToString()
                     + "added to system. Do you want to Add aother? ", "Booking Added ",
                     MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)

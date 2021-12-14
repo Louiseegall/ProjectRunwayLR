@@ -597,12 +597,14 @@ namespace ProjectRunwayLR
             this.Saturday,
             this.Sunday});
             this.dgvAppointments.Location = new System.Drawing.Point(6, 41);
+            this.dgvAppointments.MultiSelect = false;
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvAppointments.Size = new System.Drawing.Size(658, 437);
             this.dgvAppointments.TabIndex = 140;
+            this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
             // 
             // Monday
             // 
