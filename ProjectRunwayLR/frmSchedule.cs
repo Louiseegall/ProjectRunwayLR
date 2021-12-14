@@ -64,7 +64,7 @@ namespace ProjectRunwayLR
                     dgvAppointments.Rows[r].HeaderCell.Value = (r / 2 + 9) + ".30";
                 }
             }
-            sqlAppointments = @"select * from Appointment a where (a.AppointmentDate between @StartDate and @EndDate)";
+            /*sqlAppointments = @"select * from Appointment a where (a.AppointmentDate between @StartDate and @EndDate)";
             sqlStaff = @"select * from Staff";
             sqlStaffAppointment = @"select * from StaffAppointment";
             sqlTreatment = @"select * from Treatment";
@@ -77,7 +77,7 @@ namespace ProjectRunwayLR
             cmdAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
 
             daAppointment = new SqlDataAdapter(cmdAppointment);
-            daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");
+            daAppointment.FillSchema(dsRunway, SchemaType.Source, "Appointment");*/
 
 
             sqlStaff = @"select * from Staff";
@@ -88,7 +88,7 @@ namespace ProjectRunwayLR
 
             sqlStaffAppointment = @"select Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate,
 Staff.StaffNo,
-Treatment.TreatmentNo
+Treatment.TreatmentNo, Treatment.TreatmentDuration
 
 From StaffAppointment
 
@@ -171,7 +171,7 @@ select * from StaffAppointment where (AppointmentDate between @StartDate and @En
             {
                 if(ok)
                 {
-                    dsRunway.Tables["StaffAppointment"].Clear();
+                    //dsRunway.Tables["StaffAppointment"].Clear();
 
                     for (int i = 0; i <7; i++)
                     {
@@ -209,7 +209,7 @@ select * from StaffAppointment where (AppointmentDate between @StartDate and @En
                                 if(times[j].Equals(starttime))
                                 {
                                     dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Green;
-                                    dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
+                                    dgvAppointments.Rows[j].Cells[i].Value = dr["StaffNo"].ToString();
 
                                     for(int k = 1; k < Convert.ToInt32(dr["TreatmentDuration"]); k++)
                                     {
