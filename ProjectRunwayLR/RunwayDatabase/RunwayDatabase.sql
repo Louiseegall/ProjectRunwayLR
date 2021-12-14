@@ -163,7 +163,8 @@ Values(5000, '11:00' ,'2021-12-12',5000),
 (5001, '9:30' ,'2021-12-15',5001),
 (5002, '10:00' ,'2022-1-13',5002),
 (5003, '10:30' ,'2022-1-14',5003),
-(5004, '10:30', '2022-12-11', 5004)
+(5004, '10:30', '2022-12-11', 5004),
+(5005, '10:30', '2022-12-13', 5004)
 
 
 
@@ -194,15 +195,18 @@ CREATE TABLE [dbo].[StaffAppointment]
 (
 	StaffNo			INT		NOT NULL,
 	AppointmentNo	INT		NOT NULL,
-	AppointmentTime	DATETIME NOT NULL,
-	AppointmentDate DATETIME NOT NULL,
+	AppointmentTime	TIME NOT NULL,
+	AppointmentDate DATE NOT NULL,
 	TreatmentNo		INT		NOT NULL,
 	TreatmentDuration INT NOT NULL,
     CONSTRAINT FKStaffNo FOREIGN KEY (StaffNo) REFERENCES Staff(StaffNo),
 	CONSTRAINT FKAppointmentNum FOREIGN KEY (AppointmentNo) REFERENCES Appointment(AppointmentNo),
-		CONSTRAINT FKTreatmentNo FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
+	CONSTRAINT FKTreatmentNo FOREIGN KEY (TreatmentNo) REFERENCES Treatment(TreatmentNo),
 	primary key clustered(staffNo, AppointmentNo, TreatmentNo)
 )
 insert into StaffAppointment(StaffNo ,AppointmentNo, AppointmentTime, AppointmentDate,TreatmentNo, TreatmentDuration)
 Values
-(1001,5000,'11:00' ,'2021-12-12', 500, 1),(1002,5000,'11:00' ,'2021-12-12', 501, 2)--two staff doing same appointment 
+(1001,5000,'11:00' ,'2021-12-12', 500, 1),(1002,5000,'11:00' ,'2021-12-12', 501, 2),--two staff doing same appointment
+(1001,5001,'11:00', '2022-12-13', 500, 1),
+(1003,5002,'10:00','2022-1-13',500, 1),
+(1001,5003,'10:30','2022-1-14',500, 1)

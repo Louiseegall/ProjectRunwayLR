@@ -181,10 +181,10 @@ namespace ProjectRunwayLR
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            player.Stream = Properties.Resources.music;
+            //player.Stream = Properties.Resources.music;
             //  player.Stream = Properties.Resources._12percent;
           //  player.Play();
-            player.PlayLooping();
+            //player.PlayLooping();
 
 
             //  tarStop.Enabled = true;

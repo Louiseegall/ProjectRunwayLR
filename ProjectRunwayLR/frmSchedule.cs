@@ -86,26 +86,19 @@ namespace ProjectRunwayLR
             daStaff.FillSchema(dsRunway, SchemaType.Source, "Staff");
 
 
-            sqlStaffAppointment = @"select distinct Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate
-
-From Appointment
-
-JOIN StaffAppointment on StaffAppointment.AppointmentNo=Appointment.AppointmentNo
-
-
-select distinct
-Staff.StaffNo
-
-FROM Staff
-
-JOIN StaffAppointment on StaffAppointment.StaffNo = Staff.StaffNo
-
-select distinct
+            sqlStaffAppointment = @"select Appointment.AppointmentNo, Appointment.AppointmentTime, Appointment.AppointmentDate,
+Staff.StaffNo,
 Treatment.TreatmentNo
 
-FROM Treatment
-JOIN StaffAppointment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo";
+From StaffAppointment
+
+join Appointment on StaffAppointment.AppointmentNo = Appointment.AppointmentNo
+join Staff on StaffAppointment.StaffNo = Staff.StaffNo
+join Treatment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo
+select * from StaffAppointment where (AppointmentDate between @StartDate and @EndDate)";
             cmdStaffAppointment = new SqlCommand(sqlStaffAppointment, conn);
+            cmdStaffAppointment.Parameters.Add("@StartDate", SqlDbType.SmallDateTime);
+            cmdStaffAppointment.Parameters.Add("@EndDate", SqlDbType.SmallDateTime);
             daStaffAppointment = new SqlDataAdapter(cmdStaffAppointment);
             daStaffAppointment.FillSchema(dsRunway, SchemaType.Source, "StaffAppointment");
 
@@ -178,7 +171,7 @@ JOIN StaffAppointment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo";
             {
                 if(ok)
                 {
-                    dsRunway.Tables["Appointment"].Clear();
+                    dsRunway.Tables["StaffAppointment"].Clear();
 
                     for (int i = 0; i <7; i++)
                     {
@@ -188,8 +181,8 @@ JOIN StaffAppointment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo";
                             dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.White;
                         }
                     }
-                    cmdAppointment.Parameters["@StartDate"].Value = monStartDate.Date;
-                    cmdAppointment.Parameters["@EndDate"].Value = monStartDate.AddDays(7).Date;
+                    cmdStaffAppointment.Parameters["@StartDate"].Value = monStartDate.Date;
+                    cmdStaffAppointment.Parameters["@EndDate"].Value = monStartDate.AddDays(7).Date;
 
                     currentWeek[0] = monStartDate.Date;
                     currentWeek[1] = monStartDate.AddDays(1).Date;
@@ -200,16 +193,16 @@ JOIN StaffAppointment on StaffAppointment.TreatmentNo = Treatment.TreatmentNo";
                     currentWeek[6] = monStartDate.AddDays(6).Date;
 
                     //daStaffAppointment.Fill(dsRunway, "StaffAppointment");
-                    daAppointment.Fill(dsRunway, "Appointment");
+                    daStaffAppointment.Fill(dsRunway, "StaffAppointment");
 
                 }
-                foreach(DataRow dr in dsRunway.Tables["Appointment"].Rows)
+                foreach(DataRow dr in dsRunway.Tables["StaffAppointment"].Rows)
                 {
                     string starttime = (dr["AppointmentTime"].ToString());
 
                     for(int i = 0; i < 7; i++)
                     {
-                        if(Convert.ToDateTime(dr["DateStart"]).ToShortDateString().Equals(currentWeek[i].ToShortDateString()))
+                        if(Convert.ToDateTime(dr["AppointmentDate"]).ToShortDateString().Equals(currentWeek[i].ToShortDateString()))
                         {
                             for(int j = 0; j < 16; j++)
                             {
