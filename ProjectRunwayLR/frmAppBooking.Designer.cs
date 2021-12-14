@@ -576,6 +576,7 @@ namespace ProjectRunwayLR
             this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
             this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
             this.dtpBookingsStartDate.TabIndex = 141;
+            this.dtpBookingsStartDate.ValueChanged += new System.EventHandler(this.dtpBookingsStartDate_ValueChanged);
             // 
             // dgvAppointments
             // 

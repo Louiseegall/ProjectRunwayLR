@@ -19,3 +19,9 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,TreatmentTime;
 
 
 
+
+Select AppointmentNo, Treatment.TreatmentNo,TreatmentTime, TreatmentDuration
+from AppointmentTreatment 
+join Treatment on AppointmentTreatment.TreatmentNo= Treatment.TreatmentNo
+where AppointmentNo=5001
+
