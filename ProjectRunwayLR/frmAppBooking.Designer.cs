@@ -68,6 +68,8 @@ namespace ProjectRunwayLR
             this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.cmbDisplayRoomNo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,20 +90,19 @@ namespace ProjectRunwayLR
             this.tabApp = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pnlEditCustomer = new System.Windows.Forms.Panel();
+            this.btnReS = new System.Windows.Forms.Button();
             this.cmbEditAppointmentTime = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblEditCustomer3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.dtpEditStartDate = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblEditBookingDate = new System.Windows.Forms.Label();
-            this.lblEditCustomerNo = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblEditCustomer1 = new System.Windows.Forms.Label();
+            this.lblEditCustomer2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pnlEditBooking = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblEditTreatmentTime = new System.Windows.Forms.Label();
-            this.lvgEditBooking = new System.Windows.Forms.ListView();
+            this.lvwEditBooking = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -115,8 +116,6 @@ namespace ProjectRunwayLR
             this.btnEditRemove = new System.Windows.Forms.Button();
             this.btnEditItem = new System.Windows.Forms.Button();
             this.btnEditEdit = new System.Windows.Forms.Button();
-            this.cmbDisplayRoomNo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.pnlBooking.SuspendLayout();
@@ -153,7 +152,7 @@ namespace ProjectRunwayLR
             this.tabAdd.Location = new System.Drawing.Point(4, 32);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdd.Size = new System.Drawing.Size(664, 568);
+            this.tabAdd.Size = new System.Drawing.Size(664, 438);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "Add";
             // 
@@ -163,7 +162,7 @@ namespace ProjectRunwayLR
             this.btnAddCancel.BackColor = System.Drawing.Color.Black;
             this.btnAddCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCancel.ForeColor = System.Drawing.Color.White;
-            this.btnAddCancel.Location = new System.Drawing.Point(483, 463);
+            this.btnAddCancel.Location = new System.Drawing.Point(483, 333);
             this.btnAddCancel.Name = "btnAddCancel";
             this.btnAddCancel.Size = new System.Drawing.Size(127, 50);
             this.btnAddCancel.TabIndex = 120;
@@ -179,7 +178,7 @@ namespace ProjectRunwayLR
             this.btnRemoveItem.BackColor = System.Drawing.Color.Black;
             this.btnRemoveItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveItem.Location = new System.Drawing.Point(156, 463);
+            this.btnRemoveItem.Location = new System.Drawing.Point(156, 333);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(152, 50);
             this.btnRemoveItem.TabIndex = 118;
@@ -195,7 +194,7 @@ namespace ProjectRunwayLR
             this.btnAddItem.BackColor = System.Drawing.Color.Black;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(5, 463);
+            this.btnAddItem.Location = new System.Drawing.Point(5, 333);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(127, 50);
             this.btnAddItem.TabIndex = 117;
@@ -211,7 +210,7 @@ namespace ProjectRunwayLR
             this.btnAddAdd.BackColor = System.Drawing.Color.Black;
             this.btnAddAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAddAdd.Location = new System.Drawing.Point(332, 463);
+            this.btnAddAdd.Location = new System.Drawing.Point(332, 333);
             this.btnAddAdd.Name = "btnAddAdd";
             this.btnAddAdd.Size = new System.Drawing.Size(127, 50);
             this.btnAddAdd.TabIndex = 116;
@@ -232,7 +231,7 @@ namespace ProjectRunwayLR
             this.pnlBooking.Controls.Add(this.lvwBooking);
             this.pnlBooking.Location = new System.Drawing.Point(364, 113);
             this.pnlBooking.Name = "pnlBooking";
-            this.pnlBooking.Size = new System.Drawing.Size(291, 341);
+            this.pnlBooking.Size = new System.Drawing.Size(291, 211);
             this.pnlBooking.TabIndex = 115;
             // 
             // label4
@@ -297,6 +296,7 @@ namespace ProjectRunwayLR
             this.pnlRoom.Controls.Add(this.lblKennelNo);
             this.pnlRoom.Controls.Add(this.cmbTreatment);
             this.pnlRoom.Controls.Add(this.lblNoDays);
+            this.pnlRoom.Enabled = false;
             this.pnlRoom.Location = new System.Drawing.Point(360, 11);
             this.pnlRoom.Name = "pnlRoom";
             this.pnlRoom.Size = new System.Drawing.Size(296, 88);
@@ -306,6 +306,7 @@ namespace ProjectRunwayLR
             // 
             this.cmbRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoomNo.FormattingEnabled = true;
             this.cmbRoomNo.Location = new System.Drawing.Point(130, 55);
             this.cmbRoomNo.Name = "cmbRoomNo";
@@ -326,6 +327,7 @@ namespace ProjectRunwayLR
             // 
             this.cmbTreatment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTreatment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTreatment.FormattingEnabled = true;
             this.cmbTreatment.Items.AddRange(new object[] {
             "1",
@@ -428,20 +430,30 @@ namespace ProjectRunwayLR
             this.pnlCustomer.Controls.Add(this.lblCustomerName);
             this.pnlCustomer.Location = new System.Drawing.Point(5, 11);
             this.pnlCustomer.Name = "pnlCustomer";
-            this.pnlCustomer.Size = new System.Drawing.Size(340, 427);
+            this.pnlCustomer.Size = new System.Drawing.Size(340, 297);
             this.pnlCustomer.TabIndex = 112;
             // 
             // cmbAppointmentTime
             // 
+            this.cmbAppointmentTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAppointmentTime.FormattingEnabled = true;
             this.cmbAppointmentTime.Items.AddRange(new object[] {
-            "9:00",
-            "9:30",
+            "09:00",
+            "09:30",
             "10:00",
             "10:30",
             "11:00",
             "11:30",
-            "12:00"});
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30"});
             this.cmbAppointmentTime.Location = new System.Drawing.Point(154, 172);
             this.cmbAppointmentTime.Name = "cmbAppointmentTime";
             this.cmbAppointmentTime.Size = new System.Drawing.Size(172, 26);
@@ -569,9 +581,31 @@ namespace ProjectRunwayLR
             this.tabDisplay.Location = new System.Drawing.Point(4, 32);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(664, 568);
+            this.tabDisplay.Size = new System.Drawing.Size(664, 438);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
+            // 
+            // cmbDisplayRoomNo
+            // 
+            this.cmbDisplayRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDisplayRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDisplayRoomNo.FormattingEnabled = true;
+            this.cmbDisplayRoomNo.Location = new System.Drawing.Point(426, 6);
+            this.cmbDisplayRoomNo.Name = "cmbDisplayRoomNo";
+            this.cmbDisplayRoomNo.Size = new System.Drawing.Size(130, 32);
+            this.cmbDisplayRoomNo.TabIndex = 143;
+            this.cmbDisplayRoomNo.SelectedIndexChanged += new System.EventHandler(this.cmbDisplayRoomNo_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(334, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.TabIndex = 142;
+            this.label8.Text = "Room No";
             // 
             // dtpBookingsStartDate
             // 
@@ -606,9 +640,8 @@ namespace ProjectRunwayLR
             this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvAppointments.Size = new System.Drawing.Size(658, 437);
+            this.dgvAppointments.Size = new System.Drawing.Size(658, 307);
             this.dgvAppointments.TabIndex = 140;
-            this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
             // 
             // Monday
             // 
@@ -672,11 +705,11 @@ namespace ProjectRunwayLR
             this.btnCancelDisplay.BackColor = System.Drawing.Color.Black;
             this.btnCancelDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnCancelDisplay.Location = new System.Drawing.Point(546, 509);
+            this.btnCancelDisplay.Location = new System.Drawing.Point(503, 379);
             this.btnCancelDisplay.Name = "btnCancelDisplay";
-            this.btnCancelDisplay.Size = new System.Drawing.Size(104, 50);
+            this.btnCancelDisplay.Size = new System.Drawing.Size(147, 50);
             this.btnCancelDisplay.TabIndex = 139;
-            this.btnCancelDisplay.Text = "Cancel";
+            this.btnCancelDisplay.Text = "Exit System";
             this.btnCancelDisplay.UseVisualStyleBackColor = false;
             this.btnCancelDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnCancelDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
@@ -687,7 +720,7 @@ namespace ProjectRunwayLR
             this.btnDeleteDisplay.BackColor = System.Drawing.Color.Black;
             this.btnDeleteDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteDisplay.Location = new System.Drawing.Point(352, 509);
+            this.btnDeleteDisplay.Location = new System.Drawing.Point(352, 379);
             this.btnDeleteDisplay.Name = "btnDeleteDisplay";
             this.btnDeleteDisplay.Size = new System.Drawing.Size(104, 50);
             this.btnDeleteDisplay.TabIndex = 137;
@@ -703,7 +736,7 @@ namespace ProjectRunwayLR
             this.btnEditDisplay.BackColor = System.Drawing.Color.Black;
             this.btnEditDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnEditDisplay.Location = new System.Drawing.Point(174, 509);
+            this.btnEditDisplay.Location = new System.Drawing.Point(174, 379);
             this.btnEditDisplay.Name = "btnEditDisplay";
             this.btnEditDisplay.Size = new System.Drawing.Size(104, 50);
             this.btnEditDisplay.TabIndex = 136;
@@ -719,7 +752,7 @@ namespace ProjectRunwayLR
             this.btnAddDisplay.BackColor = System.Drawing.Color.Black;
             this.btnAddDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnAddDisplay.Location = new System.Drawing.Point(6, 509);
+            this.btnAddDisplay.Location = new System.Drawing.Point(6, 379);
             this.btnAddDisplay.Name = "btnAddDisplay";
             this.btnAddDisplay.Size = new System.Drawing.Size(104, 50);
             this.btnAddDisplay.TabIndex = 132;
@@ -735,7 +768,7 @@ namespace ProjectRunwayLR
             this.btnDisplayDelete.BackColor = System.Drawing.Color.Black;
             this.btnDisplayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayDelete.Location = new System.Drawing.Point(352, 580);
+            this.btnDisplayDelete.Location = new System.Drawing.Point(352, 450);
             this.btnDisplayDelete.Name = "btnDisplayDelete";
             this.btnDisplayDelete.Size = new System.Drawing.Size(136, 50);
             this.btnDisplayDelete.TabIndex = 84;
@@ -748,7 +781,7 @@ namespace ProjectRunwayLR
             this.btnDisplayEdit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayEdit.Location = new System.Drawing.Point(195, 580);
+            this.btnDisplayEdit.Location = new System.Drawing.Point(195, 450);
             this.btnDisplayEdit.Name = "btnDisplayEdit";
             this.btnDisplayEdit.Size = new System.Drawing.Size(133, 50);
             this.btnDisplayEdit.TabIndex = 85;
@@ -761,7 +794,7 @@ namespace ProjectRunwayLR
             this.btnDisplayExit.BackColor = System.Drawing.Color.Black;
             this.btnDisplayExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayExit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayExit.Location = new System.Drawing.Point(532, 580);
+            this.btnDisplayExit.Location = new System.Drawing.Point(532, 450);
             this.btnDisplayExit.Name = "btnDisplayExit";
             this.btnDisplayExit.Size = new System.Drawing.Size(139, 50);
             this.btnDisplayExit.TabIndex = 83;
@@ -774,7 +807,7 @@ namespace ProjectRunwayLR
             this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
             this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 580);
+            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 450);
             this.btnDisplayAdd.Name = "btnDisplayAdd";
             this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
             this.btnDisplayAdd.TabIndex = 86;
@@ -793,9 +826,10 @@ namespace ProjectRunwayLR
             this.tabApp.Location = new System.Drawing.Point(0, 0);
             this.tabApp.Name = "tabApp";
             this.tabApp.SelectedIndex = 0;
-            this.tabApp.Size = new System.Drawing.Size(672, 604);
+            this.tabApp.Size = new System.Drawing.Size(672, 474);
             this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabApp.TabIndex = 4;
+            this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -813,7 +847,7 @@ namespace ProjectRunwayLR
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(664, 568);
+            this.tabPage1.Size = new System.Drawing.Size(664, 438);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Edit";
             // 
@@ -823,27 +857,42 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlEditCustomer.BackColor = System.Drawing.Color.Transparent;
             this.pnlEditCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlEditCustomer.Controls.Add(this.btnReS);
             this.pnlEditCustomer.Controls.Add(this.cmbEditAppointmentTime);
-            this.pnlEditCustomer.Controls.Add(this.label9);
+            this.pnlEditCustomer.Controls.Add(this.lblEditCustomer3);
             this.pnlEditCustomer.Controls.Add(this.label10);
-            this.pnlEditCustomer.Controls.Add(this.label11);
             this.pnlEditCustomer.Controls.Add(this.dtpEditStartDate);
             this.pnlEditCustomer.Controls.Add(this.label12);
-            this.pnlEditCustomer.Controls.Add(this.lblEditBookingDate);
-            this.pnlEditCustomer.Controls.Add(this.lblEditCustomerNo);
-            this.pnlEditCustomer.Controls.Add(this.label16);
+            this.pnlEditCustomer.Controls.Add(this.lblEditCustomer1);
+            this.pnlEditCustomer.Controls.Add(this.lblEditCustomer2);
             this.pnlEditCustomer.Controls.Add(this.label17);
             this.pnlEditCustomer.Location = new System.Drawing.Point(8, 11);
             this.pnlEditCustomer.Name = "pnlEditCustomer";
-            this.pnlEditCustomer.Size = new System.Drawing.Size(321, 441);
+            this.pnlEditCustomer.Size = new System.Drawing.Size(321, 314);
             this.pnlEditCustomer.TabIndex = 113;
+            // 
+            // btnReS
+            // 
+            this.btnReS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReS.BackColor = System.Drawing.Color.Black;
+            this.btnReS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReS.ForeColor = System.Drawing.Color.White;
+            this.btnReS.Location = new System.Drawing.Point(7, 257);
+            this.btnReS.Name = "btnReS";
+            this.btnReS.Size = new System.Drawing.Size(307, 50);
+            this.btnReS.TabIndex = 123;
+            this.btnReS.Text = "Re Schedule Appointment";
+            this.btnReS.UseVisualStyleBackColor = false;
+            this.btnReS.Click += new System.EventHandler(this.btnReS_Click);
             // 
             // cmbEditAppointmentTime
             // 
+            this.cmbEditAppointmentTime.Enabled = false;
             this.cmbEditAppointmentTime.FormattingEnabled = true;
             this.cmbEditAppointmentTime.Items.AddRange(new object[] {
-            "9:00",
-            "9:30",
+            "09:00",
+            "09:30",
             "10:00",
             "10:30",
             "11:00",
@@ -861,16 +910,17 @@ namespace ProjectRunwayLR
             this.cmbEditAppointmentTime.Name = "cmbEditAppointmentTime";
             this.cmbEditAppointmentTime.Size = new System.Drawing.Size(160, 26);
             this.cmbEditAppointmentTime.TabIndex = 19;
+            this.cmbEditAppointmentTime.SelectedIndexChanged += new System.EventHandler(this.cmbEditAppointmentTime_SelectedIndexChanged);
             // 
-            // label9
+            // lblEditCustomer3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(14, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "-";
+            this.lblEditCustomer3.AutoSize = true;
+            this.lblEditCustomer3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditCustomer3.Location = new System.Drawing.Point(25, 101);
+            this.lblEditCustomer3.Name = "lblEditCustomer3";
+            this.lblEditCustomer3.Size = new System.Drawing.Size(14, 20);
+            this.lblEditCustomer3.TabIndex = 18;
+            this.lblEditCustomer3.Text = "-";
             // 
             // label10
             // 
@@ -882,20 +932,11 @@ namespace ProjectRunwayLR
             this.label10.TabIndex = 16;
             this.label10.Text = "Appointment Time";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 209);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(106, 20);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Booking Date";
-            // 
             // dtpEditStartDate
             // 
             this.dtpEditStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpEditStartDate.Enabled = false;
             this.dtpEditStartDate.Location = new System.Drawing.Point(154, 132);
             this.dtpEditStartDate.Name = "dtpEditStartDate";
             this.dtpEditStartDate.Size = new System.Drawing.Size(160, 24);
@@ -911,35 +952,25 @@ namespace ProjectRunwayLR
             this.label12.TabIndex = 7;
             this.label12.Text = "Appointment Date";
             // 
-            // lblEditBookingDate
+            // lblEditCustomer1
             // 
-            this.lblEditBookingDate.AutoSize = true;
-            this.lblEditBookingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditBookingDate.Location = new System.Drawing.Point(216, 209);
-            this.lblEditBookingDate.Name = "lblEditBookingDate";
-            this.lblEditBookingDate.Size = new System.Drawing.Size(18, 20);
-            this.lblEditBookingDate.TabIndex = 6;
-            this.lblEditBookingDate.Text = "- ";
+            this.lblEditCustomer1.AutoSize = true;
+            this.lblEditCustomer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditCustomer1.Location = new System.Drawing.Point(216, 13);
+            this.lblEditCustomer1.Name = "lblEditCustomer1";
+            this.lblEditCustomer1.Size = new System.Drawing.Size(14, 20);
+            this.lblEditCustomer1.TabIndex = 4;
+            this.lblEditCustomer1.Text = "-";
             // 
-            // lblEditCustomerNo
+            // lblEditCustomer2
             // 
-            this.lblEditCustomerNo.AutoSize = true;
-            this.lblEditCustomerNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditCustomerNo.Location = new System.Drawing.Point(216, 13);
-            this.lblEditCustomerNo.Name = "lblEditCustomerNo";
-            this.lblEditCustomerNo.Size = new System.Drawing.Size(14, 20);
-            this.lblEditCustomerNo.TabIndex = 4;
-            this.lblEditCustomerNo.Text = "-";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(25, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 20);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "-";
+            this.lblEditCustomer2.AutoSize = true;
+            this.lblEditCustomer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditCustomer2.Location = new System.Drawing.Point(25, 57);
+            this.lblEditCustomer2.Name = "lblEditCustomer2";
+            this.lblEditCustomer2.Size = new System.Drawing.Size(14, 20);
+            this.lblEditCustomer2.TabIndex = 2;
+            this.lblEditCustomer2.Text = "-";
             // 
             // label17
             // 
@@ -959,10 +990,10 @@ namespace ProjectRunwayLR
             this.pnlEditBooking.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnlEditBooking.Controls.Add(this.label7);
             this.pnlEditBooking.Controls.Add(this.lblEditTreatmentTime);
-            this.pnlEditBooking.Controls.Add(this.lvgEditBooking);
+            this.pnlEditBooking.Controls.Add(this.lvwEditBooking);
             this.pnlEditBooking.Location = new System.Drawing.Point(335, 114);
             this.pnlEditBooking.Name = "pnlEditBooking";
-            this.pnlEditBooking.Size = new System.Drawing.Size(307, 341);
+            this.pnlEditBooking.Size = new System.Drawing.Size(307, 211);
             this.pnlEditBooking.TabIndex = 122;
             // 
             // label7
@@ -983,20 +1014,23 @@ namespace ProjectRunwayLR
             this.lblEditTreatmentTime.Text = "-";
             this.lblEditTreatmentTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lvgEditBooking
+            // lvwEditBooking
             // 
-            this.lvgEditBooking.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwEditBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwEditBooking.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lvgEditBooking.HideSelection = false;
-            this.lvgEditBooking.Location = new System.Drawing.Point(0, 37);
-            this.lvgEditBooking.Name = "lvgEditBooking";
-            this.lvgEditBooking.Size = new System.Drawing.Size(307, 222);
-            this.lvgEditBooking.TabIndex = 7;
-            this.lvgEditBooking.UseCompatibleStateImageBehavior = false;
-            this.lvgEditBooking.View = System.Windows.Forms.View.Details;
+            this.lvwEditBooking.HideSelection = false;
+            this.lvwEditBooking.Location = new System.Drawing.Point(0, 37);
+            this.lvwEditBooking.Name = "lvwEditBooking";
+            this.lvwEditBooking.Size = new System.Drawing.Size(307, 158);
+            this.lvwEditBooking.TabIndex = 7;
+            this.lvwEditBooking.UseCompatibleStateImageBehavior = false;
+            this.lvwEditBooking.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -1036,6 +1070,7 @@ namespace ProjectRunwayLR
             // 
             this.cmbEditRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEditRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditRoomNo.FormattingEnabled = true;
             this.cmbEditRoomNo.Location = new System.Drawing.Point(130, 55);
             this.cmbEditRoomNo.Name = "cmbEditRoomNo";
@@ -1056,22 +1091,13 @@ namespace ProjectRunwayLR
             // 
             this.cmbEditTreatment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEditTreatment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditTreatment.FormattingEnabled = true;
-            this.cmbEditTreatment.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
             this.cmbEditTreatment.Location = new System.Drawing.Point(130, 3);
             this.cmbEditTreatment.Name = "cmbEditTreatment";
             this.cmbEditTreatment.Size = new System.Drawing.Size(175, 26);
             this.cmbEditTreatment.TabIndex = 9;
+            this.cmbEditTreatment.SelectedIndexChanged += new System.EventHandler(this.cmbEditTreatment_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -1089,12 +1115,13 @@ namespace ProjectRunwayLR
             this.btnEditCancel.BackColor = System.Drawing.Color.Black;
             this.btnEditCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCancel.ForeColor = System.Drawing.Color.White;
-            this.btnEditCancel.Location = new System.Drawing.Point(479, 461);
+            this.btnEditCancel.Location = new System.Drawing.Point(479, 331);
             this.btnEditCancel.Name = "btnEditCancel";
             this.btnEditCancel.Size = new System.Drawing.Size(127, 50);
             this.btnEditCancel.TabIndex = 120;
             this.btnEditCancel.Text = "Cancel";
             this.btnEditCancel.UseVisualStyleBackColor = false;
+            this.btnEditCancel.Click += new System.EventHandler(this.btnEditCancel_Click);
             this.btnEditCancel.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnEditCancel.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -1104,12 +1131,13 @@ namespace ProjectRunwayLR
             this.btnEditRemove.BackColor = System.Drawing.Color.Black;
             this.btnEditRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditRemove.ForeColor = System.Drawing.Color.White;
-            this.btnEditRemove.Location = new System.Drawing.Point(156, 461);
+            this.btnEditRemove.Location = new System.Drawing.Point(156, 331);
             this.btnEditRemove.Name = "btnEditRemove";
             this.btnEditRemove.Size = new System.Drawing.Size(138, 50);
             this.btnEditRemove.TabIndex = 118;
             this.btnEditRemove.Text = "Remove Item";
             this.btnEditRemove.UseVisualStyleBackColor = false;
+            this.btnEditRemove.Click += new System.EventHandler(this.btnEditRemove_Click);
             this.btnEditRemove.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnEditRemove.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -1119,12 +1147,13 @@ namespace ProjectRunwayLR
             this.btnEditItem.BackColor = System.Drawing.Color.Black;
             this.btnEditItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditItem.ForeColor = System.Drawing.Color.White;
-            this.btnEditItem.Location = new System.Drawing.Point(5, 461);
+            this.btnEditItem.Location = new System.Drawing.Point(5, 331);
             this.btnEditItem.Name = "btnEditItem";
             this.btnEditItem.Size = new System.Drawing.Size(129, 50);
             this.btnEditItem.TabIndex = 117;
-            this.btnEditItem.Text = "Edit Item";
+            this.btnEditItem.Text = "Add Item";
             this.btnEditItem.UseVisualStyleBackColor = false;
+            this.btnEditItem.Click += new System.EventHandler(this.btnEditItem_Click);
             this.btnEditItem.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnEditItem.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
@@ -1134,45 +1163,21 @@ namespace ProjectRunwayLR
             this.btnEditEdit.BackColor = System.Drawing.Color.Black;
             this.btnEditEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEditEdit.Location = new System.Drawing.Point(316, 461);
+            this.btnEditEdit.Location = new System.Drawing.Point(316, 331);
             this.btnEditEdit.Name = "btnEditEdit";
             this.btnEditEdit.Size = new System.Drawing.Size(141, 50);
             this.btnEditEdit.TabIndex = 116;
             this.btnEditEdit.Text = "Edit";
             this.btnEditEdit.UseVisualStyleBackColor = false;
+            this.btnEditEdit.Click += new System.EventHandler(this.btnEditEdit_Click);
             this.btnEditEdit.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnEditEdit.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
-            // cmbDisplayRoomNo
-            // 
-            this.cmbDisplayRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbDisplayRoomNo.FormattingEnabled = true;
-            this.cmbDisplayRoomNo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmbDisplayRoomNo.Location = new System.Drawing.Point(426, 6);
-            this.cmbDisplayRoomNo.Name = "cmbDisplayRoomNo";
-            this.cmbDisplayRoomNo.Size = new System.Drawing.Size(130, 32);
-            this.cmbDisplayRoomNo.TabIndex = 143;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(334, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 20);
-            this.label8.TabIndex = 142;
-            this.label8.Text = "Room No";
             // 
             // frmAppBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 604);
+            this.ClientSize = new System.Drawing.Size(672, 474);
             this.Controls.Add(this.tabApp);
             this.Name = "frmAppBooking";
             this.Text = "frmAppBooking";
@@ -1265,7 +1270,7 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Panel pnlEditBooking;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblEditTreatmentTime;
-        private System.Windows.Forms.ListView lvgEditBooking;
+        private System.Windows.Forms.ListView lvwEditBooking;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -1277,16 +1282,15 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnlEditCustomer;
         private System.Windows.Forms.ComboBox cmbEditAppointmentTime;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEditCustomer3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtpEditStartDate;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblEditBookingDate;
-        private System.Windows.Forms.Label lblEditCustomerNo;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblEditCustomer1;
+        private System.Windows.Forms.Label lblEditCustomer2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbDisplayRoomNo;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnReS;
     }
 }
