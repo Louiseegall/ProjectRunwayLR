@@ -217,6 +217,9 @@
     <None Include="Resources\img1.jpg" />
     <None Include="Resources\music.wav" />
     <None Include="Resources\hair1.jpg" />
+    <None Include="Resources\newvid.wav" />
+    <None Include="Resources\pause-40.png" />
+    <None Include="Resources\play-40.png" />
     <Content Include="RunwayDatabase\BookingScheduleView.sql" />
     <Content Include="RunwayDatabase\BookingAppointmentView.sql" />
     <Content Include="RunwayDatabase\RunwayDatabase - Copy.sql" />

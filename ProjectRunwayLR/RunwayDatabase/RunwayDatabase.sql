@@ -1,4 +1,5 @@
-﻿--Create Database Runway;
+﻿Create Database Runway;
+Go
 use Runway;
 
 
@@ -125,9 +126,11 @@ CREATE TABLE [dbo].[Room]
     CONSTRAINT [FKTreatmentTypeID] FOREIGN KEY (TreatmentType) REFERENCES TreatmentType(TreatmentType),
 )
 insert into Room(RoomNo, RoomDesc,TreatmentType)
-Values(1, 'Room',1),
-(2, 'Room 1',2),
-(3, 'Room ',3)
+Values(1, 'Hair',1),
+(2, 'Nails',2),
+(3, 'Spa ',3),
+(4, 'Waxing ',4),
+(5,'Hair 2',1)
 
 
 
@@ -144,7 +147,17 @@ CREATE TABLE [dbo].[Treatment]
 insert into Treatment( TreatmentNo,TreatmentDesc, TreatmentPrice, TreatmentDuration, treatmentType )
 Values(500,'wash cut blow dry',35, 1,1), --duration 1 slot =30 mins
 (501,'Colour',75, 2,1),
-(502,'highlights',35, 1,1)
+(502,'highlights',35, 1,1),
+(503,'Manicure',15, 1,2),
+(504,'Pedicure',15, 1,2),
+(505,'Manicure & Pedicure',25, 2,2),
+(506,'Hot Stone',55, 2,3),
+(507,'Massage',30, 1,3),
+(508,'Facial',25, 1,3),
+(509,'Full Leg',35, 1,4),
+(510,'Biniki',45, 1,4),
+(511,'Hollywood',65, 2,2)
+
 
 CREATE TABLE [dbo].[Appointment]
 (
@@ -159,13 +172,21 @@ CREATE TABLE [dbo].[Appointment]
 
 )
 insert into Appointment(AppointmentNo,AppointmentTime,AppointmentDate, CustomerNo )
-Values(5000, '11:00' ,'2021-12-12',5000),
-(5001, '9:30' ,'2021-12-15',5001),
-(5002, '10:00' ,'2021-12-15',5002),
-(5003, '10:30' ,'2022-1-14',5003),
-(5004, '10:30', '2022-12-11', 5004),
-(5005, '10:30', '2022-12-13', 5004)
-
+Values(10000, '09:00' ,'2021-12-20',5000),
+(10001, '10:30' ,'2021-12-20',5001),
+(10002, '12:00' ,'2021-12-20',5002),
+(10003, '13:30' ,'2021-12-20',5003),
+(10004, '16:30', '2021-12-20', 5005),
+(10005, '13:30', '2021-12-22', 5006),
+(10006, '16:30', '2021-12-21', 5007),
+(10007, '09:30', '2021-12-21', 5001),
+(10008, '11:30', '2021-12-23', 5004),
+(10009, '16:30', '2021-12-23', 5003),
+(10010, '12:30', '2021-12-24', 5004),
+(10011, '15:00', '2021-12-24', 5002),
+(10012, '16:00', '2021-12-24', 5007),
+(10013, '12:00', '2021-12-27', 5005),
+(10014, '15:00', '2021-12-27', 5006)
 
 
 
@@ -185,10 +206,22 @@ create table AppointmentTreatment(
 )
 insert into AppointmentTreatment(AppointmentNo, TreatmentNo,RoomNo,TreatmentTime)
 Values
-(5000,500,1,'11:00'),(5000,501,2,'11:30'),--two treatments that will happen in that one appointment 
-(5001,500,1,'09:30'),-- one treatment for one appointment 
-(5002,500,1,'10:00'),
-(5003,500,1,'10:30')
+(10000,500,1,'09:00'),(10000,501,5,'09:30'),--two treatments that will happen in that one appointment 
+(10001,502,1,'10:30'),-- one treatment for one appointment 
+(10002,503,2,'12:00'),
+(10003,504,2,'13:30'),
+(10004 ,505,2,'16:30'),
+(10005,506,3,'13:30'),(10005,500,5,'14:30'),(10005,510,4,'15:00'),
+(10006 ,507,3,'16:30'),
+(10007 ,508,3,'09:30'),
+(10008 ,509,4,'11:30'),(10008, 500, 1,'12:00'),(10008,508,3,'12:30'),
+(10009 ,510,4,'16:30'),
+(10010 ,510,4,'12:30'),
+(10011 ,510,5,'15:00'),
+(10012 ,501,5,'16:00'),
+(10013 ,500,5,'12:00'),(10013,503,2,'12:30'),(10013,509,4,'13:00'),(10013,506,3,'14:00'),
+(10014 ,502,5,'15:00')
+
 
 
 CREATE TABLE [dbo].[StaffAppointment]
@@ -206,7 +239,7 @@ CREATE TABLE [dbo].[StaffAppointment]
 )
 insert into StaffAppointment(StaffNo ,AppointmentNo, AppointmentTime, AppointmentDate,TreatmentNo, TreatmentDuration)
 Values
-(1001,5000,'11:00' ,'2021-12-12', 500, 1),(1002,5000,'11:00' ,'2021-12-12', 501, 2),--two staff doing same appointment
-(1001,5001,'11:00', '2022-12-13', 500, 1),
-(1003,5002,'10:00','2021-12-15',500, 1),
-(1001,5003,'10:30','2022-1-14',500, 1)
+(1001,10000,'11:00' ,'2021-12-12', 500, 1),(1002,10000,'11:00' ,'2021-12-12', 501, 2),--two staff doing same appointment
+(1001,10001,'11:00', '2022-12-13', 500, 1),
+(1003,10002,'10:00','2021-12-15',500, 1),
+(1001,10003,'10:30','2022-1-14',500, 1)

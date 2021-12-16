@@ -41,3 +41,7 @@ Select AppointmentNo, Treatment.TreatmentNo,TreatmentTime, TreatmentDuration
 from AppointmentTreatment 
 join Treatment on AppointmentTreatment.TreatmentNo= Treatment.TreatmentNo
 where RoomNo = 1
+
+
+
+ Select * from Appointment where (AppointmentDate between '2021-12-26' and '2022-01-03')

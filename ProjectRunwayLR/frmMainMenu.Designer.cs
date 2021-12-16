@@ -30,6 +30,7 @@ namespace ProjectRunwayLR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             this.btnCustomer = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnAppointment = new System.Windows.Forms.Button();
@@ -84,7 +85,7 @@ namespace ProjectRunwayLR
             this.pbLogo.Image = global::ProjectRunwayLR.Properties.Resources.run;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(513, 554);
+            this.pbLogo.Size = new System.Drawing.Size(400, 554);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 18;
             this.pbLogo.TabStop = false;
@@ -255,7 +256,7 @@ namespace ProjectRunwayLR
             // 
             this.splitContent.Panel2.Controls.Add(this.pnlBorder);
             this.splitContent.Size = new System.Drawing.Size(1124, 554);
-            this.splitContent.SplitterDistance = 513;
+            this.splitContent.SplitterDistance = 400;
             this.splitContent.SplitterWidth = 1;
             this.splitContent.TabIndex = 19;
             // 
@@ -268,7 +269,7 @@ namespace ProjectRunwayLR
             this.pnlBorder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlBorder.Name = "pnlBorder";
-            this.pnlBorder.Size = new System.Drawing.Size(610, 554);
+            this.pnlBorder.Size = new System.Drawing.Size(723, 554);
             this.pnlBorder.TabIndex = 19;
             // 
             // pnlBackground
@@ -280,7 +281,7 @@ namespace ProjectRunwayLR
             this.pnlBackground.Controls.Add(this.pnlContent);
             this.pnlBackground.Location = new System.Drawing.Point(13, 9);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(585, 532);
+            this.pnlBackground.Size = new System.Drawing.Size(698, 532);
             this.pnlBackground.TabIndex = 0;
             // 
             // pnlContent
@@ -291,7 +292,7 @@ namespace ProjectRunwayLR
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(585, 532);
+            this.pnlContent.Size = new System.Drawing.Size(698, 532);
             this.pnlContent.TabIndex = 24;
             // 
             // pnlUserID
@@ -323,11 +324,11 @@ namespace ProjectRunwayLR
             this.btnPause.BackColor = System.Drawing.Color.Black;
             this.btnPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPause.ForeColor = System.Drawing.Color.White;
+            this.btnPause.Image = global::ProjectRunwayLR.Properties.Resources.pause_40;
             this.btnPause.Location = new System.Drawing.Point(183, 2);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(129, 55);
+            this.btnPause.Size = new System.Drawing.Size(84, 61);
             this.btnPause.TabIndex = 27;
-            this.btnPause.Text = "Pause";
             this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Visible = false;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
@@ -345,9 +346,11 @@ namespace ProjectRunwayLR
             this.Controls.Add(this.tlpMenu);
             this.Controls.Add(this.btnMenu);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(999, 726);
             this.Name = "frmMainMenu";
-            this.Text = "frmMainMenu";
+            this.Text = "Runway Beauty Salon";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.SizeChanged += new System.EventHandler(this.frmMainMenu_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

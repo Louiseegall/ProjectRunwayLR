@@ -175,4 +175,13 @@
   <data name="hair2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hair1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newvid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newvid.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pause_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pause-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

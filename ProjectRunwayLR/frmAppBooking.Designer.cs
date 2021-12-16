@@ -32,6 +32,27 @@ namespace ProjectRunwayLR
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAppBooking));
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tabApp = new System.Windows.Forms.TabControl();
+            this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.cmbDisplayRoomNo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelDisplay = new System.Windows.Forms.Button();
+            this.btnDeleteDisplay = new System.Windows.Forms.Button();
+            this.btnEditDisplay = new System.Windows.Forms.Button();
+            this.btnAddDisplay = new System.Windows.Forms.Button();
+            this.btnDisplayDelete = new System.Windows.Forms.Button();
+            this.btnDisplayEdit = new System.Windows.Forms.Button();
+            this.btnDisplayExit = new System.Windows.Forms.Button();
+            this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.btnAddCancel = new System.Windows.Forms.Button();
             this.btnRemoveItem = new System.Windows.Forms.Button();
@@ -67,27 +88,6 @@ namespace ProjectRunwayLR
             this.lblCust2 = new System.Windows.Forms.Label();
             this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.lblCustomerName = new System.Windows.Forms.Label();
-            this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.cmbDisplayRoomNo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
-            this.dgvAppointments = new System.Windows.Forms.DataGridView();
-            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tuesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wednesday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sunday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancelDisplay = new System.Windows.Forms.Button();
-            this.btnDeleteDisplay = new System.Windows.Forms.Button();
-            this.btnEditDisplay = new System.Windows.Forms.Button();
-            this.btnAddDisplay = new System.Windows.Forms.Button();
-            this.btnDisplayDelete = new System.Windows.Forms.Button();
-            this.btnDisplayEdit = new System.Windows.Forms.Button();
-            this.btnDisplayExit = new System.Windows.Forms.Button();
-            this.btnDisplayAdd = new System.Windows.Forms.Button();
-            this.tabApp = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pnlEditCustomer = new System.Windows.Forms.Panel();
             this.btnReS = new System.Windows.Forms.Button();
@@ -117,14 +117,14 @@ namespace ProjectRunwayLR
             this.btnEditItem = new System.Windows.Forms.Button();
             this.btnEditEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
+            this.tabApp.SuspendLayout();
+            this.tabDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.pnlBooking.SuspendLayout();
             this.pnlRoom.SuspendLayout();
             this.pnlStaff.SuspendLayout();
             this.pnlCustomer.SuspendLayout();
-            this.tabDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
-            this.tabApp.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnlEditCustomer.SuspendLayout();
             this.pnlEditBooking.SuspendLayout();
@@ -134,6 +134,278 @@ namespace ProjectRunwayLR
             // errP
             // 
             this.errP.ContainerControl = this;
+            // 
+            // tabApp
+            // 
+            this.tabApp.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabApp.Controls.Add(this.tabDisplay);
+            this.tabApp.Controls.Add(this.tabAdd);
+            this.tabApp.Controls.Add(this.tabPage1);
+            this.tabApp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabApp.ItemSize = new System.Drawing.Size(195, 28);
+            this.tabApp.Location = new System.Drawing.Point(0, 0);
+            this.tabApp.Name = "tabApp";
+            this.tabApp.SelectedIndex = 0;
+            this.tabApp.Size = new System.Drawing.Size(672, 474);
+            this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabApp.TabIndex = 4;
+            this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
+            // 
+            // tabDisplay
+            // 
+            this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.tabDisplay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabDisplay.BackgroundImage")));
+            this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDisplay.Controls.Add(this.cmbDisplayRoomNo);
+            this.tabDisplay.Controls.Add(this.label8);
+            this.tabDisplay.Controls.Add(this.dtpBookingsStartDate);
+            this.tabDisplay.Controls.Add(this.dgvAppointments);
+            this.tabDisplay.Controls.Add(this.btnCancelDisplay);
+            this.tabDisplay.Controls.Add(this.btnDeleteDisplay);
+            this.tabDisplay.Controls.Add(this.btnEditDisplay);
+            this.tabDisplay.Controls.Add(this.btnAddDisplay);
+            this.tabDisplay.Controls.Add(this.btnDisplayDelete);
+            this.tabDisplay.Controls.Add(this.btnDisplayEdit);
+            this.tabDisplay.Controls.Add(this.btnDisplayExit);
+            this.tabDisplay.Controls.Add(this.btnDisplayAdd);
+            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDisplay.Location = new System.Drawing.Point(4, 32);
+            this.tabDisplay.Name = "tabDisplay";
+            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDisplay.Size = new System.Drawing.Size(664, 438);
+            this.tabDisplay.TabIndex = 0;
+            this.tabDisplay.Text = "Display";
+            // 
+            // cmbDisplayRoomNo
+            // 
+            this.cmbDisplayRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDisplayRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDisplayRoomNo.FormattingEnabled = true;
+            this.errP.SetIconAlignment(this.cmbDisplayRoomNo, System.Windows.Forms.ErrorIconAlignment.BottomRight);
+            this.cmbDisplayRoomNo.Location = new System.Drawing.Point(426, 6);
+            this.cmbDisplayRoomNo.Name = "cmbDisplayRoomNo";
+            this.cmbDisplayRoomNo.Size = new System.Drawing.Size(130, 32);
+            this.cmbDisplayRoomNo.TabIndex = 143;
+            this.cmbDisplayRoomNo.SelectedIndexChanged += new System.EventHandler(this.cmbDisplayRoomNo_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(334, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.TabIndex = 142;
+            this.label8.Text = "Room No";
+            // 
+            // dtpBookingsStartDate
+            // 
+            this.dtpBookingsStartDate.Location = new System.Drawing.Point(6, 6);
+            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
+            this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
+            this.dtpBookingsStartDate.TabIndex = 141;
+            this.dtpBookingsStartDate.ValueChanged += new System.EventHandler(this.dtpBookingsStartDate_ValueChanged);
+            // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvAppointments.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Monday,
+            this.Tuesday,
+            this.Wednesday,
+            this.Thursday,
+            this.Friday,
+            this.Saturday,
+            this.Sunday});
+            this.dgvAppointments.Location = new System.Drawing.Point(6, 41);
+            this.dgvAppointments.MultiSelect = false;
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvAppointments.Size = new System.Drawing.Size(658, 307);
+            this.dgvAppointments.TabIndex = 140;
+            // 
+            // Monday
+            // 
+            this.Monday.HeaderText = "Monday";
+            this.Monday.MinimumWidth = 6;
+            this.Monday.Name = "Monday";
+            this.Monday.ReadOnly = true;
+            this.Monday.Width = 103;
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.HeaderText = "Tuesday";
+            this.Tuesday.MinimumWidth = 6;
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.ReadOnly = true;
+            this.Tuesday.Width = 108;
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.HeaderText = "Wednesday";
+            this.Wednesday.MinimumWidth = 6;
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.ReadOnly = true;
+            this.Wednesday.Width = 136;
+            // 
+            // Thursday
+            // 
+            this.Thursday.HeaderText = "Thursday";
+            this.Thursday.MinimumWidth = 6;
+            this.Thursday.Name = "Thursday";
+            this.Thursday.ReadOnly = true;
+            this.Thursday.Width = 114;
+            // 
+            // Friday
+            // 
+            this.Friday.HeaderText = "Friday";
+            this.Friday.MinimumWidth = 6;
+            this.Friday.Name = "Friday";
+            this.Friday.ReadOnly = true;
+            this.Friday.Width = 87;
+            // 
+            // Saturday
+            // 
+            this.Saturday.HeaderText = "Saturday";
+            this.Saturday.MinimumWidth = 6;
+            this.Saturday.Name = "Saturday";
+            this.Saturday.ReadOnly = true;
+            this.Saturday.Width = 108;
+            // 
+            // Sunday
+            // 
+            this.Sunday.HeaderText = "Sunday";
+            this.Sunday.MinimumWidth = 6;
+            this.Sunday.Name = "Sunday";
+            this.Sunday.ReadOnly = true;
+            this.Sunday.Width = 99;
+            // 
+            // btnCancelDisplay
+            // 
+            this.btnCancelDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelDisplay.BackColor = System.Drawing.Color.Black;
+            this.btnCancelDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelDisplay.ForeColor = System.Drawing.Color.White;
+            this.btnCancelDisplay.Location = new System.Drawing.Point(503, 379);
+            this.btnCancelDisplay.Name = "btnCancelDisplay";
+            this.btnCancelDisplay.Size = new System.Drawing.Size(147, 50);
+            this.btnCancelDisplay.TabIndex = 139;
+            this.btnCancelDisplay.Text = "Exit System";
+            this.btnCancelDisplay.UseVisualStyleBackColor = false;
+            this.btnCancelDisplay.Click += new System.EventHandler(this.btnCancelDisplay_Click);
+            this.btnCancelDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnCancelDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            // 
+            // btnDeleteDisplay
+            // 
+            this.btnDeleteDisplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteDisplay.BackColor = System.Drawing.Color.Black;
+            this.btnDeleteDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteDisplay.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDisplay.Location = new System.Drawing.Point(338, 379);
+            this.btnDeleteDisplay.Name = "btnDeleteDisplay";
+            this.btnDeleteDisplay.Size = new System.Drawing.Size(118, 50);
+            this.btnDeleteDisplay.TabIndex = 137;
+            this.btnDeleteDisplay.Text = "Delete";
+            this.btnDeleteDisplay.UseVisualStyleBackColor = false;
+            this.btnDeleteDisplay.Click += new System.EventHandler(this.btnDeleteDisplay_Click);
+            this.btnDeleteDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnDeleteDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            // 
+            // btnEditDisplay
+            // 
+            this.btnEditDisplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditDisplay.BackColor = System.Drawing.Color.Black;
+            this.btnEditDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDisplay.ForeColor = System.Drawing.Color.White;
+            this.btnEditDisplay.Location = new System.Drawing.Point(174, 379);
+            this.btnEditDisplay.Name = "btnEditDisplay";
+            this.btnEditDisplay.Size = new System.Drawing.Size(114, 50);
+            this.btnEditDisplay.TabIndex = 136;
+            this.btnEditDisplay.Text = "Edit";
+            this.btnEditDisplay.UseVisualStyleBackColor = false;
+            this.btnEditDisplay.Click += new System.EventHandler(this.btnEditDisplay_Click);
+            this.btnEditDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnEditDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            // 
+            // btnAddDisplay
+            // 
+            this.btnAddDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddDisplay.BackColor = System.Drawing.Color.Black;
+            this.btnAddDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDisplay.ForeColor = System.Drawing.Color.White;
+            this.btnAddDisplay.Location = new System.Drawing.Point(8, 379);
+            this.btnAddDisplay.Name = "btnAddDisplay";
+            this.btnAddDisplay.Size = new System.Drawing.Size(111, 50);
+            this.btnAddDisplay.TabIndex = 132;
+            this.btnAddDisplay.Text = "Add";
+            this.btnAddDisplay.UseVisualStyleBackColor = false;
+            this.btnAddDisplay.Click += new System.EventHandler(this.btnAddDisplay_Click);
+            this.btnAddDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnAddDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            // 
+            // btnDisplayDelete
+            // 
+            this.btnDisplayDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDisplayDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDisplayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDisplayDelete.Location = new System.Drawing.Point(352, 450);
+            this.btnDisplayDelete.Name = "btnDisplayDelete";
+            this.btnDisplayDelete.Size = new System.Drawing.Size(136, 50);
+            this.btnDisplayDelete.TabIndex = 84;
+            this.btnDisplayDelete.Text = "Delete";
+            this.btnDisplayDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnDisplayEdit
+            // 
+            this.btnDisplayEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDisplayEdit.BackColor = System.Drawing.Color.Black;
+            this.btnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayEdit.ForeColor = System.Drawing.Color.White;
+            this.btnDisplayEdit.Location = new System.Drawing.Point(195, 450);
+            this.btnDisplayEdit.Name = "btnDisplayEdit";
+            this.btnDisplayEdit.Size = new System.Drawing.Size(133, 50);
+            this.btnDisplayEdit.TabIndex = 85;
+            this.btnDisplayEdit.Text = "Edit";
+            this.btnDisplayEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnDisplayExit
+            // 
+            this.btnDisplayExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDisplayExit.BackColor = System.Drawing.Color.Black;
+            this.btnDisplayExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayExit.ForeColor = System.Drawing.Color.White;
+            this.btnDisplayExit.Location = new System.Drawing.Point(532, 450);
+            this.btnDisplayExit.Name = "btnDisplayExit";
+            this.btnDisplayExit.Size = new System.Drawing.Size(139, 50);
+            this.btnDisplayExit.TabIndex = 83;
+            this.btnDisplayExit.Text = "Exit";
+            this.btnDisplayExit.UseVisualStyleBackColor = false;
+            // 
+            // btnDisplayAdd
+            // 
+            this.btnDisplayAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
+            this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
+            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 450);
+            this.btnDisplayAdd.Name = "btnDisplayAdd";
+            this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
+            this.btnDisplayAdd.TabIndex = 86;
+            this.btnDisplayAdd.Text = "Add";
+            this.btnDisplayAdd.UseVisualStyleBackColor = false;
             // 
             // tabAdd
             // 
@@ -162,7 +434,7 @@ namespace ProjectRunwayLR
             this.btnAddCancel.BackColor = System.Drawing.Color.Black;
             this.btnAddCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCancel.ForeColor = System.Drawing.Color.White;
-            this.btnAddCancel.Location = new System.Drawing.Point(483, 333);
+            this.btnAddCancel.Location = new System.Drawing.Point(537, 327);
             this.btnAddCancel.Name = "btnAddCancel";
             this.btnAddCancel.Size = new System.Drawing.Size(127, 50);
             this.btnAddCancel.TabIndex = 120;
@@ -178,7 +450,7 @@ namespace ProjectRunwayLR
             this.btnRemoveItem.BackColor = System.Drawing.Color.Black;
             this.btnRemoveItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveItem.Location = new System.Drawing.Point(156, 333);
+            this.btnRemoveItem.Location = new System.Drawing.Point(193, 327);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(152, 50);
             this.btnRemoveItem.TabIndex = 118;
@@ -194,7 +466,7 @@ namespace ProjectRunwayLR
             this.btnAddItem.BackColor = System.Drawing.Color.Black;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(5, 333);
+            this.btnAddItem.Location = new System.Drawing.Point(3, 327);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(127, 50);
             this.btnAddItem.TabIndex = 117;
@@ -210,7 +482,7 @@ namespace ProjectRunwayLR
             this.btnAddAdd.BackColor = System.Drawing.Color.Black;
             this.btnAddAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAddAdd.Location = new System.Drawing.Point(332, 333);
+            this.btnAddAdd.Location = new System.Drawing.Point(364, 327);
             this.btnAddAdd.Name = "btnAddAdd";
             this.btnAddAdd.Size = new System.Drawing.Size(127, 50);
             this.btnAddAdd.TabIndex = 116;
@@ -254,6 +526,9 @@ namespace ProjectRunwayLR
             // 
             // lvwBooking
             // 
+            this.lvwBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwBooking.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colTreatmentCode,
             this.colTreatmentDesc,
@@ -262,7 +537,7 @@ namespace ProjectRunwayLR
             this.lvwBooking.HideSelection = false;
             this.lvwBooking.Location = new System.Drawing.Point(0, 37);
             this.lvwBooking.Name = "lvwBooking";
-            this.lvwBooking.Size = new System.Drawing.Size(292, 307);
+            this.lvwBooking.Size = new System.Drawing.Size(292, 171);
             this.lvwBooking.TabIndex = 7;
             this.lvwBooking.UseCompatibleStateImageBehavior = false;
             this.lvwBooking.View = System.Windows.Forms.View.Details;
@@ -270,21 +545,22 @@ namespace ProjectRunwayLR
             // colTreatmentCode
             // 
             this.colTreatmentCode.Text = "Treatment";
-            this.colTreatmentCode.Width = 80;
+            this.colTreatmentCode.Width = 100;
             // 
             // colTreatmentDesc
             // 
             this.colTreatmentDesc.Text = "Description";
+            this.colTreatmentDesc.Width = 150;
             // 
             // colAppointmentTime
             // 
             this.colAppointmentTime.Text = "Time";
-            this.colAppointmentTime.Width = 79;
+            this.colAppointmentTime.Width = 90;
             // 
             // colRoomNo
             // 
             this.colRoomNo.Text = "Room No";
-            this.colRoomNo.Width = 69;
+            this.colRoomNo.Width = 90;
             // 
             // pnlRoom
             // 
@@ -560,277 +836,6 @@ namespace ProjectRunwayLR
             this.lblCustomerName.TabIndex = 0;
             this.lblCustomerName.Text = "Customer Name";
             // 
-            // tabDisplay
-            // 
-            this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.tabDisplay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabDisplay.BackgroundImage")));
-            this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDisplay.Controls.Add(this.cmbDisplayRoomNo);
-            this.tabDisplay.Controls.Add(this.label8);
-            this.tabDisplay.Controls.Add(this.dtpBookingsStartDate);
-            this.tabDisplay.Controls.Add(this.dgvAppointments);
-            this.tabDisplay.Controls.Add(this.btnCancelDisplay);
-            this.tabDisplay.Controls.Add(this.btnDeleteDisplay);
-            this.tabDisplay.Controls.Add(this.btnEditDisplay);
-            this.tabDisplay.Controls.Add(this.btnAddDisplay);
-            this.tabDisplay.Controls.Add(this.btnDisplayDelete);
-            this.tabDisplay.Controls.Add(this.btnDisplayEdit);
-            this.tabDisplay.Controls.Add(this.btnDisplayExit);
-            this.tabDisplay.Controls.Add(this.btnDisplayAdd);
-            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDisplay.Location = new System.Drawing.Point(4, 32);
-            this.tabDisplay.Name = "tabDisplay";
-            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(664, 438);
-            this.tabDisplay.TabIndex = 0;
-            this.tabDisplay.Text = "Display";
-            // 
-            // cmbDisplayRoomNo
-            // 
-            this.cmbDisplayRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbDisplayRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDisplayRoomNo.FormattingEnabled = true;
-            this.cmbDisplayRoomNo.Location = new System.Drawing.Point(426, 6);
-            this.cmbDisplayRoomNo.Name = "cmbDisplayRoomNo";
-            this.cmbDisplayRoomNo.Size = new System.Drawing.Size(130, 32);
-            this.cmbDisplayRoomNo.TabIndex = 143;
-            this.cmbDisplayRoomNo.SelectedIndexChanged += new System.EventHandler(this.cmbDisplayRoomNo_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(334, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 20);
-            this.label8.TabIndex = 142;
-            this.label8.Text = "Room No";
-            // 
-            // dtpBookingsStartDate
-            // 
-            this.dtpBookingsStartDate.Location = new System.Drawing.Point(6, 6);
-            this.dtpBookingsStartDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.dtpBookingsStartDate.Name = "dtpBookingsStartDate";
-            this.dtpBookingsStartDate.Size = new System.Drawing.Size(223, 29);
-            this.dtpBookingsStartDate.TabIndex = 141;
-            this.dtpBookingsStartDate.ValueChanged += new System.EventHandler(this.dtpBookingsStartDate_ValueChanged);
-            // 
-            // dgvAppointments
-            // 
-            this.dgvAppointments.AllowUserToAddRows = false;
-            this.dgvAppointments.AllowUserToDeleteRows = false;
-            this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAppointments.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Monday,
-            this.Tuesday,
-            this.Wednesday,
-            this.Thursday,
-            this.Friday,
-            this.Saturday,
-            this.Sunday});
-            this.dgvAppointments.Location = new System.Drawing.Point(6, 41);
-            this.dgvAppointments.MultiSelect = false;
-            this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.ReadOnly = true;
-            this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvAppointments.Size = new System.Drawing.Size(658, 307);
-            this.dgvAppointments.TabIndex = 140;
-            // 
-            // Monday
-            // 
-            this.Monday.HeaderText = "Monday";
-            this.Monday.MinimumWidth = 6;
-            this.Monday.Name = "Monday";
-            this.Monday.ReadOnly = true;
-            this.Monday.Width = 103;
-            // 
-            // Tuesday
-            // 
-            this.Tuesday.HeaderText = "Tuesday";
-            this.Tuesday.MinimumWidth = 6;
-            this.Tuesday.Name = "Tuesday";
-            this.Tuesday.ReadOnly = true;
-            this.Tuesday.Width = 108;
-            // 
-            // Wednesday
-            // 
-            this.Wednesday.HeaderText = "Wednesday";
-            this.Wednesday.MinimumWidth = 6;
-            this.Wednesday.Name = "Wednesday";
-            this.Wednesday.ReadOnly = true;
-            this.Wednesday.Width = 136;
-            // 
-            // Thursday
-            // 
-            this.Thursday.HeaderText = "Thursday";
-            this.Thursday.MinimumWidth = 6;
-            this.Thursday.Name = "Thursday";
-            this.Thursday.ReadOnly = true;
-            this.Thursday.Width = 114;
-            // 
-            // Friday
-            // 
-            this.Friday.HeaderText = "Friday";
-            this.Friday.MinimumWidth = 6;
-            this.Friday.Name = "Friday";
-            this.Friday.ReadOnly = true;
-            this.Friday.Width = 87;
-            // 
-            // Saturday
-            // 
-            this.Saturday.HeaderText = "Saturday";
-            this.Saturday.MinimumWidth = 6;
-            this.Saturday.Name = "Saturday";
-            this.Saturday.ReadOnly = true;
-            this.Saturday.Width = 108;
-            // 
-            // Sunday
-            // 
-            this.Sunday.HeaderText = "Sunday";
-            this.Sunday.MinimumWidth = 6;
-            this.Sunday.Name = "Sunday";
-            this.Sunday.ReadOnly = true;
-            this.Sunday.Width = 99;
-            // 
-            // btnCancelDisplay
-            // 
-            this.btnCancelDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelDisplay.BackColor = System.Drawing.Color.Black;
-            this.btnCancelDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnCancelDisplay.Location = new System.Drawing.Point(503, 379);
-            this.btnCancelDisplay.Name = "btnCancelDisplay";
-            this.btnCancelDisplay.Size = new System.Drawing.Size(147, 50);
-            this.btnCancelDisplay.TabIndex = 139;
-            this.btnCancelDisplay.Text = "Exit System";
-            this.btnCancelDisplay.UseVisualStyleBackColor = false;
-            this.btnCancelDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.btnCancelDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
-            // btnDeleteDisplay
-            // 
-            this.btnDeleteDisplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteDisplay.BackColor = System.Drawing.Color.Black;
-            this.btnDeleteDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteDisplay.Location = new System.Drawing.Point(352, 379);
-            this.btnDeleteDisplay.Name = "btnDeleteDisplay";
-            this.btnDeleteDisplay.Size = new System.Drawing.Size(104, 50);
-            this.btnDeleteDisplay.TabIndex = 137;
-            this.btnDeleteDisplay.Text = "Delete";
-            this.btnDeleteDisplay.UseVisualStyleBackColor = false;
-            this.btnDeleteDisplay.Click += new System.EventHandler(this.btnDeleteDisplay_Click);
-            this.btnDeleteDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.btnDeleteDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
-            // btnEditDisplay
-            // 
-            this.btnEditDisplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEditDisplay.BackColor = System.Drawing.Color.Black;
-            this.btnEditDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnEditDisplay.Location = new System.Drawing.Point(174, 379);
-            this.btnEditDisplay.Name = "btnEditDisplay";
-            this.btnEditDisplay.Size = new System.Drawing.Size(104, 50);
-            this.btnEditDisplay.TabIndex = 136;
-            this.btnEditDisplay.Text = "Edit";
-            this.btnEditDisplay.UseVisualStyleBackColor = false;
-            this.btnEditDisplay.Click += new System.EventHandler(this.btnEditDisplay_Click);
-            this.btnEditDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.btnEditDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
-            // btnAddDisplay
-            // 
-            this.btnAddDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddDisplay.BackColor = System.Drawing.Color.Black;
-            this.btnAddDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnAddDisplay.Location = new System.Drawing.Point(6, 379);
-            this.btnAddDisplay.Name = "btnAddDisplay";
-            this.btnAddDisplay.Size = new System.Drawing.Size(104, 50);
-            this.btnAddDisplay.TabIndex = 132;
-            this.btnAddDisplay.Text = "Add";
-            this.btnAddDisplay.UseVisualStyleBackColor = false;
-            this.btnAddDisplay.Click += new System.EventHandler(this.btnAddDisplay_Click);
-            this.btnAddDisplay.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
-            this.btnAddDisplay.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
-            // 
-            // btnDisplayDelete
-            // 
-            this.btnDisplayDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDisplayDelete.BackColor = System.Drawing.Color.Black;
-            this.btnDisplayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayDelete.Location = new System.Drawing.Point(352, 450);
-            this.btnDisplayDelete.Name = "btnDisplayDelete";
-            this.btnDisplayDelete.Size = new System.Drawing.Size(136, 50);
-            this.btnDisplayDelete.TabIndex = 84;
-            this.btnDisplayDelete.Text = "Delete";
-            this.btnDisplayDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnDisplayEdit
-            // 
-            this.btnDisplayEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDisplayEdit.BackColor = System.Drawing.Color.Black;
-            this.btnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayEdit.Location = new System.Drawing.Point(195, 450);
-            this.btnDisplayEdit.Name = "btnDisplayEdit";
-            this.btnDisplayEdit.Size = new System.Drawing.Size(133, 50);
-            this.btnDisplayEdit.TabIndex = 85;
-            this.btnDisplayEdit.Text = "Edit";
-            this.btnDisplayEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnDisplayExit
-            // 
-            this.btnDisplayExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisplayExit.BackColor = System.Drawing.Color.Black;
-            this.btnDisplayExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayExit.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayExit.Location = new System.Drawing.Point(532, 450);
-            this.btnDisplayExit.Name = "btnDisplayExit";
-            this.btnDisplayExit.Size = new System.Drawing.Size(139, 50);
-            this.btnDisplayExit.TabIndex = 83;
-            this.btnDisplayExit.Text = "Exit";
-            this.btnDisplayExit.UseVisualStyleBackColor = false;
-            // 
-            // btnDisplayAdd
-            // 
-            this.btnDisplayAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDisplayAdd.BackColor = System.Drawing.Color.Black;
-            this.btnDisplayAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDisplayAdd.Location = new System.Drawing.Point(3, 450);
-            this.btnDisplayAdd.Name = "btnDisplayAdd";
-            this.btnDisplayAdd.Size = new System.Drawing.Size(143, 50);
-            this.btnDisplayAdd.TabIndex = 86;
-            this.btnDisplayAdd.Text = "Add";
-            this.btnDisplayAdd.UseVisualStyleBackColor = false;
-            // 
-            // tabApp
-            // 
-            this.tabApp.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabApp.Controls.Add(this.tabDisplay);
-            this.tabApp.Controls.Add(this.tabAdd);
-            this.tabApp.Controls.Add(this.tabPage1);
-            this.tabApp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabApp.ItemSize = new System.Drawing.Size(195, 28);
-            this.tabApp.Location = new System.Drawing.Point(0, 0);
-            this.tabApp.Name = "tabApp";
-            this.tabApp.SelectedIndex = 0;
-            this.tabApp.Size = new System.Drawing.Size(672, 474);
-            this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabApp.TabIndex = 4;
-            this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
@@ -988,9 +993,9 @@ namespace ProjectRunwayLR
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEditBooking.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlEditBooking.Controls.Add(this.lvwEditBooking);
             this.pnlEditBooking.Controls.Add(this.label7);
             this.pnlEditBooking.Controls.Add(this.lblEditTreatmentTime);
-            this.pnlEditBooking.Controls.Add(this.lvwEditBooking);
             this.pnlEditBooking.Location = new System.Drawing.Point(335, 114);
             this.pnlEditBooking.Name = "pnlEditBooking";
             this.pnlEditBooking.Size = new System.Drawing.Size(307, 211);
@@ -1025,9 +1030,9 @@ namespace ProjectRunwayLR
             this.columnHeader3,
             this.columnHeader4});
             this.lvwEditBooking.HideSelection = false;
-            this.lvwEditBooking.Location = new System.Drawing.Point(0, 37);
+            this.lvwEditBooking.Location = new System.Drawing.Point(0, 32);
             this.lvwEditBooking.Name = "lvwEditBooking";
-            this.lvwEditBooking.Size = new System.Drawing.Size(307, 158);
+            this.lvwEditBooking.Size = new System.Drawing.Size(307, 179);
             this.lvwEditBooking.TabIndex = 7;
             this.lvwEditBooking.UseCompatibleStateImageBehavior = false;
             this.lvwEditBooking.View = System.Windows.Forms.View.Details;
@@ -1035,21 +1040,22 @@ namespace ProjectRunwayLR
             // columnHeader1
             // 
             this.columnHeader1.Text = "Treatment";
-            this.columnHeader1.Width = 80;
+            this.columnHeader1.Width = 100;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Description";
+            this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Time";
-            this.columnHeader3.Width = 79;
+            this.columnHeader3.Width = 90;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Room No";
-            this.columnHeader4.Width = 69;
+            this.columnHeader4.Width = 90;
             // 
             // pnlEditTreat
             // 
@@ -1115,7 +1121,7 @@ namespace ProjectRunwayLR
             this.btnEditCancel.BackColor = System.Drawing.Color.Black;
             this.btnEditCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCancel.ForeColor = System.Drawing.Color.White;
-            this.btnEditCancel.Location = new System.Drawing.Point(479, 331);
+            this.btnEditCancel.Location = new System.Drawing.Point(520, 331);
             this.btnEditCancel.Name = "btnEditCancel";
             this.btnEditCancel.Size = new System.Drawing.Size(127, 50);
             this.btnEditCancel.TabIndex = 120;
@@ -1131,7 +1137,7 @@ namespace ProjectRunwayLR
             this.btnEditRemove.BackColor = System.Drawing.Color.Black;
             this.btnEditRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditRemove.ForeColor = System.Drawing.Color.White;
-            this.btnEditRemove.Location = new System.Drawing.Point(156, 331);
+            this.btnEditRemove.Location = new System.Drawing.Point(186, 331);
             this.btnEditRemove.Name = "btnEditRemove";
             this.btnEditRemove.Size = new System.Drawing.Size(138, 50);
             this.btnEditRemove.TabIndex = 118;
@@ -1163,7 +1169,7 @@ namespace ProjectRunwayLR
             this.btnEditEdit.BackColor = System.Drawing.Color.Black;
             this.btnEditEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEditEdit.Location = new System.Drawing.Point(316, 331);
+            this.btnEditEdit.Location = new System.Drawing.Point(335, 331);
             this.btnEditEdit.Name = "btnEditEdit";
             this.btnEditEdit.Size = new System.Drawing.Size(141, 50);
             this.btnEditEdit.TabIndex = 116;
@@ -1184,6 +1190,10 @@ namespace ProjectRunwayLR
             this.Load += new System.EventHandler(this.frmAppBooking_Load);
             this.SizeChanged += new System.EventHandler(this.frmAppBooking_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
+            this.tabApp.ResumeLayout(false);
+            this.tabDisplay.ResumeLayout(false);
+            this.tabDisplay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.pnlBooking.ResumeLayout(false);
             this.pnlRoom.ResumeLayout(false);
@@ -1192,10 +1202,6 @@ namespace ProjectRunwayLR
             this.pnlStaff.PerformLayout();
             this.pnlCustomer.ResumeLayout(false);
             this.pnlCustomer.PerformLayout();
-            this.tabDisplay.ResumeLayout(false);
-            this.tabDisplay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
-            this.tabApp.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.pnlEditCustomer.ResumeLayout(false);
             this.pnlEditCustomer.PerformLayout();

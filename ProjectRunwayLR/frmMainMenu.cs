@@ -181,10 +181,10 @@ namespace ProjectRunwayLR
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            //player.Stream = Properties.Resources.music;
-            //  player.Stream = Properties.Resources._12percent;
-          //  player.Play();
-            //player.PlayLooping();
+           // player.Stream = Properties.Resources.music;
+            player.Stream = Properties.Resources.newvid;
+           // player.Play();
+            player.PlayLooping();
 
 
             //  tarStop.Enabled = true;
@@ -267,14 +267,14 @@ namespace ProjectRunwayLR
             if (playing)
             {
                 player.Stop();
-                btnPause.Text = "Play";
+                btnPause.Image = Properties.Resources.play_40;
                 playing = false;
 
             }
             else
             {
                 player.PlayLooping();
-                btnPause.Text = "Pause";
+                btnPause.Image = Properties.Resources.pause_40;
                 playing = true;
             }
         }

@@ -125,10 +125,56 @@ where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
 
         private void btnDeleteDisplay_Click(object sender, EventArgs e)
         {
+          
+
             //delete apppointment treat
+
             //delete appoint
             // same as appointment populate Edit tab sort through get data row then delet data row then commit changes to db
+            //chgeck eacxh row in appointment treatment table to se eif it matches that appoinmtnet for each
 
+            int bookingID = -1;
+
+            //    bookingClicked 
+            if (dgvAppointments.SelectedCells.Count > 0)
+            {
+                if (dgvAppointments.SelectedCells[0].Value.ToString() != "")
+                {
+                    bookingID = Int32.Parse(dgvAppointments.SelectedCells[0].Value.ToString());  //must have booking id cell selected has value, result must be a booking id insdie it
+                    //check booking id filled out
+                }
+
+            }
+
+            if (bookingID > -1)  //check if booking id is chnage form -1
+            {
+                if (MessageBox.Show("Are You Sure You Want To Delete Booking Number: " 
+                  +bookingID, "Delete Booking ",
+                  MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+
+
+
+
+                    DataRow drRa = dsRunway.Tables["Appointment"].Rows.Find(bookingID);
+
+                    foreach (DataRow dr in dsRunway.Tables["AppointmentTreatment"].Rows)
+                    {
+
+                        if (dr["AppointmentNo"].ToString() == drRa["AppointmentNo"].ToString())
+                        {
+                            dr.Delete();//delete appointment treatment one at a time, updates
+
+                        }
+                    }
+
+                    daBookingDetails.Update(dsRunway, "AppointmentTreatment");
+                    drRa.Delete();
+                    daBooking.Update(dsRunway, "Appointment");
+                    updateSchedule();
+                }
+
+            }
         }
         private void populateGrid2(DateTime[] currentWeek, DateTime monStartDate)
         {
@@ -184,13 +230,15 @@ where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
                                     string starttime = (tRow["TreatmentTime"].ToString());
                                     if (times[j].Equals(starttime))
                                     {
+                                        dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
                                         if (starttime == dr["AppointmentTime"].ToString())
                                         {
                                             dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Goldenrod;
-                                            dgvAppointments.Rows[j].Cells[i].Value = dr["AppointmentNo"].ToString();
+                                           
                                         }
                                         else
                                         {
+
                                             dgvAppointments.Rows[j].Cells[i].Style.BackColor = Color.Gold;
                                         }
                                         int start = j;
@@ -205,6 +253,7 @@ where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
                                         }
                                         for (int k = start; k < end; k++)
                                         {
+                                            dgvAppointments.Rows[k].Cells[i].Value = dr["AppointmentNo"].ToString();
                                             dgvAppointments.Rows[k].Cells[i].Style.BackColor = Color.Gold;
                                         }
                                         //start = end;
@@ -225,6 +274,7 @@ where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
             {
                 ok = false;
             }
+            dgvAppointments.AutoResizeColumns();
         }
         private void dtpBookingsStartDate_ValueChanged(object sender, EventArgs e)
         {
@@ -236,6 +286,12 @@ where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
             updateSchedule();
         }
 
+        private void btnCancelDisplay_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank You And Goodbye", "Close Runway Application");
+              
+            Application.Exit();
+        }
 
         private void updateSchedule()
         {
@@ -273,20 +329,20 @@ where (AppointmentNo =@AppointmentNo) and RoomNo = @RoomNo";
             }
             monStartDate = startDate;
 
-            dgvAppointments.Columns["Monday"].HeaderText = "Monday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Monday"].HeaderText = "Monday\n " + startDate.ToShortDateString();
             startDate = startDate.Add(TimeSpan.FromDays(1));
-            dgvAppointments.Columns["Tuesday"].HeaderText = "Tuesday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Tuesday"].HeaderText = "Tuesday\n " + startDate.ToShortDateString();
             startDate = startDate.Add(TimeSpan.FromDays(1));
-            dgvAppointments.Columns["Wednesday"].HeaderText = "Wednesday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Wednesday"].HeaderText = "Wednesday\n " + startDate.ToShortDateString();
             startDate = startDate.Add(TimeSpan.FromDays(1));
-            dgvAppointments.Columns["Thursday"].HeaderText = "Thursday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Thursday"].HeaderText = "Thursday\n" + startDate.ToShortDateString();
             startDate = startDate.Add(TimeSpan.FromDays(1));
-            dgvAppointments.Columns["Friday"].HeaderText = "Friday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Friday"].HeaderText = "Friday\n " + startDate.ToShortDateString();
             startDate = startDate.Add(TimeSpan.FromDays(1));
-            dgvAppointments.Columns["Saturday"].HeaderText = "Saturday " + startDate.ToShortDateString();
+            dgvAppointments.Columns["Saturday"].HeaderText = "Saturday\n" + startDate.ToShortDateString();
             startDate = startDate.Add(TimeSpan.FromDays(1));
-            dgvAppointments.Columns["Sunday"].HeaderText = "Sunday " + startDate.ToShortDateString();
-
+            dgvAppointments.Columns["Sunday"].HeaderText = "Sunday\n" + startDate.ToShortDateString();
+            
             // if (!formLoad)
             populateGrid2(currentWeek, monStartDate);
             //else
@@ -453,6 +509,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
 
                 foreach (DataRow ra in dsRunway.Tables["RoomAppointment"].Rows)
                 {
+
                     DateTime date = DateTime.Parse(ra["AppointmentDate"].ToString());
                     if (date.Date != dtpStartDate.Value.Date)
                     {
@@ -475,13 +532,17 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
 
 
                 }
+              
                 if (add)
                 {
                     cmbRoomNo.Items.Add(room["RoomNo"]);
                 }
             }
 
-
+            if(cmbRoomNo.Items.Count==0)
+            {
+                MessageBox.Show("No Rooms Available for This Time! Sorry");
+            }
 
         }
 
@@ -800,6 +861,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
 
                         apps.SubItems.Add(drTreat["TreatmentDesc"].ToString());
                         apps.SubItems.Add(dr["TreatmentTime"].ToString());
+                        apps.SubItems[2].Tag= Int32.Parse(drTreat["TreatmentDuration"].ToString());
                         apps.SubItems.Add(dr["RoomNo"].ToString());
                         lvwEditBooking.Items.Add(apps);
                     }
@@ -889,7 +951,10 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
                     cmbEditRoomNo.Items.Add(room["RoomNo"]);
                 }
             }
-
+            if (cmbRoomNo.Items.Count == 0)
+            {
+                MessageBox.Show("No Rooms Available for This Time! Sorry", "Rooms!");
+            }
         }
 
         private void btnReS_Click(object sender, EventArgs e)
@@ -987,9 +1052,31 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
                 var item = lvwEditBooking.SelectedItems[0];
                 lvwEditBooking.Items.Remove(item);
 
+                calculateTimes();
+                
+              
+
             }
         }
+        private void calculateTimes()
+        {
+            int totalTime = 0;
+            TimeSpan time = TimeSpan.Parse(cmbEditAppointmentTime.Text);//start time
 
+            foreach(ListViewItem item in lvwEditBooking.Items)         //each appointment Time
+            {
+                item.SubItems[2].Text=time.ToString(@"hh\:mm"); //setting sub item to time above
+                      //add udration of that appointment on to time
+                int duration = (int)item.SubItems[2].Tag;//finding duration
+                int minutes = duration* 30;
+                time =  time.Add(new TimeSpan(minutes / 60, minutes % 60, 0));//adding on no of minutes, time is now 30 mins later
+
+                
+         
+            }
+            lblEditTreatmentTime.Text = time.ToString(@"hh\:mm");//text property of label setting to string
+            
+        }
         private void btnEditCancel_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Cancel The Addition Of Appointment?", "Add Cancel",
@@ -1059,6 +1146,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
                 {
 
                     clearFrm();
+                  
                 }
                 else
                 {
@@ -1066,6 +1154,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
                     clearFrm();
 
                 }
+                updateSchedule();
             }
         }
         ///region end 
