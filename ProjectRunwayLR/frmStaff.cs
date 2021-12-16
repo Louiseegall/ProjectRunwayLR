@@ -70,7 +70,27 @@ namespace ProjectRunwayLR
 
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Cancel The Addition Of The Staff No: " + lblAddStaffNo.Text + "?", "Add Customer", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                tabStaff.SelectedIndex = 0;
+        }
 
+        private void btnAddDelete_Click(object sender, EventArgs e)
+        {
+
+            if (dgvStaff.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a Staff Member from the list.", "Select Staff");
+            }
+            else
+            {
+                drStaff = dsRunway.Tables["Staff"].Rows.Find(dgvStaff.SelectedRows[0].Cells[0].Value);
+                String tempName = drStaff["StaffForename"].ToString() + "" + drStaff["StaffSurname"].ToString() + "\'s";
+                if (MessageBox.Show("Are you sure your want to delete " + tempName + " details?", " Add Staff", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    drStaff.Delete();
+                    daStaff.Update(dsRunway, "Staff");
+                }
+            }
         }
 
         private void btnAddEdit_Click(object sender, EventArgs e)
@@ -391,6 +411,16 @@ namespace ProjectRunwayLR
         {
             drStaff = dsRunway.Tables["Staff"].Rows[noRows - 1];
             lblAddStaffNo.Text = (int.Parse(drStaff["StaffNo"].ToString()) + 1).ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 1;
+        }
+
+        private void tbnDisplayEdit_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 2;
         }
 
         private void btnEditEdit_Click(object sender, EventArgs e)

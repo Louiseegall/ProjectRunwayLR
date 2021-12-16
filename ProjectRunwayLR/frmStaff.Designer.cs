@@ -106,6 +106,9 @@ namespace ProjectRunwayLR
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.tabStaff = new System.Windows.Forms.TabControl();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tbnDisplayEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
@@ -167,8 +170,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditSpeciality
             // 
-            this.txtEditSpeciality.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditSpeciality.Location = new System.Drawing.Point(141, 346);
             this.txtEditSpeciality.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditSpeciality.Name = "txtEditSpeciality";
@@ -177,8 +178,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditEmergencyContact
             // 
-            this.txtEditEmergencyContact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditEmergencyContact.Location = new System.Drawing.Point(237, 413);
             this.txtEditEmergencyContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditEmergencyContact.Name = "txtEditEmergencyContact";
@@ -219,6 +218,7 @@ namespace ProjectRunwayLR
             // 
             // btnEditEdit
             // 
+            this.btnEditEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEditEdit.BackColor = System.Drawing.Color.Black;
             this.btnEditEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEdit.ForeColor = System.Drawing.Color.White;
@@ -247,7 +247,7 @@ namespace ProjectRunwayLR
             // 
             // btnEditCancel
             // 
-            this.btnEditCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEditCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEditCancel.BackColor = System.Drawing.Color.Black;
             this.btnEditCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCancel.ForeColor = System.Drawing.Color.White;
@@ -300,8 +300,6 @@ namespace ProjectRunwayLR
             // 
             // dtpEditDOB
             // 
-            this.dtpEditDOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpEditDOB.Location = new System.Drawing.Point(141, 124);
             this.dtpEditDOB.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEditDOB.Name = "dtpEditDOB";
@@ -322,8 +320,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditEmail
             // 
-            this.txtEditEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditEmail.Location = new System.Drawing.Point(141, 495);
             this.txtEditEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditEmail.Name = "txtEditEmail";
@@ -344,8 +340,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditTelNo
             // 
-            this.txtEditTelNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditTelNo.Location = new System.Drawing.Point(141, 450);
             this.txtEditTelNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditTelNo.Name = "txtEditTelNo";
@@ -366,8 +360,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditPostcode
             // 
-            this.txtEditPostcode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditPostcode.Location = new System.Drawing.Point(141, 290);
             this.txtEditPostcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditPostcode.Name = "txtEditPostcode";
@@ -388,8 +380,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditCountry
             // 
-            this.txtEditCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditCountry.Location = new System.Drawing.Point(462, 253);
             this.txtEditCountry.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditCountry.Name = "txtEditCountry";
@@ -410,8 +400,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditCounty
             // 
-            this.txtEditCounty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditCounty.Location = new System.Drawing.Point(141, 252);
             this.txtEditCounty.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditCounty.Name = "txtEditCounty";
@@ -432,8 +420,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditTown
             // 
-            this.txtEditTown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditTown.Location = new System.Drawing.Point(141, 209);
             this.txtEditTown.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditTown.Name = "txtEditTown";
@@ -454,8 +440,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditStreet
             // 
-            this.txtEditStreet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditStreet.Location = new System.Drawing.Point(141, 166);
             this.txtEditStreet.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditStreet.Name = "txtEditStreet";
@@ -476,8 +460,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditSurname
             // 
-            this.txtEditSurname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditSurname.Location = new System.Drawing.Point(394, 87);
             this.txtEditSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditSurname.Name = "txtEditSurname";
@@ -497,8 +479,6 @@ namespace ProjectRunwayLR
             // 
             // txtEditForename
             // 
-            this.txtEditForename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditForename.Location = new System.Drawing.Point(394, 50);
             this.txtEditForename.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditForename.Name = "txtEditForename";
@@ -518,8 +498,6 @@ namespace ProjectRunwayLR
             // 
             // cmbEditTitle
             // 
-            this.cmbEditTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbEditTitle.FormattingEnabled = true;
             this.cmbEditTitle.Items.AddRange(new object[] {
             "Mr",
@@ -621,8 +599,6 @@ namespace ProjectRunwayLR
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -635,7 +611,6 @@ namespace ProjectRunwayLR
             // 
             // button3
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
@@ -650,8 +625,6 @@ namespace ProjectRunwayLR
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -676,8 +649,6 @@ namespace ProjectRunwayLR
             // 
             // lblAddStaffNo
             // 
-            this.lblAddStaffNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAddStaffNo.AutoSize = true;
             this.lblAddStaffNo.BackColor = System.Drawing.Color.Transparent;
             this.lblAddStaffNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -702,8 +673,6 @@ namespace ProjectRunwayLR
             // 
             // dtpAdd
             // 
-            this.dtpAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpAdd.Location = new System.Drawing.Point(141, 150);
             this.dtpAdd.Margin = new System.Windows.Forms.Padding(4);
             this.dtpAdd.Name = "dtpAdd";
@@ -724,8 +693,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddEmail
             // 
-            this.txtAddEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddEmail.Location = new System.Drawing.Point(141, 495);
             this.txtAddEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddEmail.Name = "txtAddEmail";
@@ -746,8 +713,6 @@ namespace ProjectRunwayLR
             // 
             // AddEmergencyContact
             // 
-            this.AddEmergencyContact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.AddEmergencyContact.Location = new System.Drawing.Point(141, 347);
             this.AddEmergencyContact.Margin = new System.Windows.Forms.Padding(4);
             this.AddEmergencyContact.Name = "AddEmergencyContact";
@@ -756,8 +721,6 @@ namespace ProjectRunwayLR
             // 
             // AddSpeciality
             // 
-            this.AddSpeciality.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.AddSpeciality.Location = new System.Drawing.Point(237, 414);
             this.AddSpeciality.Margin = new System.Windows.Forms.Padding(4);
             this.AddSpeciality.Name = "AddSpeciality";
@@ -766,8 +729,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddTelNo
             // 
-            this.txtAddTelNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddTelNo.Location = new System.Drawing.Point(141, 451);
             this.txtAddTelNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddTelNo.Name = "txtAddTelNo";
@@ -788,8 +749,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddPostcode
             // 
-            this.txtAddPostcode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddPostcode.Location = new System.Drawing.Point(141, 298);
             this.txtAddPostcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddPostcode.Name = "txtAddPostcode";
@@ -810,8 +769,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddCountry
             // 
-            this.txtAddCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddCountry.Location = new System.Drawing.Point(448, 262);
             this.txtAddCountry.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddCountry.Name = "txtAddCountry";
@@ -832,8 +789,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddCounty
             // 
-            this.txtAddCounty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddCounty.Location = new System.Drawing.Point(141, 261);
             this.txtAddCounty.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddCounty.Name = "txtAddCounty";
@@ -854,8 +809,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddTown
             // 
-            this.txtAddTown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddTown.Location = new System.Drawing.Point(141, 224);
             this.txtAddTown.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddTown.Name = "txtAddTown";
@@ -900,8 +853,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddStreet
             // 
-            this.txtAddStreet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddStreet.Location = new System.Drawing.Point(141, 187);
             this.txtAddStreet.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddStreet.Name = "txtAddStreet";
@@ -922,8 +873,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddSurename
             // 
-            this.txtAddSurename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddSurename.Location = new System.Drawing.Point(409, 89);
             this.txtAddSurename.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddSurename.Name = "txtAddSurename";
@@ -943,8 +892,6 @@ namespace ProjectRunwayLR
             // 
             // txtAddForename
             // 
-            this.txtAddForename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddForename.Location = new System.Drawing.Point(409, 52);
             this.txtAddForename.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddForename.Name = "txtAddForename";
@@ -964,8 +911,6 @@ namespace ProjectRunwayLR
             // 
             // cmbAddTitle
             // 
-            this.cmbAddTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAddTitle.FormattingEnabled = true;
             this.cmbAddTitle.Items.AddRange(new object[] {
             "Mr",
@@ -982,6 +927,9 @@ namespace ProjectRunwayLR
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.Transparent;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDisplay.Controls.Add(this.btnDelete);
+            this.tabDisplay.Controls.Add(this.tbnDisplayEdit);
+            this.tabDisplay.Controls.Add(this.button2);
             this.tabDisplay.Controls.Add(this.dgvStaff);
             this.tabDisplay.Controls.Add(this.btnDisplayDelete);
             this.tabDisplay.Controls.Add(this.btnDisplayEdit);
@@ -1010,7 +958,7 @@ namespace ProjectRunwayLR
             this.dgvStaff.ReadOnly = true;
             this.dgvStaff.RowHeadersWidth = 51;
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaff.Size = new System.Drawing.Size(829, 591);
+            this.dgvStaff.Size = new System.Drawing.Size(829, 533);
             this.dgvStaff.TabIndex = 0;
             // 
             // btnDisplayDelete
@@ -1083,6 +1031,51 @@ namespace ProjectRunwayLR
             this.tabStaff.Size = new System.Drawing.Size(845, 641);
             this.tabStaff.TabIndex = 3;
             this.tabStaff.SelectedIndexChanged += new System.EventHandler(this.tabStaff_SelectedIndexChanged);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(4, 545);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(197, 54);
+            this.button2.TabIndex = 87;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tbnDisplayEdit
+            // 
+            this.tbnDisplayEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbnDisplayEdit.BackColor = System.Drawing.Color.Black;
+            this.tbnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnDisplayEdit.ForeColor = System.Drawing.Color.White;
+            this.tbnDisplayEdit.Location = new System.Drawing.Point(209, 545);
+            this.tbnDisplayEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.tbnDisplayEdit.Name = "tbnDisplayEdit";
+            this.tbnDisplayEdit.Size = new System.Drawing.Size(197, 54);
+            this.tbnDisplayEdit.TabIndex = 88;
+            this.tbnDisplayEdit.Text = "Edit";
+            this.tbnDisplayEdit.UseVisualStyleBackColor = false;
+            this.tbnDisplayEdit.Click += new System.EventHandler(this.tbnDisplayEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(417, 545);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(197, 54);
+            this.btnDelete.TabIndex = 88;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnAddDelete_Click);
             // 
             // frmStaff
             // 
@@ -1187,5 +1180,8 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.TextBox txtEditEmergencyContact;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button tbnDisplayEdit;
+        private System.Windows.Forms.Button button2;
     }
 }
