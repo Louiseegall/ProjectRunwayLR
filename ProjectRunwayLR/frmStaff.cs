@@ -265,6 +265,25 @@ namespace ProjectRunwayLR
 
             try
             {
+                myStaff.EmergencyContact = txtAddSpeciality.Text.Trim();
+            }
+            catch (MyException MyException)
+            {
+                ok = false;
+                errP.SetError(txtAddEmail, MyException.toString());
+            }
+
+            try
+            {
+                myStaff.Speciality = txtAddEmergency.Text.Trim();
+            }
+            catch (MyException MyException)
+            {
+                ok = false;
+                errP.SetError(txtAddEmail, MyException.toString());
+            }
+            try
+            {
                 if(ok)
                 {
                     drStaff = dsRunway.Tables["Staff"].NewRow();
