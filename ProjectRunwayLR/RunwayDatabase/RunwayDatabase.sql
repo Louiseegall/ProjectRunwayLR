@@ -29,6 +29,16 @@ IF OBJECT_ID ('Customer') IS NOT NULL
 DROP table Customer
 GO
 
+Create Table Login(
+UserName VarChar(50) primary key,
+UserPassword Varchar(50)
+)
+insert into login(UserName,UserPassword)
+Values('Louisegall@runway.com','Password10$$'),
+('Teresa@nwrc.ac.uk','Password10$$')
+
+
+
 CREATE TABLE [dbo].[Customer]
 (
 	CustomerNo			INT				NOT NULL  PRIMARY KEY,

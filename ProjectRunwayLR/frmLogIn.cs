@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,12 @@ namespace ProjectRunwayLR
     public partial class frmLogIn : Form
     {
        public static String username;
+        SqlDataAdapter daLogin;
+        String connStr, sqlLogin;
+        DataSet dsRunway = new DataSet(); //create new instance of a dataset- call dsRunway
+       
+        //SqlCommandBuilder cmdBLogin;
+        //DataRow drCustomer;
         public frmLogIn()
         {
             InitializeComponent();
@@ -21,13 +28,44 @@ namespace ProjectRunwayLR
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
 
+
+            //.local host , initial catalog-DS name
+           
+
+           
+            //cmdBCustomer = new SqlCommandBuilder(daCustomer);//builds structure of table
+            //daCustomer.FillSchema(dsRunway, SchemaType.Source, "Customer");
+            //daCustomer.Fill(dsRunway, "Customer");
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+            connStr = "Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog = Runway; Integrated Security = true";
+
+            sqlLogin = @"select * from Login where UserName= '" + txtUsername.Text.Trim()
+                + "' and UserPassword= '" + txtPassword.Text.Trim() + "'";
+
+            daLogin = new SqlDataAdapter(sqlLogin, connStr);
+            daLogin.FillSchema(dsRunway, SchemaType.Source, "Login");
+            daLogin.Fill(dsRunway, "Login");
+
+
             //frmMainMenu mainMenu = new frmMainMenu();
-            username = txtUsername.Text;
-            Close();
+            if (dsRunway.Tables["Login"].Rows.Count == 1)
+            {
+                
+
+              username = txtUsername.Text;
+                Close(); 
+            }
+            else
+            {
+                MessageBox.Show("Invalid Credientials");
+            }
+           
+        
             //mainMenu.Show();
 
         }
@@ -58,11 +96,11 @@ namespace ProjectRunwayLR
         {
             if (ckbShow_Hide.Checked == true)
             {
-                txtPassword.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = false;
             }
             else
             {
-                txtPassword.UseSystemPasswordChar =false;
+                txtPassword.UseSystemPasswordChar =true;
             }
         }
 
