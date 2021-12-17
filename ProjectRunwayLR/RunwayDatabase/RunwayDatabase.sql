@@ -1,4 +1,4 @@
-﻿Create Database Runway;
+﻿--Create Database Runway;
 Go
 use Runway;
 
@@ -63,7 +63,25 @@ Values(5000,'Ms','Louise','Gallagher','1996/11/12','Hill View','Letterkenny','Do
 (5006,'Mr','Mark','Daniels','1995/01/21','Ard Mor','Newtown','Donegal','Ireland','F92 FC43',
 '089918702','Mark@gmail.com'),
 (5007,'Mr','Rob','Cannon','1989/08/24','Roads Square','Manor','Donegal','Ireland','F92 TE36',
-'0891628736','rob@gmail.com' )
+'0891628736','rob@gmail.com' ),
+(5008,'Mrs','Kylie','Clarke','1995/10/18','Beach Mor','Letterkenny','Donegal','Ireland','F92 F553',
+'0823456432','KylieCl@yahoo.com'),
+(5009,'Miss','Sara','Connell','1996/03/03','Claddagh','Manor','Donegal','Ireland','F93 KK43',
+'0812187332','ConSara@gmail.com'),
+(5010,'Mr','Max','Gallen','1992/09/08','Thornberry','Letterkenny','Donegal','Ireland','F92 FC43',
+'0891827467','MaxGal@gmail.com'),
+(5011,'Mrs','Shannon','Doherty','1999/11/20','Wood Land','Drumkeen','Donegal','Ireland','F92 YYT2',
+'0852343454','ShannonDob@gmail.com'),
+(5012,'Mr','John','Campbell','1991/06/18','Fox Hill','Letterkenny','Donegal','Ireland','F92 TTR8',
+'0887653422','johnC@gmail.com'),
+(5013,'Miss','Mia','Smith','1995/12/21','Ashfield','Letterkenny','Donegal','Ireland','F92 YYT5',
+'0897652434','Mia@gmail.com'),
+(5014,'Mrs','Helena','Frawley','1989/07/17','Brooke Meadow','Newtown','Donegal','Ireland','F92 F5TY',
+'0871245367','FrawleyHel@gmail.com'),
+(5015,'Mr','Johnny','Curley','1998/08/19','Tierlann Heights','Derry','Derry','Ireland',' BT2 33NN',
+'089918987','Johnny@gmail.com'),
+(5016,'Miss','Chloe','Tolan','1993/01/12','Forest Road','Newtown','Donegal','Ireland','F92 FY43',
+'083345702','TolChlo@gmail.com')
 
 
 CREATE TABLE [dbo].[Staff]
