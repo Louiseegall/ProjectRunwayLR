@@ -78,8 +78,8 @@ namespace ProjectRunwayLR
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.AddEmergencyContact = new System.Windows.Forms.TextBox();
-            this.AddSpeciality = new System.Windows.Forms.TextBox();
+            this.txtAddSpeciality = new System.Windows.Forms.TextBox();
+            this.txtAddEmergency = new System.Windows.Forms.TextBox();
             this.txtAddTelNo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtAddPostcode = new System.Windows.Forms.TextBox();
@@ -100,15 +100,15 @@ namespace ProjectRunwayLR
             this.label18 = new System.Windows.Forms.Label();
             this.cmbAddTitle = new System.Windows.Forms.ComboBox();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.tbnDisplayEdit = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.btnDisplayDelete = new System.Windows.Forms.Button();
             this.btnDisplayEdit = new System.Windows.Forms.Button();
             this.btnDisplayExit = new System.Windows.Forms.Button();
             this.btnDisplayAdd = new System.Windows.Forms.Button();
             this.tabStaff = new System.Windows.Forms.TabControl();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tbnDisplayEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
@@ -553,8 +553,8 @@ namespace ProjectRunwayLR
             this.tabAdd.Controls.Add(this.label9);
             this.tabAdd.Controls.Add(this.txtAddEmail);
             this.tabAdd.Controls.Add(this.label10);
-            this.tabAdd.Controls.Add(this.AddEmergencyContact);
-            this.tabAdd.Controls.Add(this.AddSpeciality);
+            this.tabAdd.Controls.Add(this.txtAddSpeciality);
+            this.tabAdd.Controls.Add(this.txtAddEmergency);
             this.tabAdd.Controls.Add(this.txtAddTelNo);
             this.tabAdd.Controls.Add(this.label11);
             this.tabAdd.Controls.Add(this.txtAddPostcode);
@@ -711,21 +711,21 @@ namespace ProjectRunwayLR
             this.label10.TabIndex = 56;
             this.label10.Text = "Town";
             // 
-            // AddEmergencyContact
+            // txtAddSpeciality
             // 
-            this.AddEmergencyContact.Location = new System.Drawing.Point(141, 347);
-            this.AddEmergencyContact.Margin = new System.Windows.Forms.Padding(4);
-            this.AddEmergencyContact.Name = "AddEmergencyContact";
-            this.AddEmergencyContact.Size = new System.Drawing.Size(432, 29);
-            this.AddEmergencyContact.TabIndex = 74;
+            this.txtAddSpeciality.Location = new System.Drawing.Point(141, 347);
+            this.txtAddSpeciality.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddSpeciality.Name = "txtAddSpeciality";
+            this.txtAddSpeciality.Size = new System.Drawing.Size(432, 29);
+            this.txtAddSpeciality.TabIndex = 74;
             // 
-            // AddSpeciality
+            // txtAddEmergency
             // 
-            this.AddSpeciality.Location = new System.Drawing.Point(237, 414);
-            this.AddSpeciality.Margin = new System.Windows.Forms.Padding(4);
-            this.AddSpeciality.Name = "AddSpeciality";
-            this.AddSpeciality.Size = new System.Drawing.Size(336, 29);
-            this.AddSpeciality.TabIndex = 74;
+            this.txtAddEmergency.Location = new System.Drawing.Point(237, 414);
+            this.txtAddEmergency.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddEmergency.Name = "txtAddEmergency";
+            this.txtAddEmergency.Size = new System.Drawing.Size(336, 29);
+            this.txtAddEmergency.TabIndex = 74;
             // 
             // txtAddTelNo
             // 
@@ -944,6 +944,51 @@ namespace ProjectRunwayLR
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(417, 545);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(197, 54);
+            this.btnDelete.TabIndex = 88;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnAddDelete_Click);
+            // 
+            // tbnDisplayEdit
+            // 
+            this.tbnDisplayEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbnDisplayEdit.BackColor = System.Drawing.Color.Black;
+            this.tbnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnDisplayEdit.ForeColor = System.Drawing.Color.White;
+            this.tbnDisplayEdit.Location = new System.Drawing.Point(209, 545);
+            this.tbnDisplayEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.tbnDisplayEdit.Name = "tbnDisplayEdit";
+            this.tbnDisplayEdit.Size = new System.Drawing.Size(197, 54);
+            this.tbnDisplayEdit.TabIndex = 88;
+            this.tbnDisplayEdit.Text = "Edit";
+            this.tbnDisplayEdit.UseVisualStyleBackColor = false;
+            this.tbnDisplayEdit.Click += new System.EventHandler(this.tbnDisplayEdit_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(4, 545);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(197, 54);
+            this.button2.TabIndex = 87;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dgvStaff
             // 
             this.dgvStaff.AllowUserToAddRows = false;
@@ -1031,51 +1076,6 @@ namespace ProjectRunwayLR
             this.tabStaff.Size = new System.Drawing.Size(845, 641);
             this.tabStaff.TabIndex = 3;
             this.tabStaff.SelectedIndexChanged += new System.EventHandler(this.tabStaff_SelectedIndexChanged);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(4, 545);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 54);
-            this.button2.TabIndex = 87;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // tbnDisplayEdit
-            // 
-            this.tbnDisplayEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbnDisplayEdit.BackColor = System.Drawing.Color.Black;
-            this.tbnDisplayEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnDisplayEdit.ForeColor = System.Drawing.Color.White;
-            this.tbnDisplayEdit.Location = new System.Drawing.Point(209, 545);
-            this.tbnDisplayEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.tbnDisplayEdit.Name = "tbnDisplayEdit";
-            this.tbnDisplayEdit.Size = new System.Drawing.Size(197, 54);
-            this.tbnDisplayEdit.TabIndex = 88;
-            this.tbnDisplayEdit.Text = "Edit";
-            this.tbnDisplayEdit.UseVisualStyleBackColor = false;
-            this.tbnDisplayEdit.Click += new System.EventHandler(this.tbnDisplayEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelete.BackColor = System.Drawing.Color.Black;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(417, 545);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(197, 54);
-            this.btnDelete.TabIndex = 88;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnAddDelete_Click);
             // 
             // frmStaff
             // 
@@ -1172,8 +1172,8 @@ namespace ProjectRunwayLR
         private System.Windows.Forms.ComboBox cmbEditTitle;
         private System.Windows.Forms.Label lblEditStaffNo;
         private System.Windows.Forms.TextBox txtAddTown;
-        private System.Windows.Forms.TextBox AddEmergencyContact;
-        private System.Windows.Forms.TextBox AddSpeciality;
+        private System.Windows.Forms.TextBox txtAddSpeciality;
+        private System.Windows.Forms.TextBox txtAddEmergency;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEditSpeciality;
