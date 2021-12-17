@@ -147,7 +147,7 @@ namespace ProjectRunwayLR
             this.btnMenu.BackColor = System.Drawing.Color.Black;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Location = new System.Drawing.Point(12, 2);
+            this.btnMenu.Location = new System.Drawing.Point(12, 12);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(136, 55);
             this.btnMenu.TabIndex = 21;
@@ -325,9 +325,9 @@ namespace ProjectRunwayLR
             this.btnPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPause.ForeColor = System.Drawing.Color.White;
             this.btnPause.Image = global::ProjectRunwayLR.Properties.Resources.pause_40;
-            this.btnPause.Location = new System.Drawing.Point(183, 2);
+            this.btnPause.Location = new System.Drawing.Point(183, 12);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(84, 61);
+            this.btnPause.Size = new System.Drawing.Size(129, 55);
             this.btnPause.TabIndex = 27;
             this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Visible = false;

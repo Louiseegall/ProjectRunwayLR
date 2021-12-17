@@ -32,9 +32,9 @@ namespace ProjectRunwayLR
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAppBooking));
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbDisplayRoomNo = new System.Windows.Forms.ComboBox();
             this.tabApp = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.cmbDisplayRoomNo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpBookingsStartDate = new System.Windows.Forms.DateTimePicker();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
@@ -100,13 +100,13 @@ namespace ProjectRunwayLR
             this.lblEditCustomer2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pnlEditBooking = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEditTreatmentTime = new System.Windows.Forms.Label();
             this.lvwEditBooking = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblEditTreatmentTime = new System.Windows.Forms.Label();
             this.pnlEditTreat = new System.Windows.Forms.Panel();
             this.cmbEditRoomNo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -134,6 +134,18 @@ namespace ProjectRunwayLR
             // errP
             // 
             this.errP.ContainerControl = this;
+            // 
+            // cmbDisplayRoomNo
+            // 
+            this.cmbDisplayRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDisplayRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDisplayRoomNo.FormattingEnabled = true;
+            this.errP.SetIconAlignment(this.cmbDisplayRoomNo, System.Windows.Forms.ErrorIconAlignment.BottomRight);
+            this.cmbDisplayRoomNo.Location = new System.Drawing.Point(426, 6);
+            this.cmbDisplayRoomNo.Name = "cmbDisplayRoomNo";
+            this.cmbDisplayRoomNo.Size = new System.Drawing.Size(130, 32);
+            this.cmbDisplayRoomNo.TabIndex = 143;
+            this.cmbDisplayRoomNo.SelectedIndexChanged += new System.EventHandler(this.cmbDisplayRoomNo_SelectedIndexChanged);
             // 
             // tabApp
             // 
@@ -176,18 +188,6 @@ namespace ProjectRunwayLR
             this.tabDisplay.Size = new System.Drawing.Size(664, 438);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "Display";
-            // 
-            // cmbDisplayRoomNo
-            // 
-            this.cmbDisplayRoomNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbDisplayRoomNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDisplayRoomNo.FormattingEnabled = true;
-            this.errP.SetIconAlignment(this.cmbDisplayRoomNo, System.Windows.Forms.ErrorIconAlignment.BottomRight);
-            this.cmbDisplayRoomNo.Location = new System.Drawing.Point(426, 6);
-            this.cmbDisplayRoomNo.Name = "cmbDisplayRoomNo";
-            this.cmbDisplayRoomNo.Size = new System.Drawing.Size(130, 32);
-            this.cmbDisplayRoomNo.TabIndex = 143;
-            this.cmbDisplayRoomNo.SelectedIndexChanged += new System.EventHandler(this.cmbDisplayRoomNo_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -434,7 +434,7 @@ namespace ProjectRunwayLR
             this.btnAddCancel.BackColor = System.Drawing.Color.Black;
             this.btnAddCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCancel.ForeColor = System.Drawing.Color.White;
-            this.btnAddCancel.Location = new System.Drawing.Point(537, 327);
+            this.btnAddCancel.Location = new System.Drawing.Point(523, 360);
             this.btnAddCancel.Name = "btnAddCancel";
             this.btnAddCancel.Size = new System.Drawing.Size(127, 50);
             this.btnAddCancel.TabIndex = 120;
@@ -450,7 +450,7 @@ namespace ProjectRunwayLR
             this.btnRemoveItem.BackColor = System.Drawing.Color.Black;
             this.btnRemoveItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveItem.Location = new System.Drawing.Point(193, 327);
+            this.btnRemoveItem.Location = new System.Drawing.Point(190, 360);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(152, 50);
             this.btnRemoveItem.TabIndex = 118;
@@ -466,7 +466,7 @@ namespace ProjectRunwayLR
             this.btnAddItem.BackColor = System.Drawing.Color.Black;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(3, 327);
+            this.btnAddItem.Location = new System.Drawing.Point(5, 360);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(127, 50);
             this.btnAddItem.TabIndex = 117;
@@ -482,7 +482,7 @@ namespace ProjectRunwayLR
             this.btnAddAdd.BackColor = System.Drawing.Color.Black;
             this.btnAddAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAddAdd.Location = new System.Drawing.Point(364, 327);
+            this.btnAddAdd.Location = new System.Drawing.Point(366, 360);
             this.btnAddAdd.Name = "btnAddAdd";
             this.btnAddAdd.Size = new System.Drawing.Size(127, 50);
             this.btnAddAdd.TabIndex = 116;
@@ -537,25 +537,24 @@ namespace ProjectRunwayLR
             this.lvwBooking.HideSelection = false;
             this.lvwBooking.Location = new System.Drawing.Point(0, 37);
             this.lvwBooking.Name = "lvwBooking";
-            this.lvwBooking.Size = new System.Drawing.Size(292, 171);
+            this.lvwBooking.Size = new System.Drawing.Size(286, 174);
             this.lvwBooking.TabIndex = 7;
             this.lvwBooking.UseCompatibleStateImageBehavior = false;
             this.lvwBooking.View = System.Windows.Forms.View.Details;
             // 
             // colTreatmentCode
             // 
-            this.colTreatmentCode.Text = "Treatment";
-            this.colTreatmentCode.Width = 100;
+            this.colTreatmentCode.Text = "Treatment No";
+            this.colTreatmentCode.Width = 86;
             // 
             // colTreatmentDesc
             // 
             this.colTreatmentDesc.Text = "Description";
-            this.colTreatmentDesc.Width = 150;
+            this.colTreatmentDesc.Width = 100;
             // 
             // colAppointmentTime
             // 
             this.colAppointmentTime.Text = "Time";
-            this.colAppointmentTime.Width = 90;
             // 
             // colRoomNo
             // 
@@ -706,7 +705,7 @@ namespace ProjectRunwayLR
             this.pnlCustomer.Controls.Add(this.lblCustomerName);
             this.pnlCustomer.Location = new System.Drawing.Point(5, 11);
             this.pnlCustomer.Name = "pnlCustomer";
-            this.pnlCustomer.Size = new System.Drawing.Size(340, 297);
+            this.pnlCustomer.Size = new System.Drawing.Size(328, 310);
             this.pnlCustomer.TabIndex = 112;
             // 
             // cmbAppointmentTime
@@ -730,9 +729,9 @@ namespace ProjectRunwayLR
             "15:30",
             "16:00",
             "16:30"});
-            this.cmbAppointmentTime.Location = new System.Drawing.Point(154, 172);
+            this.cmbAppointmentTime.Location = new System.Drawing.Point(145, 232);
             this.cmbAppointmentTime.Name = "cmbAppointmentTime";
-            this.cmbAppointmentTime.Size = new System.Drawing.Size(172, 26);
+            this.cmbAppointmentTime.Size = new System.Drawing.Size(167, 26);
             this.cmbAppointmentTime.TabIndex = 19;
             this.cmbAppointmentTime.SelectedIndexChanged += new System.EventHandler(this.cmbAppointmentTime_SelectedIndexChanged);
             // 
@@ -740,7 +739,7 @@ namespace ProjectRunwayLR
             // 
             this.lblCust1.AutoSize = true;
             this.lblCust1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCust1.Location = new System.Drawing.Point(25, 118);
+            this.lblCust1.Location = new System.Drawing.Point(99, 105);
             this.lblCust1.Name = "lblCust1";
             this.lblCust1.Size = new System.Drawing.Size(14, 20);
             this.lblCust1.TabIndex = 18;
@@ -750,7 +749,7 @@ namespace ProjectRunwayLR
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 172);
+            this.label3.Location = new System.Drawing.Point(5, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 20);
             this.label3.TabIndex = 16;
@@ -760,7 +759,7 @@ namespace ProjectRunwayLR
             // 
             this.lblBookingDate.AutoSize = true;
             this.lblBookingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingDate.Location = new System.Drawing.Point(3, 209);
+            this.lblBookingDate.Location = new System.Drawing.Point(3, 275);
             this.lblBookingDate.Name = "lblBookingDate";
             this.lblBookingDate.Size = new System.Drawing.Size(106, 20);
             this.lblBookingDate.TabIndex = 15;
@@ -770,16 +769,16 @@ namespace ProjectRunwayLR
             // 
             this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpStartDate.Location = new System.Drawing.Point(154, 132);
+            this.dtpStartDate.Location = new System.Drawing.Point(145, 193);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(179, 24);
+            this.dtpStartDate.Size = new System.Drawing.Size(167, 24);
             this.dtpStartDate.TabIndex = 11;
             // 
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDate.Location = new System.Drawing.Point(3, 136);
+            this.lblStartDate.Location = new System.Drawing.Point(4, 193);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(139, 20);
             this.lblStartDate.TabIndex = 7;
@@ -789,7 +788,7 @@ namespace ProjectRunwayLR
             // 
             this.lblBookingDatee.AutoSize = true;
             this.lblBookingDatee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingDatee.Location = new System.Drawing.Point(216, 209);
+            this.lblBookingDatee.Location = new System.Drawing.Point(213, 275);
             this.lblBookingDatee.Name = "lblBookingDatee";
             this.lblBookingDatee.Size = new System.Drawing.Size(18, 20);
             this.lblBookingDatee.TabIndex = 6;
@@ -799,7 +798,7 @@ namespace ProjectRunwayLR
             // 
             this.lblCust3.AutoSize = true;
             this.lblCust3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCust3.Location = new System.Drawing.Point(25, 40);
+            this.lblCust3.Location = new System.Drawing.Point(99, 57);
             this.lblCust3.Name = "lblCust3";
             this.lblCust3.Size = new System.Drawing.Size(14, 20);
             this.lblCust3.TabIndex = 4;
@@ -809,7 +808,7 @@ namespace ProjectRunwayLR
             // 
             this.lblCust2.AutoSize = true;
             this.lblCust2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCust2.Location = new System.Drawing.Point(25, 78);
+            this.lblCust2.Location = new System.Drawing.Point(99, 146);
             this.lblCust2.Name = "lblCust2";
             this.lblCust2.Size = new System.Drawing.Size(14, 20);
             this.lblCust2.TabIndex = 2;
@@ -820,9 +819,9 @@ namespace ProjectRunwayLR
             this.cmbCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbCustomer.FormattingEnabled = true;
-            this.cmbCustomer.Location = new System.Drawing.Point(145, 11);
+            this.cmbCustomer.Location = new System.Drawing.Point(103, 8);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(188, 26);
+            this.cmbCustomer.Size = new System.Drawing.Size(167, 26);
             this.cmbCustomer.TabIndex = 1;
             this.cmbCustomer.SelectedIndexChanged += new System.EventHandler(this.cmbCustomer_SelectedIndexChanged);
             // 
@@ -832,9 +831,9 @@ namespace ProjectRunwayLR
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerName.Location = new System.Drawing.Point(15, 13);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(124, 20);
+            this.lblCustomerName.Size = new System.Drawing.Size(82, 20);
             this.lblCustomerName.TabIndex = 0;
-            this.lblCustomerName.Text = "Customer Name";
+            this.lblCustomerName.Text = "Customer ";
             // 
             // tabPage1
             // 
@@ -1001,24 +1000,6 @@ namespace ProjectRunwayLR
             this.pnlEditBooking.Size = new System.Drawing.Size(307, 211);
             this.pnlEditBooking.TabIndex = 122;
             // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(5, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Treatment Time";
-            // 
-            // lblEditTreatmentTime
-            // 
-            this.lblEditTreatmentTime.Location = new System.Drawing.Point(143, 7);
-            this.lblEditTreatmentTime.Name = "lblEditTreatmentTime";
-            this.lblEditTreatmentTime.Size = new System.Drawing.Size(127, 24);
-            this.lblEditTreatmentTime.TabIndex = 8;
-            this.lblEditTreatmentTime.Text = "-";
-            this.lblEditTreatmentTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lvwEditBooking
             // 
             this.lvwEditBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1056,6 +1037,24 @@ namespace ProjectRunwayLR
             // 
             this.columnHeader4.Text = "Room No";
             this.columnHeader4.Width = 90;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(5, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 20);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Treatment Time";
+            // 
+            // lblEditTreatmentTime
+            // 
+            this.lblEditTreatmentTime.Location = new System.Drawing.Point(143, 7);
+            this.lblEditTreatmentTime.Name = "lblEditTreatmentTime";
+            this.lblEditTreatmentTime.Size = new System.Drawing.Size(127, 24);
+            this.lblEditTreatmentTime.TabIndex = 8;
+            this.lblEditTreatmentTime.Text = "-";
+            this.lblEditTreatmentTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlEditTreat
             // 
