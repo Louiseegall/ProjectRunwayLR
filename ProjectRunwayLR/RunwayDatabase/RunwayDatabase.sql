@@ -35,7 +35,8 @@ UserPassword Varchar(50)
 )
 insert into login(UserName,UserPassword)
 Values('Louisegall@runway.com','Password10$$'),
-('Teresa@nwrc.ac.uk','Password10$$')
+('Teresa@nwrc.ac.uk','Password10$$'),
+('ryan@runway.com','Password10$$')
 
 
 
