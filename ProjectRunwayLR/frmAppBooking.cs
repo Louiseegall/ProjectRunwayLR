@@ -1141,7 +1141,7 @@ Group by Appointment.AppointmentNo,Room.RoomNo,AppointmentDate,AppointmentTime";
                 }
                 dtpBookingsStartDate.Value = dtpEditStartDate.Value;
                 if (MessageBox.Show("Booking no: " + drEditBooking["AppointmentNo"].ToString()
-                    + "added to system. Do you want to Add aother? ", "Booking Added ",
+                    + "Are You Done Editing? ", "Booking Added ",
                     MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
 
